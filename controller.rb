@@ -1,5 +1,6 @@
 require 'haml'
 require 'redcarpet'
+require 'tilt'
 
 class Tilt::HamlTemplate
   def prepare

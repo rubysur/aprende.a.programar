@@ -1,0 +1,1 @@
+puts 'gato' < 'perro'	

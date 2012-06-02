@@ -1,0 +1,1 @@
+puts 'Me gusta' + 'el pastel de manzana.'

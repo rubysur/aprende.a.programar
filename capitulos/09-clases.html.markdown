@@ -1,7 +1,7 @@
 # Clases
 
 Hasta ahora hemos visto diferentes tipos o *clases* de objetos: 
-cadenas, enteros, reales, matrices, y algunos objetos especiales 
+textos, enteros, flotantes, matrices, y algunos objetos especiales 
 (`true`, `false` y `nil`) de los cuales hablaremos más tarde. 
 En Ruby, estas clases están siempre en mayúsculas: `String`, `Integer`, 
 `Float`, `Array` ... etc. En general, si queremos crear un nuevo 
@@ -13,16 +13,20 @@ objeto de una cierta clase, usamos `new`:
     b = String.new + 'hello'  #  String agregado.
     c = Time.new
 
-*Resultado:*
-
     puts 'a = '+a.to_s
     puts 'b = '+b.to_s
     puts 'c = '+c.to_s
 
-Porque podemos crear matrices y cadenas usando  `[...]` y `' ... '` 
+*Resultado:*
+
+    a = [12345]
+    b = hello
+    c = 2012-06-01 12:52:06 -0500
+
+Porque podemos crear matrices y textos usando  `[...]` y `' ... '` 
 respectivamente es que rara vez los creamos usando `new`. (Aunque 
 no es muy evidente en el ejemplo anterior, `String.new` crea una 
-cadena vacía y `Array.new` crea una matriz vacía). También, los 
+cadena vacía y `Array.new` crea una matriz vacía) También, los 
 números son excepciones especiales: no se puede crear un número 
 entero con `Integer.new` . Sólo tienes que escribir el número entero.
 
@@ -30,21 +34,21 @@ entero con `Integer.new` . Sólo tienes que escribir el número entero.
 
 Entonces, ¿cuál es la historia con la clase `Time`?. Los objetos `Time` 
 representan momentos en el tiempo. Usted puede sumar (o restar) números a 
-(o desde) para obtener los nuevos tiempos: la adición de `1,5` 
+(o desde) para obtener los nuevos tiempos: la adición de `1.5` 
 a un tiempo hace un tiempo nuevo segundo y medio más tarde:
 
 *Código:*
 
-    time  = Time.new   #  El momento que se generó esta página web.
-    time2 = time + 60  #  Un minuto más tarde.
-    
-    puts time
-    puts time2
+    hora  = Time.new   #  El momento que se ejecutó esta código
+    hora2 = hora + 60  #  Un minuto más tarde.
+
+    puts hora
+    puts hora2
 
 *Resultado:*
 
-    Tue Apr 14 16:29:20 GMT 2009
-    Tue Apr 14 16:30:20 GMT 2009
+    2012-06-01 12:55:49 -0500
+    2012-06-01 12:56:49 -0500
 
 También puedes obtener el tiempo para un momento específico utilizando `Time.mktime`:
 
@@ -55,8 +59,8 @@ También puedes obtener el tiempo para un momento específico utilizando `Time.m
 
 *Resultado:*
 
-    Sat Jan 01 00:00:00 GMT 2000
-    Tue Aug 03 10:11:00 GMT 1976
+    2000-01-01 00:00:00 -0500
+    1976-08-03 10:11:00 -0500
 
 Nota: yo nací en el horario de verano del Pacífico (PDT). 
 Cuando se presentó el problema del año 2000, sin embargo, era hora 
@@ -72,10 +76,10 @@ un tiempo de otro obtendrás el número de segundos entre ellos. Juega un poco c
 
 * Mil millones de segundos ... Descubre el segundo exacto en que naciste 
 (si puedes). Averigua cuando tendrás (o tal vez cuando tuviste?) mil millones 
-de segundos de edad. luego marcalo en tu calendario.
+de segundos de edad, luego marcalo en tu calendario.
 
-* ¡Feliz cumpleaños! Pregunta qué año nació una persona, luego el mes, y luego el día. 
-Calcula la edad que tiene y dale una gran ´NALGADA!´ por cada cumpleaños que ha tenido.
+* ¡Feliz cumpleaños! Pregunta en qué año nació una persona, luego el mes, y luego el día. 
+Calcula la edad que tiene y dale una gran ´¡NALGADA!´ por cada cumpleaños que ha tenido.
 
 ## La clase`Hash`
 
@@ -93,39 +97,39 @@ yo uso para las diferentes partes del código con las que he creado este tutoria
 
     colorArray = []  #  igual a Array.new
     colorHash  = {}  #  igual a Hash.new
-    
-    colorArray[0]         = '#{@@STRING_COLOR}'
-    colorArray[1]         = '#{@@NUMBER_COLOR}'
-    colorArray[2]         = '#{@@KEYWORD_COLOR}'
-    colorHash['strings']  = '#{@@STRING_COLOR}'
-    colorHash['numbers']  = '#{@@NUMBER_COLOR}'
-    colorHash['keywords'] = '#{@@KEYWORD_COLOR}'
-    
+
+    colorArray[0]         = '#FF0000'
+    colorArray[1]         = '#008000'
+    colorArray[2]         = '#0000FF'
+    colorHash['textos ']  = '#FF0000'   # rojo
+    colorHash['numeros']  = '#008000'   # verde
+    colorHash['claves ']  = '#0000FF'   # azul
+
     colorArray.each do |color|
       puts color
     end
-    colorHash.each do |codeType, color|
-      puts codeType + ':  ' + color
+    colorHash.each do |tipoCodigo, color|
+      puts tipoCodigo + ' :  ' + color
     end
 
 *Resultado:*
 
-    red
-    green
-    blue
-    strings:  red
-    keywords:  blue
-    numbers:  green
+    #FF0000
+    #008000
+    #0000FF
+    textos  :  #FF0000
+    numeros :  #008000
+    claves  :  #0000FF
 
-Si utilizo una matriz, tengo que recordar que la ranura `0` es para las cadenas, 
+Si utilizo una matriz, tengo que recordar que la ranura `0` es para las textos, 
 la ranura `1` es para los números, etc, pero si puedo usar un hash, ¡es muy fácil! 
-Ranura `' cadenas '` mantiene el color de las cadenas, por supuesto. No hay 
+Ranura `' textos '` mantiene el color de las cadenas, por supuesto. No hay 
 nada que recordar. Puedes haber notado que cuando se utiliza `each` 
 los objetos en el hash no vienen en el mismo orden en que los pusiste adentro. (Al menos
 no lo hacían cuando escribí esto. Pueden que lo hagan ahora... nunca se sabe con los hashes).
 Matrices son para mantener las cosas en orden, no hashes.
 
-Aunque la gente suele utilizar cadenas para nombrar las ranuras de un hash, se 
+Aunque la gente suele utilizar textos para nombrar las ranuras de un hash, se 
 puede utilizar cualquier tipo de objeto, incluso las matrices y los hashes de 
 otros (aunque yo no puedo pensar en por qué querría hacer esto ...):
 
@@ -143,25 +147,25 @@ es el mejor para un problema particular.
 Al final del último capítulo escribiste un método para decir la frase en español 
 de un número entero. No era un método de número entero, sin embargo; 
 fue sólo un método genérico de un "programa". ¿No sería agradable si pudieras 
-escribir algo como `22.to_spa` en lugar de `spanishNumber  22`?. He aquí cómo harías eso:
+escribir algo como `22.to_esp` en lugar de `numeroEspanol  22`?. He aquí cómo harías eso:
 
 *Código:*
 
     class Integer
-      def to_spa
+      def to_esp
         if self == 5
-          spanish = 'cinco'
+          espanol = 'cinco'
         else
-          spanish = 'cincuenta y ocho'
+          espanol = 'cincuenta y ocho'
         end
         
-        spanish
+        espanol
       end
     end
-    
+
     #  Mejor probarlo en un par de números...
-    puts 5.to_spa
-    puts 58.to_spa
+    puts 5.to_esp
+    puts 58.to_esp
 
 *Resultado:*
 
@@ -173,7 +177,7 @@ Bueno, lo he probado y parece que funciona. ;)
 Por lo tanto, definimos un método del número entero ingresando en la clase `Integer`, 
 definiendo el método allí y saliendo luego. Ahora todos los números enteros tienen 
 este (algo incompleto) método. De hecho, si no te gusta la forma en que el método 
-`to_s` trabaja, lo podrías definir en gran parte de la misma manera ... pero yo no 
+`to_s` trabaja, lo podrías definir en gran parte de la misma manera ... pero ¡yo no 
 lo recomiendo! Lo mejor es dejar los viejos métodos y hacer otros nuevos cuando 
 se quiere hacer algo nuevo.
 
@@ -202,10 +206,10 @@ hacer la clase Dado:
       end
       
     end
-    
-    #  Vamos a hacer un par de dados...
+
+    #  Vamos a crear un par de dados...
     dados = [Dado.new, Dado.new]
-    
+
     #  ...y hacerlos rodar.
     dados.each do |dado|
       puts dado.roll
@@ -218,30 +222,30 @@ hacer la clase Dado:
 
 (Si se ha saltado la sección de números aleatorios,  `rand(6)` 
 sólo da un número aleatorio entre  0 y 5 .)
-Y eso es todo! Nuestro propios objetos. Tira los dados
+¡Y eso es todo! Nuestro propios objetos. Tira los dados
 un par de veces (con el botón de recarga) y mira lo que
 aparece.
 
 Podemos definir todo tipo de métodos para los objetos ... pero hay algo 
 que falta. Trabajar con estos objetos se parece mucho a la programación 
-antes de aprender acerca de las variables. ¡Mira los dados, por ejemplo. 
-Podemos rodarlos y cada vez que nos dan un número diferente. Pero si 
-quería guardar ese número habría que crear una variable que apunte 
-el número. 
+antes de aprender acerca de las variables. ¡Mira los dados!, por ejemplo. 
+Podemos rodarlos y cada vez nos dan números diferentes. Pero si 
+quería guardar alguno de estos números habría que crear una variable que apunte 
+al número. 
 Parece que cualquier dado decente debe ser capaz de *tener* un número, 
 y que rodando el dado nuevamente el número debe cambiar. Si hacemos un 
 seguimiento del dado debemos tener también un registro del número mostrado.
 
 Sin embargo, si tratamos de guardar el número que salió en una variable 
 (local) `roll` habrá desaparecido tan pronto como `roll` haya terminado. 
-Tenemos que guardar el número en un tipo diferente de variable
+Tenemos que guardar el número en un tipo diferente de variable.
 
 ## Variables de instancia
 
-Normalmente cuando queremos hablar de una cadena, nos limitaremos a llamar a 
-un *string*. Sin embargo, también podría llamar un *objeto de string*. Sin 
+Normalmente cuando queremos hablar de un texto, nos limitaremos a llamar a 
+un *texto*. Sin embargo, también podría llamar un *objeto de texto*. Sin 
 embargo, los programadores podrían llamar *una instancia de la clase `String`*, 
-pero esto es sólo una manera de decir de *string*. Una *instancia* de una clase 
+pero esto es sólo una manera de representar a *texto*. Una *instancia* de una clase 
 es sólo un objeto de esa clase.
 
 Por lo tanto las variables de instancia son variables de un objeto. Las 
@@ -254,23 +258,23 @@ ellos tienen `@` delante de sus nombres:
 
     class Dado
       
-      def roll
-        @numberShowing = 1 + rand(6)
+      def rodar
+        @numeroMostrado = 1 + rand(6)
       end
       
-      def showing
-        @numberShowing
+      def mostrar
+        @numeroMostrado
       end
       
     end
-    
+
     dado = Dado.new
-    dado.roll
-    puts dado.showing
-    puts dado.showing
-    dado.roll
-    puts dado.showing
-    puts dado.showing
+    dado.rodar
+    puts dado.mostrar
+    puts dado.mostrar
+    dado.rodar
+    puts dado.mostrar
+    puts dado.mostrar
 
 *Resultado:*
 
@@ -279,27 +283,27 @@ ellos tienen `@` delante de sus nombres:
     5
     5
 
-¡Muy bien!. `roll` rueda el dado y `showing` nos dice el número que muestra. 
+¡Muy bien!. `rodar` rueda el dado y `mostrar` nos dice el número que muestra. 
 Sin embargo, que pasa si tratamos de mostrar lo que existía antes de rodar el dado
-(antes de que lo hayamos guardado en `@numberShowing`)
+(antes de que lo hayamos guardado en `@numeroMostrado`)
 
 *Código:*
 
     class Dado
       
-      def roll
-        @numberShowing = 1 + rand(6)
+      def rodar
+        @nummeroMostrado = 1 + rand(6)
       end
       
-      def showing
-        @numberShowing
+      def mostrar
+        @numeroMostrado
       end
       
     end
 
     # Ya que no voy a usar esta dado de nuevo, 
     # No es necesario guardarlo en una variable. 
-    puts Dado.new.showing
+    puts Dado.new.mostrar
 
 *Resultado:*
 
@@ -317,20 +321,20 @@ Dado es creado. Para esto esta `initialize`:
       def initialize
         # Voy a tirar el dado, a pesar de que 
         # podria hacer otra cosa si quisieramos 
-          roll
+          rodar
       end
       
-      def roll
-        @numberShowing = 1 + rand(6)
+      def rodar
+        @numeroMostrado = 1 + rand(6)
       end
       
-      def showing
-        @numberShowing
+      def mostrar
+        @numeroMostrado
       end
       
     end
-    
-    puts Dado.new.showing
+
+    puts Dado.new.mostrar
 
 *Resultado:*
 
@@ -339,13 +343,13 @@ Dado es creado. Para esto esta `initialize`:
 Cuando se crea un objeto, su método `initialize` (si se ha definido 
 uno) siempre es llamado.
 Nuestros dados son casi perfectos. La única cosa que podría hacer falta 
-es una manera de establecer qué lado del dado está mostrando ... ¿Por 
-qué no escribir un método `cheap` que hace justamente eso! Vuelve cuando 
+es una manera de decirle que lado del dado debe mostrar... ¿Por 
+qué no escribir un método `timo` que hace justamente eso! Vuelve cuando 
 hayas terminado (y que haya funcionado por supuesto). Asegúrese de que 
 nadie pueda obtener un `7` con el dado!
 
 Hay varios temas interesante que apenas hemos revisado. Es difícil, sin 
-embargo, te voy a dar otro ejemplo más interesante. Digamos que queremos 
+embargo te voy a dar otro ejemplo más interesante. Digamos que queremos 
 hacer una mascota virtual sencilla, un dragón bebé. Como la mayoría de los 
 bebés debe ser capaz de comer, dormir y hacer sus necesidades, lo que 
 significa que tendremos que ser capaces de darle de comer, de ponerlo en la 
@@ -362,57 +366,57 @@ Muy bien, continuemos:
 
     class Dragon
       
-      def initialize name
-        @name = name
-        @asleep = false
-        @stuffInBelly     = 10  #  Esta lleno.
-        @stuffInIntestine =  0  #  No necesita ir.
+      def initialize nombre
+        @nombre = nombre
+        @dormido = false
+        @panzaLlena     = 10  #  Esta lleno.
+        @intestinoLleno  =  0  #  No necesita ir.
         
-        puts @name + ' nace.'
+        puts @nombre + ' nace.'
       end
       
-      def feed
-        puts 'Alimentas a ' + @name + '.'
-        @stuffInBelly = 10
-        passageOfTime
+      def alimentar
+        puts 'Alimentas a ' + @nombre + '.'
+        @panzaLlena = 10
+        pasoDelTiempo
       end
       
-      def walk
-        puts 'Haces caminar a ' + @name + '.'
-        @stuffInIntestine = 0
-        passageOfTime
+      def caminar
+        puts 'Haces caminar a ' + @nombre + '.'
+        @intestinoLleno  = 0
+        pasoDelTiempo
       end
       
-      def putToBed
-        puts 'Colocas a ' + @name + ' en la cama.'
-        @asleep = true
+      def dormir
+        puts 'Colocas a ' + @nombre + ' en la cama.'
+        @dormido = true
         3.times do
-          if @asleep
-            passageOfTime
+          if @dormido
+            pasoDelTiempo
           end
-          if @asleep
-            puts @name + ' ronca, llenando el cuarto con humo.'
+          if @dormido
+            puts @nombre + ' ronca, llenando el cuarto con humo.'
           end
         end
-        if @asleep
-          @asleep = false
-          puts @name + ' despierta lentamente.'
+        if @dormido
+          @dormido = false
+          puts @nombre + ' despierta lentamente.'
         end
       end
       
-      def toss
-        puts 'Lanzas a ' + @name + ' en el aire.'
+      def lanzar
+        puts 'Lanzas a ' + @nombre + ' en el aire.'
         puts 'Sonrie, sus cejas se mueven.'
-        passageOfTime
+        pasoDelTiempo
       end
       
-      def rock
-        puts 'Acunas a ' + @name + ' suavemente.'
-        @asleep = true
+      def acunar
+        puts 'Acunas a ' + @nombre + ' suavemente.'
+        @dormido = true
         puts 'Rapidamente se queda dormido...'
-        passageOfTime
-        if @asleep
-          @asleep = false
+        pasoDelTiempo
+        if @dormido
+          @dormido = false
           puts '...pero despierta cuando te detienes.'
         end
       end
@@ -423,65 +427,65 @@ Muy bien, continuemos:
       #  metodos internos al objeto.  (Puedes alimentar a
       #  tu dragon, pero no puedes preguntar si esta hambriento.)
       
-      def hungry?
+      def hambriento?
         #  Los nombres de los metodos pueden terminar en "?".
         #  Generalmente, hacemos esto si el método debe
         #  devolver verdadero o falso, como esto:
-        @stuffInBelly <= 2
+        @panzaLlena <= 2
       end
       
-      def poopy?
-        @stuffInIntestine >= 8
+      def ganas?
+        @intestinoLleno >= 8
       end
       
-      def passageOfTime
-        if @stuffInBelly > 0
+      def pasoDelTiempo
+        if @panzaLlena > 0
           #  Mueve el alimento del vientre al intestino.
-          @stuffInBelly     = @stuffInBelly     - 1
-          @stuffInIntestine = @stuffInIntestine + 1
+          @panzaLlena      = @panzaLlena      - 1
+          @intestinoLleno  = @intestinoLleno  + 1
         else  #  Nuestro dragon esta hambriento!
-          if @asleep
-            @asleep = false
-            puts 'Se despierta de repente!'
+          if @dormido
+            @dormido = false
+            puts '¡Se despierta de repente!'
           end
-          puts @name + ' esta hambriento!  En su desperacion, te COMIO!'
+          puts '¡' + @nombre + ' esta hambriento!  En su desperacion, ¡te COMIO!'
           exit  #  Sale del programa.
         end
         
-        if @stuffInIntestine >= 10
-          @stuffInIntestine = 0
-          puts 'Ops!  ' + @name + ' tuvo un accidente...'
+        if @intestinoLleno  >= 10
+          @intestinoLleno  = 0
+          puts '¡Uy!  ' + @nombre + ' tuvo un accidente...'
         end
         
-        if hungry?
-          if @asleep
-            @asleep = false
-            puts 'Se despierta de repente!'
+        if hambriento?
+          if @dormido
+            @dormido = false
+            puts '¡Se despierta de repente!'
           end
-          puts 'El estomago de ' + @name + 'retumba...'
+          puts 'El estomago de ' + @nombre + 'retumba...'
         end
         
-        if poopy?
-          if @asleep
-            @asleep = false
+        if ganas?
+          if @dormido
+            @dormido = false
             puts 'Se despierta de repente!'
           end
-          puts @name + ' hace la danza del baño...'
+          puts @nombre + ' hace la danza del baño...'
         end
       end
       
     end
-    
-    pet = Dragon.new 'Norbert'
-    pet.feed
-    pet.toss
-    pet.walk
-    pet.putToBed
-    pet.rock
-    pet.putToBed
-    pet.putToBed
-    pet.putToBed
-    pet.putToBed
+
+    mascota = Dragon.new 'Norbert'
+    mascota.alimentar
+    mascota.lanzar
+    mascota.caminar
+    mascota.dormir
+    mascota.acunar
+    mascota.dormir
+    mascota.dormir
+    mascota.dormir
+    mascota.dormir
 
 *Resultado:*
 
@@ -499,21 +503,21 @@ Muy bien, continuemos:
     Rapidamente se queda dormido...
     ...pero despierta cuando te detienes.
     Colocas a Norbert en la cama.
-    Se despierta de repente!
-    El estomado de Norbert retumba...
+    ¡Se despierta de repente!
+    El estomago de Norbertretumba...
     Colocas a Norbert en la cama.
-    Se despierta de repente!
-    El estomado de Norbert retumba...
+    ¡Se despierta de repente!
+    El estomago de Norbertretumba...
     Colocas a Norbert en la cama.
-    Se despierta de repente!
-    El estomado de Norbert retumba...
-    Norbert hace la danza de baño...
+    ¡Se despierta de repente!
+    El estomago de Norbertretumba...
+    Norbert hace la danza del baño...
     Colocas a Norbert en la cama.
-    Se despierta de repente!
-    Norbert esta hambriento!  En su desesperación, te COMIO!
+    ¡Se despierta de repente!
+    ¡Norbert esta hambriento!  En su desperacion, ¡te COMIO!
 
 *¡Ouau!* Por supuesto, sería mejor si fuese un programa interactivo, 
-pero puedes modificarlo. Yo sólo estaba tratando de mostrar las partes 
+pero puedes modificarlo. Yo sólo estaba tratando de mostrarte las partes 
 relacionadas directamente con la creación de una nueva clase de dragón.
 
 Vimos algunas cosas nuevas en ese ejemplo. La primera es simple: `exit` 
@@ -533,14 +537,14 @@ sobre cómo se podría representar un coche en un videojuego (que pasa a ser
 mi línea de trabajo). En primer lugar, tienes que decidir como deseas 
 que tu interfaz pública se parezca, es decir, los métodos de la gente 
 debería ser capaz de llamar por cada uno de los objetos de su coche. 
-Bueno, tienen que ser capaz de empujar el pedal del acelerador y el 
-pedal de freno, pero que también tienen que ser capaces de especificar lo 
-fuerte que están empujando el pedal. (Hay una gran diferencia entre pisar y 
-golpear.) También tendría que ser capaces de dirigir el timón, y otra vez, 
-tendrían que ser capaces de decir lo mucho que están moviendo la rueda del
+Bueno, tienes que ser capaz de empujar el pedal del acelerador y el 
+pedal de freno, pero que también tienes que ser capaz de especificar lo 
+fuerte que estás empujando el pedal. (Hay una gran diferencia entre pisar y 
+golpear) También tendrías que ser capaz de dirigir el timón, y otra vez, 
+tendrías que ser capaz de decir lo mucho que estás moviendo la rueda del
 timón. Supongo que se podría ir más allá y añadir un embrague, direccionales, 
 lanzacohetes, cámara de postcombustión, condensador de flujo, etc .. 
-depende del tipo de juego que están haciendo.
+depende del tipo de juego que estás haciendo.
 
 Internamente al objeto coche, sin embargo, tendríamos que hacer mucho más 
 cosas; otras cosas que necesita un coche son una velocidad, una dirección 
@@ -550,34 +554,34 @@ pero el usuario no sería capaz de establecer la posición directamente (que
 sería como una deformación). Usted también podría patinar o dañar si se ha 
 volcado y así sucesivamente. Todo esto sería interno a su objeto coche.
 
-## Algunas cosas para Probar
+## Algunas cosas por intentar
 
-* Hacer una clase `Orangetree`. Deberá tener un método `height` que devuelve su altura 
-y un método `oneYearPasses` que cuando se le llama aumenta la edad del árbol en un año. 
+* Hacer una clase `arbolNaranja`. Deberá tener un método `altura` que devuelve su altura 
+y un método `paso365Dias` que cuando se le llama aumenta la edad del árbol en un año. 
 Cada año crece el árbol más alto (mucho más de lo que piensas que un naranjo debe crecer en un año), 
 y después de un cierto número de años (de nuevo, tu llamada) el árbol debe morir. 
 En los primeros años el árbol no debe producir fruta, pero después de un tiempo debería hacerlo, 
 y supongo que los árboles más viejos producen más cada año que los árboles más jóvenes ... 
-lo que pienses que tiene más sentido. Y, por supuesto, usted deberá ser capaz de 
-`countTheOranges` (que devuelve el número de naranjas en el árbol), y `pickAnOrange` (que 
-reduce la `@orangeCount`en uno y devuelve una cadena que le dice cómo la naranja era deliciosa, 
-o de lo contrario sólo te dice que no hay naranjas más para elegir este año). Asegúrate 
+lo que pienses que tiene más sentido. Y, por supuesto, tú deberás ser capaz de 
+`contarNaranjas` (que devuelve el número de naranjas en el árbol), y `tomarUnaNaranja` (que 
+reduce la `@numeroNaranjas`en uno y devuelve un texto que te dice cómo la naranja era deliciosa, 
+o de lo contrario sólo te dice que no hay naranjas más para elegir este año) Asegúrate 
 que las naranjas que no se recogen en un año se caen antes del próximo año.
 
-* Escribir un programa para que pueda interactuar con su bebé dragón. Deberás 
-ser capaz de introducir comandos como `feed` y `walk`, y hacer que esos métodos se 
-llamen en tu dragón. Por supuesto, ya que lo que estás ingresando son sólo cadenas, 
-tendrás que tener algún tipo de *método de envío*, donde el programa revise las cadenas 
+* Escribir un programa para que pueda interactuar con tu bebé dragón. Deberás 
+ser capaz de introducir comandos como `alimentar` y `caminar`, y hacer que esos métodos se 
+llamen en tu dragón. Por supuesto, ya que lo que estás ingresando son sólo textos, 
+tendrás que tener algún tipo de *método de envío*, donde el programa revise los textos 
 que se han ingresado y luego llama al método adecuado.
 
-Y eso es casi todo lo que hay que hacer! Pero espera un segundo ... 
+¡Y eso es casi todo lo que hay que hacer! Pero espera un segundo ... 
 Yo no he hablado de ninguna de esas clases para hacer cosas como enviar un 
 correo electrónico o guardar y cargar archivos en el cumputador, o cómo crear ventanas 
-y botones, o los mundos en 3D, ni nada! Bueno, hay *tantas* clases que pueden utilizar 
+y botones, o los mundos en 3D, ¡ni nada! Bueno, hay *tantas* clases que pueden utilizar 
 que no es posible mostrar a todos, ¡yo no conozco la mayoría de ellos! Lo *que* puedo 
 decir es que para saber más sobre ellos tienen que saber acerca de los que deseas que el 
 programa haga. Antes de terminar hay una característica más de Ruby que deberás conocer, 
 algo que la mayoría de lenguajes de programación no tiene pero sin las cuales 
 simplemente no podría vivir: 
-<a href="https://github.com/rubyperu/aprende_a_programar/blob/master/capitulos/10_bloques_y_procs.markdown">
+<a href="https://github.com/rubyperu/aprendeaprogramar.pe/blob/master/capitulos/10-bloques-y-procs.html.markdown">
 bloques y procedimientos</a>.

@@ -1,18 +1,18 @@
 # Números
 
 
-Ahora que tiene todo 
-<a href="https://github.com/rubyperu/aprende_a_programar/blob/master/capitulos/00_inicio.markdown">instalado</a>
-¡vamos a escribir un programa! Abra su editor de texto favorito
-y escriba lo siguiente:
+Ahora que tienes todo 
+<a href="https://github.com/rubyperu/aprendeaprogramar.pe/blob/master/capitulos/00-inicio.html.markdown">instalado</a>
+¡vamos a escribir un programa! Abre tu editor de texto favorito
+y escribe lo siguiente:
 
     puts 1+2
 
-Guarde su programa (sí, ¡eso es un programa!) como `calc.rb`
+Guarda tu programa (sí, ¡eso es un programa!) como `calc.rb`
 (el **.rb** es lo que usualmente ponemos al final de
-los programas escritos con Ruby). Ahora ejecute su programa escribiendo
-`ruby calc.rb` en la línea de comandos. Debería obtener un `3`
-en su pantalla. ¿Lo ve?, programar no es tan difícil, ¿cierto?
+los programas escritos con Ruby). Ahora ejecuta tu programa escribiendo
+`ruby calc.rb` en la línea de comandos. Deberías obtener un `3`
+en tu pantalla. ¿Lo ves?, programar no es tan difícil, ¿cierto?
 
 ## Introducción a `puts`
 
@@ -26,9 +26,10 @@ en su pantalla. ¿Lo ve?, programar no es tan difícil, ¿cierto?
 ## Enteros y flotantes
 
 En la mayoría de los lenguajes de programación (y Ruby no es la excepción)
-los números sin decimales son llamados *integers* (enteros), y
-los números con punto decimal normalmente son llamados
-*números de punto flotante* o simplemente, *floats*.
+los números sin decimales son llamados *enteros* (traducción de *integers* en 
+su versión en Inglés), y los números con punto decimal normalmente son llamados
+*números de punto flotante* (o llamados solo *flotantes* de ahora en adelante ya que proviene
+de su original en inglés *floats*).
 
 Aquí hay algunos enteros:
 
@@ -44,20 +45,20 @@ Y aquí hay algunos flotantes:
     -205.3884
     0.0
 
-En la práctica, la mayoría de los programas no usan flotantes; sólo enteros.
-(Después de todo, nadie quiere leer 7,4 emails, o navegar 1,8 páginas,
-o escuchar 5,24 de sus canciones favoritas...)
+En la práctica, la mayoría de los programas no usan flotantes, sólo enteros.
+(Después de todo, nadie quiere leer 7.4 emails, o navegar 1.8 páginas,
+o escuchar 5.24 de sus canciones favoritas...)
 Los flotantes se usan más con propósitos académicos (como por ejemplo
 experimentos científicos) y para gráficos en 3D. Incluso la mayoría de los
-programas financieros usan enteros; ¡simplemente llevan un registro de los
+programas financieros usan enteros, ¡simplemente llevan un registro de los
 centavos!
 
 # Aritmética simple
 
 Hasta ahora, tenemos todo lo que necesita una calculadora simple.
-(Las calculadoras siempre usan números de punto flotante, así que si
+(Las calculadoras siempre usan flotantes, así que si
 quiere que su computadora actúe como una calculadora, también debería
-usar flotantes). Pasa suma y resta, usamos <kbd>+</kbd> y <kbd>-</kbd>,
+usar flotantes). Para suma y resta, usamos <kbd>+</kbd> y <kbd>-</kbd>,
 como ya lo vimos. Para la multiplicación, usamos <kbd>*</kbd>, y para
 la división usamos <kbd>/</kbd>. La mayoría de los teclados tienen estas
 teclas en el teclado numérico a la derecha. Intentemos expandir un poco
@@ -102,8 +103,8 @@ Tal vez se pregunte para qué es útil la división entera. Bueno, digamos
 que va al cine, pero sólo tiene $9. Aquí en Portland, puede ver una
 película en el Bagdad por $2. ¿Cuántas películas puede ver allí?
 `9/2`... `4` películas. 4.5 definitivamente *no*
-es la respuesta correcta en este caso; no le dejarán ver la mitad de
-una película, o dejar que una mitad suya vea la película entera...
+es la respuesta correcta ya que no le dejarán ver la mitad de
+una película o dejar que una mitad suya vea la película entera...
 algunas cosas simplemente no son divisibles.
 
 ¡Así que ahora experimente con algunos programas por su cuenta!
@@ -120,9 +121,9 @@ Por ejemplo:
     5
     -29802
 
-## Algunas cosas para intentar
+## Algunas cosas por intentar
 
-Escriba un programa que le diga:
+Escribe un programa que te diga:
 
 * cuántas horas hay en un año?
 * cuántos minutos hay en una década?
@@ -135,5 +136,5 @@ Aquí hay una pregunta más difícil:
 * Si tengo 1031 millones de segundos de edad, ¿cuántos años tengo?"
   
 Cuando termine de jugar con números, hechemos un vistazo
-a algunas 
-<a href="https://github.com/rubyperu/aprende_a_programar/blob/master/capitulos/02_text.markdown">letras</a>.
+a algunos 
+<a href="https://github.com/rubyperu/aprendeaprogramar.pe/blob/master/capitulos/02-textos.html.markdown">textos</a>.

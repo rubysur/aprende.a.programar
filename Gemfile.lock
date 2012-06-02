@@ -22,3 +22,4 @@ DEPENDENCIES
   haml
   redcarpet
   stasis
+  tilt

@@ -1,6 +1,6 @@
 # Variables  
 
-Hasta ahora, cuando usamos `'puts'` para un texto o números, esto
+Hasta ahora, cuando usamos `'puts'` para un texto o número, esto
 desaparece. A lo que me refiero es que, si queremos imprimir algo dos
 veces, necesitamos escribirlo dos veces:
 
@@ -16,7 +16,7 @@ veces, necesitamos escribirlo dos veces:
 
 Sería bueno si pudiesemos escribirlo solo una vez y quedárnoslo...
 guardarlo en algún lado.
-Bueno, si podemos, por supuesto; de otra manera, no lo hubiese
+Bueno, si podemos, por supuesto; de otra manera, ¡no lo hubiese
 mencionado!
 
 Para guardar el texto en la memoria de tu computadora, necesitamos darle
@@ -37,12 +37,12 @@ por ejemplo `'str'` or `'myOwnLittleString'` or
 
 *Resultado:*
 
-    puts '...puedes decir eso de nuevo...'
-    puts '...puedes decir eso de nuevo...'
+    ...puedes decir eso de nuevo...
+    ...puedes decir eso de nuevo...
 
 
-En todo momento que hiciste algo con `'myString'`, el programa se
-lo hizo a `"'...puedes decir eso de nuevo...'"` en vez. Puedes pensar
+En todo momento cuando haces referencia a `'myString'`, el programa usa en su reemplazo
+`"'...puedes decir eso de nuevo...'"`. Puedes pensar
 en la variable `'myString'` como "apuntando" al texto
 `"'...puedes decir eso de nuevo...'"`. Este es un ejemplo un poco más
 interesante.
@@ -68,19 +68,19 @@ podemos **reasignar** un objeto diferente a esa variable.
     puts composer + ' fue "el amo", en su día.'
 
     composer = 'Beethoven'
-    puts 'Pero yo prefiero a  ' + composer + ', personalmente.'
+    puts 'Pero yo prefiero a ' + composer + ', personalmente.'
 
 *Resultado:*
       
-    Mozart fue "el amo", en su dia
-    Pero yo prefiero a Beethoven, personalmente
+    Mozart fue "el amo", en su día.
+    Pero yo prefiero a Beethoven, personalmente.
 
 Por supuesto, las variables pueden apuntar a cualquier tipo de objecto, no
 solo texto:
 
 *Código:*
 
-    var = 'solo otra ' + 'string'
+    var = 'solo otro ' + 'texto'
     puts var
       
     var = 5 * (1+2)
@@ -88,12 +88,11 @@ solo texto:
 
 *Resultado:*
 
-    solo otra string
+    solo otro texto
     15
 
 De hecho, las variables pueden apuntar a casi cualquier cosa...
-excepto otras variables.
-¿Pero que pasa si lo intentamos?
+excepto otras variables. ¿Pero que pasa si lo intentamos?
 
 *Código:*
 
@@ -116,6 +115,5 @@ excepto otras variables.
     ocho
     8
 
-Cuando primero tratamos de apuntar `var2` a `var1` en realidad apuntamos a `8` (que es el valor al cual apuntaba
-`var1`). Luego cuando apuntamos `var1` a `'ocho'`, el valor de `var2`no cambia ya que en realidad no estaba apuntando a `var1` sino a `8`. Ahora que tenemos variables, números y cadenas, vamos a ver como 
-<a href="https://github.com/rubyperu/aprende_a_programar/blob/master/capitulos/04_conversiones.markdown">mezclarlas</a>.
+Cuando primero tratamos de apuntar `var2` a `var1` en realidad apuntamos a `8` (que es el valor al cual apuntaba `var1`) Luego cuando apuntamos `var1` a `'ocho'`, el valor de `var2`no cambia ya que en realidad no estaba apuntando a `var1` sino a `8`. Ahora que tenemos variables, números y textos, vamos a ver como 
+<a href="https://github.com/rubyperu/aprendeaprogramar.pe/blob/master/capitulos/04-conversiones.html.markdown">mezclarlas</a>.

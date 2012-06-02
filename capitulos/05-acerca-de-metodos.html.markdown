@@ -1,17 +1,16 @@
 # Más acerca de Métodos
-  
-Hemos visto un número de diferentes métodos,métodos `puts` y  `gets`
-, etcétera (***Prueba:*** *Listar todos los métodos que hemos 
+
+Hemos visto diferentes métodos: `puts`,  `gets`, 
+etc. (***Prueba:*** *Listar todos los métodos que hemos 
 visto hasta ahora!. Hay diez de ellos, la respuesta está abajo*), pero no hemos
-realmente hablado sobre que hacen los métodos.
-Sabemos que hacen, pero no lo que son.
+realmente hablado sobre que hacen los métodos. Sabemos que hacen, pero no lo que son.
 
 Pero realmente, esto *es* lo que son: cosas que generan otras. 
-Si objetos(como cadenas --strings--, enteros --integer--, y punto flotantes --float--) son los sujetos en 
+Si objetos (como textos, enteros y flotantes) son los sujetos en 
 el lenguaje Ruby, entonces los métodos son como verbos. Y, justo como en
-inglés, tu no puedes tener un verbo sin un sustantivo para *hacer* el verbo.
+español, tú no puedes tener un verbo sin un sustantivo para *hacer* algo.
 Por ejemplo, tic-tac no es algo que solo ocurre; un reloj (o algo) tiene que hacer
-esto. En Inglés podemos decir, "El reloj hace tic-tac". En Ruby podemos decir 
+esto. En español podemos decir: "El reloj hace tic-tac". En Ruby podemos decir 
 `clock.tick` (asumiendo por supuesto que `clock` es un objeto Ruby).
 Los programadores pueden decir que estamos "llamando el método `tick` de 
 `clock`" o llamamos al "`tick` de `clock`".
@@ -22,7 +21,7 @@ recordaras los métodos `puts`, `gets`, y
 Probablemente también recuerdas los métodos de conversión
 `to_i`, `to_f`, y `to_s`. Sin embargo, 
 ¿has visto los otros cuatro? Porque, estos no son otros que
-nuestros viejos amigos para la aritmética `+`,
+nuestros viejos amigos para la aritmética ¡`+`,
 `-`, `*`, y `/`!
 
 Entonces, como cada verbo necesita un sustantivo,
@@ -44,64 +43,61 @@ Por ejemplo:
     hola mundo
     99
 
-Esto no es muy lindo, por lo que no vamos a escribir siempre como ahora.
-; sin embargo, es importante para entender que sucede *realmente*.
-(En mi computador, que también me da una *advertencia*:`warning: 
-parenthesize argument(s) for future version`. Esto continua corriendo
-bien el código. pero esta diciendo que esta teniendo un problema para
-entender que estoy intentando hacer, y para usar mas paréntesis en el 
-futuro.)
+Esto no es muy lindo, por lo que no vamos a escribir siempre como ahora;
+sin embargo, es importante para entender que sucede *realmente*.
+
 Esto también nos da un profundo entendimiento de porque podemos hacer
 `'pig'*5` pero no podemos hacer `5*'pig'`: `'pig'*5`
-esta diciendo a `'pig'` de hacer la multiplicación, pero `5*'pig'` 
-esta diciendo  `5` de hacer la multiplicación. `'pig'` sabe como 
+esta diciendo a `'pig'` de hacer de multiplicando, pero `5*'pig'` 
+esta diciendo a `5` de hacer de multiplicando. `'pig'` sabe como 
 hacer  `5` copias de si mismo y agregar todos ellos juntos; sin embargo,
 `5` tendrá mucha mas dificultad en tiempo de hacer `'pig'` copias
 de si *mismo* y sumarlos a todos juntos.
 
 Y, por supuesto, continuaremos teniendo `puts` y `gets` para explicar.
-¿Dónde están sus objetos? En inglés, puedes algunas veces dejar fuera el sustantivo;
-por ejemplo, si un villano grita "Muere!", el sustantivo implícito es a quien él esta
+¿Dónde están sus objetos? En español, puedes algunas veces dejar fuera el sustantivo;
+por ejemplo, si un villano grita "¡Muere!", el sustantivo implícito es a quien él esta
 gritando. En Ruby, si digo `puts 'ser o no ser'`, lo que realmente estoy 
 diciendo es `self.puts 'ser o no ser'`.
-Entonces que es `self`? Esta es una variable especial que apunta a cualquier 
-en el que estés. No siempre sabemos como estar *en* un objeto,pera hasta que nos
-demos cuenta, siempre iremos a estar en un gran objeto que es... el programa entero! Y 
-para nuestra suerte, el programa tendrá unos pocos métodos en si mismo, como `puts` 
-y `gets`.
+Entonces ¿que es `self`? Esta es una variable especial que apunta al objeto en  
+el que estás. No siempre sabemos como estar *en* un objeto, pero hasta que nos
+demos cuenta, siempre iremos a estar en un gran objeto que es... ¡el programa entero! (sin 
+embargo en este caso no es posible llamarlo en forma explícita)
 Observa lo siguiente:
 
 *Código:*
 
-    iCantBelieveIMadeAVariableNameThisLongJustToPointToA3 = 3
-    puts iCantBelieveIMadeAVariableNameThisLongJustToPointToA3
+    NoPuedoCreerQueUnaVariableConNombreTanLargoApunteA3 = 3
+    puts NoPuedoCreerQueUnaVariableConNombreTanLargoApunteA3
+    self.puts NoPuedoCreerQueUnaVariableConNombreTanLargoApunteA3
 
 *Resultado:*
 
     3
+    in `<main>': private method `puts' called for main:Object (NoMethodError)
 
 Si no alcanzaste a comprender todo, está bien. Lo importante es 
 todo método está siendo propiedad de un objeto, incluso si no tiene
-un punto enfrente de este. Si entiendes esto, estás preparado.
+un punto enfrente de este. Si entiendes esto estás preparado.
 
 ## Métodos imaginativos acerca de Strings
 
 Vamos a aprender unos pocos pero interesantes métodos. No tienes
 porque memorizar todos; puedes mirar esta pagina de nuevo si te
 olvidas de alguno. Yo solo quiero mostrarte una *pequeña*
-parte de lo que puede hacer un String. De hecho, no recuerdo ni
-siquiera la mitad de los métodos para Strings; pero está bien, porque
-hay buenas referencias en internet con todo acerca de String
+parte de lo que puede hacer un texto. De hecho, no recuerdo ni
+siquiera la mitad de los métodos para textos; pero está bien, porque
+hay buenas referencias en internet con todo acerca de textos
 listados y explicados. (Voy a mostrarte donde encontrar esas referencias
 al final del tutorial.)
-Realmente, tampoco *quiero* saber todo acerca de los métodos String;
+Realmente, tampoco *quiero* saber todo acerca de los métodos para texto;
 sino sería como tratar de conocer cada palabra en el diccionario. Puedo hablar
-inglés bien sin conocer cada una de las palabras del diccionario... ¿y no es
+español bien sin conocer cada una de las palabras del diccionario... ¿y no es
 ese realmente el objetivo del diccionario? Entonces ¿no *tienes* 
 que conocer que hay en éste?
 
-Entonces, nuestro primer método string es `reverse`,
-el cual nos una version invertida de un string:
+Entonces, nuestro primer método para texto es `reverse`,
+el cual nos una version invertida de un texto:
 
 *Código:*
 
@@ -121,7 +117,7 @@ el cual nos una version invertida de un string:
     rarap
     odayarbus
     ?sever la nóicaro atse raicnunorp sedeuP
-    para
+    parar
     subrayado
     Puedes pronunciar esta oración al reves?
 
@@ -129,8 +125,8 @@ Como puedes ver, `reverse` no revierte el orden en el string original; este
 solo hace una nueva versión de éste en reversa. Esto es porque `var1` continua
 `'parar'` aún después de que llamamos  `reverse` sobre  `var1`.
 
-Otro método para strings es `length`, el cual nos dice el numero de caracteres
-(incluyendo caracteres) en el string:
+Otro método para texto es `length`, el cual nos dice el numero de caracteres
+(incluyendo caracteres) en el texto:
 
 *Código:*
 
@@ -144,11 +140,11 @@ Otro método para strings es `length`, el cual nos dice el numero de caracteres
     Christopher David Pine
     #<TypeError: can't convert Fixnum into String>
 
-Uhh!! Algo salió mal, y esto parece que ocurrió después la línea 
+¡¡Uhh!! Algo salió mal, y esto parece que ocurrió después la línea 
 `name = gets.chomp`... ¿Puedes ver el problema? Fijate si puedes darte cuenta.
 
 El problema es con `length`: esto te devuelve un número, pero nosotros queremos
-un string. Esto es fácil, necesitamos solo agregar `to_s` (y cruzar nuestros dedos):
+un texto. Esto es fácil, necesitamos solo agregar `to_s` (y cruzar nuestros dedos):
 
 *Código:*
 
@@ -166,13 +162,13 @@ No, no conocía esto.  **Nota:** esto es el número de
 *caracteres* en mi nombre, no el número de *letras*. Supongo
 que podríamos escribir un programa el cual nos pregunte por nuestro primer
 nombre, segundo nombre y apellidos individualmente, y entonces sumar estos tamaños
-todos juntos... hey, porque no haces esto! Comienza, esperaré.
+todos juntos... hey, ¡porque no haces esto! Comienza, esperaré.
 
-¿Lo hiciste? Bien! Es un lindo programa, ¿no?. Después de unos pocos capítulos más, 
+¿Lo hiciste? ¡Bien! Es un lindo programa, ¿no? Después de unos pocos capítulos más, 
 pienso, estarás sorprendido de lo que podrás hacer. 
 
-Entonces, hay también un número de métodos string los cuales cambian
-el contenido (mayúsculas y minúsculas) de tu string. `upcase` 
+Entonces, hay también un número de métodos para texto los cuales cambian
+el contenido (mayúsculas y minúsculas) de tu texto. `upcase` 
 cambian cada minúscula por mayúscula. `swapcase` cambia en cada
 letra en el string("Hola".swapcase  #=> "hOLA"), y finalmente, `capitalize`
 es como `downcase`, excepto que esto cambia solo el primer carácter a
@@ -199,7 +195,7 @@ mayúsculas(si es una letra).
 
 Esto es bastante estándar. Como puedes ver desde la linea `puts ' a'.capitalize`,
 el método `capitalize` solo deja en mayúsculas el primer *carácter*, no 
-la primer *letra*. También, como hemos visto antes, en todas estas llamadas a 
+la primera *letra*. También, como hemos visto antes, en todas estas llamadas a 
 métodos, `letters` permanece igual. No quiero decir que se dedica solo a esto,
 pero es importante entenderlo. Hay algunos métodos los cuales *hacen* cambios a los
 objetos asociados, pero no los hemos visto aún, y no lo haremos por algún tiempo. 
@@ -232,7 +228,7 @@ centrar las lineas de un poema, debería hacer algo como esto:
 Mmmm.. no pienso que esto es un campamento de verano, pero estoy muy 
 cansado para buscar esto. (Entonces, quise alinear la parte 
 `.center lineWidth` , entonces puse esos espacios extras antes
-de los strings. Esto es así solo porque pienso que es mas lindo de
+de los textos. Esto es así solo porque pienso que es más lindo de
 esta forma. Los programadores generalmente tienen duros conceptos acerca
 de que es lindo en un programa, y a menudo confrontan acerca de esto. 
 Cuanto más programes, más lograras tu propio estilo.)  Hablando de ser
@@ -244,13 +240,13 @@ al comienzo del programa, antes que en cada línea. Con un poema muy largo,
 esto podría ahorrarme un montón de tiempo. Este tipo de pereza es realmente
 una virtud en programación.
 
-Entonces, acerca del centrado... tu te darás cuenta que esto no es muy
+Entonces, acerca del centrado... tú te darás cuenta que esto no es muy
 lindo como podría serlo un procesador de texto. Si realmente quieres un 
 perfecto centrado (y quizás una fuente mas linda), entonces deberías
-solo usar un procesador de textos!. Ruby es una herramienta maravillosa,
-pero no la herramienta correcta para *cualquier* trabalo.
+¡solo usar un procesador de textos!. Ruby es una herramienta maravillosa,
+pero no la herramienta correcta para *cualquier* trabajo.
 
-Los otros dos métodos de formato de strings son `ljust` y 
+Los otros dos métodos de formato de textos son `ljust` y 
 `rjust`, lo cual significan *justificado izquierdo* y
 *justificado derecho*. Estos son similares a `center`,
 excepto que ellos rellenan los lados derecho e izquierdo respectivamente.
@@ -272,13 +268,13 @@ Vamos a verlos en acción:
                                 --> text <--
     --> text <--                --> text <--
 
-## Algunas cosas más para probar
+## Algunas cosas por intentar
 
-* Escribe un programa Jefe Enojado. Esto debe preguntar de mala 
+* Escribe un programa `Jefe Enojado`. Este debe preguntar de mala 
 manera que quieres. Cualquier cosa que consultes, el Jefe Enojado deberá
 devolverte la consulta de mala forma, y luego despedirte. Por ejemplo,
 si tu escribes `Quiero un aumento.`, deberá contestarte
-`PERO QUE DICES HOMBRE "QUIERO UN AUMENTO."?!?  ESTAS DESPEDIDO!!`
+`PERO QUE DICES HOMBRE "¿¡¿QUIERES UN AUMENTO."?!?  ¡¡ESTAS DESPEDIDO!!`
 
 * Entonces aquí hay algo para que puedas jugar un poco más con
 `center`, `ljust`, y `rjust`: Escribe un programa el 
@@ -296,13 +292,13 @@ Listado:
 
 *(Esta sección es totalmente opcional. Asume un conocimiento
 previo de matemáticas. Si no estás interesado, puedes ir directamente
-al siguiente capítulo <a href="https://github.com/rubyperu/aprende_a_programar/blob/master/capitulos/06_control_de_flujo.markdown">Control de Flujo</a>
+al siguiente capítulo <a href="https://github.com/rubyperu/aprendeaprogramar.pe/blob/master/capitulos/06-control-de-flujo.html.markdown">Control de Flujo</a>
 sin problemas. Aunque, una rápida vista de esta sección sobre
 **Números aleatorios** debería venir bien.)*
 
-No hay tantos métodos numéricos como los hay para strings (pienso
+No hay tantos métodos numéricos como los hay para textos (pienso
 que aun no los conozco a todos sin recurrir a la ayuda de documentación).
-Aquí, vamos a mirar el resto de los métodos de aritmética, un generador
+Aquí, vamos a mirar el resto de los métodos aritméticos, un generador
 de números aleatorios, y el objeto `Math` , con sus métodos trigonométricos
 y transcendentales.
 
@@ -312,7 +308,7 @@ Los otros dos métodos aritméticos son `**` (potencia) y `%`
 (módulo). Entonces si quieres decir "cinco al cuadrado" en Ruby, deberías 
 escribir algo así `5**2`. También puedes usar flotantes para tus 
 exponentes, entonces si quieres una raíz cuadrada de 5, deberías escribir 
-`5**0.5`. Los métodos modulo te dan el sobrante después de una división
+`5**0.5`. Los métodos módulo te dan el sobrante después de una división
 por un número. Entonces, por ejemplo, si divido 7 por 3, obtengo 2 con un remanente
 de 1. Vamos a ver como es que trabaja en un programa:
 
@@ -360,9 +356,7 @@ le proporcionas a `rand` un número entero (`5` por ejemplo),
 esto te devolverá un entero mayor o igual a `0` y menor a `5` 
 (entonces son cinco números posibles, de `0` a `4`).
 
-Vamos a ver `rand`  en acción. (Si recargas esta página, verás que
-el número cambiará cada vez. Tu sabías que estoy corriendo estos programas, 
-¿lo sabías?!
+Vamos a ver `rand`  en acción. 
 
 *Código:*
 
@@ -478,7 +472,7 @@ la notación `::`. Explicando el *alcance del operador*
 
 Como puedes ver, `Math` tiene todas las cosas que podrías 
 esperar de una calculadora científica decente. Y como siempre, los
-punto flotante están *realmente cerca* de ser la respuesta
+flotantes están *realmente cerca* de ser la respuesta
 correcta.
 
-Entonces ahora vamos a ver <a href="https://github.com/rubyperu/aprende_a_programar/blob/master/capitulos/06_control_de_flujo.markdown">control de flujo</a>!
+Entonces ahora vamos a ver <a href="https://github.com/rubyperu/aprendeaprogramar.pe/blob/master/capitulos/06-control-de-flujo.html.markdown">control de flujo</a>!

@@ -1,20 +1,25 @@
-# Conversiones
+# Mezclando
 
-Hemos revisado distintos tipos de objetos ([números]() y [texto]()), y hemos hecho que
+Hemos revisado distintos tipos de objetos ([números]() y [textos]()) y hemos hecho que
 [variables]() apunten a ellos; lo que queremos hacer después es que funcionen
 todos juntos.
 
 Hemos visto que si queremos que un programa imprima `25`, lo que sigue ***no***
 funciona, porque no puedes sumar números y texto:
 
+*Código:*
+
     var1 = 2
     var2 = '5'
-  
+
     puts var1 + var2
-    # => TypeError: String can't be coerced into Fixnum
+
+*Resultado:*
+
+    in `+': String can't be coerced into Fixnum (TypeError)
 
 Parte del problema es que tu computadora no sabe si estabas tratando de obtener `7`
-(`2 + 5`), o si querías obtener `'25'` (`'2' + '5'`).
+(`2 + 5`) o si querías obtener `'25'` (`'2' + '5'`).
 
 Antes de poderlos sumar, necesitamos alguna forma de conseguir la representación
 textual (en 'letras') de `var1`, o la representación numérica de `var2`.
@@ -22,26 +27,35 @@ textual (en 'letras') de `var1`, o la representación numérica de `var2`.
 ## Conversiones
 
 Para obtener la representación en texto de un objeto, simplemente escribimos `.to_s`
-después de el:
+después de el objeto:
+
+*Código:*
 
     var1 = 2
     var2 = '5'
-    
-    puts var1.to_s + var2
-    # => 25
 
-De la misma manera,, `to_i` devuelve la versión numérica entera de un objeto y `to_f`
-devuelve la versión de punto flotante, o sea, la que lleva decimales. Veamos que hacen
+    puts var1.to_s + var2
+
+*Resultado:*
+    
+    25
+
+De la misma manera, `to_i` devuelve la versión numérica entera de un objeto y `to_f`
+devuelve la versión de punto flotante, o sea la que lleva decimales. Veamos que hacen
 estos tres métodos (y lo que *no* hacen) un poco más de cerca:
 
+*Código:*
+
     var1 = 2
     var2 = '5'
     
     puts var1.to_s + var2
-    # => 25
-
     puts var1 + var2.to_i
-    # => 7
+
+*Resultado:*
+    
+    25
+    7
 
 Nota que, inclusive después de que obtuvimos la versión en texto de `var1` al llamar
 `to_s`, `var1` siempre apuntó a `2`, y nunca a `'2'`. A menos que reasignes
@@ -50,29 +64,27 @@ duración del programa.
 
 Ahora probemos conversiones más interesantes (y un poco raras):
 
+*Código:*
+
     puts '15'.to_f
-    # => 15.0
-
     puts '99.999'.to_f
-    # => 99.999
-
     puts '99.999'.to_i
-    # => 99
-
-    puts '5 is my favorite number!'.to_i
-    # => 5
-
-    puts 'Who asked you about 5 or whatever?'.to_i
-    # => 0
-
-    puts 'Your momma did.'.to_f
-    # => 0.0
-
-    puts 'stringy'.to_s
-    # => stringy
-
+    puts '5 es mi numero favorito.'.to_i
+    puts '¿Quién pregunta acerca de 5 o lo que sea?'.to_i
+    puts 'Tu mamá hizo.'.to_f
+    puts 'fibroso'.to_s
     puts 3.to_i
-    # => 3
+
+*Resultado:*
+
+    15.0
+    99.999
+    99
+    5
+    0
+    0.0
+    fibroso
+    3
 
 Esto probablemente te ha sorprendido un poco. El primero es bastante estándar,
 devolviendo `15.0`. Después de eso, convertimos el texto `'99.999'` a un número de
@@ -89,23 +101,26 @@ esperábamos.
 
 Hay algo extraño en nuestro método favorito... Mira esto:
 
+*Código:*
+
     puts 20
-    # => 20
-
     puts 20.to_s
-    # => 20
-
     puts '20'
-    # => 20
+
+*Resultado:*
+
+    20
+    20
+    20
 
 ¿Por qué estas tres líneas retornan el mismo resultado? Bueno, las últimas dos deberían,
-ya que `20.to_s` *es* `'20'`. Pero, ¿Qué pasa con la primera, el entero `20`}? Para tal
-caso, ¿Qué significa escribir *el entero* 20? Cuando escribes *2* y luego *0* en un
+ya que `20.to_s` *es* `'20'`. Pero, ¿qué pasa con la primera, el entero `20`? Para tal
+caso, ¿qué significa escribir *el entero* 20? Cuando escribes *2* y luego *0* en un
 papel, estas escribiendo texto, no un entero. *El entero* 20 es el número de dedos
 que tengo; no es *2* seguido de un *0*.
 
 Bueno, ahí está el secreto de nuestro amigo, `puts`: Antes de que `puts` trate de
-imprimir un objecto, usa `to_s` para obtener la vesión en texto de ese objeto. De
+imprimir un objecto, usa `to_s` para obtener la versión en texto de ese objeto. De
 hecho, la *s* en `puts` significa *string* (que en español significa texto); `puts`
 realmente significa *put string* (que en español significa imprimir texto).
 
@@ -117,7 +132,7 @@ foto de tu abuela, o un archivo de música, etc. Pero eso vendrá después...
 Mientras tanto, tenemos unos cuantos métodos para ti, y ellos nos permiten
 escribir todo tipo de programas divertidos...
 
-## Los Métodos `GETS` and `CHOMP`
+## Los Métodos `gets` y `chomp`
 
 Si `puts` significa *put string*, estoy seguro que puedes adivinar que significa
 `gets` (recibir texto). Y así como `puts` siempre devuelve texto, `gets` solo funciona
@@ -127,10 +142,15 @@ con texto. ¿Y de donde lo recibe?
 todo funciona bien. Lo que realmente pasa es que `gets` simplemente espera,
 leyendo todo lo que tipeas hasta que presionas `Enter`. Intentémoslo:
 
+
+*Código:*
+
     puts gets
 
-    > Is there an echo in here?
-    # => Is there an echo in here? 
+*Resultado:*
+
+    *¿Hay eco aquí?*
+    ¿Hay eco aquí?
 
 Por supuesto, lo que sea que escribas simplemente será impreso en pantalla por ti.
 Ejecútalo unas cuantas veces e intenta escribir cosas distintas.
@@ -138,45 +158,55 @@ Ejecútalo unas cuantas veces e intenta escribir cosas distintas.
 ¡Ahora podemos escribir programas interactivos! En este caso, escribe tu
 nombre y te saludará:
 
-      puts 'Hello there, and what\'s your name?'
-      name = gets
-      puts 'Your name is ' + name + '?  What a lovely name!'
-      puts 'Pleased to meet you, ' + name + '.  :)'
+    puts 'Hola, ¿cuál es tu nombre?'
+    name = gets
+    puts '¿Tu nombre es ' + name + '?  ¡Es un nombre adorable!'
+    puts 'Encantado de conocerte, ' + name + '.  :)'
 
-*Eek!* I just ran it, I typed in my name, and this is what happened:
+*Uhm!* Acabo de ejecutarlo, escribí mi nombre y esto es lo que he obtenido:
 
-      # => Hello there, and what's your name?
-      > Chris
-      # => Your name is Chris? What a lovely name!
-      # => Pleased to meet you, Chris. :)
+    Hola, ¿cuál es tu nombre?
+    *Chris*
+    ¿Tu nombre es Chris
+    ?  ¡Es un nombre adorable!
+    Encantado de conocerte, Chris
+    .  :)
+
 
 Hmmm... parece que cuanto escribí las letras *C*, *h*, *r*, *i*, *s*, y luego presioné
-`Enter`, `gets` recibió todas las letras de mi nombre *y* el <kbd>Enter</kbd>! Afortunadamente, hay un método para este
-tipo de cosas: `chomp`. Esto elimina cualquier <kbd>Enter</kbd>
+`Enter`, `gets` recibió todas las letras de mi nombre *y* el <kbd>Enter</kbd>! Afortunadamente, hay un método para este tipo de cosas: `chomp`. Esto elimina cualquier <kbd>Enter</kbd>
 al final del texto. Intentémoslo de nuevo, pero con `chomp` para
 que nos ayude:
 
-    puts 'Hello there, and what\\'s your name?'
-    name = gets.chomp
-    puts 'Your name is ' + name + '?  What a lovely name!'
-    puts 'Pleased to meet you, ' + name + '.  :)'
+*Código:*
 
-¡Mucho mejor! Nota que ya que `name` apunta a
-`gets.chomp`, no tenemos que usar `name.chomp`;
+    puts 'Hola, ¿cuál es tu nombre?'
+    name = gets.chomp
+    puts '¿Tu nombre es ' + name + '?  ¡Es un nombre adorable!'
+    puts 'Encantado de conocerte, ' + name + '.  :)'
+
+*Resultado:*
+
+    Hola, ¿cuál es tu nombre?
+    Chris
+    ¿Tu nombre es Chris?  ¡Es un nombre adorable!
+    Encantado de conocerte, Chris.  :)
+
+
+¡Mucho mejor! Nota que ya que `name` apunta a `gets.chomp`, no tenemos que usar `name.chomp`;
 `name` ya fue procesado por `chomp.
 
-## Algunas cosas para intentar
+## Algunas cosas por intentar
 
-* Escribe un programa que pregunta por el nombre de una persona,
+* Escribe un programa que pregunte por el nombre de una persona,
 luego el segundo nombre y luego el apellido. Finalemente, debería saludar
 a la persona con el nombre completo.
 
-* Escribir un programa que pregunta por el número favorito del
+* Escribe un programa que pregunte por el número favorito del
 usuario. Has que tu programa agregue un número, luego sugiera el resultado
 como el número favorito pero <em>más grande y mejorado</em>.
 (Pero hazlo con tacto.)
 
-Una vez que hayas terminado los dos programas (y otroas que hayas
-intentado), tratemos de aprender más (y más sobre ellos)
-<a href="https://github.com/rubyperu/aprende_a_programar/blob/master/capitulos/05_acerca_de_metodos.markdown">
-métodos</a>.
+Una vez que hayas terminado los dos programas (y otros que hayas
+intentado), tratemos de aprender más (y más sobre)
+<a href="https://github.com/rubyperu/aprendeaprogramar.pe/blob/master/capitulos/05-acerca-de-metodos.html.markdown">¡métodos!</a>.

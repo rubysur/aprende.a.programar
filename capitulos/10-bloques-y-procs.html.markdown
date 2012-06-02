@@ -2,14 +2,14 @@
   
 Esta es definitivamente una de las mejores herramientas de Ruby.
 Algunos lenguajes tienen esta herramienta, pienso que la llamaran
-de otra forma(como *closures*), pero la mayoría de los más
+de otra forma (como *closures*), pero la mayoría de los más
 populares no lo hacen, una pena.
 
 Entonces ¿qué es esto que es tan bueno? Esto tiene la habilidad
 de tomar un *bloque* de código (código entre **do** 
 y **end**) y encapsularlo dentro de un objeto (llamado *proc*) y
 guardarlo en una variable o pasarlo a un método, y ejecutar el código del
-bloque donde te guste (más de una vez, si quieres.) Entonces esto es 
+bloque donde te guste (más de una vez, si quieres) Entonces esto es 
 como un tipo método excepto que no está dentro de un objeto
 (este bloque *es* un objeto), y puedes almacenarlo o pasarlo como cualquier 
 otro objeto. Es hora de un ejemplo:
@@ -30,8 +30,7 @@ otro objeto. Es hora de un ejemplo:
     ¡Aplausos!
     ¡Aplausos!
 
-Entonces creé un proc (el cual pienzo debería ser pronunciado como
-"procedimiento") el cual
+Entonces creé un proc (el cual pienzo debería ser pronunciado como "procedimiento") que
 contiene un bloque de código, y llamé (*call*ed) el proc tres
 veces. Como puedes ver, esto es como un método.
 
@@ -40,59 +39,59 @@ tomar parámetros:
 
 *Código:*
 
-    doYouLike = Proc.new do |aGoodThing|
-      puts 'Me gusta *realmente* el '+aGoodThing+'!'
+    teGusta = Proc.new do |algoRico|
+      puts '¡Me gusta *realmente* el '+algoRico+'!'
     end
-    
-    doYouLike.call 'chocolate'
-    doYouLike.call 'ruby'
+
+    teGusta.call 'chocolate'
+    teGusta.call 'ruby'
 
 *Resultado:*
 
-    Me gusta *realmente* el chocolate!
-    Me gusta *realmente* el ruby!
+    ¡Me gusta *realmente* el chocolate!
+    ¡Me gusta *realmente* el ruby!
 
 Muy bien, entonces hemos visto que son los bloques y procs, y como usarlos, pero 
-¿cuál es el punto? ¿Porqué no utilizar simples métodos? Bueno, esto es porque
-hay mas cosas que no podemos hacer con simples métodos. En particular, no 
+¿cuál es el punto? ¿Porqué no utilizar simplemente métodos? Bueno, esto es porque
+hay más cosas que no podemos hacer con métodos. En particular, no 
 puedes pasar métodos a otros métodos (pero puedes pasar procs dentro de métodos),
 y métodos no pueden retornar otros métodos (pero ellos pueden retornar procs). Esto
 es simplemente porque procs son objetos; los métodos no son objetos
 
-(De hecho, ¿es algo familiar para ti? Sí, tu has visto bloques antes.. cuando aprendiste
-sobre iteradores. Pero vamos a hablar un poco mas acerca de esto en breve)	
+(De hecho, ¿es algo familiar para tí? Sí, tu has visto bloques antes... cuando aprendiste
+sobre iteradores. Pero vamos a hablar un poco más acerca de esto en breve)	
 
 ## Métodos que reciben Procedimientos
 
 Cuando pasamos un proc en un un método podemos controlar cómo o cuántas veces llamamos
-el proc. Por ejemplo, vamos a decir que queremos hacer antes y después que cierto código
+el proc. Por ejemplo, vamos a decir que queremos hacer antes y después de cierto código que
 se esta ejecutando:
 
 *Código:*
 
-    def doSelfImportantly someProc
-      puts 'Todo el mundo DETENGANSE!  Tengo algo que hacer...'
-      someProc.call
+    def hacerAlgoImportante unProc
+      puts '¡Todo el mundo DETENGANSE!  Tengo algo que hacer...'
+      unProc.call
       puts 'A todos: Está hecho.  Continuen con lo que estaban haciendo.'
     end
-    
-    sayHello = Proc.new do
+
+    decirHola = Proc.new do
       puts 'hola'
     end
-    
-    sayGoodbye = Proc.new do
+
+    decirAdios = Proc.new do
       puts 'adios'
     end
 
+    hacerAlgoImportante decirHola
+    hacerAlgoImportante decirAdios
+
 *Resultado:*
     
-    doSelfImportantly sayHello
-    doSelfImportantly sayGoodbye
-
-    Todo el mundo DETENGANSE!  Tengo algo que hacer...
+    ¡Todo el mundo DETENGANSE!  Tengo algo que hacer...
     hola
     A todos: Está hecho.  Continuen con lo que estaban haciendo.'
-    Todo el mundo DETENGANSE!  Tengo algo que hacer...
+    ¡Todo el mundo DETENGANSE!  Tengo algo que hacer...
     adios
     A todos: Está hecho.  Continuen con lo que estaban haciendo.'
 
@@ -100,7 +99,7 @@ Quizá esto no parezca muy fabuloso... pero lo es. :-)
 Es común en programacion tener requerimientos estrictos acerca de 
 que debe ser hecho y cuando. Si quieres salvar un archivo, por ejemplo,
 tienes que abrir el archivo, escribir la informacion que quieres que 
-contenga este, y luego cerrar el archivo. Si olvidas cerrar el archivo esto puede 
+contenga y luego cerrar el archivo. El olvido de cerrar el archivo puede 
 traer malas consecuencias. Pero cada vez que quieras salvar un archivo
 o cargar uno tienes que hacer lo mismo: abrir el archivo, hacer lo que
 *realmente* quieres hacer y luego cerrar el archivo. Esto es tedioso
@@ -115,29 +114,29 @@ y otro el cual lo llamará el doble de veces:
 
 *Código:*
 
-    def maybeDo someProc
+    def puedeHacerse unProc
       if rand(2) == 0
-        someProc.call
+        unProc.call
       end
     end
-    
-    def twiceDo someProc
-      someProc.call
-      someProc.call
+
+    def hacerDosVeces unProc
+      unProc.call
+      unProc.call
     end
-    
-    wink = Proc.new do
+
+    parpadeo = Proc.new do
       puts '<parpadeo>'
     end
-    
-    glance = Proc.new do
+
+    mirada = Proc.new do
       puts '<mirada>'
     end
-    
-    maybeDo parpadeo
-    maybeDo mirada
-    twiceDo parpadeo
-    twiceDo mirada
+
+    puedeHacerse parpadeo
+    puedeHacerse mirada
+    hacerDosVeces parpadeo
+    hacerDosVeces mirada
 
 *Resultado:*
 
@@ -147,7 +146,7 @@ y otro el cual lo llamará el doble de veces:
     <mirada>
     <mirada>
 
-(Si recargas esta página un par de veces, verás que la salida cambiará.) Estos son
+(Si ejecutas el programa un par de veces, verás que la salida cambiará) Estos son
 algunos de los casos comunes de uso de procs lo que le permite hacer cosas, utilizando
 simplemente métodos no podriamos hacerlo. Seguramente, podrías escribir un método para
 que parpadee dos veces, pero no podrías escribir uno que haga *algo* dos veces!
@@ -156,58 +155,58 @@ Antes de continuar, vamos a ver un último ejemplo. Los procs que
 hemos visto son bastante similares. Es tiempo de ver algo diferente, 
 entonces vamos a ver cuanto un método depende de un proc pasado a este.
 Nuestro método tomará algun objeto y un proc, y llamará a este proc 
-sobre este objeto. Si el proc retorna falso, terminamos; en otro caso
+sobre este objeto. Si el proc retorna falso, terminamos; en caso contrario
 llamaremos al proc con el objeto. Continuaremos haciendo esto hasta
-que el proc retorne falso(esto es mejor, o el programa finalizará con 
+que el proc retorne falso (esto es mejor, o el programa finalizará con 
 error). El método retornará el último valor no falso retornado por 
 el proc.
 
 *Código:*
 
-    def doUntilFalse firstInput, someProc
-      input  = firstInput
-      output = firstInput
+    def hacerHastaQueSeaFalso primeraentrada, unProc
+      entrada  = primeraentrada
+      salida = primeraentrada
       
-      while output
-        input  = output
-        output = someProc.call input
+      while salida
+        entrada  = salida
+        salida = unProc.call entrada
       end
       
-      input
+      entrada
     end
-    
-    buildArrayOfSquares = Proc.new do |array|
-      lastNumber = array.last
-      if lastNumber <= 0
+
+    construirMatrizDeCuadrados = Proc.new do |array|
+      ultimonumero = array.last
+      if ultimonumero <= 0
         false
       else
         array.pop                         #  Quitar el último número...
-        array.push lastNumber*lastNumber  #  ...y reemplazar este con el último número elevado al cuadrado...
-        array.push lastNumber-1           #  ...seguido por un número menor.
+        array.push ultimonumero*ultimonumero  #  ...y reemplazar este con el último número elevado al cuadrado...
+        array.push ultimonumero-1           #  ...seguido por un número menor.
       end
     end
-    
-    alwaysFalse = Proc.new do |justIgnoreMe|
+
+    siempreFalso = Proc.new do |soloIgnorame|
       false
     end
-    
-    puts doUntilFalse([5], buildArrayOfSquares).inspect
-    puts doUntilFalse('Estoy escribiendo esto a las 3:00 am; alguien que lo finalice!', alwaysFalse)
+
+    puts hacerHastaQueSeaFalso([5], construirMatrizDeCuadrados).inspect
+    puts hacerHastaQueSeaFalso('Estoy escribiendo esto a las 3:00 am; ¡alguien que lo finalice!', siempreFalso)
 
 *Resultado:*
 
     [25, 16, 9, 4, 1, 0]
-    Estoy escribiendo esto a las 3:00 am, alguien que lo finalice!
+    Estoy escribiendo esto a las 3:00 am, ¡alguien que lo finalice!
 
 Está bien, este es un ejemplo bastante raro, debo admitirlo. Pero esto muestra como 
 actúa diferente nuestro método cuando le damos diferentes procs.
 
 El método `inspect` es muy parecido a `to_s` , salvo que la cadena que devuelve
 trata de mostrar el código ruby para crear el objeto que pasó. Aquí se nos muestra 
-toda la matriz devuelta por nuestra primera llamada a `doUntilFalse`. Además, notamos 
+toda la matriz devuelta por nuestra primera llamada a `haceHastaQueSeaFalso`. Además, notamos 
 que nosotros no procesamos el `0` al final de la matriz, porque `0` 
 al cuadrado sigue siendo `0` y por lo tanto no tenía que hacerse. Y puesto 
-que `alwaysFalse` era siempre `false`,`doUntilFalse` no hace nada la segunda vez que 
+que `siempreFalso` era siempre `false`,`hacerHastaQueSeaFalso` no hace nada la segunda vez que 
 se llama sino que retorna lo que se le pasó.
 
 ## Métodos que retornan Procedimientos
@@ -228,27 +227,27 @@ proc.
 
 *Código:*
 
-    def compose proc1, proc2
+    def compone proc1, proc2
       Proc.new do |x|
         proc2.call(proc1.call(x))
       end
     end
-    
-    squareIt = Proc.new do |x|
+
+    cuadrado = Proc.new do |x|
       x * x
     end
-    
-    doubleIt = Proc.new do |x|
+
+    doble = Proc.new do |x|
       x + x
     end
-    
-    doubleThenSquare = compose doubleIt, squareIt
-    squareThenDouble = compose squareIt, doubleIt
-    
-    puts doubleThenSquare.call(5)
-    puts squareThenDouble.call(5)
 
-*Resultado:*
+    dobleYCuadrado = compone doble, cuadrado
+    cuadradoYDoble = compone cuadrado, doble
+
+    puts dobleYCuadrado.call(5)
+    puts cuadradoYDoble.call(5)
+
+    *Resultado:*
 
     100
     50
@@ -272,41 +271,41 @@ Te mostraré primero un ejemplo rápido, y luego vamos a hablar de ello.
 *Código:*
 
     class Array
-      def eachEven(&wasABlock_nowAProc)
-        isEven = true  #  Empezamos con "true" porque las matrices comienzan con 0
+      def cadaPar(&fueBloque_ahoraesProc)
+        esPar = true  #  Empezamos con "true" porque las matrices comienzan con 0
         
-        self.each do |object|
-          if isEven
-            wasABlock_nowAProc.call object
+        self.each do |objeto|
+          if esPar
+            fueBloque_ahoraesProc.call objeto
           end
           
-          isEven = (not isEven)  #  Cambiar de pares a impares o viceversa
+          esPar = (not esPar)  #  Cambiar de pares a impares o viceversa
         end
       end
 
     end
 
-    ['manzana', 'manzana podrida', 'cereza', 'durian'].eachEven do |fruit|
-      puts 'Yum!  Me encantan los pasteles de '+fruit+', ¿no?'
+    ['manzana', 'manzana podrida', 'cereza', 'durian'].cadaPar do |fruta|
+      puts '¡Yum!  Me encantan los pasteles de '+fruta+', ¿no?'
     end
 
-    #  Remember, we are getting the even-numbered elements
-    #  of the array, all of which happen to be odd numbers,
-    #  just because I like to cause problems like that.
-    [1, 2, 3, 4, 5].eachEven do |oddBall|
-      puts oddBall.to_s+' NO es un número par!'
+    #  Recuerda,, estamos tratando de conseguir los numeros pares 
+    #  de la Matriz.
+
+    [1, 2, 3, 4, 5].cadaPar do |bolaImpar|
+      puts bolaImpar.to_s+' NO es un número par!'
     end
 
 *Resultado:*
 
-    Yum! Me encantan los pasteles de manzana, ¿no?
-    Yum! Me encanta pasteles de cereza, ¿no?
-    1 no es un número par!
-    3 no es un número par!
-    5 no es un número par!
+    ¡Yum! Me encantan los pasteles de manzana, ¿no?
+    ¡Yum! Me encanta pasteles de cereza, ¿no?
+    1 NO es un número par!
+    3 NO es un número par!
+    5 NO es un número par!
 
-Así que para pasar un bloque de `eachEven` todo lo que tenía que hacer 
-era pegar el bloque después de que el método. Puedes pasar un bloque 
+Así que para pasar un bloque de `cadaPar` todo lo que tenía que hacer 
+era pegar el bloque después del método. Puedes pasar un bloque 
 dentro de cualquier método de esta manera, aunque muchos métodos simplemente 
 ignorarán el bloque. Con el fin de hacer que tu método *no* ignore el bloque 
 debes apoderarse de él y convertirlo en un proc y poner el nombre del proc 
@@ -314,12 +313,12 @@ al final de la lista de parámetros de tu método precedida por el signo `&`.
 Así que esa parte es un poco difícil pero no demasiado y sólo tienes que 
 hacer esto una vez (cuando se define el método). A continuación, puedes 
 utilizar el método una y otra vez al igual que los métodos que reciben bloques como
-`each` y `times`. (Recuerda que con `5.times` hacemos ...?)
+`each` y `times`. (Recuerda que con `5.times` ¿hacemos ...?)
 
-Si estás confundido, sólo recuerda lo que `eachEven` se supone que debe hacer: 
+Si estás confundido, sólo recuerda lo que `cadaPar` se supone que debe hacer: 
 llamar al bloque pasado con todos los demás elementos de la matriz. Una vez que lo 
 hayas escrito y funciona no es necesario pensar en lo que está haciendo en 
-realidad internamente ("qué bloque se llama cuando?"). De hecho, esto es 
+realidad internamente ("¿qué bloque se llama cuando?") De hecho, esto es 
 exactamente por lo que escribimos métodos como éste: para que no tengamos
 que pensar de nuevo en cómo trabajan. Nos limitamos a usarlos.
 
@@ -331,31 +330,31 @@ pero no lo necesito, ya que probablemente fue algo como esto:
 
 *Código:*
 
-    def profile descriptionOfBlock, &block
-      startTime = Time.now
+    def profile descripcionDeBloque, &bloque
+      inicioHora = Time.now
       
-      block.call
+      bloque.call
       
-      duration = Time.now - startTime
+      duracion = Time.now - inicioHora
       
-      puts descriptionOfBlock+':  '+duration.to_s+' segundos'
+      puts descripcionDeBloque+':  '+duracion.to_s+' segundos'
     end
 
     profile '25000 duplicaciones' do
-      number = 1
+      numero = 1
       
       25000.times do
-        number = number + number
+        numero = numero + numero
       end
       
-      puts number.to_s.length.to_s+' digitos'  #  El numero de digitos en este numero ENORME.
+      puts numero.to_s.length.to_s+' digitos'  #  El numero de digitos en este numero ENORME.
     end
 
     profile 'contar hasta un millon' do
-      number = 0
+      numero = 0
       
       1000000.times do
-        number = number + 1
+        numero = numero + 1
       end
     end
 
@@ -371,9 +370,9 @@ código en un bloque y se lo envió a `profile`. ¿Qué podría ser más sencill
 la mayoría de los lenguages, yo tendría que añadir explícitamente el código 
 de tiempo (lo que está dentro de `profile`) dentro de cada sección que deseo 
 medir. En Ruby, sin embargo, tengo que mantener todo en un solo lugar, y (más 
-importante) fuera de mi camino!
+importante) ¡fuera de mi camino!
 
-## Algunas cosas para probar
+## Algunas cosas por intentar
 
 * *Reloj del Abuelo*. Escriba un método que toma un bloque y lo llame una vez 
 por cada hora que ha pasado hoy. De esta manera, si paso al bloque `do puts 'DONG!' end`
@@ -430,4 +429,4 @@ Porque lo hice. Yo también recibí un montón de ayuda con el código de los ej
 de este tutorial. Pero, ¿dónde estaba *yo* buscando estas cosas y donde *yo* pido 
 ayuda?.
 
-<a href="https://github.com/rubyperu/aprende_a_programar/blob/master/capitulos/11_despues_de_esta_guia.markdown">Te voy a enseñar...</a>
+<a href="https://github.com/rubyperu/aprendeaprogramar.pe/blob/master/capitulos/11-despues-de-esta-guia.html.markdown">Te voy a enseñar...</a>
