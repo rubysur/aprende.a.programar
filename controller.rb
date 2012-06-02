@@ -12,3 +12,20 @@ class Tilt::HamlTemplate
 end
 
 layout 'layout.html.haml'
+
+before 'index.html.haml' do
+  @chapters = {}
+
+  Dir['capitulos/*.markdown'].each do |chapter|
+    chapter.gsub!('capitulos/', '')
+    chapter_number, chapter_title = chapter.split("-")
+    chapter_title.gsub!('.html.markdown', '')
+    @chapters.merge! chapter_number => chapter_title
+  end
+end
+
+helpers do
+  def link_to(text, url)
+    "<a href='#{url}'>#{text}</a>"
+  end
+end
