@@ -429,4 +429,4 @@ Porque lo hice. Yo también recibí un montón de ayuda con el código de los ej
 de este tutorial. Pero, ¿dónde estaba *yo* buscando estas cosas y donde *yo* pido 
 ayuda?.
 
-<a href="https://github.com/rubyperu/aprendeaprogramar.pe/blob/master/capitulos/11-despues-de-esta-guia.html.markdown">Te voy a enseñar...</a>
+<a href="/capitulos/11-despues-de-esta-guia.markdown">Te voy a enseñar...</a>

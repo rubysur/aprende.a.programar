@@ -280,5 +280,4 @@ la matriz en una bien formada Tabla de Contenidos.
 
 Hemos aprendido varios métodos diferentes.
 Ahora es tiempo de aprender como 
-<a href="https://github.com/rubyperu/aprendeaprogramar.pe/blob/master/capitulos/08-metodos-propios.html.markdown">
-hacerlo por nosotros mismos</a>.
+<a href="/capitulos/08-metodos-propios.markdown">hacerlo por nosotros mismos</a>.

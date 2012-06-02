@@ -1,8 +1,7 @@
 # Números
 
 
-Ahora que tienes todo 
-<a href="https://github.com/rubyperu/aprendeaprogramar.pe/blob/master/capitulos/00-inicio.html.markdown">instalado</a>
+Ahora que tienes todo <a href="/capitulos/00-inicio.markdown">instalado</a>
 ¡vamos a escribir un programa! Abre tu editor de texto favorito
 y escribe lo siguiente:
 
@@ -136,5 +135,4 @@ Aquí hay una pregunta más difícil:
 * Si tengo 1031 millones de segundos de edad, ¿cuántos años tengo?"
   
 Cuando termine de jugar con números, hechemos un vistazo
-a algunos 
-<a href="https://github.com/rubyperu/aprendeaprogramar.pe/blob/master/capitulos/02-textos.html.markdown">textos</a>.
+a algunos  <a href="/capitulos/02-textos.markdown">textos</a>.

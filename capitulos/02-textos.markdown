@@ -1,7 +1,7 @@
 # Textos
 
 Así que hemos aprendido todo acerca de 
-<a href="https://github.com/rubyperu/aprendeaprogramar.pe/blob/master/capitulos/01-numeros.html.markdown">números</a>,
+<a href="/capitulos/01-numeros.markdown">números</a>,
 ¿pero qué acerca de letras?  ¿palabras?  ¿textos?
 
 Nos referimos a grupos de letras en un programa como <dfn>textos</dfn>.  (Tú puedes
@@ -191,7 +191,5 @@ pero <em>si</em> si se escapa a si misma, esos dos últimos caracteres
 son idénticos. No parecen lo mismo en el código, pero en tu computadora
 son realmente los mismos. 
 
-Si tienes alguna pregunta, solo 
-<a href="https://github.com/rubyperu/aprendeaprogramar.pe/blob/master/capitulos/03-variables.html.markdown">
-¡sigue leyendo! </a>No podría 
-contestar cada pregunta en <em>esta</em> página, después de todo.
+Si tienes alguna pregunta, solo <a href="/capitulos/03-variables.markdown">¡sigue leyendo! </a>
+No podría contestar cada pregunta en <em>esta</em> página, después de todo.

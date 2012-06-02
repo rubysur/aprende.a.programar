@@ -115,5 +115,7 @@ excepto otras variables. ¿Pero que pasa si lo intentamos?
     ocho
     8
 
-Cuando primero tratamos de apuntar `var2` a `var1` en realidad apuntamos a `8` (que es el valor al cual apuntaba `var1`) Luego cuando apuntamos `var1` a `'ocho'`, el valor de `var2`no cambia ya que en realidad no estaba apuntando a `var1` sino a `8`. Ahora que tenemos variables, números y textos, vamos a ver como 
-<a href="https://github.com/rubyperu/aprendeaprogramar.pe/blob/master/capitulos/04-conversiones.html.markdown">mezclarlas</a>.
+Cuando primero tratamos de apuntar `var2` a `var1` en realidad apuntamos a `8` (que es el valor al 
+cual apuntaba `var1`) Luego cuando apuntamos `var1` a `'ocho'`, el valor de `var2`no cambia ya 
+que en realidad no estaba apuntando a `var1` sino a `8`. Ahora que tenemos variables, números y 
+textos, vamos a ver como <a href="/capitulos/04-conversiones.markdown">mezclarlas</a>.

@@ -292,7 +292,7 @@ Listado:
 
 *(Esta sección es totalmente opcional. Asume un conocimiento
 previo de matemáticas. Si no estás interesado, puedes ir directamente
-al siguiente capítulo <a href="https://github.com/rubyperu/aprendeaprogramar.pe/blob/master/capitulos/06-control-de-flujo.html.markdown">Control de Flujo</a>
+al siguiente capítulo <a href="/capitulos/06-control-de-flujo.markdown">Control de Flujo</a>
 sin problemas. Aunque, una rápida vista de esta sección sobre
 **Números aleatorios** debería venir bien.)*
 
@@ -475,4 +475,4 @@ esperar de una calculadora científica decente. Y como siempre, los
 flotantes están *realmente cerca* de ser la respuesta
 correcta.
 
-Entonces ahora vamos a ver <a href="https://github.com/rubyperu/aprendeaprogramar.pe/blob/master/capitulos/06-control-de-flujo.html.markdown">control de flujo</a>!
+Entonces ahora vamos a ver <a href="/capitulos/06-control-de-flujo.markdown">control de flujo</a>!

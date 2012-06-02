@@ -2,8 +2,8 @@
 
 Ahhhh, control de flujo. Acá es donde todo empieza a encajar. A pesar que este capítulo es 
 más corto y facil que el capítulo de 
-<a href="https://github.com/rubyperu/aprendeaprogramar.pe/blob/master/capitulos/05-acerca-de-metodos.html.markdown">
-métodos</a>, te abrirá un mundo nuevo de posibilidades para programar.
+<a href="/capitulos/05-acerca-de-metodos.markdown">métodos</a>, te abrirá un mundo 
+nuevo de posibilidades para programar.
 
 Luego de este capítulo, seremos capaces de escribir programas realmente interactivos; previamente 
 hemos creado programas que <em>dicen</em> distintas cosas dependiente de lo que ingreses en tu teclado, 
@@ -408,8 +408,8 @@ en mayúsculas) Si le gritas, ella te escuchará (o al menos creerá eso) y te g
 DESDE 1938!`. Para hacer el programa <em>realmente</em> creíble, haz que la abuela grite un año 
 distinto cada vez; tal vez un año aleatorio entre 1930 y 1950.  (Esta parte es opcional y sería mucho 
 más facil si lees la sección sobre generadores de números aleatorios de Ruby al final del capítulo 
-<a href="https://github.com/rubyperu/aprendeaprogramar.pe/blob/master/capitulos/05-acerca-de-metodos.html.markdown">
-métodos</a>) No podrás dejar de hablar con la abuela hasta que le grites `ADIOS`.<br />
+<a href="/capitulos/05-acerca-de-metodos.markdown">métodos</a>) No podrás dejar de 
+hablar con la abuela hasta que le grites `ADIOS`.<br />
 <em><strong>Pista:</strong> ¡No te olvides que </em>`chomp`<em>!  ¡</em>`'ADIOS'`<em>con un Enter 
 no es lo mismo que </em>`'ADIOS'`<em> sin uno!</em><br />. <em><strong>Pista 2:</strong> Trata de pensar 
 que partes del programa deberían suceder una y otra vez. Todas ellas deberían estar en tu bucle</em>`while`.
@@ -433,5 +433,4 @@ serás capaz de programar cualquier cosas. ¡En serio! Solo mira la cantidad de 
 que antes cuando no tenías bucles y ramificaciones. 
 
 Ahora, aprendamos sobre un nuevo tipo de objeto, que permite tener control de listas de otros objetos:
-<a href="https://github.com/rubyperu/aprendeaprogramar.pe/blob/master/capitulos/07-matrices.html.markdown">
-matrices</a>.
+<a href="/capitulos/07-matrices.markdown">matrices</a>.

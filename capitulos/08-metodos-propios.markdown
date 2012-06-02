@@ -740,6 +740,5 @@ qué gastar tiempo escribiendo código que alguien más ya ha escrito? ¿Quieres
 que tu programa envie un correo electrónico? ¿Te gustaría guardar y cargar archivos 
 en tu computadora? ¿Qué hay de la generación de páginas web para ver un tutorial en 
 donde los ejemplos de código son automáticamente ejecutados? ;) Ruby tiene muchos 
-<a href="https://github.com/rubyperu/aprendeaprogramar.pe/blob/master/capitulos/09-clases.html.markdown">
-tipos de objetos</a>
+<a href="/capitulos/09-clases.markdown">tipos de objetos</a>
 que podemos utilizar para ayudarnos a escribir mejores programas y con mayor rapidez.
