@@ -87,7 +87,7 @@ sientas cómodo. Si usas TextEdit, ¡asegúrate de guardar los programas como
 texto! Si no, <em>no funcionarán</em>. Otras opciones para programar son
 emacs, vi o pico, todos accesibles desde la línea de comando.
 
-¡Eso es todo! Estás listo para <a href="/capitulos/01-numeros.markdown">aprender a programar</a>.
+¡Eso es todo! Estás listo para <a href="/capitulos/01-numeros.html">aprender a programar</a>.
 
 ## Linux Installation
 
@@ -124,4 +124,4 @@ prueba tu instalación: #{input 'ruby -v'}. Si te dice la versión que
 tienes instalada, puedes eliminar los archivos en <kbd>$HOME/tmp</kbd> (o 
 donde sea que los hayas puesto).
 
-¡Eso es todo! Estás listo para <a href="/capitulos/01-numeros.markdown">aprender a programar</a>.
+¡Eso es todo! Estás listo para <a href="/capitulos/01-numeros.html">aprender a programar</a>.

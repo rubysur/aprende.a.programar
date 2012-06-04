@@ -209,4 +209,4 @@ como el número favorito pero <em>más grande y mejorado</em>.
 
 Una vez que hayas terminado los dos programas (y otros que hayas
 intentado), tratemos de aprender más (y más sobre)
-<a href="/capitulos/05-acerca-de-metodos.markdown">¡métodos!</a>.
+<a href="/capitulos/05-acerca-de-metodos.html">¡métodos!</a>.

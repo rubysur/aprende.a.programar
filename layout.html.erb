@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aprende a Programar</title>
+    <link href='/css/base.css' rel='stylesheet' type='text/css'>
+    <meta charset='utf-8'>
+    <meta content='width=device-width' name='viewport'>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-32374720-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1><%= link_to 'Aprende a Programar', '/' %> </h1>
+    </header>
+    <article>
+      <%= yield %>
+    </article>
+    <footer>
+      <p><%= link_to 'Acerca de este proyecto', '/info.html' %></p>
+    </footer>
+  </body>
+</html>

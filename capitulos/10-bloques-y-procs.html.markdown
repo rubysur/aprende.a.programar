@@ -399,7 +399,7 @@ En otras palabras, su salida debería ser algo como esto:
     ... "Otro bloque", terminó, regreso: me gusta la comida tailandesa!
     ... "Bloque exterior", terminó, regreso: false
 
-* *Better Logger*. El resultado del último logger fue un poco difícil de leer y 
+* *Mejores Logger*. El resultado del último logger fue un poco difícil de leer y 
 debería empeorar cuanto más se use. Sería mucho más fácil de leer si se indenta
 las líneas en los bloques interiores. Para ello, tendrás que llevar la cuenta 
 de cuán profundamente estás anidado cada vez que el logger quiere escribir algo. 
@@ -429,4 +429,4 @@ Porque lo hice. Yo también recibí un montón de ayuda con el código de los ej
 de este tutorial. Pero, ¿dónde estaba *yo* buscando estas cosas y donde *yo* pido 
 ayuda?.
 
-<a href="/capitulos/11-despues-de-esta-guia.markdown">Te voy a enseñar...</a>
+<a href="/capitulos/11-despues-de-esta-guia.html">Te voy a enseñar...</a>

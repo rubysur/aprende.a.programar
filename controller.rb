@@ -1,31 +1,62 @@
-require 'haml'
+# encoding: utf-8
+
+require 'sass'
 require 'redcarpet'
 require 'tilt'
+require 'yaml'
 
-class Tilt::HamlTemplate
-  def prepare
-    options = @options.merge(:filename => eval_file, :line => line)
-    options[:format] = :html5
-    options = options.merge :ugly => true
-    @engine = ::Haml::Engine.new(data, options)
-  end
-end
+# ignorando archivos
+ignore /\/_.*/        # archivos que comienzan con _
+ignore /\/\..*/       # archivos que comienzan con .
+ignore /\/Gemfile.*/  # Gemfile y relacionados
+ignore /\/README.*/   # READMEs
+ignore /\/.*\.yml/    # archivos YAML
 
-layout 'layout.html.haml'
+# priority /.*/markdown/ => 1, 'index.html.erb' => 2
 
-before 'index.html.haml' do
-  @chapters = {}
+layout 'layout.html.erb'
 
-  Dir['capitulos/*.markdown'].each do |chapter|
-    chapter.gsub!('capitulos/', '')
-    chapter_number, chapter_title = chapter.split("-")
-    chapter_title.gsub!('.html.markdown', '')
-    @chapters.merge! chapter_number => chapter_title
+before 'index.html.erb' do
+  chapters_path = File.expand_path("../capitulos/", __FILE__) + "**/*"
+  @chapters = []
+  Dir[chapters_path].each do |chapter_path|
+    @chapters << Chapter.new(chapter_path)
   end
 end
 
 helpers do
   def link_to(text, url)
-    "<a href='#{url}'>#{text}</a>"
+    "<a href='#{url}' title='#{text}'>#{text}</a>"
+  end
+end
+
+# probablemente seria bueno mover esto a lib
+class Chapter
+  attr_reader :path
+
+  def initialize(full_path)
+    @path = full_path.split("/").last
+  end
+
+  def id
+    path.gsub('.html.markdown', '')
+  end
+
+  def url
+    '/capitulos/' + path.gsub('.markdown', '')
+  end
+
+  def position
+    id.split("-").first
+  end
+
+  def title
+    split_id = id.split("-")
+    split_id.shift
+    split_id.join(" ").capitalize
+  end
+
+  def to_link
+    "<a href='#{url}' title='#{title}'>#{title}</a>"
   end
 end

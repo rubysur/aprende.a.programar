@@ -583,4 +583,4 @@ decir es que para saber más sobre ellos tienen que saber acerca de los que dese
 programa haga. Antes de terminar hay una característica más de Ruby que deberás conocer, 
 algo que la mayoría de lenguajes de programación no tiene pero sin las cuales 
 simplemente no podría vivir: 
-<a href="/capitulos/10-bloques-y-procs.markdown">bloques y procedimientos</a>.
+<a href="/capitulos/10-bloques-y-procs.html">bloques y procedimientos</a>.

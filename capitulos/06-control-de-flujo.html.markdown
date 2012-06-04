@@ -2,7 +2,7 @@
 
 Ahhhh, control de flujo. Acá es donde todo empieza a encajar. A pesar que este capítulo es 
 más corto y facil que el capítulo de 
-<a href="/capitulos/05-acerca-de-metodos.markdown">métodos</a>, te abrirá un mundo 
+<a href="/capitulos/05-acerca-de-metodos.html">métodos</a>, te abrirá un mundo 
 nuevo de posibilidades para programar.
 
 Luego de este capítulo, seremos capaces de escribir programas realmente interactivos; previamente 
@@ -433,4 +433,4 @@ serás capaz de programar cualquier cosas. ¡En serio! Solo mira la cantidad de 
 que antes cuando no tenías bucles y ramificaciones. 
 
 Ahora, aprendamos sobre un nuevo tipo de objeto, que permite tener control de listas de otros objetos:
-<a href="/capitulos/07-matrices.markdown">matrices</a>.
+<a href="/capitulos/07-matrices.html">matrices</a>.

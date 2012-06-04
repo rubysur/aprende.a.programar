@@ -475,4 +475,4 @@ esperar de una calculadora científica decente. Y como siempre, los
 flotantes están *realmente cerca* de ser la respuesta
 correcta.
 
-Entonces ahora vamos a ver <a href="/capitulos/06-control-de-flujo.markdown">control de flujo</a>!
+Entonces ahora vamos a ver <a href="/capitulos/06-control-de-flujo.html">control de flujo</a>!

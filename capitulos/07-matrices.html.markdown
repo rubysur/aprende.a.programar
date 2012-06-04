@@ -280,4 +280,4 @@ la matriz en una bien formada Tabla de Contenidos.
 
 Hemos aprendido varios métodos diferentes.
 Ahora es tiempo de aprender como 
-<a href="/capitulos/08-metodos-propios.markdown">hacerlo por nosotros mismos</a>.
+<a href="/capitulos/08-metodos-propios.html">hacerlo por nosotros mismos</a>.
