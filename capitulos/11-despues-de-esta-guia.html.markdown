@@ -150,4 +150,5 @@ y yo lo haré a mi manera.
 ## Fin
 
 Usa esto para lo bueno y no para lo malo. :-)  Y si encuentras este tutorial
-útil (o confuso, o si encuentras un error), <a href="mailto:rubyperu@googlegroups.">avísanos</a>!
+útil (o confuso, o si encuentras un error),
+<a href="mailto:rubyperu@googlegroups.com">avísanos</a>!
