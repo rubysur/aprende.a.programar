@@ -9,6 +9,8 @@ comprar la segunda versión (en inglés) siguiendo
 ## Agradecimientos
 
 En primer lugar, obviamente al autor, por dejarnos usar el contenido libremente,
-a la comunidad de [Ruby Perú](http://ruby.pe) por hacer la traducción, actualización
-y mantenimiento del contenido y a [Diego Algorta](http://about.me/oboxodo) por haber
-tenido la iniciativa y dar los primeros pasos.
+a [Diego Algorta](http://oboxodo.com) por haber tenido la iniciativa y dar los
+primeros pasos, a [César Diaz](https://github.com/cesarediaz),
+[Lucas Florio](https://github.com/lucasefe) y a la comunidad de
+[Ruby Perú](http://ruby.pe) por ayudar con la traducción, actualización y
+mantenimiento del contenido.

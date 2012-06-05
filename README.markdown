@@ -20,8 +20,18 @@ Estas son las decisiones tomadas:
 2. La página será desarrollada con [stasis](http://stasis.me) y se usará
 sintáxis coloeada por rainbow
 3. La página será estática, con los ejemplos en archivos para descargar.
-4. Terminología: string=texto, array=matriz, float=flotante, integer=entero
+4. Terminología: _string_=texto, _array_=matriz, _float_=flotante,
+_integer_=entero
 5. El discurso del libro es coloquial por lo que se usará "TÚ".
 6. El código y los resultados deben colocarse en cuadros separados.
 7. El proyecto estará en un nuevo proyecto de Github (mudando el anterior) en
 <https://github.com/rubyperu/aprendeaprogramar.pe">
+
+## Agradecimientos
+
+En primer lugar, obviamente al autor, por dejarnos usar el contenido libremente,
+a [Diego Algorta](http://oboxodo.com) por haber tenido la iniciativa y dar los
+primeros pasos, a [César Diaz](https://github.com/cesarediaz),
+[Lucas Florio](https://github.com/lucasefe) y a la comunidad de
+[Ruby Perú](http://ruby.pe) por ayudar con la traducción, actualización y
+mantenimiento del contenido.
