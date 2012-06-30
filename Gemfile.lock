@@ -3,8 +3,16 @@ GEM
   specs:
     directory_watcher (1.4.1)
     haml (3.1.6)
+    hpricot (0.8.6)
+    mustache (0.99.4)
+    rdiscount (1.6.8)
     redcarpet (2.1.1)
     redis (2.2.2)
+    ronn (0.7.3)
+      hpricot (>= 0.8.2)
+      mustache (>= 0.7.0)
+      rdiscount (>= 1.5.8)
+    sass (3.1.16)
     slop (2.1.0)
     stasis (0.1.23)
       directory_watcher (~> 1.4.1)
@@ -19,7 +27,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  haml
-  redcarpet
-  stasis
-  tilt
+  haml (~> 3.1.0)
+  redcarpet (~> 2.1.0)
+  ronn
+  sass
+  stasis (~> 0.1.0)
