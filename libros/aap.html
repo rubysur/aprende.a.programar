@@ -1,0 +1,4134 @@
+<div class='mp'>
+<h1>Inicio</h1>
+<p>Cuando programas una computadora, necesitas "hablar" en la forma que tu
+computadora entienda: un lenguaje de programación. Existen diferentes
+lenguajes y muchos de ellos son excelentes. En esta guía voy a
+usar mi lenguaje de programación favorito: <em>Ruby</em></p>
+
+<p>Además de ser mi favorito, Ruby es también el lenguaje más fácil de
+aprender que he visto (y eso que he visto unos cuantos) De hecho, esa es
+mi verdadera motivación para escribir esta guía: No decidí escribir una
+guía y luego escogí Ruby porque es mi lenguaje favorito; fue la simplicidad
+de Ruby lo que me motivó a escribirla. (Esribir una guía similar en otro
+lenguaje, como C++ o Java, hubiese requerido cientos y cientos de
+páginas) ¡Pero no creas que Ruby es un lenguaje para principiantes solo
+porque es fáci! Es un lenguaje poderoso y de calibre profesional, si es
+que existe alguno así.</p>
+
+<p>Cuando escribes algo en un lenguaje humano, lo que se escribe es texto.
+Cuando escribes algo en un lenguaje de computadora, lo que se escribe es</p>
+
+<dfn>código</dfn>
+
+
+<p>. He incluido muchos ejemplos de código Ruby en esta
+guía, muchos de ellos son programas completos que puedes ejecutar en tu
+equipo. Para hacer el código más fácil de leer, he marcado partes del
+código de distintos colores y formatos.</p>
+
+<p>Si encuentras algo que no entiendas o si tienes una pregunta que no has
+podido resolver, ¡escríbela y sigue leyendo! Es posible que la respuesta
+llegue en un capítulo posterior. Sin embargo, si tu pregunta no ha sido
+resuelta al finalizar la guía, te voy a mostrar donde preguntar. Hay
+muchas personas dispuestas a ayudar; solo necesitas saber donde están.</p>
+
+<p>Pero primero necesitas descargar e instalar Ruby en tu computadora.</p>
+
+<h2 id="Instalaci-n-en-Windows">Instalación en Windows</h2>
+
+<p>La instalación de Ruby en Windows es rápida, primero debes descargar el
+<a href="http://rubyinstaller.rubyforge.org/">Instalador de Ruby</a>.
+Puede que haya unas cuantas versiones para escoger; en este tutorial se
+utilizará la versión 1.9.3-p194, así que asegúrate de por lo menos
+descargar una version tan reciente como la indicada. Luego simplemente ejecuta el
+programa de instalación. A menos que tengas una buena razón, sería bueno
+que lo instales en la ubicación por defecto.</p>
+
+<p>Para poder programar, vas a necesitar escribir tus programas y
+ejecutarlos. Para esto vas a necesitar un editor de texto y la línea de
+comando.</p>
+
+<p>El instalador de Ruby viene con un editor de texto llamado SciTE
+(el editor de texto Scintilla). Puedes ejecutar SciTE seleccionandolo del
+menú de arranque. Si quieres que tu código esté coloreado como los
+ejemplos de esta guía, descarga estos archivos y ponlos en tu carpeta de
+SciTE (<kbd>c:/ruby/scite</kbd> si escogiste la ubicación por defecto):</p>
+
+<ul>
+<li><a href="'+LINKADDR+'SciTEGlobal.properties">Propiedades Globales</a></li>
+<li><a href="'+LINKADDR+'ruby.properties">Propiedades de Ruby</a></li>
+</ul>
+
+
+<p>Sería una buena idea crear una carpeta para guardar ahí todos tus
+programas. Asegúrate de guardar tus programas en esta carpeta.</p>
+
+<p>Para acceder a tu línea de comando, selecciona</p>
+
+<p>  Menú de Inicio - Accesorios - Símbolo del Sistema</p>
+
+<p>Luego navega hacia la carpeta
+designada para tus programas. Escribir #{input 'cd ..'} te llevará una
+carpeta arriba (carpeta padre), y #{input 'cd foldername'} te llevará a la
+carpeta llamada <kbd>foldername</kbd>. Para ver todos los folders en tu
+carpeta actual, escribe #{input 'dir /ad'}.</p>
+
+<p>¡Eso es todo! Estás listo para <a href="capitulos/01-numeros.html">aprender a programar</a>.</p>
+
+<h2 id="Instalaci-n-en-Mac">Instalación en Mac</h2>
+
+<p>Si tienes Mac OS X 10.7 (Lion), ¡Ruby está instalado en tu sistema! ¿Qué
+puede ser más fácil? Desafortunadamente si tienes una versión anterior a Max OS X 10.1
+no creo que puedas usar Ruby.</p>
+
+<p>Para poder programar, vas a necesitar escribir tus programas y
+ejecutarlos. Para esto vas a necesitar un editor de texto y la línea de
+comando.</p>
+
+<p>Tu línea de comando es accesible a través del programa Terminal (que
+encontrarás en Applications/Utilities).</p>
+
+<p>Como editor de texto puedes usar uno que te sea familiar o donde te
+sientas cómodo. Si usas TextEdit, ¡asegúrate de guardar los programas como
+texto! Si no, <em>no funcionarán</em>. Otras opciones para programar son
+emacs, vi o pico, todos accesibles desde la línea de comando.</p>
+
+<p>¡Eso es todo! Estás listo para <a href="capitulos/01-numeros.html">aprender a programar</a>.</p>
+
+<h2 id="Linux-Installation">Linux Installation</h2>
+
+<p>Primero, debes revisar si ya tienes Ruby instalado. Escribe
+<code>which ruby</code>. Si dice algo como
+<code>/usr/bin/which: no ruby in (...)</code>, entonces necesitas
+<a href="http://www.ruby-lang.org/es/downloads/">descargar Ruby</a>,
+si no, revisa que versión de Ruby tienes instalado escribiendo
+<code>ruby -v</code>. Si es más antigua que la última versión estable
+mostrada en la página de descarga mencionada arriba, deberías
+actualizarla.</p>
+
+<p>Si eres el usuario root, seguro no necesitas ningunas instrucciones para
+instalar Ruby. Si no lo eres, debes pedirle a tu administrador de redes
+que lo instale por ti. (De esa forma todos los usuarios del sistema podrán
+usar Ruby.)</p>
+
+<p>Por otro lado, puedes simplemente instalarlo para que tu lo puedas usar.
+Mueve el archivo que descargaste a una carpeta temporal, como
+<kbd>$HOME/tmp</kbd>.  Si el nombre del archivo es
+<kbd>ruby-1.9.3-p194.tar.bz2</kbd>, puedes abrirlo ejecutando
+<code>tar zxvf ruby-1.9.3-p194.tar.bz2</code>. Cambia de directorio al que acabas
+de crear (en este ejemplo, <code>cd ruby-1.9.3-p194</code>).</p>
+
+<p>Configura la instalación escribiendo
+<code>./configure --prefix=$HOME</code>. Luego escribe  <code>make</code>, lo
+que compilará el interpretador de Ruby. Esto tomará unos minutos. Después
+de terminar, escribe <code>make install</code> para instalarlo.</p>
+
+<p>Luego, vas a necesitar agergar <kbd>$HOME/bin</kbd> a tu ruta de búsqueda
+de comandos editando el archivo <kbd>$HOME/.bashrc</kbd>. (Tal vez debas
+cerrar y abrir una nueva sesión para que esto tenga efecto.) Al terminar,
+prueba tu instalación: #{input 'ruby -v'}. Si te dice la versión que
+tienes instalada, puedes eliminar los archivos en <kbd>$HOME/tmp</kbd> (o
+donde sea que los hayas puesto).</p>
+
+<p>¡Eso es todo! Estás listo para <a href="capitulos/01-numeros.html">aprender a programar</a>.</p>
+
+</div>
+<div class='mp'>
+<h1>Números</h1>
+<p>Ahora que tienes todo <a href="capitulos/00-inicio.html">instalado</a>
+¡vamos a escribir un programa! Abre tu editor de texto favorito
+y escribe lo siguiente:</p>
+
+<pre><code>puts 1+2
+</code></pre>
+
+<p>Guarda tu programa (sí, ¡eso es un programa!) como <code>calc.rb</code>
+(el <strong>.rb</strong> es lo que usualmente ponemos al final de
+los programas escritos con Ruby). Ahora ejecuta tu programa escribiendo
+<code>ruby calc.rb</code> en la línea de comandos. Deberías obtener un <code>3</code>
+en tu pantalla. ¿Lo ves?, programar no es tan difícil, ¿cierto?</p>
+
+<h2 id="Introducci-n-a-puts">Introducción a <code>puts</code></h2>
+
+<p>¿Cómo es que funciona ese programa? Seguramente puede adivinar qué es lo que
+<code>1+2</code> hace; nuestro programa es básicamente lo mismo que:</p>
+
+<pre><code>puts 3
+</code></pre>
+
+<p><code>puts</code> simplemente escribe en la pantalla lo que sea que escribamos a continuación.</p>
+
+<h2 id="Enteros-y-flotantes">Enteros y flotantes</h2>
+
+<p>En la mayoría de los lenguajes de programación (y Ruby no es la excepción)
+los números sin decimales son llamados <em>enteros</em> (traducción de <em>integers</em> en
+su versión en Inglés), y los números con punto decimal normalmente son llamados
+<em>números de punto flotante</em> (o llamados solo <em>flotantes</em> de ahora en adelante ya que proviene
+de su original en inglés <em>floats</em>).</p>
+
+<p>Aquí hay algunos enteros:</p>
+
+<pre><code>5
+-205
+9999999999999999999999999
+0
+</code></pre>
+
+<p>Y aquí hay algunos flotantes:</p>
+
+<pre><code>54.321
+0.001
+-205.3884
+0.0
+</code></pre>
+
+<p>En la práctica, la mayoría de los programas no usan flotantes, sólo enteros.
+(Después de todo, nadie quiere leer 7.4 emails, o navegar 1.8 páginas,
+o escuchar 5.24 de sus canciones favoritas...)
+Los flotantes se usan más con propósitos académicos (como por ejemplo
+experimentos científicos) y para gráficos en 3D. Incluso la mayoría de los
+programas financieros usan enteros, ¡simplemente llevan un registro de los
+centavos!</p>
+
+<h1>Aritmética simple</h1>
+
+<p>Hasta ahora, tenemos todo lo que necesita una calculadora simple.
+(Las calculadoras siempre usan flotantes, así que si
+quiere que su computadora actúe como una calculadora, también debería
+usar flotantes). Para suma y resta, usamos <kbd>+</kbd> y <kbd>-</kbd>,
+como ya lo vimos. Para la multiplicación, usamos <kbd>*</kbd>, y para
+la división usamos <kbd>/</kbd>. La mayoría de los teclados tienen estas
+teclas en el teclado numérico a la derecha. Intentemos expandir un poco
+nuestro programa calc.rb. Escribe lo siguiente y ejecútalo:</p>
+
+<pre><code>puts 1.0 + 2.0
+puts 2.0 * 3.0
+puts 5.0 - 8.0
+puts 9.0 / 2.0
+</code></pre>
+
+<p>Esto es lo que retorna el programa:</p>
+
+<pre><code>3.0
+6.0
+-3.0
+4.5
+</code></pre>
+
+<p>(Los espacios en el programa no son importantes; simplemente
+hacen que el código sea más fácil de leer). Bueno, eso no
+fue muy sorprendente. Ahora probemos con enteros:</p>
+
+<pre><code>puts 1+2
+puts 2*3
+puts 5-8
+puts 9/2
+</code></pre>
+
+<p>Básicamente lo misno, ¿no?</p>
+
+<pre><code>3
+6
+-3
+4
+</code></pre>
+
+<p>Uh... ¡excepto por el último!
+Pero cuando se hace aritmética con enteros, se obtienen enteros.
+Cuando su computadora no puede obtener la respuesta "correcta",
+siempre redondea hacia abajo. (Por supuesto, <code>4</code> <em>es</em>
+la respuesta correcta en aritmética con enteros para <code>9/2</code>;
+simplemente tal vez no sea el resultado que esperaba).</p>
+
+<p>Tal vez se pregunte para qué es útil la división entera. Bueno, digamos
+que va al cine, pero sólo tiene $9. Aquí en Portland, puede ver una
+película en el Bagdad por $2. ¿Cuántas películas puede ver allí?
+<code>9/2</code>... <code>4</code> películas. 4.5 definitivamente <em>no</em>
+es la respuesta correcta ya que no le dejarán ver la mitad de
+una película o dejar que una mitad suya vea la película entera...
+algunas cosas simplemente no son divisibles.</p>
+
+<p>¡Así que ahora experimente con algunos programas por su cuenta!
+Si quiere escribir expresiones más complejas, puede usar paréntesis.
+Por ejemplo:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>puts 5 * (12-8) + -15
+puts 98 + (59872 / (13*8)) * -52
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>5
+-29802
+</code></pre>
+
+<h2 id="Algunas-cosas-por-intentar">Algunas cosas por intentar</h2>
+
+<p>Escribe un programa que te diga:</p>
+
+<ul>
+<li>cuántas horas hay en un año?</li>
+<li>cuántos minutos hay en una década?</li>
+<li>¿cuántos segundos de edad tiene usted?</li>
+<li>¿cuántos chocolates espera comer en su vida?</li>
+<li><strong>Advertencia:</strong> ¡Esta parte del programa puede tomar tiempo para computarse!</li>
+</ul>
+
+
+<p>Aquí hay una pregunta más difícil:</p>
+
+<ul>
+<li>Si tengo 1031 millones de segundos de edad, ¿cuántos años tengo?</li>
+</ul>
+
+
+<p>Cuando termine de jugar con números, hechemos un vistazo
+a algunos  <a href="capitulos/02-textos.html">textos</a>.</p>
+
+</div>
+<div class='mp'>
+<h1>Textos</h1>
+<p>Así que hemos aprendido todo acerca de
+<a href="/capitulos/01-numeros.markdown">números</a>,
+¿pero qué acerca de letras?  ¿palabras?  ¿textos?</p>
+
+<p>Nos referimos a grupos de letras en un programa como <dfn>textos</dfn>.  (Tú puedes
+pensar en letras impresas siendo ensartadas en un cartel.)
+Aquí hay algunos textos:</p>
+
+<pre><code>'Hola.'
+'Ruby la rompe.'
+'5 es mi número favorito... ¿Cuál es el tuyo?'
+'Snoopy dice #%^?&amp;*@! cuando le aplastan el dedo del pie.'
+'     '
+''
+</code></pre>
+
+<p>Como puedes ver, los textos pueden tener puntuación, dígitos, símbolos,
+y espacios dentro... más que solo palabras. Ese último texto
+no tiene nada y podemos llamarlo un texto <dfn>vacío</dfn>.</p>
+
+<p>Hemos estado usando <code>puts</code> para imprimir números, intentémoslo con textos:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>puts 'Hola, mundo!'
+puts ''
+puts 'Adiós.'
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>Hola Mundo
+
+Adiós
+</code></pre>
+
+<p>Eso funcionó bien. Ahora inténtalo con algún texto tuyo.</p>
+
+<h2 id="Aritm-tica-de-textos">Aritmética de textos</h2>
+
+<p>Igual que hacer hacer aritmética con números, ¡tú puedes también hacer
+aritmética con textos! Bueno, algo así... puedes sumar textos, digamos.
+Intentemos sumar dos textos y ver que hace
+<code>puts</code> con eso.</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>puts 'Me gusta' + 'el pastel de manzana.'
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>Me gustael pastel de manzana
+</code></pre>
+
+<p>Whoops! Me olvidé de poner un espacio entre <code>'Me gusta'</code> y <code>'el pastel de manzana.'</code>.
+Los espacios no importan generalmente salvo si lo hacen dentro de los textos.
+(Es verdad lo que dicen: las computadoras no hacen lo que tú <em>quieres</em>
+que hagan, solo lo que tú <em>le dices</em>  que hagan) Intentémoslo nuevamente:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>puts 'Me gusta ' + 'el pastel de manzana.'
+puts 'Me gusta' + ' el pastel de manzana.'
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>Me gusta el pastel de manzana
+Me gusta el pastel de manzana
+</code></pre>
+
+<p>(Como puedes ver, no importó a que texto le agregué el espacio)</p>
+
+<p>Así que puedes sumar textos, ¡pero también puedes multiplicarlas!
+(Por un número ...) Observa esto:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>puts 'parpadeo ' * 4
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>batea tus párpados
+</code></pre>
+
+<p>(Solo bromeaba, en realidad muestra esto):</p>
+
+<pre><code>parpadeo parpadeo parpadeo parpadeo
+</code></pre>
+
+<p>Si lo piensas, tiene todo el sentido. Después de todo,
+<code>7*3</code> realemnte solo significa <code>7+7+7</code>, así que <code>'moo'*3</code> solo
+significa <code>'moo'+'moo'+'moo'</code>.</p>
+
+<h2 id="12-vs-12-"><code>12</code> vs <code>'12'</code></h2>
+
+<p>Antes de ir más allá, debemos asegurarnos de entender la
+diferencia entre <em>números</em> y <em>dígitos</em>.
+<code>12</code> es un número, pero <code>'12'</code> es un texto de dos dígitos.</p>
+
+<p>Juguemos con esto un poco:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>puts  12  +  12
+puts '12' + '12'
+puts '12  +  12'
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>24
+1212
+12  +  12
+</code></pre>
+
+<p>Y qué sucede con esto?:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>puts  2  *  5
+puts '2' *  5
+puts '2  *  5'
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>10
+22222
+2  *  5
+</code></pre>
+
+<p>Estos ejemplos fueron bastante directos. De cualquier modo, si no tienes
+cuidado en cómo mezclas tus textos y tus números podrías encontrarte con...</p>
+
+<h2 id="Problemas">Problemas</h2>
+
+<p>En este punto podrías haber probado algunas cosas que
+<em>no funcionaron</em>. Si no lo has hecho, aquí hay algunas:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>puts '12' + 12
+puts '2' * '5'
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>can't convert Fixnum into String (TypeError)
+</code></pre>
+
+<p>Hmmm... un mensaje de error.  El problema es eque en realidad
+no puedes sumar un número a un texto, o multiplicar
+un texto por otro texto. No tiene más sentido que esto:</p>
+
+<pre><code>puts 'Betty' + 12
+puts 'Fred' * 'John'
+</code></pre>
+
+<p>Algo más para tener cuidado: Puedes escribir <code>'pig'*5</code> en un programa,
+dado que sólo significa <code>5</code> veces el texto <code>'pig'</code> todo
+sumado. De cualquier modo,
+tú <em>no puedes</em> escribir <code>5*'pig'</code>, ya que eso significa <code>'pig'</code>
+veces el número <code>5</code>, lo cual es simplemente tonto.</p>
+
+<p>Finalmente, y si quisieras que tu programa imprimiera
+<code>¡Mi nombre es O'hara!</code>?  Podrías intentar:</p>
+
+<pre><code>puts '¡Mi nombre es O'hara!'
+</code></pre>
+
+<p>Bueno, <em>eso</em> no funcionará; No intentaré ni ejecutarlo.
+La computadora pensó que habíamos terminado con el texto.
+(Esta es la razón de porque es lindo tener un editor de
+texto que haga <dfn>coloreo sintáctico</dfn> por ti)
+¿Entonces, cómo permitimos que la computadora sepa que
+queremos permanecer en el texto? Tenemos que <dfn>escapar</dfn>
+el apóstrofe, de esta manera:</p>
+
+<pre><code>puts '¡Mi nombre es O\'hara!'
+</code></pre>
+
+<p>La barra invertida es el carácter de escape. En otras palabras,
+si tú tienes una barra invertida y otro carácter, ellos a veces son
+convertidos a otro carácter. Las únicas cosas que una barra invertida
+escapa son los apóstrofes y las propias barras invertidas. (Si lo
+piensas un poco, los caracteres escapados siempre se escapan a sí mismo)
+Unos pocos ejemplos vendrían muy bien, me parece:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>puts '¡Mi nombre es O\'hara!'
+puts 'barra invertida al final del texto:  \\'
+puts 'arriba\\abajo'
+puts 'arriba\abajo'
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>¡Mi nombre es O'hara!
+barra invertida al final del texto:  \
+arriba\abajo
+arriba\abajo
+</code></pre>
+
+<p>Dado que la barra invertida <em>no</em> escapa un `'d',
+pero <em>si</em> si se escapa a si misma, esos dos últimos caracteres
+son idénticos. No parecen lo mismo en el código, pero en tu computadora
+son realmente los mismos.</p>
+
+<p>Si tienes alguna pregunta, solo <a href="/capitulos/03-variables.html">¡sigue leyendo!</a>
+No podría contestar cada pregunta en <em>esta</em> página, después de todo.</p>
+
+</div>
+<div class='mp'>
+<h1>Variables</h1>
+<p>Hasta ahora, cuando usamos <code>'puts'</code> para un texto o número, esto
+desaparece. A lo que me refiero es que, si queremos imprimir algo dos
+veces, necesitamos escribirlo dos veces:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>puts '...puedes decir eso de nuevo...'
+puts '...puedes decir eso de nuevo...'
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>...puedes decir eso de nuevo...
+...puedes decir eso de nuevo...
+</code></pre>
+
+<p>Sería bueno si pudiesemos escribirlo solo una vez y quedárnoslo...
+guardarlo en algún lado.
+Bueno, si podemos, por supuesto; de otra manera, ¡no lo hubiese
+mencionado!</p>
+
+<p>Para guardar el texto en la memoria de tu computadora, necesitamos darle
+un nombre al texto. Los programadores se refieren frecuentemente a este
+proceso como <strong>asignación</strong> y llaman a los nombres
+<strong>variables</strong>. Esta variable puede ser cualquier secuencia de
+letras o números, pero el primer caracter necesita ser minúscula. Probemos
+nuestro programa de nuevo, pero esta vez voy a darle el nombre
+<code>'myString'</code> al texto (aunque podría haber usado cualquier nombre,
+por ejemplo <code>'str'</code> or <code>'myOwnLittleString'</code> or
+<code>'henryTheEighth'</code>).</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>myString = '...puedes decir eso de nuevo...'
+puts myString
+puts myString
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>...puedes decir eso de nuevo...
+...puedes decir eso de nuevo...
+</code></pre>
+
+<p>En todo momento cuando haces referencia a <code>'myString'</code>, el programa usa en su reemplazo
+<code>"'...puedes decir eso de nuevo...'"</code>. Puedes pensar
+en la variable <code>'myString'</code> como "apuntando" al texto
+<code>"'...puedes decir eso de nuevo...'"</code>. Este es un ejemplo un poco más
+interesante.</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>name = 'Patricia Rosanna Jessica Mildred Oppenheimer'
+puts 'Me llamo ' + name + '.'
+puts 'Wow!  "' + name + '" es un nombre realmente largo!'
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>Me llamo Patricia Rosanna Jessica Mildred Oppenheimer
+Wow1 Patricia Rosanna Jessica Mildred Oppenheimer es un nombre realmente largo!
+</code></pre>
+
+<p>También, así como podemos <strong>asignar</strong> un objeto a una variable,
+podemos <strong>reasignar</strong> un objeto diferente a esa variable.
+(Por eso es que las llamamos variables: porque varían.)</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>composer = 'Mozart'
+puts composer + ' fue "el amo", en su día.'
+
+composer = 'Beethoven'
+puts 'Pero yo prefiero a ' + composer + ', personalmente.'
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>Mozart fue "el amo", en su día.
+Pero yo prefiero a Beethoven, personalmente.
+</code></pre>
+
+<p>Por supuesto, las variables pueden apuntar a cualquier tipo de objecto, no
+solo texto:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>var = 'solo otro ' + 'texto'
+puts var
+
+var = 5 * (1+2)
+puts var
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>solo otro texto
+15
+</code></pre>
+
+<p>De hecho, las variables pueden apuntar a casi cualquier cosa...
+excepto otras variables. ¿Pero que pasa si lo intentamos?</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>var1 = 8
+var2 = var1
+puts var1
+puts var2
+
+puts ''
+
+var1 = 'ocho'
+puts var1
+puts var2
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>8
+8
+
+ocho
+8
+</code></pre>
+
+<p>Cuando primero tratamos de apuntar <code>var2</code> a <code>var1</code> en realidad apuntamos a <code>8</code> (que es el valor al
+cual apuntaba <code>var1</code>) Luego cuando apuntamos <code>var1</code> a <code>'ocho'</code>, el valor de <code>var2</code>no cambia ya
+que en realidad no estaba apuntando a <code>var1</code> sino a <code>8</code>. Ahora que tenemos variables, números y
+textos, vamos a ver como <a href="/capitulos/04-conversiones.html">mezclarlas</a>.</p>
+
+</div>
+<div class='mp'>
+<h1>Mezclando</h1>
+<p>Hemos revisado distintos tipos de objetos (<a href="">números</a> y <a href="">textos</a>) y hemos hecho que
+<a href="">variables</a> apunten a ellos; lo que queremos hacer después es que funcionen
+todos juntos.</p>
+
+<p>Hemos visto que si queremos que un programa imprima <code>25</code>, lo que sigue <strong><em>no</em></strong>
+funciona, porque no puedes sumar números y texto:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>var1 = 2
+var2 = '5'
+
+puts var1 + var2
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>in `+': String can't be coerced into Fixnum (TypeError)
+</code></pre>
+
+<p>Parte del problema es que tu computadora no sabe si estabas tratando de obtener <code>7</code>
+(<code>2 + 5</code>) o si querías obtener <code>'25'</code> (<code>'2' + '5'</code>).</p>
+
+<p>Antes de poderlos sumar, necesitamos alguna forma de conseguir la representación
+textual (en 'letras') de <code>var1</code>, o la representación numérica de <code>var2</code>.</p>
+
+<h2 id="Conversiones">Conversiones</h2>
+
+<p>Para obtener la representación en texto de un objeto, simplemente escribimos <code>.to_s</code>
+después de el objeto:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>var1 = 2
+var2 = '5'
+
+puts var1.to_s + var2
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>25
+</code></pre>
+
+<p>De la misma manera, <code>to_i</code> devuelve la versión numérica entera de un objeto y <code>to_f</code>
+devuelve la versión de punto flotante, o sea la que lleva decimales. Veamos que hacen
+estos tres métodos (y lo que <em>no</em> hacen) un poco más de cerca:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>var1 = 2
+var2 = '5'
+
+puts var1.to_s + var2
+puts var1 + var2.to_i
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>25
+7
+</code></pre>
+
+<p>Nota que, inclusive después de que obtuvimos la versión en texto de <code>var1</code> al llamar
+<code>to_s</code>, <code>var1</code> siempre apuntó a <code>2</code>, y nunca a <code>'2'</code>. A menos que reasignes
+explícitamente <code>var1</code> (lo que requiere de un signo <code>=</code>), apuntará a <code>2</code> durante la
+duración del programa.</p>
+
+<p>Ahora probemos conversiones más interesantes (y un poco raras):</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>puts '15'.to_f
+puts '99.999'.to_f
+puts '99.999'.to_i
+puts '5 es mi numero favorito.'.to_i
+puts '¿Quién pregunta acerca de 5 o lo que sea?'.to_i
+puts 'Tu mamá hizo.'.to_f
+puts 'fibroso'.to_s
+puts 3.to_i
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>15.0
+99.999
+99
+5
+0
+0.0
+fibroso
+3
+</code></pre>
+
+<p>Esto probablemente te ha sorprendido un poco. El primero es bastante estándar,
+devolviendo <code>15.0</code>. Después de eso, convertimos el texto <code>'99.999'</code> a un número de
+punto flotante y a un entero. El primero hizo lo que esperábamos; el entero fue,
+como siempre, redondeado hacia abajo.</p>
+
+<p>Luego, tuvimos ejemplos de algunos textos... <em>inusuales</em> ...  convertidos a números
+<code>to_i</code> ignora lo primero que no entienda, y el resto del texto a partir de ahí. Así
+que lo primero va a ser convertido a <code>5</code>, pero los otros, ya que comenzaban con letras,
+fueron ignorados completamente... así que la computadora simplemente elige usar cero.</p>
+
+<p>Finalmente, vimos que las últimas dos conversiones no hacían nada, tal como
+esperábamos.</p>
+
+<p>Hay algo extraño en nuestro método favorito... Mira esto:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>puts 20
+puts 20.to_s
+puts '20'
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>20
+20
+20
+</code></pre>
+
+<p>¿Por qué estas tres líneas retornan el mismo resultado? Bueno, las últimas dos deberían,
+ya que <code>20.to_s</code> <em>es</em> <code>'20'</code>. Pero, ¿qué pasa con la primera, el entero <code>20</code>? Para tal
+caso, ¿qué significa escribir <em>el entero</em> 20? Cuando escribes <em>2</em> y luego <em>0</em> en un
+papel, estas escribiendo texto, no un entero. <em>El entero</em> 20 es el número de dedos
+que tengo; no es <em>2</em> seguido de un <em>0</em>.</p>
+
+<p>Bueno, ahí está el secreto de nuestro amigo, <code>puts</code>: Antes de que <code>puts</code> trate de
+imprimir un objecto, usa <code>to_s</code> para obtener la versión en texto de ese objeto. De
+hecho, la <em>s</em> en <code>puts</code> significa <em>string</em> (que en español significa texto); <code>puts</code>
+realmente significa <em>put string</em> (que en español significa imprimir texto).</p>
+
+<p>Esto puede no parecer muy emocionante ahora, pero hay muchos, <em>muchos</em> objetos en
+Ruby (¡inclusive vas a aprender a crear tus propios objetos!), y es bueno saber que
+va a pasar cuando trates de ejecutar <code>puts</code> con un objeto bastante raro, como la
+foto de tu abuela, o un archivo de música, etc. Pero eso vendrá después...</p>
+
+<p>Mientras tanto, tenemos unos cuantos métodos para ti, y ellos nos permiten
+escribir todo tipo de programas divertidos...</p>
+
+<h2 id="Los-M-todos-gets-y-chomp">Los Métodos <code>gets</code> y <code>chomp</code></h2>
+
+<p>Si <code>puts</code> significa <em>put string</em>, estoy seguro que puedes adivinar que significa
+<code>gets</code> (recibir texto). Y así como <code>puts</code> siempre devuelve texto, <code>gets</code> solo funciona
+con texto. ¿Y de donde lo recibe?</p>
+
+<p>¡De ti! Bueno, de tu teclado, en realidad. Ya que tu teclado solo escribe texto,
+todo funciona bien. Lo que realmente pasa es que <code>gets</code> simplemente espera,
+leyendo todo lo que tipeas hasta que presionas <code>Enter</code>. Intentémoslo:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>puts gets
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>*¿Hay eco aquí?*
+¿Hay eco aquí?
+</code></pre>
+
+<p>Por supuesto, lo que sea que escribas simplemente será impreso en pantalla por ti.
+Ejecútalo unas cuantas veces e intenta escribir cosas distintas.</p>
+
+<p>¡Ahora podemos escribir programas interactivos! En este caso, escribe tu
+nombre y te saludará:</p>
+
+<pre><code>puts 'Hola, ¿cuál es tu nombre?'
+name = gets
+puts '¿Tu nombre es ' + name + '?  ¡Es un nombre adorable!'
+puts 'Encantado de conocerte, ' + name + '.  :)'
+</code></pre>
+
+<p><em>Uhm!</em> Acabo de ejecutarlo, escribí mi nombre y esto es lo que he obtenido:</p>
+
+<pre><code>Hola, ¿cuál es tu nombre?
+*Chris*
+¿Tu nombre es Chris
+?  ¡Es un nombre adorable!
+Encantado de conocerte, Chris
+.  :)
+</code></pre>
+
+<p>Hmmm... parece que cuanto escribí las letras <em>C</em>, <em>h</em>, <em>r</em>, <em>i</em>, <em>s</em>, y luego presioné
+<code>Enter</code>, <code>gets</code> recibió todas las letras de mi nombre <em>y</em> el <kbd>Enter</kbd>! Afortunadamente, hay un método para este tipo de cosas: <code>chomp</code>. Esto elimina cualquier <kbd>Enter</kbd>
+al final del texto. Intentémoslo de nuevo, pero con <code>chomp</code> para
+que nos ayude:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>puts 'Hola, ¿cuál es tu nombre?'
+name = gets.chomp
+puts '¿Tu nombre es ' + name + '?  ¡Es un nombre adorable!'
+puts 'Encantado de conocerte, ' + name + '.  :)'
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>Hola, ¿cuál es tu nombre?
+Chris
+¿Tu nombre es Chris?  ¡Es un nombre adorable!
+Encantado de conocerte, Chris.  :)
+</code></pre>
+
+<p>¡Mucho mejor! Nota que ya que <code>name</code> apunta a <code>gets.chomp</code>, no tenemos que usar <code>name.chomp</code>;
+<code>name</code> ya fue procesado por `chomp.</p>
+
+<h2 id="Algunas-cosas-por-intentar">Algunas cosas por intentar</h2>
+
+<ul>
+<li><p>Escribe un programa que pregunte por el nombre de una persona,
+luego el segundo nombre y luego el apellido. Finalemente, debería saludar
+a la persona con el nombre completo.</p></li>
+<li><p>Escribe un programa que pregunte por el número favorito del
+usuario. Has que tu programa agregue un número, luego sugiera el resultado
+como el número favorito pero <em>más grande y mejorado</em>.
+(Pero hazlo con tacto.)</p></li>
+</ul>
+
+
+<p>Una vez que hayas terminado los dos programas (y otros que hayas
+intentado), tratemos de aprender más (y más sobre)
+<a href="/capitulos/05-acerca-de-metodos.html">¡métodos!</a>.</p>
+
+</div>
+<div class='mp'>
+<h1>Más acerca de Métodos</h1>
+<p>Hemos visto diferentes métodos: <code>puts</code>,  <code>gets</code>,
+etc. (<strong><em>Prueba:</em></strong> <em>Listar todos los métodos que hemos
+visto hasta ahora!. Hay diez de ellos, la respuesta está abajo</em>), pero no hemos
+realmente hablado sobre que hacen los métodos. Sabemos que hacen, pero no lo que son.</p>
+
+<p>Pero realmente, esto <em>es</em> lo que son: cosas que generan otras.
+Si objetos (como textos, enteros y flotantes) son los sujetos en
+el lenguaje Ruby, entonces los métodos son como verbos. Y, justo como en
+español, tú no puedes tener un verbo sin un sustantivo para <em>hacer</em> algo.
+Por ejemplo, tic-tac no es algo que solo ocurre; un reloj (o algo) tiene que hacer
+esto. En español podemos decir: "El reloj hace tic-tac". En Ruby podemos decir
+<code>clock.tick</code> (asumiendo por supuesto que <code>clock</code> es un objeto Ruby).
+Los programadores pueden decir que estamos "llamando el método <code>tick</code> de
+<code>clock</code>" o llamamos al "<code>tick</code> de <code>clock</code>".</p>
+
+<p>Entonces, ¿has hecho la prueba? Bien. Bueno, estoy seguro que
+recordaras los métodos <code>puts</code>, <code>gets</code>, y
+<code>chomp</code>, dado que ya hablamos sobre ellos.
+Probablemente también recuerdas los métodos de conversión
+<code>to_i</code>, <code>to_f</code>, y <code>to_s</code>. Sin embargo,
+¿has visto los otros cuatro? Porque, estos no son otros que
+nuestros viejos amigos para la aritmética ¡<code>+</code>,
+<code>-</code>, <code>*</code>, y <code>/</code>!</p>
+
+<p>Entonces, como cada verbo necesita un sustantivo,
+entonces cada método necesita un objeto. Esto es generalmente fácil de
+indicar: es el que viene justo antes de un punto, como nuestro
+ejemplo <code>clock.tick</code>, o en <code>101.to_s</code>.
+Algunas veces, sin embargo, esto no es tan obvio; como con los métodos
+aritméticos. Como resulta, <code>5 + 5</code>  es solo otra forma fácil de
+escribir <code>5.+ 5</code>.
+Por ejemplo:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>puts 'hola '.+ 'mundo'
+puts (10.* 9).+ 9
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>hola mundo
+99
+</code></pre>
+
+<p>Esto no es muy lindo, por lo que no vamos a escribir siempre como ahora;
+sin embargo, es importante para entender que sucede <em>realmente</em>.</p>
+
+<p>Esto también nos da un profundo entendimiento de porque podemos hacer
+<code>'pig'*5</code> pero no podemos hacer <code>5*'pig'</code>: <code>'pig'*5</code>
+esta diciendo a <code>'pig'</code> de hacer de multiplicando, pero <code>5*'pig'</code>
+esta diciendo a <code>5</code> de hacer de multiplicando. <code>'pig'</code> sabe como
+hacer  <code>5</code> copias de si mismo y agregar todos ellos juntos; sin embargo,
+<code>5</code> tendrá mucha mas dificultad en tiempo de hacer <code>'pig'</code> copias
+de si <em>mismo</em> y sumarlos a todos juntos.</p>
+
+<p>Y, por supuesto, continuaremos teniendo <code>puts</code> y <code>gets</code> para explicar.
+¿Dónde están sus objetos? En español, puedes algunas veces dejar fuera el sustantivo;
+por ejemplo, si un villano grita "¡Muere!", el sustantivo implícito es a quien él esta
+gritando. En Ruby, si digo <code>puts 'ser o no ser'</code>, lo que realmente estoy
+diciendo es <code>self.puts 'ser o no ser'</code>.
+Entonces ¿que es <code>self</code>? Esta es una variable especial que apunta al objeto en<br />
+el que estás. No siempre sabemos como estar <em>en</em> un objeto, pero hasta que nos
+demos cuenta, siempre iremos a estar en un gran objeto que es... ¡el programa entero! (sin
+embargo en este caso no es posible llamarlo en forma explícita)
+Observa lo siguiente:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>NoPuedoCreerQueUnaVariableConNombreTanLargoApunteA3 = 3
+puts NoPuedoCreerQueUnaVariableConNombreTanLargoApunteA3
+self.puts NoPuedoCreerQueUnaVariableConNombreTanLargoApunteA3
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>3
+in `&lt;main>': private method `puts' called for main:Object (NoMethodError)
+</code></pre>
+
+<p>Si no alcanzaste a comprender todo, está bien. Lo importante es
+todo método está siendo propiedad de un objeto, incluso si no tiene
+un punto enfrente de este. Si entiendes esto estás preparado.</p>
+
+<h2 id="M-todos-imaginativos-acerca-de-Strings">Métodos imaginativos acerca de Strings</h2>
+
+<p>Vamos a aprender unos pocos pero interesantes métodos. No tienes
+porque memorizar todos; puedes mirar esta pagina de nuevo si te
+olvidas de alguno. Yo solo quiero mostrarte una <em>pequeña</em>
+parte de lo que puede hacer un texto. De hecho, no recuerdo ni
+siquiera la mitad de los métodos para textos; pero está bien, porque
+hay buenas referencias en internet con todo acerca de textos
+listados y explicados. (Voy a mostrarte donde encontrar esas referencias
+al final del tutorial.)
+Realmente, tampoco <em>quiero</em> saber todo acerca de los métodos para texto;
+sino sería como tratar de conocer cada palabra en el diccionario. Puedo hablar
+español bien sin conocer cada una de las palabras del diccionario... ¿y no es
+ese realmente el objetivo del diccionario? Entonces ¿no <em>tienes</em>
+que conocer que hay en éste?</p>
+
+<p>Entonces, nuestro primer método para texto es <code>reverse</code>,
+el cual nos una version invertida de un texto:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>var1 = 'parar'
+var2 = 'subrayado'
+var3 = 'Puedes pronunciar esta oración al reves?'
+
+puts var1.reverse
+puts var2.reverse
+puts var3.reverse
+puts var1
+puts var2
+puts var3
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>rarap
+odayarbus
+?sever la nóicaro atse raicnunorp sedeuP
+parar
+subrayado
+Puedes pronunciar esta oración al reves?
+</code></pre>
+
+<p>Como puedes ver, <code>reverse</code> no revierte el orden en el string original; este
+solo hace una nueva versión de éste en reversa. Esto es porque <code>var1</code> continua
+<code>'parar'</code> aún después de que llamamos  <code>reverse</code> sobre  <code>var1</code>.</p>
+
+<p>Otro método para texto es <code>length</code>, el cual nos dice el numero de caracteres
+(incluyendo caracteres) en el texto:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>puts 'Cuál es tu nombre completo?'
+name = gets.chomp
+puts '¿Sabes que hay ' + name.length + ' caracteres en tu nombre, ' + name + '?'
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>Cuál es tu nombre completo?
+Christopher David Pine
+#&lt;TypeError: can't convert Fixnum into String&gt;
+</code></pre>
+
+<p>¡¡Uhh!! Algo salió mal, y esto parece que ocurrió después la línea
+<code>name = gets.chomp</code>... ¿Puedes ver el problema? Fijate si puedes darte cuenta.</p>
+
+<p>El problema es con <code>length</code>: esto te devuelve un número, pero nosotros queremos
+un texto. Esto es fácil, necesitamos solo agregar <code>to_s</code> (y cruzar nuestros dedos):</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>puts 'Cuál es tu nombre completo?'
+name = gets.chomp
+puts '¿Sabías que hay ' + name.length.to_s + ' caracteres en tu nombre, ' + name + '?'
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>Cuál es tu nombre completo?
+Christopher David Pine
+Sabías que hay 22 caracteres en tu nombre, Christopher David Pine
+</code></pre>
+
+<p>No, no conocía esto.  <strong>Nota:</strong> esto es el número de
+<em>caracteres</em> en mi nombre, no el número de <em>letras</em>. Supongo
+que podríamos escribir un programa el cual nos pregunte por nuestro primer
+nombre, segundo nombre y apellidos individualmente, y entonces sumar estos tamaños
+todos juntos... hey, ¡porque no haces esto! Comienza, esperaré.</p>
+
+<p>¿Lo hiciste? ¡Bien! Es un lindo programa, ¿no? Después de unos pocos capítulos más,
+pienso, estarás sorprendido de lo que podrás hacer.</p>
+
+<p>Entonces, hay también un número de métodos para texto los cuales cambian
+el contenido (mayúsculas y minúsculas) de tu texto. <code>upcase</code>
+cambian cada minúscula por mayúscula. <code>swapcase</code> cambia en cada
+letra en el string("Hola".swapcase  #=> "hOLA"), y finalmente, <code>capitalize</code>
+es como <code>downcase</code>, excepto que esto cambia solo el primer carácter a
+mayúsculas(si es una letra).</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>letters = 'aAbBcCdDeE'
+puts letters.upcase
+puts letters.downcase
+puts letters.swapcase
+puts letters.capitalize
+puts ' a'.capitalize
+puts letters
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>AABBCCDDEE
+aabbccddee
+AaBbCcDdEe
+Aabbccddee
+ a
+aAbBcCdDeE
+</code></pre>
+
+<p>Esto es bastante estándar. Como puedes ver desde la linea <code>puts ' a'.capitalize</code>,
+el método <code>capitalize</code> solo deja en mayúsculas el primer <em>carácter</em>, no
+la primera <em>letra</em>. También, como hemos visto antes, en todas estas llamadas a
+métodos, <code>letters</code> permanece igual. No quiero decir que se dedica solo a esto,
+pero es importante entenderlo. Hay algunos métodos los cuales <em>hacen</em> cambios a los
+objetos asociados, pero no los hemos visto aún, y no lo haremos por algún tiempo.</p>
+
+<p>El último tipo de métodos que veremos son los de formato visual. El primero es, <code>center</code>,
+suma espacios al comienzo y final para hacer que este centrado. Sin embargo, solo tienes
+que decir <code>puts</code> a lo que quieres imprimir, y <code>+</code> a lo que quieres sumar, pero
+tienes que decir a <code>center</code> que ancho tiene que tener el string centrado. Entonces si quiero
+centrar las lineas de un poema, debería hacer algo como esto:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>lineWidth = 50
+puts(                'Old Mother Hubbard'.center(lineWidth))
+puts(               'Sat in her cupboard'.center(lineWidth))
+puts(         'Eating her curds an whey,'.center(lineWidth))
+puts(          'When along came a spider'.center(lineWidth))
+puts(         'Which sat down beside her'.center(lineWidth))
+puts('And scared her poor shoe dog away.'.center(lineWidth))
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>          Old Mother Hubbard                
+         Sat in her cupboard                
+      Eating her curds an whey,             
+       When along came a spider             
+      Which sat down beside her             
+  And scared her poor shoe dog away.        
+</code></pre>
+
+<p>Mmmm.. no pienso que esto es un campamento de verano, pero estoy muy
+cansado para buscar esto. (Entonces, quise alinear la parte
+<code>.center lineWidth</code> , entonces puse esos espacios extras antes
+de los textos. Esto es así solo porque pienso que es más lindo de
+esta forma. Los programadores generalmente tienen duros conceptos acerca
+de que es lindo en un programa, y a menudo confrontan acerca de esto.
+Cuanto más programes, más lograras tu propio estilo.)  Hablando de ser
+perezoso a la hora de programar, lo cual no es siempre algo malo en
+programación. Por ejemplo, fijate como guardé el ancho del poema en la
+variable  <code>lineWidth</code>? Esto es que si entonces quiero regresar
+más tarde y hacer el poema más ancho, solo tengo que cambiar la variable
+al comienzo del programa, antes que en cada línea. Con un poema muy largo,
+esto podría ahorrarme un montón de tiempo. Este tipo de pereza es realmente
+una virtud en programación.</p>
+
+<p>Entonces, acerca del centrado... tú te darás cuenta que esto no es muy
+lindo como podría serlo un procesador de texto. Si realmente quieres un
+perfecto centrado (y quizás una fuente mas linda), entonces deberías
+¡solo usar un procesador de textos!. Ruby es una herramienta maravillosa,
+pero no la herramienta correcta para <em>cualquier</em> trabajo.</p>
+
+<p>Los otros dos métodos de formato de textos son <code>ljust</code> y
+<code>rjust</code>, lo cual significan <em>justificado izquierdo</em> y
+<em>justificado derecho</em>. Estos son similares a <code>center</code>,
+excepto que ellos rellenan los lados derecho e izquierdo respectivamente.
+Vamos a verlos en acción:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>lineWidth = 40
+str = '--&gt; text &lt;--'
+puts str.ljust  lineWidth
+puts str.center lineWidth
+puts str.rjust  lineWidth
+puts str.ljust(lineWidth/2) + str.rjust(lineWidth/2)
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>--&gt; text &lt;--                            
+              --> text &lt;--              
+                            --> text &lt;--
+--> text &lt;--                --> text &lt;--
+</code></pre>
+
+<h2 id="Algunas-cosas-por-intentar">Algunas cosas por intentar</h2>
+
+<ul>
+<li><p>Escribe un programa <code>Jefe Enojado</code>. Este debe preguntar de mala
+manera que quieres. Cualquier cosa que consultes, el Jefe Enojado deberá
+devolverte la consulta de mala forma, y luego despedirte. Por ejemplo,
+si tu escribes <code>Quiero un aumento.</code>, deberá contestarte
+<code>PERO QUE DICES HOMBRE "¿¡¿QUIERES UN AUMENTO."?!?  ¡¡ESTAS DESPEDIDO!!</code></p></li>
+<li><p>Entonces aquí hay algo para que puedas jugar un poco más con
+<code>center</code>, <code>ljust</code>, y <code>rjust</code>: Escribe un programa el
+cual muestre una Tabla de Contenidos que se parezca a lo siguiente:</p></li>
+</ul>
+
+
+<p>Listado:</p>
+
+<pre><code>                Tabla de Contenidos                 
+
+Capítulo 1:  Números                        página 1
+Capítulo 2:  Letras                        página 72
+Capítulo 3:  Variables                    página 118
+</code></pre>
+
+<h2 id="Matem-ticas-Avanzadas">Matemáticas Avanzadas</h2>
+
+<p><em>(Esta sección es totalmente opcional. Asume un conocimiento
+previo de matemáticas. Si no estás interesado, puedes ir directamente
+al siguiente capítulo <a href="/capitulos/06-control-de-flujo.markdown">Control de Flujo</a>
+sin problemas. Aunque, una rápida vista de esta sección sobre
+<strong>Números aleatorios</strong> debería venir bien.)</em></p>
+
+<p>No hay tantos métodos numéricos como los hay para textos (pienso
+que aun no los conozco a todos sin recurrir a la ayuda de documentación).
+Aquí, vamos a mirar el resto de los métodos aritméticos, un generador
+de números aleatorios, y el objeto <code>Math</code> , con sus métodos trigonométricos
+y transcendentales.</p>
+
+<h2 id="M-s-de-aritm-tica">Más de aritmética</h2>
+
+<p>Los otros dos métodos aritméticos son <code>**</code> (potencia) y <code>%</code>
+(módulo). Entonces si quieres decir "cinco al cuadrado" en Ruby, deberías
+escribir algo así <code>5**2</code>. También puedes usar flotantes para tus
+exponentes, entonces si quieres una raíz cuadrada de 5, deberías escribir
+<code>5**0.5</code>. Los métodos módulo te dan el sobrante después de una división
+por un número. Entonces, por ejemplo, si divido 7 por 3, obtengo 2 con un remanente
+de 1. Vamos a ver como es que trabaja en un programa:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>puts 5**2
+puts 5**0.5
+puts 7/3
+puts 7%3
+puts 365%7
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>25
+2.23606797749979
+2
+1
+1
+</code></pre>
+
+<p>De la última línea, aprendimos que un año (no bisiesto) tienen algún
+número de semanas, más un día. Entonces si tu cumpleaños fue un Martes
+este año, el próximo año será un Miércoles. Tu también puedes usar
+flotantes con los métodos módulo. Básicamente, funciona de una manera
+lógica... pero voy a mostrar un poco mas como trabajar con esto.</p>
+
+<p>Hay un último método para mencionar antes de chequear el método random:
+ <code>abs</code>. Este solo toma el valor absoluto de un número:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>puts((5-2).abs)
+puts((2-5).abs)
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>3
+3
+</code></pre>
+
+<h2 id="N-meros-aleatorios">Números aleatorios</h2>
+
+<p>Ruby viene con un lindo generador de números aleatorios. El método para obtener
+un número aleatorio es <code>rand</code>. Si llamas <code>rand</code> , obtendrás un
+número flotante mayor o igual a <code>0.0</code> y menor a <code>1.0</code>. Si
+le proporcionas a <code>rand</code> un número entero (<code>5</code> por ejemplo),
+esto te devolverá un entero mayor o igual a <code>0</code> y menor a <code>5</code>
+(entonces son cinco números posibles, de <code>0</code> a <code>4</code>).</p>
+
+<p>Vamos a ver <code>rand</code>  en acción.</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>puts rand
+puts rand
+puts rand
+puts(rand(100))
+puts(rand(100))
+puts(rand(100))
+puts(rand(1))
+puts(rand(1))
+puts(rand(1))
+puts(rand(99999999999999999999999999999999999999999999999999999999999))
+puts('El pronosticador del tiempo dijo que hay '+rand(101).to_s+'% chances de que llueva,')
+puts('pero nunca debes confiar en el.')
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>0.866769322351658
+0.155609260113273
+0.208355946789083
+61
+46
+92
+0
+0
+0
+22982477508131860231954108773887523861600693989518495699862
+El pronosticador del tiempo dijo que hay 47% chances de que llueva,
+pero nunca debes confiar en el.  
+</code></pre>
+
+<p>Fijate que utilicé <code>rand(101)</code> para obtener números entre <code>0</code>
+y <code>100</code>, y que el <code>rand(1)</code> siempre devuelve <code>0</code>. No
+entender el rango posible de retorno de valores es el error más grande que veo
+en gente que hace <code>rand</code>; aún programadores profesionales, más aún en
+productos finalizados que puedes comprar. Incluso tenía un reproductor de CD
+que si se configuraba en "Reproducción aleatoria," reproducia<br />
+todas las canciones menos la última ... (Me pregunto ¿qué hubiera pasado si hubiera
+puesto un CD con sólo una canción en ella?)</p>
+
+<p>Algunas veces querrás que <code>rand</code> retorne el <em>mismo</em>
+random de números incluso en la misma secuencia en dos diferentes ejecuciones
+de tu programa. (Por ejemplo, una vez estaba utilizando números generados
+aleatoriamente para crear un mundo al azar por un juego de computadoras.
+Encontré un mundo que realmente me gustó, quizás me hubiera gustado jugar de nuevo
+con éste o enviarlo a un amigo.) Con el fin de hacer esto, tu necesitas configurar
+la <em>"generación de éste"</em>, lo que se puede hacer con <code>srand</code>. Como
+lo siguiente:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>srand 1776
+puts(rand(100))
+puts(rand(100))
+puts(rand(100))
+puts(rand(100))
+puts(rand(100))
+puts ''
+srand 1776
+puts(rand(100))
+puts(rand(100))
+puts(rand(100))
+puts(rand(100))
+puts(rand(100))
+</code></pre>
+
+<p> <em>Resultado:</em></p>
+
+<pre><code>24
+35
+36
+58
+70
+
+24
+35
+36
+58
+70
+</code></pre>
+
+<p>Esto hará la misma cosa cada vez que inicies con el mismo número. Si quieres
+obtener diferentes números(como pasaría si nunca utilizaras <code>srand</code>),
+entonces solo llamas a <code>srand 0</code>. Esto inicializa con un número
+realmente raro, utilizando (además de otras cosas) la hora actual de tu
+computadora, hasta los milisegundos.</p>
+
+<h2 id="El-Objeto-Math">El Objeto <code>Math</code></h2>
+
+<p>Finalmente, vamos a echar un vistazo al objeto <code>Math</code>. Deberíamos
+ir directamente a este:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>puts(Math::PI)
+puts(Math::E)
+puts(Math.cos(Math::PI/3))
+puts(Math.tan(Math::PI/4))
+puts(Math.log(Math::E**2))
+puts((1 + Math.sqrt(5))/2)
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>3.14159265358979
+2.71828182845905
+0.5
+1.0
+2.0
+1.61803398874989
+</code></pre>
+
+<p>La primera cosa de la que te habrás dado cuenta es probablemente de
+la notación <code>::</code>. Explicando el <em>alcance del operador</em>
+(que es esto) esta fuera del objetivo de este tutorial.</p>
+
+<p>Como puedes ver, <code>Math</code> tiene todas las cosas que podrías
+esperar de una calculadora científica decente. Y como siempre, los
+flotantes están <em>realmente cerca</em> de ser la respuesta
+correcta.</p>
+
+<p>Entonces ahora vamos a ver <a href="/capitulos/06-control-de-flujo.html">control de flujo</a>!</p>
+
+</div>
+<div class='mp'>
+<h1>Control de Flujo</h1>
+<p>Ahhhh, control de flujo. Acá es donde todo empieza a encajar. A pesar que este capítulo es
+más corto y facil que el capítulo de
+<a href="/capitulos/05-acerca-de-metodos.html">métodos</a>, te abrirá un mundo
+nuevo de posibilidades para programar.</p>
+
+<p>Luego de este capítulo, seremos capaces de escribir programas realmente interactivos; previamente
+hemos creado programas que <em>dicen</em> distintas cosas dependiente de lo que ingreses en tu teclado,
+pero luego de este capítulo estos también <em>harán</em> distintas cosas. Pero antes que podamos hacer
+eso, necesitamos ser capaces de comparar objectos en nuestros programas. Necesitamos...</p>
+
+<h2 id="M-todos-de-comparaci-n">Métodos de comparación</h2>
+
+<p>Avancemos rapidamente por esta sección para que podamos ir a la siguiente, <strong>Ramificaciones</strong>,
+donde todas las cosas geniales ocurren.  Entonces, para ver si un objeto es mayor o menor que otro,
+usaremos los métodos <code>&gt;</code> y <code>&lt;</code>, así:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>puts 1 &gt; 2
+puts 1 &lt; 2
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>false
+true
+</code></pre>
+
+<p>Sin problemas. De igual manera, podemos identificar si un objeto es mayor-o-igual-que otro o
+menor-o-igual-que con los métodos <code>&gt;=</code> y <code>&lt;=</code></p>
+
+<p><em>Código:</em></p>
+
+<pre><code>puts 5 &gt;= 5
+puts 5 &lt;= 4
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>true
+false
+</code></pre>
+
+<p>Finalmente, podemos ver si dos objetos son iguales o no utilizando <code>==</code> (que significa "¿son éstos
+iguales?") y <code>!=</code> (que significa "¿son éstos diferentes?")</p>
+
+<p>Es importante no confundir <code>=</code> con <code>==</code>. <code>=</code> se utiliza para decirle a una variable a que objeto apuntar
+(asignación) y <code>==</code> se utiliza para responder la pregunta: "¿Son estos dos objetos iguales?"</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>puts 1 == 1
+puts 2 != 1
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>true
+true
+</code></pre>
+
+<p>Por supuesto, podemos comparar textos también. Cuando los textos se comparan, comparan
+su <dfn>ordenamiento lexicográfico</dfn>, que básicamente significa su orden en un diccionario.  <code>gato</code>
+aparece antes que <code>perro</code> en el diccionario, así que:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>puts 'gato' &lt; 'perro'
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>true
+</code></pre>
+
+<p>Sin embargo, hay algo que tener en cuenta: la manera en que las computadoras normalmente asumen
+que las letras mayúsculas vienen antes que las letras minúsculas (Así es como almacenan los
+caracteres en las fuentes, por ejemplo: los caracteres en mayúscula primero y en minúscula después)</p>
+
+<p>Esto significa que pensará que <code>'Zoológico'</code> aparece antes que <code>'ave'</code>, así que si quieres
+encontrar que palabra aparecería antes en un diccionario real, asegúrate de utilizar <code>downcase</code> (o
+<code>upcase</code> o <code>capitalize</code>) en ambas palabras antes de tratar de compararlas.</p>
+
+<p>Un ultimo comentario antes de revisar <strong>Ramificaciones</strong>: Los métodos de comparación no
+nos están dando los textos <code>'true'</code> o <code>'false'</code> ("verdadero" y "falso" en español); nos están dando
+los objetos especiales <code>true</code> y <code>false</code>.  (Por supuesto, , <code>true.to_s</code> nos devuelve <code>'true'</code>, que es
+por lo que <code>puts</code> imprimió <code>'true'</code>.)</p>
+
+<p><code>true</code> y <code>false</code> se utilizan todo el tiempo en...</p>
+
+<h2 id="Ramificaciones">Ramificaciones</h2>
+
+<p>Las Ramificaciones son un concepto simple, pero poderoso. De hecho, es tan simple que no necesito explicarlo,
+solo te lo mostraré:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>puts 'Hola, ¿cual es tu nombre?'
+name = gets.chomp
+puts 'Hola, ' + name + '.'
+if name == 'Chris'
+  puts '¡Que nombre tan hermoso!'
+end
+</code></pre>
+
+<p><em>si respondemos 'Chris':</em></p>
+
+<pre><code>Hola, ¿cual es tu nombre?
+Chris
+Hola, Chris.
+¡Que nombre tan hermoso!
+</code></pre>
+
+<p><em>pero si ponemos otro nombre:</em></p>
+
+<pre><code>Hola, ¿cual es tu nombre?
+Chewbacca
+Hola, Chewbacca.
+</code></pre>
+
+<p>Y eso es una ramificación. Si lo que viene luego del <code>if</code> es <code>true</code> (es decir, si es cierto), se
+ejecutará el código entre el <code>if</code> y el <code>end</code>. Y no se ejecutará si lo que viene luego del <code>if</code>
+es <code>false</code> (falso). Más facil imposible.</p>
+
+<p>He indentado el código entre <code>if</code> y el <code>end</code> solo porque me parece que es más
+facil leer las ramificaciones de esa manera. Casi todos los programadores lo hacen
+así, sin importar el lenguaje en que estén programando. No parece ser de mucha ayuda
+en este ejemploe, pero cuando las cosas se vuelven complejas, es una gran diferencia.</p>
+
+<p>Varias veces nos gustaría que un programa haga alguna cosa si una expresión
+es <code>true</code>, y otra cosa si es que es <code>false</code>.  Para eso es que existe <code>else</code>:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>puts 'Soy un adivino. Dime tu nombre:'
+name = gets.chomp
+if name == 'Chris'
+  puts 'Veo grandes cosas en tu futuro.'
+else
+  puts 'Tu futuro es... ¡Oh! ¡Mira la hora!'
+  puts 'Realmente debo irme, ¡lo siento!'
+end
+</code></pre>
+
+<p><em>si respondemos 'Chris':</em></p>
+
+<pre><code>Soy un adivino. Dime tu nombre:
+Chris
+Veo grandes cosas en tu futuro.
+</code></pre>
+
+<p><em>Si tratamos con un nombre diferente:</em></p>
+
+<pre><code>Soy un adivino. Dime tu nombre:
+Ringo
+Tu futuro es... ¡Oh! ¡Mira la hora!
+Realmente debo irme, ¡lo siento!
+</code></pre>
+
+<p>Las ramificaciones son como encontrar una bifurcación en el código: ¿Seguimos el camino de las personas
+cuyo <code>name == 'Chris'</code> o el camino de aquellas que no (<code>else</code>)?</p>
+
+<p>Y como las ramas de un árbol, puedes tener ramificaciones que a su vez tengan otras ramificaciones:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>puts 'Hola, y bienvenido a la clase de 7mo año.'
+puts 'Me llamo Mrs. Gabbard. ¿Tú nombre es...?'
+nombre = gets.chomp
+
+if nombre == nombre.capitalize
+  puts 'Por favor, toma asiento ' + nombre + '.'
+else
+  puts '¿' + nombre + '? Quieres decir ' + nombre.capitalize + ', ¿cierto?'
+  puts '¿No sabes escribir tu propio nombre?'
+  respuesta = gets.chomp
+
+  if respuesta.downcase == 'si'
+    puts '¡Hum!  Bueno, ¡siéntese!'
+  else
+    puts '¡SALGA DEL SALON!'
+  end
+end
+</code></pre>
+
+<p><em>si respondemos el nombre en minúsculas:</em></p>
+
+<pre><code>Hola, y bienvenido a la clase de 7mo año.
+Me llamo Mrs. Gabbard. ¿Tú nombre es...?
+chris
+¿chris? Quieres decir Chris, ¿cierto?
+¿No sabes escribir tu propio nombre?
+si
+¡Hum!  Bueno, ¡siéntese!
+</code></pre>
+
+<p><em>y si respodemos el nombre como debe ser:</em></p>
+
+<pre><code>Hola, y bienvenido a la clase de 7mo año.
+Me llamo Mrs. Gabbard. ¿Tú nombre es...?
+Chris
+Por favor, toma asiento Chris.
+</code></pre>
+
+<p>Algunas veces puede ser algo confuso entender donde todos los <code>if</code>s, <code>else</code>s, y
+<code>end</code>s van.  Lo que yo hago es escribir el <code>end</code> <em>al mismo tiempo</em> que escribo el <code>if</code>.<br />
+Así es que como se veía al principio el programa de arriba seún lo iba escribiendo:</p>
+
+<pre><code>puts 'Hola, y bienvenido a la clase de 7mo año.'
+puts 'Me llamo Mrs. Gabbard. ¿Tú nombre es...?'
+nombre = gets.chomp
+
+if nombre == nombre.capitalize
+else
+end
+</code></pre>
+
+<p>Entonces lo llené con <dfn>comentarios</dfn>, cosas en el código que la computadora ignorará:</p>
+
+<pre><code>puts 'Hola, y bienvenido a la clase de 7mo año.'
+puts 'Me llamo Mrs. Gabbard. ¿Tú nombre es...?'
+nombre = gets.chomp
+
+if nombre == nombre.capitalize
+  #  Me trata como una persona normal.
+else
+  #  Se vuelve loca.
+end
+</code></pre>
+
+<p>Todo lo que aparezca luego de un <code>#</code> se considera un comentario  (a menos, claro,
+que estés en un texto). Después de eso, reemplacé los comentarios con
+código funcional. Algunas personas prefieren dejar los comentarios; personalmente,
+pienso que un código bien escrito normalmente habla por si mismo. Solía utilizar más
+comentarios, pero mientras más "flúido" me volvía con Ruby menos los utiliza.
+Actualmente los encuentro algo distrayentes la mayor parte del tiempo. Es una opción
+personal; tú encontrarás tu propio estilo (siempre en evolución). Así que mi siguiente
+paso se veía así:</p>
+
+<pre><code>puts 'Hola, y bienvenido a la clase de 7mo año.'
+puts 'Me llamo Mrs. Gabbard. ¿Tú nombre es...?'
+nombre = gets.chomp
+
+if nombre == nombre.capitalize
+  puts 'Por favor, toma asiento ' + nombre + '.'
+else
+  puts '¿' + nombre + '? Quieres decir ' + nombre.capitalize + ', ¿cierto?'
+  puts '¿No sabes escribir tu propio nombre?'
+  respuesta = gets.chomp
+
+  if respuesta.downcase == 'si'
+  else
+  end
+end
+</code></pre>
+
+<p>De nuevo, escribí los <code>if</code>, <code>else</code>, y <code>end</code> juntos. Realmente me ayuda para saber
+"donde estoy" en el código. Tambien permite que el trabajo parezca más sencillo ya que
+me permite enfocarme en una pequeña parte, como en llenar el código entre <code>if</code> y el
+<code>else</code>. El otro beneficio de realizarlo de esta manera es que el computador puede entender
+el programa  en cualquier etapa. Cualquiera de las versiones incompletas del programa
+que te mostrén se podrían ejecutar. No estaban finalizadas, pero eran programas funcionales.
+De esa manera, podría probarlo mientras lo escribo, lo que ayuda a ver como voy avanzando
+y donde aún necesito trabajar. Cuando pase todas las pruebas sé que he terminado.</p>
+
+<p>Estos tipos te ayudarán a escribir programas con ramificaciones pero también te ayudarán
+con otros tipos de control de flujo:</p>
+
+<h2 id="Bucles">Bucles</h2>
+
+<p>A veces querrás que tu computadora haga la misma acción una y otra vez &mdash;después de
+todo se supone que en eso son buenas las computadoras&mdash;.</p>
+
+<p>Cuando le dices a la computadora que siga repitiendo algo, también debes decirle cuando
+parar. Las computadoras nunca se aburren asi que si no le indicas cuando hacerlo nunca
+lo harán. Nos aseguramos que esto no pase al indicarle a la computadora que repita ciertas
+partes de un programe mientras (<code>while</code>) una cierta condición sea cierta. Esto funciona de
+manera muy similar a como lo hace <code>if</code>:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>comando = ''
+
+while comando != 'adios'
+  puts comando
+  comando = gets.chomp
+end
+
+puts '¡Vuelve pronto!'
+</code></pre>
+
+<p><em>Respuesta:</em></p>
+
+<pre><code>¿Hola?
+¿Hola?
+¡Hola!
+¡Hola!
+Un gusto conocerlo
+Un gusto conocerlo
+¡Oh... que amable!
+¡Oh... que amable!
+adios
+¡Vuelve pronto!
+</code></pre>
+
+<p>Y eso es un bucle. (Tal vez te has dado cuenta de la línea vacía que sale al inicio del resultado;
+viene de ejecutar el primer <code>puts</code>, antes del primer <code>gets</code>. ¿Cómo cambiarías el programa para eliminar
+esa primera línea? ¡Pruébalo! ¿Funcionó <em>exactamente</em> igual que el programa de arriba, sin
+contar la primera línea blanca?)</p>
+
+<p>Los bucles nos permiten hacer una serie de cosas interesantes, como estoy seguro te podrás imaginar.
+Sin embargo, también pueden causar problemas si cometes un error. ¿Qué pasaría si tu computadora se
+queda atrapado en un bucle infinito? Si piensas que eso te ha ocurrido, solo presiona la tecla
+<kbd>Ctrl</kbd> y luego la <kbd>C</kbd>.</p>
+
+<p>Antes de empezar a jugar con los bucles, aprendadmos un par de cosas que nos permitirán hacer nuestro
+trabajo más facil.</p>
+
+<h2 id="Un-poco-de-l-gica">Un poco de lógica</h2>
+
+<p>Echémosle un vistazo a nuestro primer programa de condicionales una vez más. ¿Qué pasaría si mi
+esposa llega a casa, ve el programa, lo prueba y éste no le dice que <em>ella</em> tiene un nombre hermoso.
+Yo no querría herir sus sentimientos (o dormir en el sillón) así que reescribámoslo:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>puts 'Hola, ¿cual es tu nombre?'
+nombre = gets.chomp
+puts 'Hola, ' + nombre + '.'
+if nombre == 'Chris'
+  puts '¡Que nombre tan hermoso!'
+else
+  if nombre == 'Katy'
+    puts '¡Que nombre tan hermoso!'
+  end
+end
+</code></pre>
+
+<p><em>Respuesta:</em></p>
+
+<pre><code>Hola, ¿cual es tu nombre?
+Katy
+Hola, Katy.
+¡Que nombre tan hermoso!
+</code></pre>
+
+<p>Bueno, funciona... pero no es un programa muy bonito. ¿Por qué no? Bueno, la mejor regla que he
+aprendido de programación es la regla <dfn>DRY</dfn>: <dfn>Don't Repeat Yourself</dfn> ("No
+te repitas" en español). Probablemente podría escribir un libro pequeño sobre por qué es tan buena
+esta regla. En nuestro caso, hemos repetido la línea <code>puts 'Que nombre tan hermoso!'</code>. ¿Por qué
+es tan problemático esto? Bueno, que pasaría si cometiera un error al escribir los textos cuando
+reescribí el programa? ¿Que tal si hubiera querido cambiar de <code>'hermoso'</code> a <code>'bonito'</code> en ambas líneas?</p>
+
+<p>Soy flojo, ¿recuerdas? Básicamente si quisiera que el programa haga lo mismo cuando reciba <code>'Chris'</code>
+o <code>'Katy'</code>, entonces realmente debería hacer exactamente<em>la misma cosa</em>:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>puts 'Hola, ¿cual es tu nombre?'
+nombre = gets.chomp
+puts 'Hola, ' + nombre + '.'
+if (nombre == 'Chris' or nombre == 'Katy')
+  puts '¡Que nombre tan hermoso!'
+end
+</code></pre>
+
+<p><em>Respuesta:</em></p>
+
+<pre><code>Hola, ¿cual es tu nombre?
+Katy
+Hola, Katy.
+¡Que nombre tan hermoso!
+</code></pre>
+
+<p>Mucho mejor. Para hacer que funcione, he utilizado el operador <code>or</code>. Los otros <em>operadores
+lógicos</em> son <code>and</code> y <code>not</code>. Siempre es una buena idea usar los paréntesis cuando trabajamos
+con éstos. Veamos como funcionan:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>soyChris        = true
+soyMorado       = false
+meGustaLaComida = true
+comoRocas       = false
+
+puts (soyChris and meGustaLaComida)
+puts (meGustaLaComida and comoRocas)
+puts (soyMorado and meGustaLaComida)
+puts (soyMorado and comoRocas)
+puts
+puts (soyChris or meGustaLaComida)
+puts (meGustaLaComida or comoRocas)
+puts (soyMorado or meGustaLaComida)
+puts (soyMorado or comoRocas)
+puts
+puts (not soyMorado)
+puts (not soyChris) 
+</code></pre>
+
+<p><em>Respuesta:</em></p>
+
+<pre><code>true
+false
+false
+false
+
+true
+true
+true
+false
+
+true
+false
+</code></pre>
+
+<p>La única de esas sentencias que te podría confundir es el <code>or</code>. En español normalmente decimos
+"uno u otro, pero no los dos". Por ejemplo, tu mamá podría decir "Para postre puedes pedir pie o
+torta". ¡Ella <em>no</em> quiso decir que podrías tener ambos!</p>
+
+<p>Una computadora, por otro lado, usa <code>or</code> (o) para decir "uno u otro o los dos"  (Otra manera de
+decirlo es "al menos una de estas debe ser cierta"). Es por eso que las computadoras son más divertidas
+que mamá.</p>
+
+<h2 id="Algunas-cosas-por-intentar">Algunas cosas por intentar</h2>
+
+<p>&bull;<em>"99 botellas de cerveza en la pared..."</em> Escribe un programa que imprima la letra del clásico
+en viajes <a href="http://en.wikipedia.org/wiki/99_Bottles_of_Beer">99 botellas de cerveza en la pared"</a></p>
+
+<p>&bull;Escribe un programa de la Abuela Sorda. Lo que sea que le digas a la abuela (lo que sea que escribas),
+ella deberá responder con HUH?!  ¡HABLA MAS FUERTE, HIJO!<code>, a menos que le grites (escribas todo
+en mayúsculas) Si le gritas, ella te escuchará (o al menos creerá eso) y te gritará de vuelta NO, ¡NO
+DESDE 1938!</code>. Para hacer el programa <em>realmente</em> creíble, haz que la abuela grite un año
+distinto cada vez; tal vez un año aleatorio entre 1930 y 1950.  (Esta parte es opcional y sería mucho
+más facil si lees la sección sobre generadores de números aleatorios de Ruby al final del capítulo
+<a href="/capitulos/05-acerca-de-metodos.markdown">métodos</a>) No podrás dejar de
+hablar con la abuela hasta que le grites <code>ADIOS</code>.<br />
+<em><strong>Pista:</strong> ¡No te olvides que </em><code>chomp</code><em>!  ¡</em><code>'ADIOS'</code><em>con un Enter
+no es lo mismo que </em><code>'ADIOS'</code><em> sin uno!</em><br />. <em><strong>Pista 2:</strong> Trata de pensar
+que partes del programa deberían suceder una y otra vez. Todas ellas deberían estar en tu bucle</em><code>while</code>.</p>
+
+<p>&bull; Extiende el programa de la Abuela Sorda. ¿Qué pasaría si la abuela no quiere que te vayas?
+Cuando le grites <code>ADIOS</code>, ella podría pretender que no te escucha. Cambia el programa previo para
+que tengas que gritar <code>ADIOS</code> tres veces <em>seguidas</em>. Asegúrate que tu programa: si gritas ADIOS`
+tres veces, pero no seguidas, deberías seguir hablando con la abuela.</p>
+
+<p>&bull; Años bisiestos. Escribe un programa que pregunte por un año de inicio y uno de fin, y luego
+imprima (<code>puts</code>) todos los años bisiestos que han ocurrido entre ellos (incluyéndolos si también han
+sido estos años bisiestos). Los años bisiestos son divisibles entre cuatro (como 1984 y 2004). Sin
+embargo, los años divisibles entre 100 <em>no</em> son años bisiestos (como 1800 y 1900) <strong><em>a
+menos</em></strong> que sean divisibles por 400 (como 1600 y 2000, los cuales fueron, de hecho, bisiestos).
+<em>(Sí, todo es bastante confuso, pero no tanto como tener Enero en medio del invierno, lo cual es
+algo que a veces sucede)</em></p>
+
+<p>Cuando termines con ellos, ¡tómate un descanso! Haz aprendido un montón hasta ahora. ¡Felicitaciones! ¿Estás
+sorprendido de la cantidad de cosas que le puedes pedir hacer a una computadora? Unos capítulos más y
+serás capaz de programar cualquier cosas. ¡En serio! Solo mira la cantidad de cosas que puedes hacer ahora
+que antes cuando no tenías bucles y ramificaciones.</p>
+
+<p>Ahora, aprendamos sobre un nuevo tipo de objeto, que permite tener control de listas de otros objetos:
+<a href="/capitulos/07-matrices.html">matrices</a>.</p>
+
+</div>
+<div class='mp'>
+<h1>Matrices e Iteraciones</h1>
+<p>Vamos a escribir un programa el cual nos pida digitar tantas
+palabras como nosotros querramos (una palabra por línea),
+continuando hasta que oprimamos <em>Enter</em> en una línea
+vacia), el cual luego nos devolverá las palabras en orden
+alfabetico. OK?</p>
+
+<p>Entonces... nosotros primero vamos; uh... um... hmmm...  Bueno,
+nosotros podríamos; er... um...</p>
+
+<p>Tú sabes, no pienso que podamos hacer esto. Necesitamos una
+forma de almacenar una cantidad desconocida de palabras y como
+obtener todas ellas juntas, entonces no se confundan con otras
+variables. Necesitamos colocarlas en un tipo de lista. Lo que
+necesitamos son <em>matrices</em>.</p>
+
+<p>Una matriz es solo una lista en su computadora. Cada  posición en
+la lista actúa como una variable: puedes ver que objeto en
+particular apunta a cada posición, y puedes hacer que este apunte
+a un objeto diferente. Vamos a echar un vistazo a algunas matrices:</p>
+
+<pre><code>[]
+[5]
+['Hola', 'Adiós']
+
+flavor = 'vainilla'           #  Esto no es una matriz, por supuesto...
+[89.9, sabor, [true, false]]  #  ...pero esto sí lo es.
+</code></pre>
+
+<p>Entonces primero tenemos una matriz vacía, luego una matriz
+conteniendo un número simple, luego una matriz que contiene
+dos textos. Siguiendo, tenemos una simple asignación, luego
+un array conteniendo tres objetos, de los cuales el último
+es la matriz <code>'[true, false]'</code>. Recuerda, variables
+no son objetos, entonces nuestra ultima matriz es en realidad
+un flotante, un <em>texto</em>, y una matriz. Aún asi si
+nosotros hubieramos puestoo <code>'sabor'</code> a punto o algo más,
+esto no hubiera cambiado la matriz.</p>
+
+<p>Para ayudarnos a encontrar un objeto particular en una matriz,
+cada posición es dada por un índice numérico. Programadores
+(y, por cierto, la mayoría de los matemáticos) comienzan
+contando desde cero, por lo que la primera posicion del array
+es cero. Aquí es como nosotros deberíamos referenciar los
+objetos en una matriz:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>names = ['Ada', 'Belle', 'Chris']
+
+puts names
+puts names[0]
+puts names[1]
+puts names[2]
+puts names[3]  #  Este esta fuera del rango.
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>    Ada
+    Belle
+    Chris
+    Ada
+    Belle
+    Chris
+</code></pre>
+
+<p>Entonces, nosotros vemos que <code>'puts names'</code> imprime
+cada nombre en la matriz <code>'names'</code>. Luego usamos
+<code>'puts names[0]'</code> para imprimir el "primer" nombre en
+la matriz, y <code>'puts names[1]'</code> para imprimir el "segundo"
+... Estoy seguro que esto parece confuso, pero puedes
+acostumbrarte a esto. Tienes que realmente solo comenzar
+pensando que el contador comienza en cero, y dejas de usar
+palabras como "primero" y "segundo"</p>
+
+<p>Si tienes un conjunto de cinco cursos, no hablas acerca del "primer"
+curso, hablas acerca del curso cero (y en tu cabeza, estás pensando
+<code>'course[0]'</code>). Tú tienes cinco dedos en tu mano derecha,
+y sus números son 0, 1, 2, 3 y 4. Mi esposa y yo somos malabaristas.
+Cuando hacemos malabares con seis objetos, nosotros estamos con
+los objetos 0-5. Esperamos en los próximos meses, poder manejarnos
+con el objeto 6(y por lo tanto trataremos de manejarnos con 7 objetos)
+Tu sabrás que lo has aprendido cuando comiences a usar la palabra
+"cero". Sí, esto es real; pregunta a cualquier programador o
+matemático.</p>
+
+<p>Finalmente, tratamos <code>'puts names[3]'</code>, solo para ver
+que podría suceder. ¿Estabas esperando un error? Algunas veces
+cuando preguntas algo, tu pregunta no tiene sentido (al menos para
+tu computadora); ahí es cuando obtienes un error.    <br />
+Algunas veces, en cambio, tu puedes preguntar algo y la
+respuesta es nada. ¿Qué hay en la posición tres? Nada.
+¿Qué hay en <code>'names[3]'</code>?  <code>'nil'</code>: Es la forma Ruby
+de decir "nada". <code>'nil'</code>  es un objeto especial que
+significa "no hay ningún objeto".</p>
+
+<p>Si todo este divertido numerado de posiciones esta molestándote,
+¡no te preocupes! También, podemos evitar esto completamente usando
+varios metodos para matrices, como el que sigue:</p>
+
+<h2 id="El-Metodo-each-">El Metodo <code>'each'</code></h2>
+
+<p><code>'each'</code> nos permite hacer algo (lo que queramos)
+a <em>cada</em> objeto que apunte. Asi, si queremos decir algo
+bueno acerca de cada lenguaje en la matriz de abajo, podriamos hacer
+esto:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>lenguajes = ['Inglés', 'Alemán', 'Ruby']
+
+lenguajes.each do |leng|
+  puts '¡Me gusta ' + leng + '!'
+  puts '¿A ti?'
+end
+
+puts '¡Y vamos a escuchar esto para C++!'
+puts '...'
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>¡Me gusta Inglés!
+¿A tí?
+¡Me gusta Alemán!
+¿A tí?
+¡Me gusta Ruby!
+¿A tí?
+¡Y vamos a escuchar esto para C++!
+...
+</code></pre>
+
+<p>¿Qué acaba de ocurrir? Bueno, tenemos permitido ir a través
+de cada objeto en la matriz sin utilizar ningun número, así
+esto es definitivamente mejor. Traducido al español
+diriamos que: Para cada <code>'each'</code> objeto en <code>'lenguajes'</code>,
+apunta la variable <code>'leng'</code> al objeto y entonces <code>'do'</code>
+(do = hacer) todo lo que te digo, hasta que llegues al <code>'end'</code>.
+(Sólo para que sepas, C++ es otro lenguaje de programación. Este es
+mucho mas difícil de aprender que Ruby; por lo general, un programa
+hecho en C++ será muchas veces más extenso que un programa en Ruby
+que haga la misma funcionalidad)</p>
+
+<p>Tú estarás pensando para ti mismo, "Esto es un montón de bucles
+como los que hemos aprendido antes". Sí, esto es similar.
+Una diferencia importante es que el método <code>'each'</code> es solo eso:
+un método. <code>'while'</code> y <code>'end'</code>; tal como <code>'do'</code>,
+<code>'if'</code>, <code>'else'</code>, y todas las otras "palabras" no lo son.
+Ellos son una parte fundamental del lenguaje Ruby,
+tal como <code>'='</code> y los paréntesis son tipos de puntuación como en español.</p>
+
+<p>Pero no <code>'each'</code>; <code>'each'</code> es solo otro método de la matriz.
+Métodos como `'each' los cuales 'actuan como' bucles son a menudo
+llamados <em>iteradores</em>.</p>
+
+<p>Algo para saber sobre iteradores es que estos son siempre seguidos por
+<code>'do'</code>...<code>'end'</code>.
+<code>'while'</code> y <code>'if'</code> nunca tuvieron un <code>'do'</code> cerca de ellos;
+nosotros solo usamos <code>'do'</code> con iteradores</p>
+
+<p>Aquí hay otro pequeño iterador, pero esto no es un método para <em>matriz</em>... es un método
+para <em>entero</em>!</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>3.times do
+  puts 'Hip-Hip-Hooray!'
+end
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>Hip-Hip-Hooray!
+Hip-Hip-Hooray!
+Hip-Hip-Hooray!
+</code></pre>
+
+<h2 id="Mas-m-todos-para-Matrices">Mas métodos para Matrices</h2>
+
+<p>Entonces hemos aprendido sobre <code>'each'</code>, pero hay muchos métodos
+más... al menos muchos como métodos para matrices. De hecho, algunos de ellos
+(como <code>'length'</code>, <code>'reverse'</code>, <code>'+'</code>, y <code>'*'</code> )
+trabajan igual que lo hacen para textos, excepto que ellos operan sobre
+las posiciones de una matriz y no sobre letras de un texto. Otros, como
+<code>'last'</code> y <code>'join'</code>, son específicos de matrices. Aún otros,
+como <code>'push'</code> y <code>'pop'</code>, en realidad cambian la matriz. Y
+así como con métodos para textos, no tienes que recordar todos, puedes
+recurrir a recordar sobre ellos buscando información.</p>
+
+<p>Primero, vamos a echar un vistazo a <code>'to_s'</code> y <code>'join'</code>.
+<code>'join'</code> trabaja tal como <code>'to_s'</code> lo hace, excepto que
+este agrega un texto entre los objetos de la matriz.
+Vamos a mirar un poco:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>alimentos = ['artichoke', 'brioche', 'caramel']
+
+puts alimentos
+puts
+puts alimentos.to_s
+puts
+puts alimentos.join(', ')
+puts
+puts alimentos.join('  :)  ') + '  8)'
+
+200.times do
+  puts []
+end
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>artichoke
+brioche
+caramel
+
+["artichoke", "brioche", "caramel"]
+
+artichoke, brioche, caramel
+
+artichoke  :)  brioche  :)  caramel  8)
+</code></pre>
+
+<p>Como puedes ver, <code>'puts'</code> trata la matriz diferente  a otros objetos:
+solo llama <code>'puts'</code> sobre cada uno de los objetos en la matriz.
+Esto es porque <code>'puts'</code> con una matriz vacía 200 veces no hace nada; la
+matriz no apunta a nada; entonces no hay nada para <code>'puts'</code>. (Hacer nada
+200 veces continúa siendo hacer nada)</p>
+
+<p>Trata de usar <code>'puts'</code> en una matriz conteniendo otras matrices; ¿hace lo
+que esperabas que hiciera?</p>
+
+<p>También, te habrás dado cuenta que dejé fuera el texto vacio cuando quise
+hacer <code>'puts'</code> de una línea en blanco? Esto hace lo mismo.</p>
+
+<p>Ahora vamos a echar un vistazo a <code>'push'</code>, <code>'pop'</code>, y  <code>'last'</code>.
+Los métodos <code>'push'</code> y <code>'pop'</code> son una suerte de métodos opuestos como
+lo son <code>'+'</code> y <code>'-'</code>. <code>'push'</code> agrega un objeto al final de la matriz,
+y <code>'pop'</code> quita el último objeto desde la matriz (y te dice que objeto es).
+<code>'last'</code> es similar a <code>'pop'</code> en el sentido que te indica que hay al final
+de la matriz, excepto que este deja la matriz. De nuevo, <code>'push'</code> y <code>'pop'</code>
+en realidad cambian la matriz:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>favoritos = []
+favoritos.push 'lluvia de rosas'
+favoritos.push 'whisky en gatitos'
+
+puts favoritos[0]
+puts favoritos.last
+puts favoritos.length
+
+puts favoritos.pop
+puts favoritos
+puts favoritos.length
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>lluvia de rosas
+whisky en gatitos
+2
+whisky en gatitos
+lluvia de rosas
+1
+</code></pre>
+
+<h2 id="Algunas-cosas-por-intentar">Algunas cosas por intentar</h2>
+
+<ul>
+<li><p>Escribe el programa del cual hablamos al principio de este capítulo.
+<strong>Consejo:</strong>  Hay un hermoso método para matrices el cual te dará la
+version ordenada de una matriz: <code>'sort'</code>. Usalo!</p></li>
+<li><p>Escribe el programa sugerido anteriormente sin usar
+el método <code>'sort'</code>.  Una gran parte de la programación es la solución de
+problemas, entonces ¡obtén toda la practica que puedas!</p></li>
+<li><p>Reescribe tu programa <code>Tabla de contenidos</code> (en el capítulo sobre <code>'métodos'</code>).
+Comienza el programa con una matriz conteniendo toda la información de tu
+Tabla de Contenidos (capítulo textos,
+capítulo números, etc.). Entonces imprime la información desde
+la matriz en una bien formada Tabla de Contenidos.</p></li>
+</ul>
+
+
+<p>Hemos aprendido varios métodos diferentes.
+Ahora es tiempo de aprender como
+<a href="/capitulos/08-metodos-propios.html">hacerlo por nosotros mismos</a>.</p>
+
+</div>
+<div class='mp'>
+<h1>Métodos Propios</h1>
+<p>Como hemos visto anteriormente, los bucles e iteradores
+nos permiten hacer lo mismo (o ejecutar el mismo código) una y
+otra vez.  Sin embargo, a veces queremos hacer algo una determinada
+cantidad de veces pero desde distintos lugares en el
+programa. Por ejemplo, supongamos que estamos escribiendo un
+programa que hace un cuestionario para un estudiante de
+sicología. De los estudiantes de sicología que he conocido y
+de los cuestionarios que me han dado, esto sería algo similar
+a:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>puts 'Hola, y gracias por tomarse el tiempo para'
+puts 'que me ayude con este experimento. Mi experimento'
+puts 'tiene que ver con tu gusto acerca de'
+puts 'la comida mexicana. Basta con pensar en la comida mexicana'
+puts 'y tratar de contestar todas las preguntas con honestidad,'
+puts 'ya sea con un "sí" o un "no". Mi experimento'
+puts 'no tiene nada que ver con mojar la cama.' 
+puts
+
+#  Preguntaremos, pero ignoraremos sus respuestas.
+
+buenaRespuesta = false
+while (not buenaRespuesta)
+  puts '¿Te gusta comer tacos?'
+  respuesta = gets.chomp.downcase
+  if (respuesta == 'si' or respuesta == 'no')
+    buenaRespuesta = true
+  else
+    puts 'Por favor, responda "si" o "no".'
+  end
+end
+
+buenaRespuesta = false
+while (not buenaRespuesta)
+  puts '¿Te gusta comer burritos?'
+  respuesta = gets.chomp.downcase
+  if (respuesta == 'si' or respuesta == 'no')
+    buenaRespuesta = true
+  else
+    puts 'Por favor, responda "si" o "no".'
+  end
+end
+
+#  Presta atención a *esta* respuesta.
+buenaRespuesta = false
+while (not buenaRespuesta)
+  puts '¡Mojas la cama?'
+  respuesta = gets.chomp.downcase
+  if (respuesta == 'si' or respuesta == 'no')
+    buenaRespuesta = true
+    if respuesta == 'si'
+      mojasLaCama = true
+    else
+      mojasLaCama = false
+    end
+  else
+    puts 'Por favor, responda "si" o "no".'
+  end
+end
+
+buenaRespuesta = false
+while (not buenaRespuesta)
+  puts '¿Te gusta comer chimichangas?'
+  respuesta = gets.chomp.downcase
+  if (respuesta == 'si' or respuesta == 'no')
+    buenaRespuesta = true
+  else
+    puts 'Por favor, responda "si" o "no".'
+  end
+end
+
+puts 'Solo una cuantas preguntas más...'
+
+buenaRespuesta = false
+while (not buenaRespuesta)
+  puts '¿Te gusta comer sopapillas?'
+  respuesta = gets.chomp.downcase
+  if (respuesta == 'si' or respuesta == 'no')
+    buenaRespuesta = true
+  else
+    puts 'Por favor, responda "si" o "no".'
+  end
+end
+
+#  Preguntas otras cosas sobre la comida mexicana.
+
+puts
+puts 'Interrogatorio:'
+puts 'Gracias por tomarse el tiempo para ayudar con'
+puts 'este experimento. De hecho, este experimento'
+puts 'no tiene nada que ver con la comida mexicana. Es'
+puts 'un experimento sobre mojar la cama. La comida mexicana'
+puts 'ahí para atraparte con la guardia baja'
+puts 'con la esperanza de que respondería más'
+puts 'honestamente. Gracias de nuevo.'
+puts
+puts mojasLaCama
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>Hola, y gracias por tomarse el tiempo para
+que me ayude con este experimento. Mi experimento
+tiene que ver con tu gusto acerca de
+la comida mexicana. Basta con pensar en la comida mexicana
+y tratar de contestar todas las preguntas con honestidad,
+ya sea con un "sí" o un "no". Mi experimento
+no tiene nada que ver con mojar la cama.
+
+¿Te gusta comer tacos?
+si
+¿Te gusta comer burritos?
+si
+¡Mojas la cama?
+de ninguna manera
+Por favor, responda "si" o "no".
+¡Mojas la cama?
+NO
+¿Te gusta comer chimichangas?
+si
+Solo una cuantas preguntas más...
+¿Te gusta comer sopapillas?
+si
+
+Interrogatorio:
+Gracias por tomarse el tiempo para ayudar con
+este experimento. De hecho, este experimento
+no tiene nada que ver con la comida mexicana. Es
+un experimento sobre mojar la cama. La comida mexicana
+ahí para atraparte con la guardia baja
+con la esperanza de que respondería más
+honestamente. Gracias de nuevo.
+
+false
+</code></pre>
+
+<p>Ese fue un programa bastante largo, con mucha repetición.
+(Todas las secciones de código sobre las preguntas de comida
+mexicana eran idénticas, y la pregunta sobre mojar la cama fue
+la única pregunta algo diferente).
+La repetición es mala. Sin embargo, no podemos transformar el
+código en un gran bucle o iterador, porque a veces queremos
+hacer algo entre las preguntas. En situaciones como estas,
+es mejor escribir un método. Aquí está como:</p>
+
+<pre><code>def decirMu
+  puts 'muuuuuu...'
+end
+</code></pre>
+
+<p>Uy... nuestro programa no hizo <code>muuuuuu</code>. ¿Por qué no?, Porque no le dijimos que lo hiciera.
+Le dijimos <em>cómo</em> hacer <code>muuuuuu</code>, pero nunca le dijimos en realidad que lo <em>haga</em>.
+Intentemos otra vez:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>def decirMu
+  puts 'muuuuuu...'
+end
+
+decirMu
+decirMu
+puts 'coin-coin'
+decirMu
+decirMu
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>muuuuuu...
+muuuuuu...
+coin-coin
+muuuuuu...
+muuuuuu...
+</code></pre>
+
+<p>Ah, mucho mejor. (En caso que no hables francés, eso fue un pato francés en medio del programa. En
+Francia los patos dicen <em>coin-coin</em>.)</p>
+
+<p>Por lo tanto, <code>def</code>inimos el método de <code>decirMu</code>. (Nombres de los métodos, al igual que
+los nombres de variables, comienzan con letras minúsculas. Hay unas pocas excepciones, tales
+como <code>+</code> o <code>==</code>.) ¿Pero los métodos no siempre tienen que estar asociados con objetos?.
+Bueno, sí, y en este caso (como sucede con <code>puts</code> y <code>gets</code>), el método sólo está
+asociado con el objeto que representa la totalidad del programa. En el próximo
+capítulo veremos cómo agregar métodos a otros objetos. Pero primero ...</p>
+
+<h2 id="Par-metros-del-M-todo">Parámetros del Método</h2>
+
+<p>Habrás notado que algunos métodos (como <code>gets</code>, <code>to_s</code>, <code>reverse</code>...) solo pueden
+ser llamados en un objeto. Sin embargo, otros métodos (como <code>+</code> , <code>-</code> , <code>puts</code>...) toman
+los <em>parámetros</em> para decir al objeto que hacer con el método. Por ejemplo, no sólo
+le diría <code>5+</code>, ¿verdad? Le estás pidiendo 5 que agregue, pero no le estás diciendo
+lo que va a agregar.</p>
+
+<p>Para agregar un parámetro a <code>decirMu</code> (digamos, el número de muuuuuu), haríamos lo siguiente:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>def decirMu numeroDeMus
+  puts 'muuuuuuu...'*numeroDeMus
+end
+
+decirMu 3
+puts 'oink-oink'
+decirMu  #  Esto debería dar un error porque falta el parámetro.
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>muuuuuuu...muuuuuuu...muuuuuuu...
+oink-oink
+in `decirMu': wrong number of arguments (0 for 1) (ArgumentError)
+</code></pre>
+
+<p><code>numeroDeMus</code> es una variable que apunta al parámetro que se le ha pasado, lo voy a decir de nuevo,
+pero es un poco confuso: <code>numeroDeMus</code> es una variable que apunta al parámetro pasado. Por lo
+tanto, si digito <code>decirMu 3</code>, el parámetro es 3, y la variable <code>numeroDeMus</code> apunta a 3.</p>
+
+<p>Como puedes ver, el parámetro es ahora <em>requerido</em>. Después de todo, lo que <code>decirMu</code> hace es multiplicar<br />
+<code>'muuuuuu...</code> ¿pero, si no le dan un parámetro? Tu pobre computadora no tiene ni idea de que hacer.</p>
+
+<p>Si los objetos en Ruby son como los nombres en español, y los métodos son como los verbos,
+entonces se puede pensar en parámetros como adverbios (como con <code>decirMu</code>, donde el parámetro
+nos dice como se afecta <code>decirMu</code>) o a veces como objetos directos (por ejemplo con ´puts´, donde
+el parámetro es lo que se <em>muestra</em>)</p>
+
+<h2 id="Variables-Locales">Variables Locales</h2>
+
+<p>En el siguientre programa hay dos variables:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>def duplicaEsto num
+  numeroVeces2 = num*2
+  puts num.to_s+' el doble es '+numeroVeces2.to_s
+end
+
+duplicaEsto 44
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>44 el doble es 88
+</code></pre>
+
+<p>Las variables son <code>num</code> y <code>numeroVeces2</code>.
+Los dos se encuentran dentro del método <code>duplicaEsto</code>. Estas (y todas las variables
+que hemos visto hasta ahora) son las <em>variables locales</em>. Esto significa que ellos viven
+dentro del método y no pueden salir. Si lo intentas obtendrás un error:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>def duplicaEsto num
+  numeroVeces2 = num*2
+  puts num.to_s+' el doble es '+numeroVeces2.to_s
+end
+
+duplicaEsto 44
+puts numeroVeces2.to_s
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>44 el doble es 88
+in `&lt;main>': undefined local variable or method `numeroVeces2' for main:Object (NameError)
+</code></pre>
+
+<p>Variable local no definida ... De hecho, nos <em>hicieron</em> definir esa variable local, pero
+no es local donde traté de usarlo, es local en el método.</p>
+
+<p>Esto podría ser un inconveniente, pero en realidad es bastante bueno. Significa que no tienes
+acceso a las variables dentro de los métodos y también significa
+que ellos no tienes acceso a <em>tus</em> variables y por lo tanto no pueden meter la pata:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>def pequenaMascota var
+  var = nil
+  puts '¡HAHA!  ¡He malogrado tu variable!'
+end
+
+var = '¡Tu ni siquiera puedes tocar mi variable!'
+pequenaMascota var
+puts var
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>¡HAHA!  ¡He malogrado tu variable!
+¡Tu ni siquiera puedes tocar mi variable!
+</code></pre>
+
+<p>En realidad, hay <em>dos</em> variables en el programa que se llaman <code>var</code>: uno en el
+interior de <code>pequenaMascota</code> y otro fuera de él. Cuando llamamos a <code>pequenaMascota var</code>, nosotros
+en realidad pasamos de un <code>var</code> a otro de manera que ambos están apuntando al mismo texto.
+Luego <code>pequenaMascota</code> apuntó a su propio <code>var</code> local a <code>nil</code>, pero que no hizo nada al <code>var</code>
+que está fuera del método.</p>
+
+<h2 id="Valores-de-Retorno">Valores de Retorno</h2>
+
+<p>Puedes haber notado que algunos métodos envían algo de regreso cuando son llamados.
+Por ejemplo, <code>gets</code> <em>retorna</em> una cadena (la cadena que escribiste), y el método <code>+</code> en
+<code>5+3</code>, (que es en realidad <code>5.+(3)</code>) devuelve <code>8</code>. Los métodos aritméticos para
+los números retornan números y los métodos aritméticos para los textos devuelven textos.</p>
+
+<p>Es importante entender la diferencia entre los métodos que devuelven un valor al método
+que lo llamó, y lo que el programa muestra en la pantalla como hace <code>puts</code>. Ten en
+cuenta que <code>5+3</code> retorna <code>8</code>, cosa que <em>no</em> hace la salida <code>8</code>.</p>
+
+<p>Entonces, ¿qué es lo que <em>hace</em> <code>puts</code> al retornar? No nos importó antes, pero vamos a ver ahora:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>valorRetorno = puts 'Esto es lo que puts retorna:'
+puts valorRetorno
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>Esto es lo que puts retorna:
+cero
+</code></pre>
+
+<p>Así que el primer <code>puts</code> retornó <code>nil</code>. A pesar de que no lo prueba, el segundo <code>puts</code>
+también lo hizo, <code>puts</code> siempre retorna <code>nil</code>. Cada método tiene que devolver algo,
+incluso si es valor es solo <code>nil</code>.</p>
+
+<p>Tómate un descanso rápido y escribe un programa para averiguar lo que <code>decirMu</code> devuelve.</p>
+
+<p>¿Te sorprendió? Bueno, así es como funciona: el valor devuelto por un método no es más que
+la última línea del método. En el caso de <code>decirMu</code>, esto significa que devuelve
+<code>puts "muuuuuu... '* Los numeroDeMus</code>, lo cual es simplemente <code>nil</code> ya que <code>puts</code> siempre
+devuelve <code>nil</code>. Si queremos que todos nuestros métodos devuelvan el texto <code>'submarino amarillo'</code>,
+sólo tenemos que ponerla al final de ellos:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>def decirMu numeroDeMus
+  puts 'muuuuuu...'*numeroDeMus
+  'submarino amarillo'
+end
+
+x = decirMu 2
+puts x
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>muuuuuu... muuuuuuu...
+submarino amarillo
+</code></pre>
+
+<p>Vamos a tratar con el experimento de sicología otra vez, pero esta vez vamos a
+escribir un método que haga las preguntas por nosotros. Se tendrá que tomar la pregunta
+como un parámetro, y devolver <code>true</code> si contestan que <code>sí</code>, y <code>false</code> si responden que <code>no</code>.
+(Aún cuando la mayoría de veces ignoramos la respuesta, sigue siendo una buena idea
+que nuestro método devuelva la respuesta. De esta manera se puede utilizar para la pregunta
+de mojar la cama también.) También voy a acortar el saludo y el interrogatorio de manera
+que sea más fácil de leer:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>def preguntar pregunta
+  buenarespuesta = false
+  while (not buenarespuesta)
+    puts pregunta
+    reply = gets.chomp.downcase
+
+    if (reply == 'si' or reply == 'no')
+      buenarespuesta = true
+      if reply == 'si'
+        answer = true
+      else
+        answer = false
+      end
+    else
+      puts 'Por favor, responder "si" o "no".'
+    end
+  end
+
+  answer  #  Esto es lo que retorna (`true` o `false`).
+end
+
+puts 'Hola, y gracias por...'
+puts
+
+preguntar '¿Te gusta comer tacos?'      #  Ignoramos la respuesta.
+preguntar '¿Te gusta comer burritos?'
+mojasLaCama = preguntar '¿Mojas la cama?'  #  Salvamos el valor retornado.
+preguntar '¿Te gusta comer chimichangas?'
+preguntar '¿Te gusta comer sopapillas?'
+preguntar '¿Te gusta comer tamales?'
+puts 'Solo unas preguntas mas...'
+preguntar '¿Te gusta beber horchata?'
+preguntar '¿Te gusta comer flautas?'
+
+puts
+puts 'Interrogatorio:'
+puts 'Gracias por...'
+puts
+puts mojasLaCama
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>¿Te gusta comer tacos?
+si
+¿Te gusta comer burritos?
+si
+¿Mojas la cama?
+de ninguna manera
+Por favor, responder "si" o "no".
+¿Mojas la cama?
+NO
+¿Te gusta comer chimichangas?
+si
+¿Te gusta comer sopapillas?
+si
+¿Te gusta comer tamales?
+si
+Solo unas preguntas mas...
+¿Te gusta beber horchata?
+si
+¿Te gusta comer flautas?
+si
+
+Interrogatorio:
+Gracias por...
+
+false
+</code></pre>
+
+<p>No está mal, ¿eh?. Hemos sido capaces de añadir más preguntas (y la adición de
+preguntas ahora es <em>fácil</em>), y nuestro programa es aún más corto!. Es una gran mejora -
+El sueño de un programador perezoso.</p>
+
+<h2 id="Un-ejemplo-m-s-grande">Un ejemplo más grande</h2>
+
+<p>Creo que otro método como ejemplo podría ser útil aquí. Llamaremos
+a este <em>numeroEnEspanol</em>. Se llevará un número, como <code>22</code>, y devolverá
+la versión en español de la misma (en este caso el texto de <code>'veintidós'</code>)
+Por ahora, vamos a trabajar solamente con números enteros entre 0 a 100.</p>
+
+<p><em>(<strong>NOTA:</strong> Este método utiliza un nuevo truco para retornar en forma temprana
+en el método usando <code>return</code> e introduce un nuevo giro en las bifurcaciones: <code>elsif</code>.
+Debe quedar claro en el contexto de cómo funcionan estos.)</em></p>
+
+<p><em>Código:</em></p>
+
+<pre><code>def numeroEnEspanol numero
+  #  Solo estamos considerando los números de 0-100.
+  if numero &lt; 0
+    return 'Por favor ingrese un numero mayor o igual a cero.'
+  end 
+  if numero &gt; 100
+    return 'Por favor ingrese un numero menor o igual a 100'
+  end
+
+  numeroDeTexto  = ''  #  Esta es el texto que retorna.
+
+  #  "izquierda" es cuanto del número aún falta escribir.
+  #  "escrito" es la parte que estamos escribiendo en estos momentos.
+  #  escrito y izquierda... lo captas?  :)
+  izquierda  = numero
+  escrito = izquierda/100          #  Cuantos cientos faltan escribir?
+  izquierda  = izquierda - escrito*100  #  Restar estos cientos.
+
+  if escrito &gt; 0 
+    return 'cien'
+  end
+
+  escrito = izquierda/10          #  Cuantas decenas faltan escribir?
+  izquierda  = izquierda - escrito*10  #  Restar las decenas.
+
+  if escrito &gt; 0
+    if escrito == 1  #  Ah-ah...
+      #  No podemos escribir "diezidos" en lugar de "doce", 
+      #  hemos realizado una excepción especial .
+      if    izquierda == 0
+        numeroDeTexto = numeroDeTexto + 'diez'
+      elsif izquierda == 1
+        numeroDeTexto = numeroDeTexto + 'once'
+      elsif izquierda == 2
+        numeroDeTexto = numeroDeTexto + 'doce'
+      elsif izquierda == 3
+        numeroDeTexto = numeroDeTexto + 'trece'
+      elsif izquierda == 4
+        numeroDeTexto = numeroDeTexto + 'catorce'
+      elsif izquierda == 5
+        numeroDeTexto = numeroDeTexto + 'quince'
+      elsif izquierda == 6
+        numeroDeTexto = numeroDeTexto + 'dieciseis'
+      elsif izquierda == 7
+        numeroDeTexto = numeroDeTexto + 'diecisiete'
+      elsif izquierda == 8
+        numeroDeTexto = numeroDeTexto + 'dieciocho'
+      elsif izquierda == 9
+        numeroDeTexto = numeroDeTexto + 'diecinueve'
+      end
+      #  Desde que ya tomamos el digito faltante,
+      #  ya no tenemos nada que escribir.
+      izquierda = 0
+    elsif escrito == 2
+      #  Como no podemos decir "veinteiuno",
+      #  tenemos que eliminar la "e" final.
+      if izquierda == 0
+        numeroDeTexto = numeroDeTexto + 'veinte'
+      else
+        numeroDeTexto = numeroDeTexto + 'veint'
+      end
+    elsif escrito == 3
+      numeroDeTexto = numeroDeTexto + 'treinta'
+    elsif escrito == 4
+      numeroDeTexto = numeroDeTexto + 'cuartenta'
+    elsif escrito == 5
+      numeroDeTexto = numeroDeTexto + 'cincuenta'
+    elsif escrito == 6
+      numeroDeTexto = numeroDeTexto + 'sesenta'
+    elsif escrito == 7
+      numeroDeTexto = numeroDeTexto + 'setenta'
+    elsif escrito == 8
+      numeroDeTexto = numeroDeTexto + 'ochenta'
+    elsif escrito == 9
+      numeroDeTexto = numeroDeTexto + 'noventa'
+    end
+
+    if izquierda &gt; 0
+      numeroDeTexto = numeroDeTexto + 'i'
+    end
+  end
+
+  escrito = izquierda  #  Cuanto falta para el número?
+  izquierda  = 0     #  Restar lo que falta.
+
+  if escrito &gt; 0
+    if    escrito == 1
+      numeroDeTexto = numeroDeTexto + 'uno'
+    elsif escrito == 2
+      numeroDeTexto = numeroDeTexto + 'dos'
+    elsif escrito == 3
+      numeroDeTexto = numeroDeTexto + 'tres'
+    elsif escrito == 4
+      numeroDeTexto = numeroDeTexto + 'cuatro'
+    elsif escrito == 5
+      numeroDeTexto = numeroDeTexto + 'cinco'
+    elsif escrito == 6
+      numeroDeTexto = numeroDeTexto + 'seis'
+    elsif escrito == 7
+      numeroDeTexto = numeroDeTexto + 'siete'
+    elsif escrito == 8
+      numeroDeTexto = numeroDeTexto + 'ocho'
+    elsif escrito == 9
+      numeroDeTexto = numeroDeTexto + 'nueve'
+    end
+  end
+
+  if numeroDeTexto == ''
+    #  La unica forma que "numeroDeTexto" este vacio es que 
+    #  "numero" sea 0.
+    return 'cero'
+  end
+
+  #  Si numeroDeTexto os hasta hasta aqui es que tenemos un numero 
+  #  entre 0 y 100, por lo que debemos retornar "numeroDeTexto".
+  numeroDeTexto
+end
+
+puts numeroEnEspanol(  0)
+puts numeroEnEspanol(  9)
+puts numeroEnEspanol( 10)
+puts numeroEnEspanol( 21)
+puts numeroEnEspanol( 17)
+puts numeroEnEspanol( 32)
+puts numeroEnEspanol( 88)
+puts numeroEnEspanol( 99)
+puts numeroEnEspanol(100)
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>cero
+nueve
+diez
+veintiuno
+diecisiete
+treintaidos
+ochentaiocho
+noventainueve
+cien
+</code></pre>
+
+<p>Bueno, sin duda hay algunas cosas acerca de este programa que no me gustan. En primer
+lugar hay demasiada repetición. En segundo lugar, no se ocupa de los números mayores de
+100. En tercer lugar, hay muchos casos especiales, demasiados <code>return</code>s. Veamos ahora
+algunas matrices y tratar de limpiar un poco:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>def numeroEnEspanol numero
+  if numero &lt; 0  #  No numeros negativos
+    return 'Por favor ingresar un numero que nos ea negativo.'
+  end
+  if numero == 0
+    return 'cero'
+  end
+
+  #  No mas casos especiales!  No mas returns!
+
+  numeroDeTexto = ''  #  Esta es el texto que se retornara.
+
+  primeraPosicion = ['uno',     'dos',       'tres',    'cuatro',     'cinco',
+               'seis',     'siete',     'ocho',    'nueve']
+  segundaPosicion = ['diez',     'veinte',    'treinta',   'cuarenta',    'cincuenta',
+               'sesenta',   'setenta',   'ochenta',   'noventa']
+  entre11Y19 = ['once',  'doce',    'trece', 'catorce', 'quince',
+               'dieciseis', 'diecisiete', 'dieciocho', 'diecinueve']
+  entre21Y29 = ['veintiuno',  'veintidos',    'veintitres', 'veinticuatro', 'veinticinco',
+               'veintiseis', 'veintisiete', 'veintiiocho', 'veintinueve']
+
+  #  "izquierda" es cuanto del numero aun falta escribir
+  #  "escrito" es la parte que estamos escribiendo en este momento.
+  #  escrito y izquierda... lo captas?  :)
+  izquierda  = numero
+  escrito = izquierda/100          #  Cuantos cientos faltan escribir?
+  izquierda  = izquierda - escrito*100  #  La esta de estos cientos
+
+  if escrito &gt; 0
+    #  Ahora hacemos un pequeño truco:
+    cientos  = numeroEnEspanol escrito
+    numeroDeTexto = numeroDeTexto + cientos + ' ciento'
+
+    # Eso se llama "recursividad". Entonces, ¿Qué acabo de hacer? 
+    # Le dije a este método para llamarse a sí mismo, pero con "escrito" en vez de 
+    # "numero". Recuerde que "escrito" es (por el momento) el número de 
+    # cientos que tenemos que escribir. Después añadimos "hundred" de "numeroDeTexto", 
+    # añadimos la cadena 'cien' después de él. Así, por ejemplo, si 
+    # se llamó originalmente numeroEnEspanol con el 1999 (por lo que "numero" = 1999), 
+    # y luego en este momento "escrito" sería 19, y la "izquierda" sería 99. 
+    # La más perezoso que se puede hacer en ese momento es que numeroEnEspanol 
+    # escriba 'diecinueve' para nosotros, entonces escribimos 'cien', 
+    # y luego el resto de numeroEnEspanol escribe "noventa y nueve".
+
+    if izquierda &gt; 0
+      #  So escribir  'dos ciencincuentaiuno'...
+      numeroDeTexto = numeroDeTexto + ' '
+    end
+  end
+
+  escrito = izquierda/10          #  Cuantas decenas faltan escribir?
+  izquierda  = izquierda - escrito*10  #  Resta de estas decenas.
+
+  if escrito &gt; 0
+    if ((escrito == 1) and (izquierda &gt; 0))
+      #  No podemos escribir "diez-dos" instead of "doce",
+      #  hacemos una excepción especial .
+      numeroDeTexto = numeroDeTexto + entre11Y19[izquierda-1]
+      #  Es "-1" porque entre11Y19[3] ess 'catorce', no 'trece'.
+
+      #  Ya que tomamos el digito que nos faltaba,
+      #  no tenemos nada mas que escribir.
+      izquierda = 0
+    elsif ((escrito ==2 and (izquierda&gt;0)))
+      #  Similar para los veintipico
+      numeroDeTexto = numeroDeTexto + entre21Y29[izquierda-1]
+      izquierda = 0
+    else
+      numeroDeTexto = numeroDeTexto + segundaPosicion[escrito-1]
+      #  Es "-1" porque segundaPosicion[3] es 'cuarenta', no 'treinta'.
+    end
+
+    if izquierda &gt; 0
+      #  No escribiremos 'sesentacuatro'...
+      numeroDeTexto = numeroDeTexto + 'i'
+    end
+  end
+
+  escrito = izquierda  #  Cuantos faltan?
+  izquierda  = 0     #  Restar lo que falta.
+
+  if escrito &gt; 0
+    numeroDeTexto = numeroDeTexto + primeraPosicion[escrito-1]
+    #  Es "-1" porque primeraPosicion[3] es 'cuatro', no 'tres'.
+  end
+
+  #  Ahora solo retornamos "numeroDeTexto"...
+  numeroDeTexto
+end
+
+puts numeroEnEspanol(  0)
+puts numeroEnEspanol(  9)
+puts numeroEnEspanol( 10)
+puts numeroEnEspanol( 11)
+puts numeroEnEspanol( 17)
+puts numeroEnEspanol( 32)
+puts numeroEnEspanol( 88)
+puts numeroEnEspanol( 99)
+puts numeroEnEspanol(100)
+puts numeroEnEspanol(101)
+puts numeroEnEspanol(234)
+puts numeroEnEspanol(3211)
+puts numeroEnEspanol(999999)
+puts numeroEnEspanol(1000000000000)
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>cero
+nueve
+diez
+once
+diecisiete
+treintaidos
+ochentaiocho
+noventainueve
+uno ciento
+uno ciento uno
+dos ciento treintaicuatro
+treintaidos ciento once
+noventainueve ciento noventainueve ciento noventainueve
+uno ciento ciento ciento ciento ciento ciento
+</code></pre>
+
+<p><em>Ahhhh ....</em> Eso está mucho, mucho mejor. El programa es bastante denso, por lo
+que puse varioos comentarios. También funciona con números grandes ... aunque no
+tan bien como cabría esperar. Por ejemplo, creo que ' un millón de millones ' sería
+un valor de retorno más agradable para que el último número. De hecho, puedes hacer
+eso en este momento ...</p>
+
+<h2 id="Algunas-cosas-por-intentar">Algunas cosas por intentar</h2>
+
+<ul>
+<li><p>Ampliar al <code>numeroEnEspanol</code> . En primer lugar, poner en miles. Por lo tanto, debe devolver <code>un mil</code>
+en lugar de <code>diez cien</code> y <code>diez mil</code> en lugar de <code>cien cien</code> .</p></li>
+<li><p>Ampliar al <code>numeroEnEspanol</code> un poco más. Ahora ponga en millones, para que pueda obtener <code>un millón</code>
+en lugar de <code>un mil mil</code>. A continuación, pruebe a añadir miles de millones y billones.
+¿Qué tan alto puede llegar?</p></li>
+<li><p>¿Qué hay de <code>tiempoDeMatrimonio</code>? Deberá trabajar casi como <code>numeroEnEspanol</code>, excepto que se
+debe insertar la palabra "y" por todo el lugar, volviendo las cosas como <code>`mil movecientos
+setenta y dos'</code>, o como se supone deben verse en las invitaciones de la boda. Te daría
+más ejemplos, pero yo no lo entiendo completamente. Es posible que necesite ponerse en
+contacto con un coordinador de bodas para que le ayude.</p></li>
+<li><p>Las <em>"Noventa y nueve botellas de cerveza ..."</em> Usando numeroEnEspanol y el viejo programa,
+escribir las letras de esta canción en forma <em>correcta</em> esta vez.
+Penalizar a tu computador: hacer que se inicie en 9999. (No elegir un número demasiado
+grande, ya que al escribir todo eso en la pantalla de tu computador toma un buen tiempo. Cien
+mil botellas de cerveza lleva tiempo;. Y si tienes que elegir un millón, te estarás
+castigando tú mismo!</p></li>
+</ul>
+
+
+<p>¡Felicitaciones! En este punto, usted es un ¡programador de verdad! Usted ha aprendido
+todo lo que necesita para construir grandes programas desde cero. Si tienes ideas
+para los programas que te gustaría escribir para ti mismo, ¡dame una!</p>
+
+<p>Por supuesto, construir todo desde cero puede ser un proceso bastante lento. ¿Por
+qué gastar tiempo escribiendo código que alguien más ya ha escrito? ¿Quieres
+que tu programa envie un correo electrónico? ¿Te gustaría guardar y cargar archivos
+en tu computadora? ¿Qué hay de la generación de páginas web para ver un tutorial en
+donde los ejemplos de código son automáticamente ejecutados? ;) Ruby tiene muchos
+<a href="/capitulos/09-clases.html">tipos de objetos</a>
+que podemos utilizar para ayudarnos a escribir mejores programas y con mayor rapidez.</p>
+
+</div>
+<div class='mp'>
+<h1>Clases</h1>
+<p>Hasta ahora hemos visto diferentes tipos o <em>clases</em> de objetos:
+textos, enteros, flotantes, matrices, y algunos objetos especiales
+(<code>true</code>, <code>false</code> y <code>nil</code>) de los cuales hablaremos más tarde.
+En Ruby, estas clases están siempre en mayúsculas: <code>String</code>, <code>Integer</code>,
+<code>Float</code>, <code>Array</code> ... etc. En general, si queremos crear un nuevo
+objeto de una cierta clase, usamos <code>new</code>:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>a = Array.new  + [12345]  #  Array  agregado.
+b = String.new + 'hello'  #  String agregado.
+c = Time.new
+
+puts 'a = '+a.to_s
+puts 'b = '+b.to_s
+puts 'c = '+c.to_s
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>a = [12345]
+b = hello
+c = 2012-06-01 12:52:06 -0500
+</code></pre>
+
+<p>Porque podemos crear matrices y textos usando  <code>[...]</code> y <code>' ... '</code>
+respectivamente es que rara vez los creamos usando <code>new</code>. (Aunque
+no es muy evidente en el ejemplo anterior, <code>String.new</code> crea una
+cadena vacía y <code>Array.new</code> crea una matriz vacía) También, los
+números son excepciones especiales: no se puede crear un número
+entero con <code>Integer.new</code> . Sólo tienes que escribir el número entero.</p>
+
+<h2 id="La-clase-Time">La clase <code>Time</code></h2>
+
+<p>Entonces, ¿cuál es la historia con la clase <code>Time</code>?. Los objetos <code>Time</code>
+representan momentos en el tiempo. Usted puede sumar (o restar) números a
+(o desde) para obtener los nuevos tiempos: la adición de <code>1.5</code>
+a un tiempo hace un tiempo nuevo segundo y medio más tarde:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>hora  = Time.new   #  El momento que se ejecutó esta código
+hora2 = hora + 60  #  Un minuto más tarde.
+
+puts hora
+puts hora2
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>2012-06-01 12:55:49 -0500
+2012-06-01 12:56:49 -0500
+</code></pre>
+
+<p>También puedes obtener el tiempo para un momento específico utilizando <code>Time.mktime</code>:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>puts Time.mktime(2000, 1, 1)          #  Y2K.
+puts Time.mktime(1976, 8, 3, 10, 11)  #  Cuando nació Chris.
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>2000-01-01 00:00:00 -0500
+1976-08-03 10:11:00 -0500
+</code></pre>
+
+<p>Nota: yo nací en el horario de verano del Pacífico (PDT).
+Cuando se presentó el problema del año 2000, sin embargo, era hora
+estándar del Pacífico (PST), por lo menos para nosotros los de la
+Costa Oeste. Los paréntesis son para agrupar los parámetros a <code>mktime</code>.
+Los parámetros adicionales hacen más preciso el tiempo obtenido.</p>
+
+<p>Puedes comparar los tiempos usando los métodos de comparación
+(un tiempo anterior es <em>menos que</em> un tiempo posterior), y si se resta
+un tiempo de otro obtendrás el número de segundos entre ellos. Juega un poco con él!</p>
+
+<h2 id="Algunas-cosas-para-probar">Algunas cosas para probar</h2>
+
+<ul>
+<li><p>Mil millones de segundos ... Descubre el segundo exacto en que naciste
+(si puedes). Averigua cuando tendrás (o tal vez cuando tuviste?) mil millones
+de segundos de edad, luego marcalo en tu calendario.</p></li>
+<li><p>¡Feliz cumpleaños! Pregunta en qué año nació una persona, luego el mes, y luego el día.
+Calcula la edad que tiene y dale una gran ´¡NALGADA!´ por cada cumpleaños que ha tenido.</p></li>
+</ul>
+
+
+<h2 id="La-claseHash">La clase<code>Hash</code></h2>
+
+<p>Otra clase muy útil es <code>Hash</code>. Los valores hash son muy parecidos a
+las matrices: tienen un montón de ranuras que pueden apuntar a objetos diferentes.
+Sin embargo, en una matriz, las ranuras están alineados en una fila y cada uno
+está numerado (empezando de cero). En un <code>hash</code>, las ranuras no están en una fila
+(que es sólo un tipo de mezcla), y se puede utilizar <em>cualquier</em> objeto
+para hacer referencia a un espacio no sólo un número. Es bueno utilizar
+hashes cuando se tiene un montón de cosas que no se desea perder de vista,
+pero que en realidad no encajan en una lista ordenada. Por ejemplo los colores que
+yo uso para las diferentes partes del código con las que he creado este tutorial:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>colorArray = []  #  igual a Array.new
+colorHash  = {}  #  igual a Hash.new
+
+colorArray[0]         = '#FF0000'
+colorArray[1]         = '#008000'
+colorArray[2]         = '#0000FF'
+colorHash['textos ']  = '#FF0000'   # rojo
+colorHash['numeros']  = '#008000'   # verde
+colorHash['claves ']  = '#0000FF'   # azul
+
+colorArray.each do |color|
+  puts color
+end
+colorHash.each do |tipoCodigo, color|
+  puts tipoCodigo + ' :  ' + color
+end
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>#FF0000
+#008000
+#0000FF
+textos  :  #FF0000
+numeros :  #008000
+claves  :  #0000FF
+</code></pre>
+
+<p>Si utilizo una matriz, tengo que recordar que la ranura <code>0</code> es para las textos,
+la ranura <code>1</code> es para los números, etc, pero si puedo usar un hash, ¡es muy fácil!
+Ranura <code>' textos '</code> mantiene el color de las cadenas, por supuesto. No hay
+nada que recordar. Puedes haber notado que cuando se utiliza <code>each</code>
+los objetos en el hash no vienen en el mismo orden en que los pusiste adentro. (Al menos
+no lo hacían cuando escribí esto. Pueden que lo hagan ahora... nunca se sabe con los hashes).
+Matrices son para mantener las cosas en orden, no hashes.</p>
+
+<p>Aunque la gente suele utilizar textos para nombrar las ranuras de un hash, se
+puede utilizar cualquier tipo de objeto, incluso las matrices y los hashes de
+otros (aunque yo no puedo pensar en por qué querría hacer esto ...):</p>
+
+<pre><code>weirdHash = Hash.new
+
+weirdHash[12] = 'monos'
+weirdHash[[]] = 'el vacío'
+weirdHash[Time.new] = 'ningun momento como el actual'
+</code></pre>
+
+<p>Hashes y matrices son buenos para cosas diferentes, depende de ti decidir cuál
+es el mejor para un problema particular.</p>
+
+<h2 id="Extendiendo-las-clases">Extendiendo las clases</h2>
+
+<p>Al final del último capítulo escribiste un método para decir la frase en español
+de un número entero. No era un método de número entero, sin embargo;
+fue sólo un método genérico de un "programa". ¿No sería agradable si pudieras
+escribir algo como <code>22.to_esp</code> en lugar de <code>numeroEspanol  22</code>?. He aquí cómo harías eso:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>class Integer
+  def to_esp
+    if self == 5
+      espanol = 'cinco'
+    else
+      espanol = 'cincuenta y ocho'
+    end
+
+    espanol
+  end
+end
+
+#  Mejor probarlo en un par de números...
+puts 5.to_esp
+puts 58.to_esp
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>cinco
+cincuenta y ocho
+</code></pre>
+
+<p>Bueno, lo he probado y parece que funciona. ;)</p>
+
+<p>Por lo tanto, definimos un método del número entero ingresando en la clase <code>Integer</code>,
+definiendo el método allí y saliendo luego. Ahora todos los números enteros tienen
+este (algo incompleto) método. De hecho, si no te gusta la forma en que el método
+<code>to_s</code> trabaja, lo podrías definir en gran parte de la misma manera ... pero ¡yo no
+lo recomiendo! Lo mejor es dejar los viejos métodos y hacer otros nuevos cuando
+se quiere hacer algo nuevo.</p>
+
+<p>Así que ... ¿confundido? Permiteme explayarme más en ese último programa.
+Hasta ahora, cada vez que ejecutabas cualquier código o cualquier otro método definido se
+hacía por omisión en el "programa" del objeto. En nuestro último programa,
+dejamos el objeto por primera vez y se fuimos a la clase <code>Integer</code>. Se definió
+un método allí (lo que lo convierte en un método de número entero) y que todos
+los números enteros pueden utilizar. Dentro de ese método se utiliza <code>self</code> para
+referirse al objeto (el entero) utilizando el método.</p>
+
+<h2 id="Creando-clases">Creando clases</h2>
+
+<p>Hemos visto diferentes clases de objetos. Sin embargo, es fácil
+llegar a los tipos de objetos que Ruby no tiene. Por suerte, la
+creación de una nueva clase es tan fácil como la ampliación de una antigua.
+Digamos que hemos querido hacer algunos dados en Ruby. Así es como podemos
+hacer la clase Dado:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>class Dado
+
+  def roll
+    1 + rand(6)
+  end
+
+end
+
+#  Vamos a crear un par de dados...
+dados = [Dado.new, Dado.new]
+
+#  ...y hacerlos rodar.
+dados.each do |dado|
+  puts dado.roll
+end
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>3
+4
+</code></pre>
+
+<p>(Si se ha saltado la sección de números aleatorios,  <code>rand(6)</code>
+sólo da un número aleatorio entre  0 y 5 .)
+¡Y eso es todo! Nuestro propios objetos. Tira los dados
+un par de veces (con el botón de recarga) y mira lo que
+aparece.</p>
+
+<p>Podemos definir todo tipo de métodos para los objetos ... pero hay algo
+que falta. Trabajar con estos objetos se parece mucho a la programación
+antes de aprender acerca de las variables. ¡Mira los dados!, por ejemplo.
+Podemos rodarlos y cada vez nos dan números diferentes. Pero si
+quería guardar alguno de estos números habría que crear una variable que apunte
+al número.
+Parece que cualquier dado decente debe ser capaz de <em>tener</em> un número,
+y que rodando el dado nuevamente el número debe cambiar. Si hacemos un
+seguimiento del dado debemos tener también un registro del número mostrado.</p>
+
+<p>Sin embargo, si tratamos de guardar el número que salió en una variable
+(local) <code>roll</code> habrá desaparecido tan pronto como <code>roll</code> haya terminado.
+Tenemos que guardar el número en un tipo diferente de variable.</p>
+
+<h2 id="Variables-de-instancia">Variables de instancia</h2>
+
+<p>Normalmente cuando queremos hablar de un texto, nos limitaremos a llamar a
+un <em>texto</em>. Sin embargo, también podría llamar un <em>objeto de texto</em>. Sin
+embargo, los programadores podrían llamar <em>una instancia de la clase <code>String</code></em>,
+pero esto es sólo una manera de representar a <em>texto</em>. Una <em>instancia</em> de una clase
+es sólo un objeto de esa clase.</p>
+
+<p>Por lo tanto las variables de instancia son variables de un objeto. Las
+variables locales de un método viven hasta que el método ha terminado. Las
+variables de instancia de un objeto, por otro lado, duran tanto como el objeto.
+Para diferenciar las variables de instancia de las variables locales,
+ellos tienen <code>@</code> delante de sus nombres:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>class Dado
+
+  def rodar
+    @numeroMostrado = 1 + rand(6)
+  end
+
+  def mostrar
+    @numeroMostrado
+  end
+
+end
+
+dado = Dado.new
+dado.rodar
+puts dado.mostrar
+puts dado.mostrar
+dado.rodar
+puts dado.mostrar
+puts dado.mostrar
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>1
+1
+5
+5
+</code></pre>
+
+<p>¡Muy bien!. <code>rodar</code> rueda el dado y <code>mostrar</code> nos dice el número que muestra.
+Sin embargo, que pasa si tratamos de mostrar lo que existía antes de rodar el dado
+(antes de que lo hayamos guardado en <code>@numeroMostrado</code>)</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>class Dado
+
+  def rodar
+    @nummeroMostrado = 1 + rand(6)
+  end
+
+  def mostrar
+    @numeroMostrado
+  end
+
+end
+
+# Ya que no voy a usar esta dado de nuevo, 
+# No es necesario guardarlo en una variable. 
+puts Dado.new.mostrar
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>nil
+</code></pre>
+
+<p>Hmmm ... bueno, al menos no nos muestra un error. Aún así, no tiene mucho
+sentido para un dado "no rodado" mostrar <code>nil</code> o lo que sea que se supone
+que significa. Sería bueno si pudiéramos dar un valor cuando nuestro objeto
+Dado es creado. Para esto esta <code>initialize</code>:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>class Dado
+
+  def initialize
+    # Voy a tirar el dado, a pesar de que 
+    # podria hacer otra cosa si quisieramos 
+      rodar
+  end
+
+  def rodar
+    @numeroMostrado = 1 + rand(6)
+  end
+
+  def mostrar
+    @numeroMostrado
+  end
+
+end
+
+puts Dado.new.mostrar
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>6
+</code></pre>
+
+<p>Cuando se crea un objeto, su método <code>initialize</code> (si se ha definido
+uno) siempre es llamado.
+Nuestros dados son casi perfectos. La única cosa que podría hacer falta
+es una manera de decirle que lado del dado debe mostrar... ¿Por
+qué no escribir un método <code>timo</code> que hace justamente eso! Vuelve cuando
+hayas terminado (y que haya funcionado por supuesto). Asegúrese de que
+nadie pueda obtener un <code>7</code> con el dado!</p>
+
+<p>Hay varios temas interesante que apenas hemos revisado. Es difícil, sin
+embargo te voy a dar otro ejemplo más interesante. Digamos que queremos
+hacer una mascota virtual sencilla, un dragón bebé. Como la mayoría de los
+bebés debe ser capaz de comer, dormir y hacer sus necesidades, lo que
+significa que tendremos que ser capaces de darle de comer, de ponerlo en la
+cama y llevarlo a pasear. Internamente, nuestro dragón tendrá que realizar
+una verificación de si tiene hambre, está cansado o tiene que ir al baño
+pero no vamos a ser capaces de ver su estado cuando nos relacionamos con
+nuestro dragón al igual que no se puede preguntar a un bebé humano, "¿Tienes
+hambre?". También vamos a añadir algunas otras maneras divertidas de
+interactuar con nuestro dragón bebé y cuando nace le daremos un nombre.
+(Lo que sea que pasen al método <code>new</code> al método <code>initialize</code>).
+Muy bien, continuemos:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>class Dragon
+
+  def initialize nombre
+    @nombre = nombre
+    @dormido = false
+    @panzaLlena     = 10  #  Esta lleno.
+    @intestinoLleno  =  0  #  No necesita ir.
+
+    puts @nombre + ' nace.'
+  end
+
+  def alimentar
+    puts 'Alimentas a ' + @nombre + '.'
+    @panzaLlena = 10
+    pasoDelTiempo
+  end
+
+  def caminar
+    puts 'Haces caminar a ' + @nombre + '.'
+    @intestinoLleno  = 0
+    pasoDelTiempo
+  end
+
+  def dormir
+    puts 'Colocas a ' + @nombre + ' en la cama.'
+    @dormido = true
+    3.times do
+      if @dormido
+        pasoDelTiempo
+      end
+      if @dormido
+        puts @nombre + ' ronca, llenando el cuarto con humo.'
+      end
+    end
+    if @dormido
+      @dormido = false
+      puts @nombre + ' despierta lentamente.'
+    end
+  end
+
+  def lanzar
+    puts 'Lanzas a ' + @nombre + ' en el aire.'
+    puts 'Sonrie, sus cejas se mueven.'
+    pasoDelTiempo
+  end
+
+  def acunar
+    puts 'Acunas a ' + @nombre + ' suavemente.'
+    @dormido = true
+    puts 'Rapidamente se queda dormido...'
+    pasoDelTiempo
+    if @dormido
+      @dormido = false
+      puts '...pero despierta cuando te detienes.'
+    end
+  end
+
+  private
+
+  #  "private" significa que los metodos defindos aqui son
+  #  metodos internos al objeto.  (Puedes alimentar a
+  #  tu dragon, pero no puedes preguntar si esta hambriento.)
+
+  def hambriento?
+    #  Los nombres de los metodos pueden terminar en "?".
+    #  Generalmente, hacemos esto si el método debe
+    #  devolver verdadero o falso, como esto:
+    @panzaLlena &lt;= 2
+  end
+
+  def ganas?
+    @intestinoLleno >= 8
+  end
+
+  def pasoDelTiempo
+    if @panzaLlena &gt; 0
+      #  Mueve el alimento del vientre al intestino.
+      @panzaLlena      = @panzaLlena      - 1
+      @intestinoLleno  = @intestinoLleno  + 1
+    else  #  Nuestro dragon esta hambriento!
+      if @dormido
+        @dormido = false
+        puts '¡Se despierta de repente!'
+      end
+      puts '¡' + @nombre + ' esta hambriento!  En su desperacion, ¡te COMIO!'
+      exit  #  Sale del programa.
+    end
+
+    if @intestinoLleno  &gt;= 10
+      @intestinoLleno  = 0
+      puts '¡Uy!  ' + @nombre + ' tuvo un accidente...'
+    end
+
+    if hambriento?
+      if @dormido
+        @dormido = false
+        puts '¡Se despierta de repente!'
+      end
+      puts 'El estomago de ' + @nombre + 'retumba...'
+    end
+
+    if ganas?
+      if @dormido
+        @dormido = false
+        puts 'Se despierta de repente!'
+      end
+      puts @nombre + ' hace la danza del baño...'
+    end
+  end
+
+end
+
+mascota = Dragon.new 'Norbert'
+mascota.alimentar
+mascota.lanzar
+mascota.caminar
+mascota.dormir
+mascota.acunar
+mascota.dormir
+mascota.dormir
+mascota.dormir
+mascota.dormir
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>Norbert nace.
+Alimentas a Norbert.
+Lanzas a Norbert en el aire.
+Sonrie, sus cejas se mueven.
+Haces caminar a Norbert.
+Colocas a Norbert en la cama.
+Norbert ronca, llenando el cuarto con humo.
+Norbert ronca, llenando el cuarto con humo.
+Norbert ronca, llenando el cuarto con humo.
+Norbert despierta lentamente.
+Acunas a Norbert suavemente.
+Rapidamente se queda dormido...
+...pero despierta cuando te detienes.
+Colocas a Norbert en la cama.
+¡Se despierta de repente!
+El estomago de Norbertretumba...
+Colocas a Norbert en la cama.
+¡Se despierta de repente!
+El estomago de Norbertretumba...
+Colocas a Norbert en la cama.
+¡Se despierta de repente!
+El estomago de Norbertretumba...
+Norbert hace la danza del baño...
+Colocas a Norbert en la cama.
+¡Se despierta de repente!
+¡Norbert esta hambriento!  En su desperacion, ¡te COMIO!
+</code></pre>
+
+<p><em>¡Ouau!</em> Por supuesto, sería mejor si fuese un programa interactivo,
+pero puedes modificarlo. Yo sólo estaba tratando de mostrarte las partes
+relacionadas directamente con la creación de una nueva clase de dragón.</p>
+
+<p>Vimos algunas cosas nuevas en ese ejemplo. La primera es simple: <code>exit</code>
+termina el programa en ese mismo momento. La segunda es la
+palabra <code>private</code>, que pusimos en la definición de nuestra clase.
+Podría haberlos mantenido afuera, pero yo quería reforzar la idea
+de que hay ciertos métodos que hacen cosas que puede hacer un dragón
+y otros que simplemente se establecen dentro el dragón. Usted puede
+pensar en ellos como "bajo el capó": a menos que seas un mecánico de automóviles
+todo lo que necesitas saber es el pedal del acelerador, el pedal del
+freno y el volante. Un programador puede llamar a esto <em>interfaz pública</em> del
+automóvil. Sin embargo, cómo saber cuando la bolsa de aire se activará es algo
+interno del automóvil, el usuario típico (el conductor) no tiene por qué saberlo.</p>
+
+<p>En realidad, para un ejemplo más concreto en ese sentido vamos a hablar
+sobre cómo se podría representar un coche en un videojuego (que pasa a ser
+mi línea de trabajo). En primer lugar, tienes que decidir como deseas
+que tu interfaz pública se parezca, es decir, los métodos de la gente
+debería ser capaz de llamar por cada uno de los objetos de su coche.
+Bueno, tienes que ser capaz de empujar el pedal del acelerador y el
+pedal de freno, pero que también tienes que ser capaz de especificar lo
+fuerte que estás empujando el pedal. (Hay una gran diferencia entre pisar y
+golpear) También tendrías que ser capaz de dirigir el timón, y otra vez,
+tendrías que ser capaz de decir lo mucho que estás moviendo la rueda del
+timón. Supongo que se podría ir más allá y añadir un embrague, direccionales,
+lanzacohetes, cámara de postcombustión, condensador de flujo, etc ..
+depende del tipo de juego que estás haciendo.</p>
+
+<p>Internamente al objeto coche, sin embargo, tendríamos que hacer mucho más
+cosas; otras cosas que necesita un coche son una velocidad, una dirección
+y una posición (que son las cosas más básicas). Estos atributos se
+modificarían pulsando sobre el gas o los pedales de freno y girando la rueda,
+pero el usuario no sería capaz de establecer la posición directamente (que
+sería como una deformación). Usted también podría patinar o dañar si se ha
+volcado y así sucesivamente. Todo esto sería interno a su objeto coche.</p>
+
+<h2 id="Algunas-cosas-por-intentar">Algunas cosas por intentar</h2>
+
+<ul>
+<li><p>Hacer una clase <code>arbolNaranja</code>. Deberá tener un método <code>altura</code> que devuelve su altura
+y un método <code>paso365Dias</code> que cuando se le llama aumenta la edad del árbol en un año.
+Cada año crece el árbol más alto (mucho más de lo que piensas que un naranjo debe crecer en un año),
+y después de un cierto número de años (de nuevo, tu llamada) el árbol debe morir.
+En los primeros años el árbol no debe producir fruta, pero después de un tiempo debería hacerlo,
+y supongo que los árboles más viejos producen más cada año que los árboles más jóvenes ...
+lo que pienses que tiene más sentido. Y, por supuesto, tú deberás ser capaz de
+<code>contarNaranjas</code> (que devuelve el número de naranjas en el árbol), y <code>tomarUnaNaranja</code> (que
+reduce la <code>@numeroNaranjas</code>en uno y devuelve un texto que te dice cómo la naranja era deliciosa,
+o de lo contrario sólo te dice que no hay naranjas más para elegir este año) Asegúrate
+que las naranjas que no se recogen en un año se caen antes del próximo año.</p></li>
+<li><p>Escribir un programa para que pueda interactuar con tu bebé dragón. Deberás
+ser capaz de introducir comandos como <code>alimentar</code> y <code>caminar</code>, y hacer que esos métodos se
+llamen en tu dragón. Por supuesto, ya que lo que estás ingresando son sólo textos,
+tendrás que tener algún tipo de <em>método de envío</em>, donde el programa revise los textos
+que se han ingresado y luego llama al método adecuado.</p></li>
+</ul>
+
+
+<p>¡Y eso es casi todo lo que hay que hacer! Pero espera un segundo ...
+Yo no he hablado de ninguna de esas clases para hacer cosas como enviar un
+correo electrónico o guardar y cargar archivos en el cumputador, o cómo crear ventanas
+y botones, o los mundos en 3D, ¡ni nada! Bueno, hay <em>tantas</em> clases que pueden utilizar
+que no es posible mostrar a todos, ¡yo no conozco la mayoría de ellos! Lo <em>que</em> puedo
+decir es que para saber más sobre ellos tienen que saber acerca de los que deseas que el
+programa haga. Antes de terminar hay una característica más de Ruby que deberás conocer,
+algo que la mayoría de lenguajes de programación no tiene pero sin las cuales
+simplemente no podría vivir:
+<a href="/capitulos/10-bloques-y-procs.html">bloques y procedimientos</a>.</p>
+
+</div>
+<div class='mp'>
+<h1>Bloques y Procedimientos</h1>
+<p>Esta es definitivamente una de las mejores herramientas de Ruby.
+Algunos lenguajes tienen esta herramienta, pienso que la llamaran
+de otra forma (como <em>closures</em>), pero la mayoría de los más
+populares no lo hacen, una pena.</p>
+
+<p>Entonces ¿qué es esto que es tan bueno? Esto tiene la habilidad
+de tomar un <em>bloque</em> de código (código entre <strong>do</strong>
+y <strong>end</strong>) y encapsularlo dentro de un objeto (llamado <em>proc</em>) y
+guardarlo en una variable o pasarlo a un método, y ejecutar el código del
+bloque donde te guste (más de una vez, si quieres) Entonces esto es
+como un tipo método excepto que no está dentro de un objeto
+(este bloque <em>es</em> un objeto), y puedes almacenarlo o pasarlo como cualquier
+otro objeto. Es hora de un ejemplo:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>toast = Proc.new do
+  puts '¡Aplausos!'
+end
+
+toast.call
+toast.call
+toast.call
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>¡Aplausos!
+¡Aplausos!
+¡Aplausos!
+</code></pre>
+
+<p>Entonces creé un proc (el cual pienzo debería ser pronunciado como "procedimiento") que
+contiene un bloque de código, y llamé (<em>call</em>ed) el proc tres
+veces. Como puedes ver, esto es como un método.</p>
+
+<p>En realidad, son más parecidos a los métodos que te he mostrado, porque los bloques pueden
+tomar parámetros:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>teGusta = Proc.new do |algoRico|
+  puts '¡Me gusta *realmente* el '+algoRico+'!'
+end
+
+teGusta.call 'chocolate'
+teGusta.call 'ruby'
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>¡Me gusta *realmente* el chocolate!
+¡Me gusta *realmente* el ruby!
+</code></pre>
+
+<p>Muy bien, entonces hemos visto que son los bloques y procs, y como usarlos, pero
+¿cuál es el punto? ¿Porqué no utilizar simplemente métodos? Bueno, esto es porque
+hay más cosas que no podemos hacer con métodos. En particular, no
+puedes pasar métodos a otros métodos (pero puedes pasar procs dentro de métodos),
+y métodos no pueden retornar otros métodos (pero ellos pueden retornar procs). Esto
+es simplemente porque procs son objetos; los métodos no son objetos</p>
+
+<p>(De hecho, ¿es algo familiar para tí? Sí, tu has visto bloques antes... cuando aprendiste
+sobre iteradores. Pero vamos a hablar un poco más acerca de esto en breve)</p>
+
+<h2 id="M-todos-que-reciben-Procedimientos">Métodos que reciben Procedimientos</h2>
+
+<p>Cuando pasamos un proc en un un método podemos controlar cómo o cuántas veces llamamos
+el proc. Por ejemplo, vamos a decir que queremos hacer antes y después de cierto código que
+se esta ejecutando:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>def hacerAlgoImportante unProc
+  puts '¡Todo el mundo DETENGANSE!  Tengo algo que hacer...'
+  unProc.call
+  puts 'A todos: Está hecho.  Continuen con lo que estaban haciendo.'
+end
+
+decirHola = Proc.new do
+  puts 'hola'
+end
+
+decirAdios = Proc.new do
+  puts 'adios'
+end
+
+hacerAlgoImportante decirHola
+hacerAlgoImportante decirAdios
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>¡Todo el mundo DETENGANSE!  Tengo algo que hacer...
+hola
+A todos: Está hecho.  Continuen con lo que estaban haciendo.'
+¡Todo el mundo DETENGANSE!  Tengo algo que hacer...
+adios
+A todos: Está hecho.  Continuen con lo que estaban haciendo.'
+</code></pre>
+
+<p>Quizá esto no parezca muy fabuloso... pero lo es. :-)
+Es común en programacion tener requerimientos estrictos acerca de
+que debe ser hecho y cuando. Si quieres salvar un archivo, por ejemplo,
+tienes que abrir el archivo, escribir la informacion que quieres que
+contenga y luego cerrar el archivo. El olvido de cerrar el archivo puede
+traer malas consecuencias. Pero cada vez que quieras salvar un archivo
+o cargar uno tienes que hacer lo mismo: abrir el archivo, hacer lo que
+<em>realmente</em> quieres hacer y luego cerrar el archivo. Esto es tedioso
+y fácil de olvidar. En Ruby, guardar (o cargar) archivos trabaja en forma similar
+al código anterior, entonces no tienes que preocuparte por nada más que por
+lo que quieres guardar(o cargar). (En el próximo capitulo mostraré donde
+encontrar información sobre guardar y cargar archivos.)</p>
+
+<p>También pudes escribir métodos que determinan cuantas veces, o incluso <em>si</em>
+deben llamar a un proc. Aquí hay un método el cual podría llamar al proc la mitad de veces
+y otro el cual lo llamará el doble de veces:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>def puedeHacerse unProc
+  if rand(2) == 0
+    unProc.call
+  end
+end
+
+def hacerDosVeces unProc
+  unProc.call
+  unProc.call
+end
+
+parpadeo = Proc.new do
+  puts '&lt;parpadeo>'
+end
+
+mirada = Proc.new do
+  puts '&lt;mirada>'
+end
+
+puedeHacerse parpadeo
+puedeHacerse mirada
+hacerDosVeces parpadeo
+hacerDosVeces mirada
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>&lt;mirada>
+&lt;parpadeo>
+&lt;parpadeo>
+&lt;mirada>
+&lt;mirada>
+</code></pre>
+
+<p>(Si ejecutas el programa un par de veces, verás que la salida cambiará) Estos son
+algunos de los casos comunes de uso de procs lo que le permite hacer cosas, utilizando
+simplemente métodos no podriamos hacerlo. Seguramente, podrías escribir un método para
+que parpadee dos veces, pero no podrías escribir uno que haga <em>algo</em> dos veces!</p>
+
+<p>Antes de continuar, vamos a ver un último ejemplo. Los procs que
+hemos visto son bastante similares. Es tiempo de ver algo diferente,
+entonces vamos a ver cuanto un método depende de un proc pasado a este.
+Nuestro método tomará algun objeto y un proc, y llamará a este proc
+sobre este objeto. Si el proc retorna falso, terminamos; en caso contrario
+llamaremos al proc con el objeto. Continuaremos haciendo esto hasta
+que el proc retorne falso (esto es mejor, o el programa finalizará con
+error). El método retornará el último valor no falso retornado por
+el proc.</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>def hacerHastaQueSeaFalso primeraentrada, unProc
+  entrada  = primeraentrada
+  salida = primeraentrada
+
+  while salida
+    entrada  = salida
+    salida = unProc.call entrada
+  end
+
+  entrada
+end
+
+construirMatrizDeCuadrados = Proc.new do |array|
+  ultimonumero = array.last
+  if ultimonumero &lt;= 0
+    false
+  else
+    array.pop                         #  Quitar el último número...
+    array.push ultimonumero*ultimonumero  #  ...y reemplazar este con el último número elevado al cuadrado...
+    array.push ultimonumero-1           #  ...seguido por un número menor.
+  end
+end
+
+siempreFalso = Proc.new do |soloIgnorame|
+  false
+end
+
+puts hacerHastaQueSeaFalso([5], construirMatrizDeCuadrados).inspect
+puts hacerHastaQueSeaFalso('Estoy escribiendo esto a las 3:00 am; ¡alguien que lo finalice!', siempreFalso)
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>[25, 16, 9, 4, 1, 0]
+Estoy escribiendo esto a las 3:00 am, ¡alguien que lo finalice!
+</code></pre>
+
+<p>Está bien, este es un ejemplo bastante raro, debo admitirlo. Pero esto muestra como
+actúa diferente nuestro método cuando le damos diferentes procs.</p>
+
+<p>El método <code>inspect</code> es muy parecido a <code>to_s</code> , salvo que la cadena que devuelve
+trata de mostrar el código ruby para crear el objeto que pasó. Aquí se nos muestra
+toda la matriz devuelta por nuestra primera llamada a <code>haceHastaQueSeaFalso</code>. Además, notamos
+que nosotros no procesamos el <code>0</code> al final de la matriz, porque <code>0</code>
+al cuadrado sigue siendo <code>0</code> y por lo tanto no tenía que hacerse. Y puesto
+que <code>siempreFalso</code> era siempre <code>false</code>,<code>hacerHastaQueSeaFalso</code> no hace nada la segunda vez que
+se llama sino que retorna lo que se le pasó.</p>
+
+<h2 id="M-todos-que-retornan-Procedimientos">Métodos que retornan Procedimientos</h2>
+
+<p>Una de las cosas interesantes que puedes hacer con procs es crearlos
+en los métodos y devolverlos. Esto permite realizar cosas grandiosas de
+programación (cosas con nombres impresionantes, como <em>lazy evaluation</em>,
+<em>estructuras de datos infinitas</em> y <em>currying</em>), pero el hecho es que
+casi nunca hago esto en la práctica, ni puedo recordar haber visto a
+nadie hacer esto en su código. Creo que es el tipo de cosas que no
+suelen llegar a tener que hacer en Ruby, o tal vez simplemente Ruby te
+anima a buscar otras soluciones, yo no lo sé. En cualquier caso, sólo
+voy a referirme a esto brevemente.</p>
+
+<p>En este ejemplo, <code>compose</code> toma dos procs y devuelve un proc nuevo que,
+cuando se le llama, llama al primer procy pasa el resultado en el segundo
+proc.</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>def compone proc1, proc2
+  Proc.new do |x|
+    proc2.call(proc1.call(x))
+  end
+end
+
+cuadrado = Proc.new do |x|
+  x * x
+end
+
+doble = Proc.new do |x|
+  x + x
+end
+
+dobleYCuadrado = compone doble, cuadrado
+cuadradoYDoble = compone cuadrado, doble
+
+puts dobleYCuadrado.call(5)
+puts cuadradoYDoble.call(5)
+
+*Resultado:*
+
+100
+50
+</code></pre>
+
+<p>Ten en cuenta que la llamada a <code>proc1</code> tenía que estar dentro de los
+paréntesis para <code>proc2</code> con el fin de que se haga en primer lugar.</p>
+
+<h2 id="Pasando-Bloques-no-Procedimientos-en-los-M-todos">Pasando Bloques (no Procedimientos) en los Métodos</h2>
+
+<p>Ok, esto es académicamente interesante pero también algo difícil de usar.
+Gran parte del problema es que hay tres pasos que se tienen que realizar
+(definir el método, hacer el proc y llamar al método con el proc), parecería
+que solo debería haber dos (definir el método y pasar el <em>bloque</em> correcto dentro
+del método, sin necesidad de usar un proc) ya que la mayoría de las veces usted
+no desea utilizar el proc/bloque después de pasarlo al método. Bueno, no lo sabes,
+Ruby tiene todo resuelto por nosotros! De hecho, ya ha estabas haciendolo cada
+vez que utilizabas iteradores.</p>
+
+<p>Te mostraré primero un ejemplo rápido, y luego vamos a hablar de ello.</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>class Array
+  def cadaPar(&amp;fueBloque_ahoraesProc)
+    esPar = true  #  Empezamos con "true" porque las matrices comienzan con 0
+
+    self.each do |objeto|
+      if esPar
+        fueBloque_ahoraesProc.call objeto
+      end
+
+      esPar = (not esPar)  #  Cambiar de pares a impares o viceversa
+    end
+  end
+
+end
+
+['manzana', 'manzana podrida', 'cereza', 'durian'].cadaPar do |fruta|
+  puts '¡Yum!  Me encantan los pasteles de '+fruta+', ¿no?'
+end
+
+#  Recuerda,, estamos tratando de conseguir los numeros pares 
+#  de la Matriz.
+
+[1, 2, 3, 4, 5].cadaPar do |bolaImpar|
+  puts bolaImpar.to_s+' NO es un número par!'
+end
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>¡Yum! Me encantan los pasteles de manzana, ¿no?
+¡Yum! Me encanta pasteles de cereza, ¿no?
+1 NO es un número par!
+3 NO es un número par!
+5 NO es un número par!
+</code></pre>
+
+<p>Así que para pasar un bloque de <code>cadaPar</code> todo lo que tenía que hacer
+era pegar el bloque después del método. Puedes pasar un bloque
+dentro de cualquier método de esta manera, aunque muchos métodos simplemente
+ignorarán el bloque. Con el fin de hacer que tu método <em>no</em> ignore el bloque
+debes apoderarse de él y convertirlo en un proc y poner el nombre del proc
+al final de la lista de parámetros de tu método precedida por el signo <code>&amp;</code>.
+Así que esa parte es un poco difícil pero no demasiado y sólo tienes que
+hacer esto una vez (cuando se define el método). A continuación, puedes
+utilizar el método una y otra vez al igual que los métodos que reciben bloques como
+<code>each</code> y <code>times</code>. (Recuerda que con <code>5.times</code> ¿hacemos ...?)</p>
+
+<p>Si estás confundido, sólo recuerda lo que <code>cadaPar</code> se supone que debe hacer:
+llamar al bloque pasado con todos los demás elementos de la matriz. Una vez que lo
+hayas escrito y funciona no es necesario pensar en lo que está haciendo en
+realidad internamente ("¿qué bloque se llama cuando?") De hecho, esto es
+exactamente por lo que escribimos métodos como éste: para que no tengamos
+que pensar de nuevo en cómo trabajan. Nos limitamos a usarlos.</p>
+
+<p>Recuerdo una vez que quería ser capaz de medir la duración de distintas secciones
+de un programa. (Esto también se conoce como <em>profiling</em>.) Así que escribí un
+método que toma la hora antes de ejecutar el código, ejecuta y luego toma la hora
+al final para obtener la diferencia. No puedo encontrar el código en este momento,
+pero no lo necesito, ya que probablemente fue algo como esto:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>def profile descripcionDeBloque, &amp;bloque
+  inicioHora = Time.now
+
+  bloque.call
+
+  duracion = Time.now - inicioHora
+
+  puts descripcionDeBloque+':  '+duracion.to_s+' segundos'
+end
+
+profile '25000 duplicaciones' do
+  numero = 1
+
+  25000.times do
+    numero = numero + numero
+  end
+
+  puts numero.to_s.length.to_s+' digitos'  #  El numero de digitos en este numero ENORME.
+end
+
+profile 'contar hasta un millon' do
+  numero = 0
+
+  1000000.times do
+    numero = numero + 1
+  end
+end
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>7526 digitos
+25000 duplicaciones:  0.246768 segundos
+contar hasta un millon:  0.90245 segundos
+</code></pre>
+
+<p>¡Qué sencillo! Qué elegante! Con ese pequeño método puedo fácilmente saber
+cuanto tiempo demora parte de cualquier programa que quiero, solo ejecuto el
+código en un bloque y se lo envió a <code>profile</code>. ¿Qué podría ser más sencillo? En
+la mayoría de los lenguages, yo tendría que añadir explícitamente el código
+de tiempo (lo que está dentro de <code>profile</code>) dentro de cada sección que deseo
+medir. En Ruby, sin embargo, tengo que mantener todo en un solo lugar, y (más
+importante) ¡fuera de mi camino!</p>
+
+<h2 id="Algunas-cosas-por-intentar">Algunas cosas por intentar</h2>
+
+<ul>
+<li><p><em>Reloj del Abuelo</em>. Escriba un método que toma un bloque y lo llame una vez
+por cada hora que ha pasado hoy. De esta manera, si paso al bloque <code>do puts 'DONG!' end</code>
+la campana debería sonar (más o menos) como un reloj de péndulo. Pon a prueba
+tu método con unas pocos bloques (incluyendo la que acabo de darte). <strong><em>Sugerencia:</em></strong>
+Puede utilizar <code>Time.now.hour</code> para obtener la hora actual. Sin embargo, este
+devuelve un número entre <code>0</code> y <code>23</code>, por lo que tendrá que modificar los números
+a fin de obtener valores clásicos de un reloj de este tipo (<code>1</code> <em>al</em> <code>12</code>).</p></li>
+<li><p><em>Program Logger</em>. Escribir un método llamado <code>log</code>, la cual toma una
+cadena de un bloque y, por supuesto, el bloque. Al igual que <code>doSelfImportantly</code>,
+deberá <code>puts</code> una cadena diciendo que se ha iniciado el bloque, y otra cadena
+diciendo que ha terminado el bloque y también debe decir lo que el bloque retornó.
+Pon a prueba tu método mediante el envío de un bloque de código. En el interior
+del bloque, pon <em>otra</em> llamada a <code>log</code> pasando otro bloque. (Esto se llama <em>anidación</em>.)
+En otras palabras, su salida debería ser algo como esto:</p></li>
+</ul>
+
+
+<p><em>Listado:</em></p>
+
+<pre><code>A partir del "bloque externo" ...
+A partir de "un bloque pequeño" ...
+... "Algún pequeño bloque" terminó, regreso: 5
+A partir del "otro bloque" ...
+... "Otro bloque", terminó, regreso: me gusta la comida tailandesa!
+... "Bloque exterior", terminó, regreso: false
+</code></pre>
+
+<ul>
+<li><em>Mejores Logger</em>. El resultado del último logger fue un poco difícil de leer y
+debería empeorar cuanto más se use. Sería mucho más fácil de leer si se indenta
+las líneas en los bloques interiores. Para ello, tendrás que llevar la cuenta
+de cuán profundamente estás anidado cada vez que el logger quiere escribir algo.
+Para ello, utilice una <em>variable global</em>, una variable que se puede ver en
+cualquier parte de tu código. Para hacer una variable global, sólo precede a
+su nombre con el símbolo <code>$</code> , como los siguientes:  <code>$global</code>, <code>$nestingDepth</code> y
+<code>$bigTopPeeWee</code>. Al final, el logger debe generar un código como este:</li>
+</ul>
+
+
+<p><em>Listado:</em></p>
+
+<pre><code>A partir del "bloque exterior" ...
+  A partir de "un bloque pequeño" ...
+    A partir del "pequeñito-minúsculo bloque" ...
+    ... "pequeñito-minúsculo bloque" terminó, regreso: un montón de amor
+  ... "un bloque pequeño" terminó, regreso: 42
+  A partir del "otro bloque" ...
+  ... "otro bloque", terminó, regreso: me encanta la comida india!
+... "bloque exterior", terminó, regreso: true
+</code></pre>
+
+<p>Bueno, eso es todo lo que vas a aprender de este tutorial. ¡Felicitaciones!
+¡Has aprendido un montón! Tal vez no tienes ganas de recordar todo, o te has
+saltado unas partes ... Realmente, eso está bien. La programación no es sobre
+lo que sabes, se trata de lo que puedes imaginar. Como siempre que se sepa
+dónde encontrar las cosas que habías olvidado, lo estás haciendo muy bien.
+¡Espero que no pienses que escribí todo esto sin revisar estas cosas a cada minuto!
+Porque lo hice. Yo también recibí un montón de ayuda con el código de los ejemplos
+de este tutorial. Pero, ¿dónde estaba <em>yo</em> buscando estas cosas y donde <em>yo</em> pido
+ayuda?.</p>
+
+<p><a href="/capitulos/11-despues-de-esta-guia.html">Te voy a enseñar...</a></p>
+
+</div>
+<div class='mp'>
+<h1>Después de esta guía</h1>
+<p>Entonces, ¿qué haremos ahora? Si tienes una pregunta, ¿a quién consultarás?
+Que pasa si quieres un programa que abra una página web, envíe un correo electrónico,
+o redefina el tamaño de una foto digital? Bueno, hay muchos, muchos lugares
+donde encontrar ayuda Ruby. Desafortunadamente, esto es de poca ayuda, ¿no? :-)</p>
+
+<p>Para mí, hay realmente solo tres lugares donde busco ayuda sobre Ruby.
+Si es una pequeña pregunta, y pienso que puedo experimentar yo mismo para
+encontrar la respuesta, utilizo <em>irb</em>. Si es una gran pregunta,
+busco por esto dentro de mis <em>herramientas</em>. Y si no puedo darme
+cuenta por mi mismo, entonces pregunto por ayuda en <em>ruby-talk</em>.</p>
+
+<h2 id="IRB-Ruby-Interactivo">IRB:  Ruby Interactivo</h2>
+
+<p>Si instalaste Ruby, entonces tienes instalado irb. Para usarlo, solo
+ve a consola y tipea <code>irb</code>.  Cuando estes en irb, puedes tipear cualquier
+expresion ruby que quieras, y este te dirá el valor de esto. Tipea <code>1 + 2</code>,
+y este te devolverá <code>3</code>. (Puedes darte cuenta que no tienes que utilizar
+<code>puts</code>.) Esto es como una calculadora Ruby gigante. Cuando finalizes, solo
+debes tipear <code>exit</code>.</p>
+
+<p>Hay un montón de cosas ademas para irb, pero puedes aprender mucho más
+probando esto.</p>
+
+<h2 id="El-Pico-Programming-Ruby-">El Pico: "Programming Ruby"</h2>
+
+<p>Absolutamente <em>el</em> libro Ruby a tener es "Programming Ruby 1.9,
+The Pragmatic Programmer's Guide", por Dave Thomas, Chad Fowler y Andrew
+Hunt (The Pragmatic Programmers). Mientras que recomiendo tomar la
+<a href="http://pragprog.com/press_releases/programming-ruby-1-9">tercera edición</a>
+de este excelente libro, con todo lo último cubierto.</p>
+
+<p>Puedes encontrar todo lo que necesites de Ruby, desde lo básico a lo
+avanzado, en este libro. Es fácil de leer, fácil de entender, es perfecto.
+Desearía que cada lenguage tuviera un libro de esta calidad. Al reverso
+del libro, encontrarás una gran sección detallando cada método en cada
+clase, explicandolo y dando ejemplos. ¡Me encanta este libro!</p>
+
+<p>Hay algunos lugares donde puedes conseguir una versión más antigua (incluyendo
+el sitio mismo  Pragmatic Programmers), pero mi lugar favorito es
+en <a href="http://www.ruby-doc.org/docs/ProgrammingRuby/">ruby-doc.org</a>.
+Esta versión tiene una linda tabla de contenidos a un costado, como también
+un índice. (ruby-doc.org tiene un montón más de grandiosos contenidos también,
+como para el Core API y biblioteca estándar(Standard Library)... basicamente,
+documenta todo Ruby. <a href="http://www.ruby-doc.org/">Chequealo aquí.</a>)</p>
+
+<p>Y porque es llamado "¿el pico"? Bueno, hay una imágen de un pico en la tapa del
+libro. Es un nombre tonto, creo yo, pero quedó así.</p>
+
+<h2 id="Ruby-Talk-la-lista-de-mails-Ruby">Ruby-Talk: la lista de mails Ruby</h2>
+
+<p>Aun teniendo irb y el pico, algunas veces sigues sin resolver
+algo que necesitas. O quizás quieres saber si alguien ya hizo algo de lo
+tú estás intentando, para saber si puedes usar eso en cambio. En estos casos,
+el lugar para esto es ruby-talk, la lista de mails Ruby. Esta lleno de gente
+amigable, inteligente y con ganas de ayudar. Para aprender más de esto, o suscribirte,
+mira <a href="http://www.ruby-lang.org/es/community/mailing-lists/">aquí</a>.</p>
+
+<p><strong>ADVERTENCIA:</strong> Hay <em>muchos</em> emails en
+esta lista de correos cada día. Tuve que enviar directamente estos
+a diferentes carpetas de mail para que no me molesten. Si no quieres
+ocuparte de todos esos emails, pienso, no debes inscribirte. La lista
+de mails es espejada en el grupo de noticias comp.lang.ruby, y viceversa,
+entonces puedes ver los mensajes ahí. De igual manera, ves los mismos
+mensajes, pero en un formato diferente.</p>
+
+<h2 id="Tim-Toady">Tim Toady</h2>
+
+<p>Algo que traté de mostrarte, lo cual seguramente podrás probar pronto,
+es el concepto de TMTOWTDI (pronunciado como "Tim Toady" en inglés for <em>There's
+More Than One Way To Do It</em>): <em>Hay Más De Una Forma DE Hacer Esto</em>.</p>
+
+<p>Algunos te dirán que TMTOWTDI es maravillos mientras otros
+puedan pensar algo diferente. No tengo fuertes sentimientos de las<br />
+cosas en general, pero pienso que esto es
+una <em>terrible</em> forma de enseñar a programar a alguién.
+(Como si aprender a programar de una forma no fuera suficiente desafío y confuso!)</p>
+
+<p>Sin embargo, ahora que te estás moviendose más allá de este tutorial, verás mucha
+más diversidad de código. Por ejemplo, pienso que al menos hay otras cinco formas
+de hacer un texto (aparte de las que encierran un texto en comillas), y cada uno de estos
+trabaja un poco diferente. Solo mostre lo más simple.</p>
+
+<p>Cuando hablamos de ramificación, mostré el <code>if</code>,
+pero no mostré el <code>unless</code>. Voy a dejar que te des
+cuenta por ti mismo en irb de que se trata.</p>
+
+<p>Otro lindo atajo que puedes usar con <code>if</code>,
+<code>unless</code> y <code>while</code>, es esta linda versión de una línea:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>#  Estas lineas son de un programa que escribi para generar palabras
+puts 'grobably combergearl kitatently thememberate' if 5 == 2**2 + 1**1
+puts 'enlestrationshifter supposine follutify blace' unless 'Chris'.length == 5
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>grobably combergearl kitatently thememberate
+</code></pre>
+
+<p>Y finalmente, hay otro camino para escribir métodos la cual toma bloques
+(no procs). Vimos la parte donde tomabamos el bloque y lo convertíamos
+dentro de un proc usando el truco <code>&amp;block</code> en la lista de parametros
+cuando defines una función. Entonces, para llamar el bloque, solo usas
+<code>block.call</code>.  Bueno, hay una manera más corta (aunque personalmente pienso que
+es más confuso). En lugar de esto:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>def hacerDosVeces(&amp;block)
+  block.call
+  block.call
+end
+
+hacerDosVeces do
+  puts 'murditivent flavitemphan siresent litics'
+end
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>murditivent flavitemphan siresent litics
+murditivent flavitemphan siresent litics
+</code></pre>
+
+<p>...haces esto:</p>
+
+<p><em>Código:</em></p>
+
+<pre><code>def hacerDosVeces
+  yield
+  yield
+end
+
+hacerDosVeces do
+  puts 'buritiate mustripe lablic acticise'
+end
+</code></pre>
+
+<p><em>Resultado:</em></p>
+
+<pre><code>buritiate mustripe lablic acticise
+buritiate mustripe lablic acticise
+</code></pre>
+
+<p>No sé... ¿qué piensas? Quizás solo sea yo, pero... ¡¿<code>yield</code>?!
+Si esto fue algo como  <code>call_the_hidden_block</code> o otra cosa más,
+esto tendría <em>mucho más</em> sentido para mi. Mucha gente dice que <code>yield</code>
+tiene sentido para ellos. Pero, supongo que es algo como TMTOWTDI (Hay Más De
+Una Forma De Hacer Esto), y eso es todo: ellos hacen las cosas a su manera,
+y yo lo haré a mi manera.</p>
+
+<h2 id="Fin">Fin</h2>
+
+<p>Usa esto para lo bueno y no para lo malo. :-)  Y si encuentras este tutorial
+útil (o confuso, o si encuentras un error),
+<a href="https://github.com/rubyperu/aprendeaprogramar.pe/issues">avísanos</a>!</p>
+
+</div>
