@@ -10,7 +10,7 @@ El autor liberó el contenido del libro y nos permitió traducirlo. El ha escrit
 una segunda versión, y puede ser comprada (en inglés) en
 <http://pragprog.com/book/ltp2/learn-to-program>.
 
-## Plan
+## Plan:
 
 Ya se han traducido todos los capítulos. Ahora estamos armando el sitio web.
 Estas son las decisiones tomadas:
@@ -27,7 +27,16 @@ _integer_=entero
 7. El proyecto estará en un nuevo proyecto de Github (mudando el anterior) en
 <https://github.com/rubyperu/aprendeaprogramar.pe">
 
-## Agradecimientos
+## How To:
+
+Ejecuta en la terminal:
+
+    bundle install
+    bundle exec stasis -d 3000
+
+Abre la dirección http://localhost:3000/ en tu navegador preferido.
+
+## Agradecimientos:
 
 En primer lugar, obviamente al autor, por dejarnos usar el contenido libremente,
 a [Diego Algorta](http://oboxodo.com) por haber tenido la iniciativa y dar los
