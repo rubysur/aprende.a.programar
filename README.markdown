@@ -3,10 +3,10 @@
 Este proyecto nace con la idea de traducir al español el libro de Chris Pine
 llamado "Learn To Program" (que en español significa "Aprende a Programar").
 Este libro utiliza un lenguaje llamado Ruby para enseñar los conceptos de
-programación. Todos los lenguajes de programación comparten estos casi todos
+programación. Todos los lenguajes de programación comparten casi todos
 estos conceptos, pero Ruby es un lenguaje particularmente fácil e intuitivo.
 
-El autor liberó el contenido del libro y nos permitió traducirlo. El ha escrito
+El autor liberó el contenido del libro y nos permitió traducirlo. Él ha escrito
 una segunda versión, y puede ser comprada (en inglés) en
 <http://pragprog.com/book/ltp2/learn-to-program>.
 
