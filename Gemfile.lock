@@ -2,7 +2,6 @@ GEM
   remote: http://rubygems.org/
   specs:
     directory_watcher (1.4.1)
-    haml (3.1.6)
     hpricot (0.8.6)
     mustache (0.99.4)
     rdiscount (1.6.8)
@@ -27,8 +26,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  haml (~> 3.1.0)
-  redcarpet (~> 2.1.0)
+  redcarpet
   ronn
   sass
-  stasis (~> 0.1.0)
+  stasis

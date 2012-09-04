@@ -1,7 +1,6 @@
-source 'http://rubygems.org'
+source :rubygems
 
-gem 'stasis',     '~> 0.1.0'
-gem 'haml',       '~> 3.1.0'
+gem 'stasis'
 gem 'sass'
-gem 'redcarpet',  '~> 2.1.0'  
-gem 'ronn'  
+gem 'redcarpet'
+gem 'ronn'
