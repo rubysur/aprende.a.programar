@@ -18,10 +18,10 @@ Estas son las decisiones tomadas:
 1. El sitio estará en http://www.aprendeaprogramar.pe (auspiciado por
 [RubyPeru](http://ruby.pe))
 2. La página será desarrollada con [stasis](http://stasis.me) y se usará
-sintáxis coloeada por rainbow
+sintáxis coloreada por rainbow.
 3. La página será estática, con los ejemplos en archivos para descargar.
 4. Terminología: _string_=texto, _array_=matriz, _float_=flotante,
-_integer_=entero
+_integer_=entero.
 5. El discurso del libro es coloquial por lo que se usará "TÚ".
 6. El código y los resultados deben colocarse en cuadros separados.
 
@@ -32,7 +32,7 @@ Ejecuta en la terminal:
     bundle install
     bundle exec stasis -d 3000
 
-Abre la dirección http://localhost:3000/ en tu navegador preferido.
+Abre la dirección <http://localhost:3000/> en tu navegador preferido.
 
 ## Agradecimientos:
 
