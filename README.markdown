@@ -24,8 +24,6 @@ sintáxis coloeada por rainbow
 _integer_=entero
 5. El discurso del libro es coloquial por lo que se usará "TÚ".
 6. El código y los resultados deben colocarse en cuadros separados.
-7. El proyecto estará en un nuevo proyecto de Github (mudando el anterior) en
-<https://github.com/rubyperu/aprendeaprogramar.pe">
 
 ## How To:
 
