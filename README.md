@@ -35,7 +35,7 @@ mantenimiento del contenido.
 10. [Bloques y procs](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/10-bloques-y-procs.md).
 11. [Después de esta guía](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/11-despues-de-esta-guia.md).
 
-### Información adicional:
+## Información adicional:
 
 Encuéntranos en:
 
