@@ -21,6 +21,12 @@ a través de _pull requests_ a este repositorio. Revisa nuestra
 guía [¿Cómo crear un Pull Request?](https://github.com/rubyperu/rubyperu.github.com/wiki/Pull-Requests-en-Github)
 para más información.
 
+Ten en cuenta las siguientes consideraciones:
+
+* Terminología: _string_=texto, _array_=matriz, _float_=flotante, _integer_=entero.
+* El discurso del libro es coloquial por lo que se usará "TÚ".
+* El código y los resultados deben colocarse en cuadros separados.
+
 Si estás pensando en hacer contribuciones de manera regular, puedes solicitar
 acceso al repositorio escribiendo a nuestro mailing list:
 <rubyperu@googlegroups.com>.
