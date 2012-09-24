@@ -9,7 +9,8 @@ conceptos, pero Ruby es un lenguaje particularmente fácil e intuitivo.
 traducirlo. Él ha escrito una segunda versión, y puede ser comprada (en inglés) en
 <http://pragprog.com/book/ltp2/learn-to-program>.
 
-Puedes revisar la versión original en <http://pine.fm/>.
+Puedes revisar la versión original en <http://pine.fm/>. Si deseas contribuir
+al proyecto, revisa [CONTRIBUTING](https://github.com/rubyperu/aprende.a.programar/blob/master/CONTRIBUTING.md).
 
 ## Agradecimientos
 
