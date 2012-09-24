@@ -44,4 +44,4 @@ Encuéntranos en:
 * Chat: <http://ruby.pe/chat.html>
 * Mailing List: [RubyPeru Google Group](https://groups.google.com/forum/?fromgroups#!forum/rubyperu)
 
-[Ruby Perú](http://ruby.pe/).
+[Ruby Perú <3](http://ruby.pe/).
