@@ -23,18 +23,18 @@ mantenimiento del contenido.
 
 ## Índice
 
-0. [Inicio](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/00-inicio.md).
-1. [Números](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/01-numeros.md).
-2. [Textos](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/02-textos.md).
-3. [Variables](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/03-variables.md).
-4. [Conversiones](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/04-conversiones.md).
-5. [Acerca de métodos](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/05-acerca-de-metodos.md).
-6. [Control de flujo](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/06-control-de-flujo.md).
-7. [Matrices](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/07-matrices.md).
-8. [Métodos propios](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/08-metodos-propios.md).
-9. [Clases](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/09-clases.md).
-10. [Bloques y procedimientos](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/10-bloques-y-procs.md).
-11. [Después de esta guía](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/11-despues-de-esta-guia.md).
+1. [Inicio](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/00-inicio.md).
+2. [Números](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/01-numeros.md).
+3. [Textos](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/02-textos.md).
+4. [Variables](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/03-variables.md).
+5. [Conversiones](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/04-conversiones.md).
+6. [Acerca de métodos](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/05-acerca-de-metodos.md).
+7. [Control de flujo](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/06-control-de-flujo.md).
+8. [Matrices](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/07-matrices.md).
+9. [Métodos propios](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/08-metodos-propios.md).
+10. [Clases](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/09-clases.md).
+11. [Bloques y procedimientos](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/10-bloques-y-procs.md).
+12. [Después de esta guía](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/11-despues-de-esta-guia.md).
 
 ## Información adicional:
 
