@@ -33,7 +33,7 @@ acceso al repositorio escribiendo a nuestro mailing list:
 
 **Gracias!**
 :heart: :heart: :heart: <br />
-[RubyPeru](https://github.com/rubyperu).
+[Ruby Perú](http://ruby.pe/).
 
 --------------------------------------------------------------------------------
 
@@ -44,4 +44,4 @@ Encuéntranos en:
 * Twitter: [@rubyperu](https://twitter.com/rubyperu)
 * Facebook: [Ruby Perú](https://www.facebook.com/pages/Ruby-Perú/191872640917345)
 * Chat: <http://ruby.pe/chat.html>
-a Mailing List: [RubyPeru Google Group](https://groups.google.com/forum/?fromgroups#!forum/rubyperu)
+* Mailing List: [RubyPeru Google Group](https://groups.google.com/forum/?fromgroups#!forum/rubyperu)
