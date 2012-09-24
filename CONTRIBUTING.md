@@ -1,10 +1,12 @@
-# ¿Cómo contribuir a Ruby Perú?
+¿Cómo contribuir a Ruby Perú?
+=============================
 
 Somos una comunidad creada a puro esfuerzo voluntario. Nuestro principal objetivo es
 difundir el conocimiento sobre Ruby. Te animamos a apoyarnos en seguir avanzando con
 esta meta.
 
-## Aprende a Programar
+Aprende a Programar
+-------------------
 
 Este proyecto nace con la idea de traducir al español el libro de Chris Pine
 llamado "Learn To Program" (que en español significa "Aprende a Programar").

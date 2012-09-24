@@ -1,4 +1,5 @@
-## Aprende a Programar
+Aprende a Programar
+===================
 
 Este proyecto nace con la idea de enseñar los conceptos básicos de programación
 a través de Ruby. Todos los lenguajes de programación comparten casi todos estos
@@ -12,7 +13,8 @@ traducirlo. Él ha escrito una segunda versión, y puede ser comprada (en inglé
 Puedes revisar la versión original en <http://pine.fm/>. Si deseas contribuir
 al proyecto, revisa [CONTRIBUTING](https://github.com/rubyperu/aprende.a.programar/blob/master/CONTRIBUTING.md).
 
-## Agradecimientos
+Agradecimientos
+---------------
 
 En primer lugar, a Chris Pine (el autor original) por dejarnos usar el contenido
 libremente, a [Diego Algorta](http://oboxodo.com) por haber tenido la iniciativa y
@@ -21,7 +23,8 @@ dar los primeros pasos, a [César Diaz](https://github.com/cesarediaz),
 [Ruby Perú](http://ruby.pe) por ayudar con la traducción, actualización y
 mantenimiento del contenido.
 
-## Índice
+Índice
+------
 
 1. [Inicio](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/00-inicio.md).
 2. [Números](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/01-numeros.md).
@@ -36,7 +39,8 @@ mantenimiento del contenido.
 11. [Bloques y procedimientos](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/10-bloques-y-procs.md).
 12. [Después de esta guía](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/11-despues-de-esta-guia.md).
 
-## Información adicional:
+Información adicional:
+----------------------
 
 Encuéntranos en:
 
