@@ -16,7 +16,7 @@ MD = ../capitulos/00-inicio.md \
   ../capitulos/10-bloques-y-procs.md \
   ../capitulos/11-despues-de-esta-guia.md
 
-HTML = $(MD:.markdown=.html)
+HTML = $(MD:.md=.html)
 
 all: aap.html aap.pdf aap.mobi aap.epub
 
@@ -36,7 +36,7 @@ aap.html: $(HTML)
   @echo "\n... generando $@"
   cat $(HTML) > aap.html
 
-%.html: %.markdown
+%.html: %.md
   ronn --pipe --fragment $< \
     | sed -E 's/<h1>([^ ]+) - /<h1>/' \
       $@
