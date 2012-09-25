@@ -29,9 +29,8 @@ llegue en un capítulo posterior. Sin embargo, si tu pregunta no ha sido
 resuelta al finalizar la guía, te voy a mostrar donde preguntar. Hay
 muchas personas dispuestas a ayudar; sólo necesitas saber donde están.
 
-Pero primero necesitas descargar e instalar Ruby en tu computadora.
-
-Para instalar Ruby, puedes seguir las siguientes guías:
+Pero primero necesitas descargar e instalar Ruby en tu computadora. Para
+instalar Ruby, puedes seguir las siguientes guías:
 
 * [Instalación en Windows](https://github.com/rubyperu/rubyperu.github.com/wiki/Rails-Installer).
 * [Instalación en Ubuntu](https://github.com/rubyperu/rubyperu.github.com/wiki/Instalacion-Ubuntu).
