@@ -29,7 +29,7 @@ mantenimiento del contenido.
 1. [Inicio](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/00-inicio.md#inicio).
 2. [Números](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/01-numeros.md#n%C3%BAmeros).
 3. [Textos](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/02-textos.md#textos).
-4. [Variables](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/03-variables.md).
+4. [Variables](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/03-variables.md#variables).
 5. [Conversiones](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/04-conversiones.md).
 6. [Acerca de métodos](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/05-acerca-de-metodos.md).
 7. [Control de flujo](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/06-control-de-flujo.md).
