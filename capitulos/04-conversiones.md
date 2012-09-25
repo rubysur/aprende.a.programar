@@ -1,8 +1,9 @@
 # Mezclando
 
-Hemos revisado distintos tipos de objetos ([números]() y [textos]()) y hemos hecho que
-[variables]() apunten a ellos; lo que queremos hacer después es que funcionen
-todos juntos.
+Hemos revisado distintos tipos de objetos ([números](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/01-numeros.md#n%C3%BAmeros)
+y [textos](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/02-textos.md#textos))
+y hemos hecho que [variables](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/03-variables.md#variables)
+apunten a ellos; lo que queremos hacer después es que funcionen todos juntos.
 
 Hemos visto que si queremos que un programa imprima `25`, lo que sigue ***no***
 funciona, porque no puedes sumar números y texto:
@@ -26,7 +27,7 @@ textual (en 'letras') de `var1`, o la representación numérica de `var2`.
 
 ## Conversiones
 
-Para obtener la representación en texto de un objeto, simplemente escribimos `.to_s`
+Para obtener la representación en texto de un objeto, simplemente escribiendo `.to_s`
 después de el objeto:
 
 *Código:*
@@ -37,7 +38,7 @@ después de el objeto:
     puts var1.to_s + var2
 
 *Resultado:*
-    
+
     25
 
 De la misma manera, `to_i` devuelve la versión numérica entera de un objeto y `to_f`
@@ -48,12 +49,12 @@ estos tres métodos (y lo que *no* hacen) un poco más de cerca:
 
     var1 = 2
     var2 = '5'
-    
+
     puts var1.to_s + var2
     puts var1 + var2.to_i
 
 *Resultado:*
-    
+
     25
     7
 
@@ -86,7 +87,7 @@ Ahora probemos conversiones más interesantes (y un poco raras):
     fibroso
     3
 
-Esto probablemente te ha sorprendido un poco. El primero es bastante estándar,
+Ésto probablemente te ha sorprendido un poco. El primero es bastante estándar,
 devolviendo `15.0`. Después de eso, convertimos el texto `'99.999'` a un número de
 punto flotante y a un entero. El primero hizo lo que esperábamos; el entero fue,
 como siempre, redondeado hacia abajo.
@@ -119,29 +120,29 @@ caso, ¿qué significa escribir *el entero* 20? Cuando escribes *2* y luego *0* 
 papel, estas escribiendo texto, no un entero. *El entero* 20 es el número de dedos
 que tengo; no es *2* seguido de un *0*.
 
-Bueno, ahí está el secreto de nuestro amigo, `puts`: Antes de que `puts` trate de
-imprimir un objecto, usa `to_s` para obtener la versión en texto de ese objeto. De
+Bueno, ahí está el secreto de nuestro amigo `puts`. Antes de que `puts` trate de
+imprimir un objeto, usa `to_s` para obtener la versión en texto de ese objeto. De
 hecho, la *s* en `puts` significa *string* (que en español significa texto); `puts`
 realmente significa *put string* (que en español significa imprimir texto).
 
 Esto puede no parecer muy emocionante ahora, pero hay muchos, *muchos* objetos en
 Ruby (¡inclusive vas a aprender a crear tus propios objetos!), y es bueno saber que
 va a pasar cuando trates de ejecutar `puts` con un objeto bastante raro, como la
-foto de tu abuela, o un archivo de música, etc. Pero eso vendrá después...
+foto de tu abuela, o un archivo de música, etc. Pero eso vendrá después ...
 
 Mientras tanto, tenemos unos cuantos métodos para ti, y ellos nos permiten
-escribir todo tipo de programas divertidos...
+escribir todo tipo de programas divertidos ...
 
-## Los Métodos `gets` y `chomp`
+Los Métodos `gets` y `chomp`
+----------------------------
 
 Si `puts` significa *put string*, estoy seguro que puedes adivinar que significa
-`gets` (recibir texto). Y así como `puts` siempre devuelve texto, `gets` solo funciona
-con texto. ¿Y de donde lo recibe?
+`gets`, *get string* (recibir texto). Y así como `puts` siempre devuelve texto,
+`gets` sólo funciona con texto. ¿Y de dónde lo recibe?
 
-¡De ti! Bueno, de tu teclado, en realidad. Ya que tu teclado solo escribe texto,
-todo funciona bien. Lo que realmente pasa es que `gets` simplemente espera,
-leyendo todo lo que tipeas hasta que presionas `Enter`. Intentémoslo:
-
+¡De ti! Bueno, de tu teclado, en realidad. Ya que tu teclado sólo escribe texto,
+todo funciona bien. Lo que realmente pasa es que `gets` simplemente
+lee todo lo que tipeas hasta que presionas `Enter`. Intentémoslo:
 
 *Código:*
 
@@ -173,8 +174,9 @@ nombre y te saludará:
     .  :)
 
 
-Hmmm... parece que cuanto escribí las letras *C*, *h*, *r*, *i*, *s*, y luego presioné
-`Enter`, `gets` recibió todas las letras de mi nombre *y* el <kbd>Enter</kbd>! Afortunadamente, hay un método para este tipo de cosas: `chomp`. Esto elimina cualquier <kbd>Enter</kbd>
+Hmmm... parece que cuando escribí las letras *C*, *h*, *r*, *i*, *s*, y luego presioné
+`Enter`, `gets` recibió todas las letras de mi nombre *y* el `Enter`! Afortunadamente,
+hay un método para este tipo de cosas: `chomp`. Ésto elimina cualquier `Enter`
 al final del texto. Intentémoslo de nuevo, pero con `chomp` para
 que nos ayude:
 
@@ -193,20 +195,20 @@ que nos ayude:
     Encantado de conocerte, Chris.  :)
 
 
-¡Mucho mejor! Nota que ya que `name` apunta a `gets.chomp`, no tenemos que usar `name.chomp`;
-`name` ya fue procesado por `chomp.
+¡Mucho mejor! Nota que ya que `name` apunta a `gets.chomp`, no tenemos que usar
+`name.chomp`; `name` ya fue procesado por `chomp.
 
-## Algunas cosas por intentar
+Algunas cosas por intentar
+--------------------------
 
 * Escribe un programa que pregunte por el nombre de una persona,
-luego el segundo nombre y luego el apellido. Finalemente, debería saludar
+luego el segundo nombre y luego el apellido. Finalmente, debería saludar
 a la persona con el nombre completo.
 
 * Escribe un programa que pregunte por el número favorito del
-usuario. Has que tu programa agregue un número, luego sugiera el resultado
-como el número favorito pero <em>más grande y mejorado</em>.
-(Pero hazlo con tacto.)
+usuario. Haz que tu programa agregue un número, luego sugiera el resultado
+como el número favorito pero _más grande y mejorado_ (Pero hazlo con tacto).
 
 Una vez que hayas terminado los dos programas (y otros que hayas
 intentado), tratemos de aprender más (y más sobre)
-<a href="/capitulos/05-acerca-de-metodos.html">¡métodos!</a>.
+[¡métodos!](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/05-acerca-de-metodos.md#m%C3%A1s-acerca-de-m%C3%A9todos).
