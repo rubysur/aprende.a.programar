@@ -34,10 +34,10 @@ mantenimiento del contenido.
 6. [Acerca de métodos](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/05-acerca-de-metodos.md#m%C3%A1s-acerca-de-m%C3%A9todos).
 7. [Control de flujo](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/06-control-de-flujo.md#control-de-flujo).
 8. [Matrices](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/07-matrices.md#matrices-e-iteraciones).
-9. [Métodos propios](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/08-metodos-propios.md).
-10. [Clases](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/09-clases.md).
-11. [Bloques y procedimientos](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/10-bloques-y-procs.md).
-12. [Después de esta guía](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/11-despues-de-esta-guia.md).
+9. [Métodos propios](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/08-metodos-propios.md#m%C3%A9todos-propios).
+10. [Clases](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/09-clases.md#clases).
+11. [Bloques y procedimientos](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/10-bloques-y-procs.md#bloques-y-procedimientos).
+12. [Después de esta guía](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/11-despues-de-esta-guia.md#despu%C3%A9s-de-esta-gu%C3%ADa).
 
 Información adicional:
 ----------------------
