@@ -33,7 +33,7 @@ mantenimiento del contenido.
 5. [Conversiones](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/04-conversiones.md).
 6. [Acerca de métodos](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/05-acerca-de-metodos.md#m%C3%A1s-acerca-de-m%C3%A9todos).
 7. [Control de flujo](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/06-control-de-flujo.md#control-de-flujo).
-8. [Matrices](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/07-matrices.md).
+8. [Matrices](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/07-matrices.md#matrices-e-iteraciones).
 9. [Métodos propios](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/08-metodos-propios.md).
 10. [Clases](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/09-clases.md).
 11. [Bloques y procedimientos](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/10-bloques-y-procs.md).
