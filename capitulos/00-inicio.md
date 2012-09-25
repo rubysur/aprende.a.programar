@@ -37,4 +37,4 @@ Para instalar Ruby, puedes seguir las siguientes guías:
 * [Instalación en Ubuntu](https://github.com/rubyperu/rubyperu.github.com/wiki/Instalacion-Ubuntu).
 * [Instalación en Mac OSX](https://github.com/rubyperu/rubyperu.github.com/wiki/Instalacion-Mac-OSX-Mountain-Lion).
 
-¡Eso es todo! Estás listo para [aprender a programar](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/01-numeros.md).
+¡Eso es todo! Estás listo para [aprender a programar](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/01-numeros.md#n%C3%BAmeros).

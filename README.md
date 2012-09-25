@@ -26,8 +26,8 @@ mantenimiento del contenido.
 Índice
 ------
 
-1. [Inicio](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/00-inicio.md).
-2. [Números](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/01-numeros.md).
+1. [Inicio](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/00-inicio.md#inicio).
+2. [Números](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/01-numeros.md#n%C3%BAmeros).
 3. [Textos](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/02-textos.md).
 4. [Variables](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/03-variables.md).
 5. [Conversiones](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/04-conversiones.md).
