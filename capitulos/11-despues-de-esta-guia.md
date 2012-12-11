@@ -33,7 +33,7 @@ de este excelente libro, con todo lo último cubierto.
 
 Puedes encontrar todo lo que necesites de Ruby, desde lo básico a lo
 avanzado, en este libro. Es fácil de leer, fácil de entender, es perfecto.
-Desearía que cada lenguage tuviera un libro de esta calidad. Al reverso
+Desearía que cada lenguaje tuviera un libro de esta calidad. Al reverso
 del libro, encontrarás una gran sección detallando cada método en cada
 clase, explicandolo y dando ejemplos. ¡Me encanta este libro!
 

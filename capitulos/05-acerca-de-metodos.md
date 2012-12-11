@@ -250,7 +250,7 @@ perfecto centrado (y quizás una fuente mas linda), entonces deberías
 ¡sólo usar un procesador de textos!. Ruby es una herramienta maravillosa,
 pero no la herramienta correcta para *cualquier* trabajo.
 
-Los otros dos métodos de formato de textos son `ljust` y
+Los otros dos métodos def formato de textos son `ljust` y
 `rjust`, lo cual significan *justificado izquierdo* y
 *justificado derecho*. Estos son similares a `center`,
 excepto que ellos rellenan los lados derecho e izquierdo respectivamente.
