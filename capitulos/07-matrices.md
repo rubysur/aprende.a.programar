@@ -34,7 +34,7 @@ un array conteniendo tres objetos, de los cuales el último
 es la matriz `'[true, false]'`. Recuerda, variables
 no son objetos, entonces nuestra ultima matriz es en realidad
 un flotante, un *texto*, y una matriz. Aún asi si
-nosotros hubieramos puestoo `'sabor'` a punto o algo más,
+nosotros hubieramos puesto `'sabor'` a punto o algo más,
 esto no hubiera cambiado la matriz.
 
 Para ayudarnos a encontrar un objeto particular en una matriz,

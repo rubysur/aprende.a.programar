@@ -83,7 +83,7 @@ Así que puedes sumar textos, ¡pero también puedes multiplicarlas!
     parpadeo parpadeo parpadeo parpadeo
 
 Si lo piensas, tiene todo el sentido. Después de todo, 
-`7*3` realemnte solo significa `7+7+7`, así que `'moo'*3` solo
+`7*3` realmente solo significa `7+7+7`, así que `'moo'*3` solo
 significa `'moo'+'moo'+'moo'`.
 
 ## `12` vs `'12'`
@@ -137,7 +137,7 @@ En este punto podrías haber probado algunas cosas que
 
     can't convert Fixnum into String (TypeError)
 
-Hmmm... un mensaje de error.  El problema es eque en realidad
+Hmmm... un mensaje de error.  El problema es que en realidad
 no puedes sumar un número a un texto, o multiplicar 
 un texto por otro texto. No tiene más sentido que esto:
 

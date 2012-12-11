@@ -30,7 +30,7 @@ otro objeto. Es hora de un ejemplo:
     ¡Aplausos!
     ¡Aplausos!
 
-Entonces creé un proc (el cual pienzo debería ser pronunciado como "procedimiento") que
+Entonces creé un proc (el cual pienso debería ser pronunciado como "procedimiento") que
 contiene un bloque de código, y llamé (*call*ed) el proc tres
 veces. Como puedes ver, esto es como un método.
 
@@ -63,7 +63,7 @@ sobre iteradores. Pero vamos a hablar un poco más acerca de esto en breve)
 
 ## Métodos que reciben Procedimientos
 
-Cuando pasamos un proc en un un método podemos controlar cómo o cuántas veces llamamos
+Cuando pasamos un proc en un método podemos controlar cómo o cuántas veces llamamos
 el proc. Por ejemplo, vamos a decir que queremos hacer antes y después de cierto código que
 se esta ejecutando:
 
@@ -108,7 +108,7 @@ al código anterior, entonces no tienes que preocuparte por nada más que por
 lo que quieres guardar(o cargar). (En el próximo capitulo mostraré donde 
 encontrar información sobre guardar y cargar archivos.)
 
-También pudes escribir métodos que determinan cuantas veces, o incluso *si*
+También puedes escribir métodos que determinan cuantas veces, o incluso *si*
 deben llamar a un proc. Aquí hay un método el cual podría llamar al proc la mitad de veces 
 y otro el cual lo llamará el doble de veces:
 
@@ -367,7 +367,7 @@ pero no lo necesito, ya que probablemente fue algo como esto:
 ¡Qué sencillo! Qué elegante! Con ese pequeño método puedo fácilmente saber
 cuanto tiempo demora parte de cualquier programa que quiero, solo ejecuto el 
 código en un bloque y se lo envió a `profile`. ¿Qué podría ser más sencillo? En 
-la mayoría de los lenguages, yo tendría que añadir explícitamente el código 
+la mayoría de los lenguajes, yo tendría que añadir explícitamente el código 
 de tiempo (lo que está dentro de `profile`) dentro de cada sección que deseo 
 medir. En Ruby, sin embargo, tengo que mantener todo en un solo lugar, y (más 
 importante) ¡fuera de mi camino!

@@ -189,7 +189,7 @@ otras ramificaciones:
     si
     ¡Hum!  Bueno, ¡siéntese!
 
-*y si respodemos el nombre como debe ser:*
+*y si respondemos el nombre como debe ser:*
 
     Hola, y bienvenido a la clase de 7mo año.
     Me llamo Mrs. Gabbard. ¿Tú nombre es...?
@@ -198,7 +198,7 @@ otras ramificaciones:
 
 Algunas veces puede ser algo confuso entender donde todos los `if`s, `else`s, y
 `end`s van. Lo que yo hago es escribir el `end` _al mismo tiempo_ que escribo el
-`if`.  Así es que como se veía al principio el programa de arriba seún lo iba
+`if`.  Así es que como se veía al principio el programa de arriba según lo iba
 escribiendo:
 
     puts 'Hola, y bienvenido a la clase de 7mo año.'
@@ -251,7 +251,7 @@ De nuevo, escribí los `if`, `else`, y `end` juntos. Realmente me ayuda para sab
 me permite enfocarme en una pequeña parte, como en llenar el código entre `if` y el
 `else`. El otro beneficio de realizarlo de esta manera es que el computador puede entender
 el programa  en cualquier etapa. Cualquiera de las versiones incompletas del programa
-que te mostrén se podrían ejecutar. No estaban finalizadas, pero eran programas funcionales.
+que te mostré se podrían ejecutar. No estaban finalizadas, pero eran programas funcionales.
 De esa manera, podría probarlo mientras lo escribo, lo que ayuda a ver como voy avanzando
 y donde aún necesito trabajar. Cuando pase todas las pruebas sé que he terminado.
 

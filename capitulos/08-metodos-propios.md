@@ -225,7 +225,7 @@ el parámetro es lo que se *muestra*)
 
 ## Variables Locales
 
-En el siguientre programa hay dos variables:
+En el siguiente programa hay dos variables:
 
 *Código:*
 
@@ -704,7 +704,7 @@ algunas matrices y tratar de limpiar un poco:
     uno ciento ciento ciento ciento ciento ciento
 
 *Ahhhh ....* Eso está mucho, mucho mejor. El programa es bastante denso, por lo
-que puse varioos comentarios. También funciona con números grandes ... aunque no
+que puse varios comentarios. También funciona con números grandes ... aunque no
 tan bien como cabría esperar. Por ejemplo, creo que ' un millón de millones ' sería
 un valor de retorno más agradable para que el último número. De hecho, puedes hacer
 eso en este momento ...
@@ -719,7 +719,7 @@ en lugar de `un mil mil`. A continuación, pruebe a añadir miles de millones y 
 ¿Qué tan alto puede llegar?
 
 * ¿Qué hay de `tiempoDeMatrimonio`? Deberá trabajar casi como `numeroEnEspanol`, excepto que se
-debe insertar la palabra "y" por todo el lugar, volviendo las cosas como ``mil movecientos
+debe insertar la palabra "y" por todo el lugar, volviendo las cosas como ``mil novecientos
 setenta y dos'`, o como se supone deben verse en las invitaciones de la boda. Te daría
 más ejemplos, pero yo no lo entiendo completamente. Es posible que necesite ponerse en
 contacto con un coordinador de bodas para que le ayude.

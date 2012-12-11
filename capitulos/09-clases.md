@@ -424,7 +424,7 @@ Muy bien, continuemos:
 
       private
 
-      #  "private" significa que los metodos defindos aqui son
+      #  "private" significa que los metodos definidos aqui son
       #  metodos internos al objeto.  (Puedes alimentar a
       #  tu dragon, pero no puedes preguntar si esta hambriento.)
 
@@ -449,7 +449,7 @@ Muy bien, continuemos:
             @dormido = false
             puts '¡Se despierta de repente!'
           end
-          puts '¡' + @nombre + ' esta hambriento!  En su desperacion, ¡te COMIO!'
+          puts '¡' + @nombre + ' esta hambriento!  En su desesperacion, ¡te COMIO!'
           exit  #  Sale del programa.
         end
 
@@ -515,7 +515,7 @@ Muy bien, continuemos:
     Norbert hace la danza del baño...
     Colocas a Norbert en la cama.
     ¡Se despierta de repente!
-    ¡Norbert esta hambriento!  En su desperacion, ¡te COMIO!
+    ¡Norbert esta hambriento!  En su desesperacion, ¡te COMIO!
 
 *¡Ouau!* Por supuesto, sería mejor si fuese un programa interactivo,
 pero puedes modificarlo. Yo sólo estaba tratando de mostrarte las partes
@@ -544,7 +544,7 @@ fuerte que estás empujando el pedal. (Hay una gran diferencia entre pisar y
 golpear) También tendrías que ser capaz de dirigir el timón, y otra vez,
 tendrías que ser capaz de decir lo mucho que estás moviendo la rueda del
 timón. Supongo que se podría ir más allá y añadir un embrague, direccionales,
-lanzacohetes, cámara de postcombustión, condensador de flujo, etc ..
+lanzacohetes, cámara de post-combustión, condensador de flujo, etc ..
 depende del tipo de juego que estás haciendo.
 
 Internamente al objeto coche, sin embargo, tendríamos que hacer mucho más
@@ -577,7 +577,7 @@ que se han ingresado y luego llama al método adecuado.
 
 ¡Y eso es casi todo lo que hay que hacer! Pero espera un segundo ...
 Yo no he hablado de ninguna de esas clases para hacer cosas como enviar un
-correo electrónico o guardar y cargar archivos en el cumputador, o cómo crear ventanas
+correo electrónico o guardar y cargar archivos en el computador, o cómo crear ventanas
 y botones, o los mundos en 3D, ¡ni nada! Bueno, hay *tantas* clases que pueden utilizar
 que no es posible mostrar a todos, ¡yo no conozco la mayoría de ellos! Lo *que* puedo
 decir es que para saber más sobre ellos tienen que saber acerca de los que deseas que el
