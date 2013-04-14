@@ -84,7 +84,7 @@ fue muy sorprendente. Ahora probemos con enteros:
     puts 5-8
     puts 9/2
 
-Básicamente lo misno, ¿no?
+Básicamente lo mismo, ¿no?
 
     3
     6
