@@ -80,7 +80,7 @@ curso, hablas acerca del curso cero (y en tu cabeza, estás pensando
 y sus números son 0, 1, 2, 3 y 4. Mi esposa y yo somos malabaristas.
 Cuando hacemos malabares con seis objetos, nosotros estamos con
 los objetos 0-5. Esperamos en los próximos meses, poder manejarnos
-con el objeto 6(y por lo tanto trataremos de manejarnos con 7 objetos)
+con el objeto 6 (y por lo tanto trataremos de manejarnos con 7 objetos)
 Tu sabrás que lo has aprendido cuando comiences a usar la palabra
 "cero". Sí, esto es real; pregunta a cualquier programador o
 matemático.

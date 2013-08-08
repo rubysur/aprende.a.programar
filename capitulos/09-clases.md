@@ -82,7 +82,7 @@ de segundos de edad, luego marcalo en tu calendario.
 * ¡Feliz cumpleaños! Pregunta en qué año nació una persona, luego el mes, y luego el día.
 Calcula la edad que tiene y dale una gran ´¡NALGADA!´ por cada cumpleaños que ha tenido.
 
-## La clase`Hash`
+## La clase `Hash`
 
 Otra clase muy útil es `Hash`. Los valores hash son muy parecidos a
 las matrices: tienen un montón de ranuras que pueden apuntar a objetos diferentes.
@@ -122,7 +122,7 @@ yo uso para las diferentes partes del código con las que he creado este tutoria
     numeros :  #008000
     claves  :  #0000FF
 
-Si utilizo una matriz, tengo que recordar que la ranura `0` es para las textos,
+Si utilizo una matriz, tengo que recordar que la ranura `0` es para los textos,
 la ranura `1` es para los números, etc, pero si puedo usar un hash, ¡es muy fácil!
 Ranura `' textos '` mantiene el color de las cadenas, por supuesto. No hay
 nada que recordar. Puedes haber notado que cuando se utiliza `each`
@@ -185,7 +185,7 @@ se quiere hacer algo nuevo.
 Así que ... ¿confundido? Permiteme explayarme más en ese último programa.
 Hasta ahora, cada vez que ejecutabas cualquier código o cualquier otro método definido se
 hacía por omisión en el "programa" del objeto. En nuestro último programa,
-dejamos el objeto por primera vez y se fuimos a la clase `Integer`. Se definió
+dejamos el objeto por primera vez y nos fuimos a la clase `Integer`. Se definió
 un método allí (lo que lo convierte en un método de número entero) y que todos
 los números enteros pueden utilizar. Dentro de ese método se utiliza `self` para
 referirse al objeto (el entero) utilizando el método.
@@ -302,7 +302,7 @@ Sin embargo, que pasa si tratamos de mostrar lo que existía antes de rodar el d
 
     end
 
-    # Ya que no voy a usar esta dado de nuevo,
+    # Ya que no voy a usar este dado de nuevo,
     # No es necesario guardarlo en una variable.
     puts Dado.new.mostrar
 

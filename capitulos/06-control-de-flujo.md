@@ -267,7 +267,7 @@ de todo se supone que en eso son buenas las computadoras&mdash;.
 Cuando le dices a la computadora que siga repitiendo algo, también debes decirle cuando
 parar. Las computadoras nunca se aburren asi que si no le indicas cuando hacerlo nunca
 lo harán. Nos aseguramos que esto no pase al indicarle a la computadora que repita
-ciertas partes de un programe mientras (`while`) una cierta condición sea cierta.
+ciertas partes de un programa mientras (`while`) una cierta condición sea cierta.
 Ésto funciona de manera muy similar a como lo hace `if`:
 
 *Código:*
@@ -424,7 +424,7 @@ más facil si lees la sección sobre generadores de números aleatorios de Ruby 
 hablar con la abuela hasta que le grites `ADIOS`.<br />
 <em><strong>Pista:</strong> ¡No te olvides que </em>`chomp`<em>!  ¡</em>`'ADIOS'`<em>con un Enter
 no es lo mismo que </em>`'ADIOS'`<em> sin uno!</em><br />. <em><strong>Pista 2:</strong> Trata de pensar
-que partes del programa deberían suceder una y otra vez. Todas ellas deberían estar en tu bucle</em>`while`.
+que partes del programa deberían suceder una y otra vez. Todas ellas deberían estar en tu bucle</em> `while`.
 
 &bull; Extiende el programa de la Abuela Sorda. ¿Qué pasaría si la abuela no quiere que te vayas?
 Cuando le grites `ADIOS`, ella podría pretender que no te escucha. Cambia el programa previo para
