@@ -222,7 +222,7 @@ anima a buscar otras soluciones, yo no lo sé. En cualquier caso, sólo
 voy a referirme a esto brevemente.
 
 En este ejemplo, `compose` toma dos procs y devuelve un proc nuevo que, 
-cuando se le llama, llama al primer procy pasa el resultado en el segundo 
+cuando se le llama, llama al primer proc y pasa el resultado en el segundo 
 proc.
 
 *Código:*

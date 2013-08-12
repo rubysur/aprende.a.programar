@@ -265,7 +265,7 @@ no es local donde traté de usarlo, es local en el método.
 
 Esto podría ser un inconveniente, pero en realidad es bastante bueno. Significa que no tienes
 acceso a las variables dentro de los métodos y también significa
-que ellos no tienes acceso a *tus* variables y por lo tanto no pueden meter la pata:
+que ellos no tienen acceso a *tus* variables y por lo tanto no pueden meter la pata:
 
 *Código:*
 
@@ -314,7 +314,7 @@ Entonces, ¿qué es lo que *hace* `puts` al retornar? No nos importó antes, per
 
 Así que el primer `puts` retornó `nil`. A pesar de que no lo prueba, el segundo `puts`
 también lo hizo, `puts` siempre retorna `nil`. Cada método tiene que devolver algo,
-incluso si es valor es solo `nil`.
+incluso si el valor es solo `nil`.
 
 Tómate un descanso rápido y escribe un programa para averiguar lo que `decirMu` devuelve.
 

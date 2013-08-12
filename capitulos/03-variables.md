@@ -53,7 +53,7 @@ Este es un ejemplo un poco más interesante.
 *Resultado:*
 
     Me llamo Patricia Rosanna Jessica Mildred Oppenheimer
-    Wow1 Patricia Rosanna Jessica Mildred Oppenheimer es un nombre realmente largo!
+    Wow! Patricia Rosanna Jessica Mildred Oppenheimer es un nombre realmente largo!
 
 También, así como podemos **asignar** un objeto a una variable,
 podemos **reasignar** un objeto diferente a esa variable
