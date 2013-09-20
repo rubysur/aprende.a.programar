@@ -1,8 +1,8 @@
 # Mezclando
 
-Hemos revisado distintos tipos de objetos ([números](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/01-numeros.md#n%C3%BAmeros)
-y [textos](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/02-textos.md#textos))
-y hemos hecho que [variables](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/03-variables.md#variables)
+Hemos revisado distintos tipos de objetos ([números](/capitulos/01-numeros.md#n%C3%BAmeros)
+y [textos](/capitulos/02-textos.md#textos))
+y hemos hecho que [variables](/capitulos/03-variables.md#variables)
 apunten a ellos; lo que queremos hacer después es que funcionen todos juntos.
 
 Hemos visto que si queremos que un programa imprima `25`, lo que sigue ***no***
@@ -211,4 +211,4 @@ como el número favorito pero _más grande y mejorado_ (Pero hazlo con tacto).
 
 Una vez que hayas terminado los dos programas (y otros que hayas
 intentado), tratemos de aprender más (y más sobre)
-[¡métodos!](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/05-acerca-de-metodos.md#m%C3%A1s-acerca-de-m%C3%A9todos).
+[¡métodos!](/capitulos/05-acerca-de-metodos.md#m%C3%A1s-acerca-de-m%C3%A9todos).
