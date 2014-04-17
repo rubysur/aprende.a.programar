@@ -1,52 +1,39 @@
-Aprende a Programar
-===================
+Aprende a Programar con Ruby
+============================
 
-Este proyecto nace con la idea de enseñar los conceptos básicos de programación
-a través de Ruby. Todos los lenguajes de programación comparten casi todos estos
-conceptos, pero Ruby es un lenguaje particularmente fácil e intuitivo.
+Cuando programas una computadora, necesitas "hablar" en la forma que tu
+computadora entienda: un lenguaje de programación. Existen diferentes
+lenguajes y muchos de ellos son excelentes. En esta guía voy a
+usar mi lenguaje de programación favorito: _Ruby_.
 
-"Aprende a Programar" es la traducción del libro de Chris Pine llamado
-"Learn to Program". El autor liberó el contenido del libro y nos permitió
-traducirlo. Él ha escrito una segunda versión, y puede ser comprada (en inglés) en
-<http://pragprog.com/book/ltp2/learn-to-program>.
+Además de ser mi favorito, Ruby es también el lenguaje más fácil de
+aprender que he visto (y eso que he visto unos cuantos). De hecho, esa es
+mi verdadera motivación para escribir esta guía: No decidí escribir una
+guía y luego escogí Ruby porque es mi lenguaje favorito; fue la simplicidad
+de Ruby lo que me motivó a escribirla (Escribir una guía similar en otro
+lenguaje, como C++ o Java, hubiese requerido cientos y cientos de
+páginas). ¡Pero no creas que Ruby es un lenguaje para principiantes sólo
+porque es fácil! Es un lenguaje poderoso y de calibre profesional, si es
+que existe alguno así.
 
-Puedes revisar la versión original en <http://pine.fm/>. Si deseas contribuir
-al proyecto, revisa [CONTRIBUTING](https://github.com/rubyperu/aprende.a.programar/blob/master/CONTRIBUTING.md).
+Cuando escribes algo en un lenguaje humano, lo que se escribe es texto.
+Cuando escribes algo en un lenguaje de computadora, lo que se escribe es
+_código_. He incluido muchos ejemplos de código Ruby en esta
+guía, muchos de ellos son programas completos que puedes ejecutar en tu
+equipo. Para hacer el código más fácil de leer, he marcado partes del
+código de distintos colores y formatos.
 
-Agradecimientos
----------------
+Si encuentras algo que no entiendas o si tienes una pregunta que no has
+podido resolver, ¡escríbela y sigue leyendo! Es posible que la respuesta
+llegue en un capítulo posterior. Sin embargo, si tu pregunta no ha sido
+resuelta al finalizar la guía, te voy a mostrar donde preguntar. Hay
+muchas personas dispuestas a ayudar; sólo necesitas saber donde están.
 
-En primer lugar, a Chris Pine (el autor original) por dejarnos usar el contenido
-libremente, a [Diego Algorta](http://oboxodo.com) por haber tenido la iniciativa y
-dar los primeros pasos, a [César Diaz](https://github.com/cesarediaz),
-[Lucas Florio](https://github.com/lucasefe) y a la comunidad de
-[Ruby Perú](http://ruby.pe) por ayudar con la traducción, actualización y
-mantenimiento del contenido.
+Pero primero necesitas descargar e instalar Ruby en tu computadora. Para
+instalar Ruby, puedes seguir las siguientes guías:
 
-Índice
-------
+* [Instalación en Windows](https://github.com/rubyperu/rubyperu.github.com/wiki/Rails-Installer).
+* [Instalación en Ubuntu](https://github.com/rubyperu/rubyperu.github.com/wiki/Instalacion-Ubuntu).
+* [Instalación OS X Mountain Lion](https://github.com/rubyperu/rubyperu.github.com/wiki/Instalación-OS-X-Mountain-Lion).
 
-1. [Inicio](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/00-inicio.md#inicio).
-2. [Números](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/01-numeros.md#n%C3%BAmeros).
-3. [Textos](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/02-textos.md#textos).
-4. [Variables](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/03-variables.md#variables).
-5. [Conversiones](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/04-conversiones.md).
-6. [Acerca de métodos](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/05-acerca-de-metodos.md#m%C3%A1s-acerca-de-m%C3%A9todos).
-7. [Control de flujo](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/06-control-de-flujo.md#control-de-flujo).
-8. [Matrices](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/07-matrices.md#matrices-e-iteraciones).
-9. [Métodos propios](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/08-metodos-propios.md#m%C3%A9todos-propios).
-10. [Clases](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/09-clases.md#clases).
-11. [Bloques y procedimientos](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/10-bloques-y-procs.md#bloques-y-procedimientos).
-12. [Después de esta guía](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/11-despues-de-esta-guia.md#despu%C3%A9s-de-esta-gu%C3%ADa).
-
-Información adicional:
-----------------------
-
-Encuéntranos en:
-
-* Twitter: [@rubyperu](https://twitter.com/rubyperu)
-* Facebook: [Ruby Perú](https://www.facebook.com/pages/Ruby-Perú/191872640917345)
-* Chat: <http://ruby.pe/chat.html>
-* Mailing List: [RubyPeru Google Group](https://groups.google.com/forum/?fromgroups#!forum/rubyperu)
-
-[Ruby Perú <3](http://ruby.pe/).
+¡Eso es todo! Estás listo para [aprender a programar](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/01-numeros.md#n%C3%BAmeros).

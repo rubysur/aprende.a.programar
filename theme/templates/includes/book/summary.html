@@ -1,0 +1,48 @@
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        {% if githubId %}
+        <li>
+            <a href="http://rubysur.org/" target="blank">RubySur</a>
+        </li>
+        <li>
+            <a href="{{ githubHost }}{{ githubId }}/issues" target="blank">Preguntas y Errores</a>
+        </li>
+        <li>
+            <a href="{{ githubHost }}{{ githubId }}/edit/master/{{ _input }}" target="blank">Edita y Contribuye!</a>
+        </li>
+        <li class="divider"></li>
+        {% endif %}
+        <li data-level="0" data-path="index.html">
+            <a href="{{ basePath }}/"><i class="fa fa-check"></i>Introducción</a>
+        </li>
+        {% for item in summary.chapters %}
+            <li {% if item._path == _input %}class="active"{% endif %} data-level="{{ item.level }}" {% if item.path %}data-path="{{ item.path|mdLink }}"{% endif %}>
+                {% if item.path %}
+                <a href="{{ basePath }}/{{ item.path|mdLink }}">
+                    <i class="fa fa-check"></i> <b>{{ item.level }}.</b> {{ item.title }}
+                </a>
+                {% else %}
+                <span><b>{{ item.level }}.</b> {{ item.title }}</span>
+                {% endif %}
+                {% if item.articles.length > 0 %}
+                <ul class="articles">
+                    {% for article in item.articles %}
+                        <li {% if article._path == _input %}class="active"{% endif %} data-level="{{ article.level }}" {% if article.path %}data-path="{{ article.path|mdLink }}"{% endif %}>
+                            {% if article.path %}
+                            <a href="{{ basePath }}/{{ article.path|mdLink }}">
+                                <i class="fa fa-check"></i> <b>{{ article.level }}.</b> {{ article.title }}
+                            </a>
+                            {% else %}
+                            <span><b>{{ article.level }}.</b> {{ article.title }}</span>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</div>

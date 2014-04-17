@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ progress.current.title }}{% parent %}{% endblock %}
+{% block content %}
+    <div class="book" {% if githubId %}data-github="{{ githubId }}"{% endif %} data-level="{{ progress.current.level }}" data-basepath="{{ basePath }}" data-revision="{{ revision }}">
+    {% include "includes/book/header.html" %}
+    {% include "includes/book/summary.html" %}
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="page-wrapper" tabindex="-1">
+                {% include "includes/book/progress.html" %}
+
+                <div class="page-inner">
+                {% for section in content %}
+                    <section class="{{ section.type }}" id="section-{{ section.id }}">
+                    {% if section.type == "normal" %}
+                        {% autoescape false %}{{ section.content }}{% endautoescape %}
+                    {% elif section.type == "exercise" %}
+                        {% include "./includes/book/exercise.html" with {section: section} %}
+                    {% elif section.type == "quiz" %}
+                        {% include "./includes/book/quiz.html" with {section: section} %}
+                    {% endif %}
+                    </section>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        {% if progress.current.prev and progress.current.prev.path %}
+        <a href="{{ basePath }}/{{ progress.current.prev.path|mdLink }}" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        {% endif %}
+        {% if progress.current.next and progress.current.next.path %}
+        <a href="{{ basePath }}/{{ progress.current.next.path|mdLink }}" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

@@ -9,7 +9,8 @@ module.exports = function (grunt) {
         "gitbook": {
             development: {
                 input: "./",
-                github: "frodsan/theguidetocuba"
+                github: "rubysur/aprende.a.programar",
+                theme: "./theme"
             }
         },
 

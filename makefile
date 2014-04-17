@@ -10,4 +10,4 @@ publish:
 	grunt publish
 
 server:
-	gitbook serve
+	gitbook serve --theme theme
