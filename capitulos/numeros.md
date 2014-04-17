@@ -1,11 +1,12 @@
 Números
 =======
 
-Ahora que tienes todo [instalado](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/00-inicio.md#inicio),
-¡vamos a escribir un programa! Abre tu editor de texto favorito y escribe lo
-siguiente:
+Ahora que tienes todo [instalado](/aprende.a.programar), ¡vamos a escribir un programa!
+Abre tu editor de texto favorito y escribe lo siguiente:
 
-    puts 1+2
+```ruby
+puts 1+2
+```
 
 Guarda tu programa (sí, ¡eso es un programa!) como `calc.rb`
 (el **.rb** es lo que usualmente ponemos al final de
@@ -136,4 +137,4 @@ Aquí hay una pregunta más difícil:
 * Si tengo 1031 millones de segundos de edad, ¿cuántos años tengo?
 
 Cuando termine de jugar con números, echemos un vistazo
-a algunos [textos](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/02-textos.md#textos).
+a algunos [textos](/aprende.a.programar/capitulos/textos.html).

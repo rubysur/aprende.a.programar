@@ -115,4 +115,4 @@ excepto otras variables. ¿Pero qué pasa si lo intentamos?
 Primero, cuando tratamos de apuntar `var2` a `var1` en realidad apuntamos a `8` (que
 es el valor al cual apuntaba `var1`). Luego cuando apuntamos `var1` a `'ocho'`, el
 valor de `var2` no cambia ya que en realidad no estaba apuntando a `var1` sino a `8`.
-Ahora que tenemos variables, números y textos, vamos a ver como [mezclarlos](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/04-conversiones.md#mezclando).
+Ahora que tenemos variables, números y textos, vamos a ver como [mezclarlos](/aprende.a.programar/capitulos/conversiones.html).

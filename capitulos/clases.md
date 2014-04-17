@@ -584,4 +584,4 @@ decir es que para saber más sobre ellos tienen que saber acerca de los que dese
 programa haga. Antes de terminar hay una característica más de Ruby que deberás conocer,
 algo que la mayoría de lenguajes de programación no tiene pero sin las cuales
 simplemente no podría vivir:
-[bloques y procedimientos](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/10-bloques-y-procs.md#bloques-y-procedimientos).
+[bloques y procedimientos](/aprende.a.programar/capitulos/bloques.html).

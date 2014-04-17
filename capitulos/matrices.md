@@ -279,6 +279,5 @@ Tabla de Contenidos (capítulo textos,
 capítulo números, etc.). Entonces imprime la información desde
 la matriz en una bien formada Tabla de Contenidos.
 
-Hemos aprendido varios métodos diferentes.
-Ahora es tiempo de aprender como
-[hacerlo por nosotros mismos](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/08-metodos-propios.md#m%C3%A9todos-propios).
+Hemos aprendido varios métodos diferentes. Ahora es tiempo de aprender como
+[hacerlo por nosotros mismos](/aprende.a.programar/capitulos/metodos_propios.html).

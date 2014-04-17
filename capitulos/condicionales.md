@@ -2,8 +2,7 @@ Condicionales
 =============
 
 Ahhhh, control de flujo. Acá es donde todo empieza a encajar. A pesar que este
-capítulo es más corto y facil que el capítulo de
-[métodos](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/05-acerca-de-metodos.md#m%C3%A1s-acerca-de-m%C3%A9todos),
+capítulo es más corto y facil que el capítulo de [métodos](/aprende.a.programar/capitulos/metodos.html),
 te abrirá un mundo nuevo de posibilidades para programar.
 
 Luego de este capítulo, seremos capaces de escribir programas realmente interactivos; previamente
@@ -445,4 +444,4 @@ serás capaz de programar cualquier cosas. ¡En serio! Solo mira la cantidad de 
 que antes cuando no tenías bucles y ramificaciones.
 
 Ahora, aprendamos sobre un nuevo tipo de objeto, que permite tener control de listas de otros objetos:
-[matrices](https://github.com/rubyperu/aprende.a.programar/blob/master/capitulos/07-matrices.md#matrices-e-iteraciones).
+[matrices](/aprende.a.programar/capitulos/matrices.html).

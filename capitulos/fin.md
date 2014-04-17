@@ -151,4 +151,4 @@ y yo lo haré a mi manera.
 
 Usa esto para lo bueno y no para lo malo. :-)  Y si encuentras este tutorial
 útil (o confuso, o si encuentras un error),
-<a href="https://github.com/rubyperu/aprendeaprogramar.pe/issues">avísanos</a>!
+<a href="https://github.com/rubysur/aprendeaprogramar.pe/issues">avísanos</a>!
