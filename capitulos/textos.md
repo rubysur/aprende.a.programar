@@ -46,9 +46,13 @@ Al igual que hacer aritmética con números, ¡tú también puedes hacer
 aritmética con textos! Bueno, algo así ... digamos que puedes suma
 textos. Intentemos sumar dos textos y ver que hace `puts` con eso.
 
+**Código:**
+
 ```ruby
 puts "Me gusta" + "el pastel de manzana."
 ```
+
+**Resultado:**
 
 ```html
 Me gustael pastel de manzana.
@@ -60,10 +64,14 @@ se escriben dentro de los textos (es verdad lo que dicen: las computadoras
 no hacen lo que tú *quieres* que hagan, sólo lo que tú *les dices* que
 hagan). Intentémoslo nuevamente:
 
+**Código:**
+
 ```ruby
 puts "Me gusta " + "el pastel de manzana."
 puts "Me gusta" + " el pastel de manzana."
 ```
+
+**Resultado:**
 
 ```html
 Me gusta el pastel de manzana.
@@ -75,9 +83,13 @@ Como puedes ver, no importó a que texto le agregué el espacio.
 Así que puedes sumar textos, pero ... ¡también puedes multiplicarlos! (por
 un número ...). Observa esto:
 
+**Código:**
+
 ```ruby
 puts "parpadeo " * 4
 ```
+
+**Resultado:**
 
 ```html
 batea tus párpados
@@ -102,11 +114,15 @@ dígitos.
 
 Juguemos con esto un poco:
 
+**Código:**
+
 ```ruby
 puts  12  +  12
 puts "12" + "12"
 puts "12  +  12"
 ```
+
+**Resultado:**
 
 ```html
 24
@@ -116,11 +132,15 @@ puts "12  +  12"
 
 Y qué sucede con esto?:
 
+**Código:**
+
 ```ruby
 puts  2  *  5
 puts "2" *  5
 puts "2  *  5"
 ```
+
+**Resultado:**
 
 ```html
 10
@@ -137,10 +157,14 @@ Problemas
 En este punto podrías haber probado algunas cosas que no funcionaron. Si
 no lo has hecho, aquí hay algunas:
 
+**Código:**
+
 ```ruby
 puts "12" + 12
 puts "2" * "5"
 ```
+
+**Resultado:**
 
 ```html
 can't convert Fixnum into String (TypeError)
@@ -179,10 +203,14 @@ Entonces, podrías combinar comillas simples (`'`) o dobles (`"`) según
 lo requieras. Es más fácil de entender, si miramos los siguientes
 ejemplos:
 
+**Código:**
+
 ```ruby
 puts "Mi nombre es Jo'C."
 puts '¡Mi sobrenombre es "Pepe"!'
 ```
+
+**Resultado:**
 
 ```html
 Mi nombre es Jo'C
