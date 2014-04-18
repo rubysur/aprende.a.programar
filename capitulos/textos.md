@@ -51,7 +51,7 @@ puts "Me gusta" + "el pastel de manzana."
 ```
 
 ```html
-Me gustael pastel de manzana
+Me gustael pastel de manzana.
 ```
 
 Whoops! Me olvidé de poner un espacio entre `"Me gusta"` y
@@ -66,8 +66,8 @@ puts "Me gusta" + " el pastel de manzana."
 ```
 
 ```html
-Me gusta el pastel de manzana
-Me gusta el pastel de manzana
+Me gusta el pastel de manzana.
+Me gusta el pastel de manzana.
 ```
 
 Como puedes ver, no importó a que texto le agregué el espacio.
@@ -191,4 +191,4 @@ Mi nombre es Jo'C
 
 Si tiene algunas dudas, [¡sigue leyendo!](/aprende.a.programar/capitulos/variables.html)
 Vas a encontrar muchas respuestas a continuación (después de todo, no
-podría contestar cada pregunta en tan sólo una página).
+puedo contestar cada pregunta en tan sólo una página).
