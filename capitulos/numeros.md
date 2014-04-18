@@ -5,7 +5,7 @@ Ahora que tienes todo [instalado](/aprende.a.programar), ¡vamos a escribir un p
 Abre tu editor de texto favorito y escribe lo siguiente:
 
 ```ruby
-puts 1+2
+puts 1 + 2
 ```
 
 Guarda tu programa (sí, ¡eso es un programa!) como `calc.rb` (el `.rb`
