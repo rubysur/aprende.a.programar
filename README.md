@@ -23,7 +23,7 @@ guía, muchos de ellos son programas completos que puedes ejecutar en tu
 equipo. Para hacer el código más fácil de leer, he marcado partes del
 código de distintos colores y formatos.
 
-Si encuentras algo que no entiendas o si tienes una pregunta que no has
+Si encuentras algo que no entiendes o si tienes una pregunta que no has
 podido resolver, ¡escríbela y sigue leyendo! Es posible que la respuesta
 llegue en un capítulo posterior. Sin embargo, si tu pregunta no ha sido
 resuelta al finalizar la guía, te voy a mostrar donde preguntar. Hay
