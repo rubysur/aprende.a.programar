@@ -32,9 +32,9 @@ puts "Adiós."
 El resultado es el siguiente:
 
 ```html
-Hola Mundo
+Hola, Mundo!
 
-Adiós
+Adiós.
 ```
 
 Eso funcionó muy bien. Ahora inténtalo con algún texto tuyo.
