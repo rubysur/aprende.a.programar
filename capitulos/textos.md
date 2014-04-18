@@ -1,196 +1,194 @@
 Textos
 ======
 
-Así que hemos aprendido todo acerca de
-<a href="/capitulos/01-numeros.markdown">números</a>,
-¿pero qué acerca de letras?  ¿palabras?  ¿textos?
+Así que hemos aprendido todo acerca de [números](aprende.a.programar/capitulos/numeros.html),
+¿pero qué hay acerca de letras?, ¿palabras? o ¿textos?
 
-Nos referimos a grupos de letras en un programa como <dfn>textos</dfn>.  (Tú puedes
-pensar en letras impresas siendo ensartadas en un cartel.)
-Aquí hay algunos textos:
+Nos referimos a grupos de letras en un programa como **textos**. Tú puedes
+pensar en letras impresas siendo insertadas en un cartel. Aquí hay algunos
+textos:
 
-    'Hola.'
-    'Ruby la rompe.'
-    '5 es mi número favorito... ¿Cuál es el tuyo?'
-    'Snoopy dice #%^?&*@! cuando le aplastan el dedo del pie.'
-    '     '
-    ''
+```html
+"Hola."
+"Ruby la rompe."
+"5 es mi número favorito... ¿Cuál es el tuyo?"
+"Snoopy dice #%^?&*@! cuando le aplastan el dedo del pie."
+"     "
+""
+```
 
-Como puedes ver, los textos pueden tener puntuación, dígitos, símbolos,
-y espacios dentro... más que solo palabras. Ese último texto
-no tiene nada y podemos llamarlo un texto <dfn>vacío</dfn>.
+Como puedes ver, los textos pueden tener puntuación, dígitos, símbolos
+y espacios dentro ... más que solo palabras. Ese último texto no tiene
+nada y podemos llamarlo un texto **vacío**.
 
 Hemos estado usando `puts` para imprimir números, intentémoslo con textos:
 
-*Código:*
+```ruby
+puts "Hola, mundo!"
+puts ""
+puts "Adiós."
+```
 
-    puts 'Hola, mundo!'
-    puts ''
-    puts 'Adiós.'
+El resultado es el siguiente:
 
-*Resultado:*
+```html
+Hola Mundo
 
-    Hola Mundo
+Adiós
+```
 
-    Adiós
+Eso funcionó muy bien. Ahora inténtalo con algún texto tuyo.
 
-Eso funcionó bien. Ahora inténtalo con algún texto tuyo.
+Aritmética de textos
+--------------------
 
-## Aritmética de textos
+Al igual que hacer aritmética con números, ¡tú también puedes hacer
+aritmética con textos! Bueno, algo así ... digamos que puedes suma
+textos. Intentemos sumar dos textos y ver que hace `puts` con eso.
 
-Igual que hacer hacer aritmética con números, ¡tú puedes también hacer
-aritmética con textos! Bueno, algo así... puedes sumar textos, digamos.
-Intentemos sumar dos textos y ver que hace
-`puts` con eso.
+```ruby
+puts "Me gusta" + "el pastel de manzana."
+```
 
-*Código:*
+```html
+Me gustael pastel de manzana
+```
 
-    puts 'Me gusta' + 'el pastel de manzana.'
+Whoops! Me olvidé de poner un espacio entre `"Me gusta"` y
+`"el pastel de manzana."`. Los espacios generalmente no importan salvo si
+se escriben dentro de los textos (es verdad lo que dicen: las computadoras
+no hacen lo que tú *quieres* que hagan, sólo lo que tú *les dices* que
+hagan). Intentémoslo nuevamente:
 
-*Resultado:*
+```ruby
+puts "Me gusta " + "el pastel de manzana."
+puts "Me gusta" + " el pastel de manzana."
+```
 
-    Me gustael pastel de manzana
+```html
+Me gusta el pastel de manzana
+Me gusta el pastel de manzana
+```
 
-Whoops! Me olvidé de poner un espacio entre `'Me gusta'` y `'el pastel de manzana.'`.
-Los espacios no importan generalmente salvo si lo hacen dentro de los textos.
-(Es verdad lo que dicen: las computadoras no hacen lo que tú <em>quieres</em>
-que hagan, solo lo que tú <em>le dices</em>  que hagan) Intentémoslo nuevamente:
+Como puedes ver, no importó a que texto le agregué el espacio.
 
-*Código:*
+Así que puedes sumar textos, pero ... ¡también puedes multiplicarlos! (por
+un número ...). Observa esto:
 
-    puts 'Me gusta ' + 'el pastel de manzana.'
-    puts 'Me gusta' + ' el pastel de manzana.'
+```ruby
+puts "parpadeo " * 4
+```
 
-*Resultado:*
+```html
+batea tus párpados
+```
 
-    Me gusta el pastel de manzana
-    Me gusta el pastel de manzana
+Solo bromeaba, en realidad muestra esto:
 
-(Como puedes ver, no importó a que texto le agregué el espacio)
+```html
+parpadeo parpadeo parpadeo parpadeo
+```
 
-Así que puedes sumar textos, ¡pero también puedes multiplicarlas!
-(Por un número ...) Observa esto:
+Si lo piensas, tiene mucho sentido. Después de todo, `7 * 3` realmente
+sólo significa `7 + 7 + 7`, así que `"moo" * 3` sólo significa
+`"moo" + "moo" + "moo"`.
 
-*Código:*
+`12` vs `"12"`
+--------------
 
-    puts 'parpadeo ' * 4
-
-*Resultado:*
-
-    batea tus párpados
-
-(Solo bromeaba, en realidad muestra esto):
-
-    parpadeo parpadeo parpadeo parpadeo
-
-Si lo piensas, tiene todo el sentido. Después de todo,
-`7*3` realmente solo significa `7+7+7`, así que `'moo'*3` solo
-significa `'moo'+'moo'+'moo'`.
-
-## `12` vs `'12'`
-
-Antes de ir más allá, debemos asegurarnos de entender la
-diferencia entre <em>números</em> y <em>dígitos</em>.
-`12` es un número, pero `'12'` es un texto de dos dígitos.
+Antes de ir más allá, debemos asegurarnos de entender la diferencia entre
+números y dígitos. `12` es un número, pero `"12"` es un texto de dos
+dígitos.
 
 Juguemos con esto un poco:
 
-*Código:*
+```ruby
+puts  12  +  12
+puts "12" + "12"
+puts "12  +  12"
+```
 
-    puts  12  +  12
-    puts '12' + '12'
-    puts '12  +  12'
-
-*Resultado:*
-
-    24
-    1212
-    12  +  12
+```html
+24
+1212
+12  +  12
+```
 
 Y qué sucede con esto?:
 
-*Código:*
+```ruby
+puts  2  *  5
+puts "2" *  5
+puts "2  *  5"
+```
 
-    puts  2  *  5
-    puts '2' *  5
-    puts '2  *  5'
-
-*Resultado:*
-
-    10
-    22222
-    2  *  5
+```html
+10
+22222
+2  *  5
+```
 
 Estos ejemplos fueron bastante directos. De cualquier modo, si no tienes
-cuidado en cómo mezclas tus textos y tus números podrías encontrarte con...
+cuidado en cómo mezclas textos y números podrías encontrarte con ...
 
-## Problemas
+Problemas
+---------
 
-En este punto podrías haber probado algunas cosas que
-<em>no funcionaron</em>. Si no lo has hecho, aquí hay algunas:
+En este punto podrías haber probado algunas cosas que no funcionaron. Si
+no lo has hecho, aquí hay algunas:
 
-*Código:*
+```ruby
+puts "12" + 12
+puts "2" * "5"
+```
 
-    puts '12' + 12
-    puts '2' * '5'
+```html
+can't convert Fixnum into String (TypeError)
+```
 
-*Resultado:*
+Hmmm... un mensaje de error. El problema es que en realidad no puedes sumar
+un número a un texto o multiplicar un texto por otro texto. Tiene tan poco
+sentido como esto:
 
-    can't convert Fixnum into String (TypeError)
+```ruby
+puts "Betty" + 12
+puts "Fred" * "John"
+```
 
-Hmmm... un mensaje de error.  El problema es que en realidad
-no puedes sumar un número a un texto, o multiplicar
-un texto por otro texto. No tiene más sentido que esto:
-
-    puts 'Betty' + 12
-    puts 'Fred' * 'John'
-
-Algo más para tener cuidado: Puedes escribir `'pig'*5` en un programa,
-dado que sólo significa `5` veces el texto `'pig'` todo
-sumado. De cualquier modo,
-tú <em>no puedes</em> escribir `5*'pig'`, ya que eso significa `'pig'`
+Algo más para tener cuidado: Puedes escribir `"pig" * 5` en un programa,
+dado que sólo significa `5` veces el texto `"pig"` todo junto. De cualquier
+modo, tú *no puedes* escribir `5 * "pig"`, ya que eso significa `"pig"`
 veces el número `5`, lo cual es simplemente tonto.
 
-Finalmente, y si quisieras que tu programa imprimiera
-`¡Mi nombre es O'hara!`?  Podrías intentar:
+Finalmente, por ejemplo, si quisieras que tu programa imprimiera
+`¡Mi sobrenombre es "Pepe"!`?  Podrías intentar:
 
-    puts '¡Mi nombre es O'hara!'
+```ruby
+puts "¡Mi sobrenombre es "Pepe"!"
+```
 
-Bueno, <em>eso</em> no funcionará; No intentaré ni ejecutarlo.
-La computadora pensó que habíamos terminado con el texto.
-(Esta es la razón de porque es lindo tener un editor de
-texto que haga <dfn>coloreo sintáctico</dfn> por ti)
-¿Entonces, cómo permitimos que la computadora sepa que
-queremos permanecer en el texto? Tenemos que <dfn>escapar</dfn>
-el apóstrofe, de esta manera:
+Bueno, eso no va a funcionar. La computadora no va a poder ejecutarlo
+porque piensa que el texto termina en el segundo `"` (antes de `Pepe`)
+y que `Pepe` es un método de Ruby, lo cual no es para nada cierto.
 
-    puts '¡Mi nombre es O\'hara!'
+Entonces, ¿cómo hacemos para que la computadora entienda el texto
+que incluye doble comillas (`"`)? Olvidé mencionarte que también
+puedes usar comillas simples (`'`) para escribir texto en Ruby.
 
-La barra invertida es el carácter de escape. En otras palabras,
-si tú tienes una barra invertida y otro carácter, ellos a veces son
-convertidos a otro carácter. Las únicas cosas que una barra invertida
-escapa son los apóstrofes y las propias barras invertidas. (Si lo
-piensas un poco, los caracteres escapados siempre se escapan a sí mismo)
-Unos pocos ejemplos vendrían muy bien, me parece:
+Entonces, podrías combinar comillas simples (`'`) o dobles (`"`) según
+lo requieras. Es más fácil de entender, si miramos los siguientes
+ejemplos:
 
-*Código:*
+```ruby
+puts "Mi nombre es Jo'C."
+puts '¡Mi sobrenombre es "Pepe"!'
+```
 
-    puts '¡Mi nombre es O\'hara!'
-    puts 'barra invertida al final del texto:  \\'
-    puts 'arriba\\abajo'
-    puts 'arriba\abajo'
+```html
+Mi nombre es Jo'C
+¡Mi sobrenombre es "Pepe"!
+```
 
-*Resultado:*
-
-    ¡Mi nombre es O'hara!
-    barra invertida al final del texto:  \
-    arriba\abajo
-    arriba\abajo
-
-Dado que la barra invertida <em>no</em> escapa un `'d',
-pero <em>si</em> si se escapa a si misma, esos dos últimos caracteres
-son idénticos. No parecen lo mismo en el código, pero en tu computadora
-son realmente los mismos.
-
-Si tienes alguna pregunta, solo <a href="/capitulos/03-variables.html">¡sigue leyendo!</a>
-No podría contestar cada pregunta en <em>esta</em> página, después de todo.
+Si tiene algunas dudas, [¡sigue leyendo!](/aprende.a.programar/capitulos/variables.html)
+Vas a encontrar muchas respuestas a continuación (después de todo, no
+podría contestar cada pregunta en tan sólo una página).
