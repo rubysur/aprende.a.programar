@@ -21,12 +21,14 @@ la lista actúa como una variable: puedes ver que objeto en
 particular apunta a cada posición, y puedes hacer que este apunte
 a un objeto diferente. Vamos a echar un vistazo a algunas matrices:
 
-    []
-    [5]
-    ['Hola', 'Adiós']
+```ruby
+[]
+[5]
+['Hola', 'Adiós']
 
-    flavor = 'vainilla'           #  Esto no es una matriz, por supuesto...
-    [89.9, sabor, [true, false]]  #  ...pero esto sí lo es.
+flavor = 'vainilla'           #  Esto no es una matriz, por supuesto...
+[89.9, flavor, [true, false]]  #  ...pero esto sí lo es.
+```
 
 Entonces primero tenemos una matriz vacía, luego una matriz
 conteniendo un número simple, luego una matriz que contiene
@@ -35,7 +37,7 @@ un array conteniendo tres objetos, de los cuales el último
 es la matriz `'[true, false]'`. Recuerda, variables
 no son objetos, entonces nuestra ultima matriz es en realidad
 un flotante, un *texto*, y una matriz. Aún asi si
-nosotros hubieramos puesto `'sabor'` a punto o algo más,
+nosotros hubieramos puesto `'flavor'` a punto o algo más,
 esto no hubiera cambiado la matriz.
 
 Para ayudarnos a encontrar un objeto particular en una matriz,
@@ -48,23 +50,26 @@ objetos en una matriz:
 
 *Código:*
 
-    names = ['Ada', 'Belle', 'Chris']
+```ruby
+names = ['Ada', 'Belle', 'Chris']
 
-    puts names
-    puts names[0]
-    puts names[1]
-    puts names[2]
-    puts names[3]  #  Este esta fuera del rango.
+puts names
+puts names[0]
+puts names[1]
+puts names[2]
+puts names[3]  #  Este esta fuera del rango.
+```
 
 *Resultado:*
 
-        Ada
-        Belle
-        Chris
-        Ada
-        Belle
-        Chris
-
+```html
+Ada
+Belle
+Chris
+Ada
+Belle
+Chris
+```
 
 Entonces, nosotros vemos que `'puts names'` imprime
 cada nombre en la matriz `'names'`. Luego usamos
@@ -109,26 +114,30 @@ esto:
 
 *Código:*
 
-    lenguajes = ['Inglés', 'Alemán', 'Ruby']
+```ruby
+lenguajes = ['Inglés', 'Alemán', 'Ruby']
 
-    lenguajes.each do |leng|
-      puts '¡Me gusta ' + leng + '!'
-      puts '¿A ti?'
-    end
+lenguajes.each do |leng|
+  puts '¡Me gusta ' + leng + '!'
+  puts '¿A ti?'
+end
 
-    puts '¡Y vamos a escuchar esto para C++!'
-    puts '...'
+puts '¡Y vamos a escuchar esto para C++!'
+puts '...'
+```
 
 *Resultado:*
 
-    ¡Me gusta Inglés!
-    ¿A tí?
-    ¡Me gusta Alemán!
-    ¿A tí?
-    ¡Me gusta Ruby!
-    ¿A tí?
-    ¡Y vamos a escuchar esto para C++!
-    ...
+```html
+¡Me gusta Inglés!
+¿A tí?
+¡Me gusta Alemán!
+¿A tí?
+¡Me gusta Ruby!
+¿A tí?
+¡Y vamos a escuchar esto para C++!
+...
+```
 
 ¿Qué acaba de ocurrir? Bueno, tenemos permitido ir a través
 de cada objeto en la matriz sin utilizar ningun número, así
@@ -163,16 +172,19 @@ para *entero*!
 
 *Código:*
 
-    3.times do
-      puts 'Hip-Hip-Hooray!'
-    end
+```ruby
+3.times do
+  puts 'Hip-Hip-Hooray!'
+end
+```
 
 *Resultado:*
 
-    Hip-Hip-Hooray!
-    Hip-Hip-Hooray!
-    Hip-Hip-Hooray!
-
+```html
+Hip-Hip-Hooray!
+Hip-Hip-Hooray!
+Hip-Hip-Hooray!
+```
 
 ## Mas métodos para Matrices
 
@@ -193,31 +205,35 @@ Vamos a mirar un poco:
 
 *Código:*
 
-    alimentos = ['artichoke', 'brioche', 'caramel']
+```ruby
+alimentos = ['artichoke', 'brioche', 'caramel']
 
-    puts alimentos
-    puts
-    puts alimentos.to_s
-    puts
-    puts alimentos.join(', ')
-    puts
-    puts alimentos.join('  :)  ') + '  8)'
+puts alimentos
+puts
+puts alimentos.to_s
+puts
+puts alimentos.join(', ')
+puts
+puts alimentos.join('  :)  ') + '  8)'
 
-    200.times do
-      puts []
-    end
+200.times do
+  puts []
+end
+```
 
 *Resultado:*
 
-    artichoke
-    brioche
-    caramel
+```html
+artichoke
+brioche
+caramel
 
-    ["artichoke", "brioche", "caramel"]
+["artichoke", "brioche", "caramel"]
 
-    artichoke, brioche, caramel
+artichoke, brioche, caramel
 
-    artichoke  :)  brioche  :)  caramel  8)
+artichoke  :)  brioche  :)  caramel  8)
+```
 
 Como puedes ver, `'puts'` trata la matriz diferente  a otros objetos:
 solo llama `'puts'` sobre cada uno de los objetos en la matriz.
@@ -241,27 +257,30 @@ en realidad cambian la matriz:
 
 *Código:*
 
-    favoritos = []
-    favoritos.push 'lluvia de rosas'
-    favoritos.push 'whisky en gatitos'
+```ruby
+favoritos = []
+favoritos.push 'lluvia de rosas'
+favoritos.push 'whisky en gatitos'
 
-    puts favoritos[0]
-    puts favoritos.last
-    puts favoritos.length
+puts favoritos[0]
+puts favoritos.last
+puts favoritos.length
 
-    puts favoritos.pop
-    puts favoritos
-    puts favoritos.length
+puts favoritos.pop
+puts favoritos
+puts favoritos.length
+```
 
 *Resultado:*
 
-    lluvia de rosas
-    whisky en gatitos
-    2
-    whisky en gatitos
-    lluvia de rosas
-    1
-
+```html
+lluvia de rosas
+whisky en gatitos
+2
+whisky en gatitos
+lluvia de rosas
+1
+```
 
 ## Algunas cosas por intentar
 

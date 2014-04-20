@@ -13,129 +13,133 @@ a:
 
 *Código:*
 
-    puts 'Hola, y gracias por tomarse el tiempo para'
-    puts 'que me ayude con este experimento. Mi experimento'
-    puts 'tiene que ver con tu gusto acerca de'
-    puts 'la comida mexicana. Basta con pensar en la comida mexicana'
-    puts 'y tratar de contestar todas las preguntas con honestidad,'
-    puts 'ya sea con un "sí" o un "no". Mi experimento'
-    puts 'no tiene nada que ver con mojar la cama.'
-    puts
+```ruby
+puts 'Hola, y gracias por tomarse el tiempo para'
+puts 'que me ayude con este experimento. Mi experimento'
+puts 'tiene que ver con tu gusto acerca de'
+puts 'la comida mexicana. Basta con pensar en la comida mexicana'
+puts 'y tratar de contestar todas las preguntas con honestidad,'
+puts 'ya sea con un "sí" o un "no". Mi experimento'
+puts 'no tiene nada que ver con mojar la cama.'
+puts
 
-    #  Preguntaremos, pero ignoraremos sus respuestas.
+#  Preguntaremos, pero ignoraremos sus respuestas.
 
-    buenaRespuesta = false
-    while (not buenaRespuesta)
-      puts '¿Te gusta comer tacos?'
-      respuesta = gets.chomp.downcase
-      if (respuesta == 'si' or respuesta == 'no')
-        buenaRespuesta = true
-      else
-        puts 'Por favor, responda "si" o "no".'
-      end
+buenaRespuesta = false
+while (not buenaRespuesta)
+  puts '¿Te gusta comer tacos?'
+  respuesta = gets.chomp.downcase
+  if (respuesta == 'si' or respuesta == 'no')
+    buenaRespuesta = true
+  else
+    puts 'Por favor, responda "si" o "no".'
+  end
+end
+
+buenaRespuesta = false
+while (not buenaRespuesta)
+  puts '¿Te gusta comer burritos?'
+  respuesta = gets.chomp.downcase
+  if (respuesta == 'si' or respuesta == 'no')
+    buenaRespuesta = true
+  else
+    puts 'Por favor, responda "si" o "no".'
+  end
+end
+
+#  Presta atención a *esta* respuesta.
+buenaRespuesta = false
+while (not buenaRespuesta)
+  puts '¡Mojas la cama?'
+  respuesta = gets.chomp.downcase
+  if (respuesta == 'si' or respuesta == 'no')
+    buenaRespuesta = true
+    if respuesta == 'si'
+      mojasLaCama = true
+    else
+      mojasLaCama = false
     end
+  else
+    puts 'Por favor, responda "si" o "no".'
+  end
+end
 
-    buenaRespuesta = false
-    while (not buenaRespuesta)
-      puts '¿Te gusta comer burritos?'
-      respuesta = gets.chomp.downcase
-      if (respuesta == 'si' or respuesta == 'no')
-        buenaRespuesta = true
-      else
-        puts 'Por favor, responda "si" o "no".'
-      end
-    end
+buenaRespuesta = false
+while (not buenaRespuesta)
+  puts '¿Te gusta comer chimichangas?'
+  respuesta = gets.chomp.downcase
+  if (respuesta == 'si' or respuesta == 'no')
+    buenaRespuesta = true
+  else
+    puts 'Por favor, responda "si" o "no".'
+  end
+end
 
-    #  Presta atención a *esta* respuesta.
-    buenaRespuesta = false
-    while (not buenaRespuesta)
-      puts '¡Mojas la cama?'
-      respuesta = gets.chomp.downcase
-      if (respuesta == 'si' or respuesta == 'no')
-        buenaRespuesta = true
-        if respuesta == 'si'
-          mojasLaCama = true
-        else
-          mojasLaCama = false
-        end
-      else
-        puts 'Por favor, responda "si" o "no".'
-      end
-    end
+puts 'Solo una cuantas preguntas más...'
 
-    buenaRespuesta = false
-    while (not buenaRespuesta)
-      puts '¿Te gusta comer chimichangas?'
-      respuesta = gets.chomp.downcase
-      if (respuesta == 'si' or respuesta == 'no')
-        buenaRespuesta = true
-      else
-        puts 'Por favor, responda "si" o "no".'
-      end
-    end
+buenaRespuesta = false
+while (not buenaRespuesta)
+  puts '¿Te gusta comer sopapillas?'
+  respuesta = gets.chomp.downcase
+  if (respuesta == 'si' or respuesta == 'no')
+    buenaRespuesta = true
+  else
+    puts 'Por favor, responda "si" o "no".'
+  end
+end
 
-    puts 'Solo una cuantas preguntas más...'
+#  Preguntas otras cosas sobre la comida mexicana.
 
-    buenaRespuesta = false
-    while (not buenaRespuesta)
-      puts '¿Te gusta comer sopapillas?'
-      respuesta = gets.chomp.downcase
-      if (respuesta == 'si' or respuesta == 'no')
-        buenaRespuesta = true
-      else
-        puts 'Por favor, responda "si" o "no".'
-      end
-    end
-
-    #  Preguntas otras cosas sobre la comida mexicana.
-
-    puts
-    puts 'Interrogatorio:'
-    puts 'Gracias por tomarse el tiempo para ayudar con'
-    puts 'este experimento. De hecho, este experimento'
-    puts 'no tiene nada que ver con la comida mexicana. Es'
-    puts 'un experimento sobre mojar la cama. La comida mexicana'
-    puts 'ahí para atraparte con la guardia baja'
-    puts 'con la esperanza de que respondería más'
-    puts 'honestamente. Gracias de nuevo.'
-    puts
-    puts mojasLaCama
+puts
+puts 'Interrogatorio:'
+puts 'Gracias por tomarse el tiempo para ayudar con'
+puts 'este experimento. De hecho, este experimento'
+puts 'no tiene nada que ver con la comida mexicana. Es'
+puts 'un experimento sobre mojar la cama. La comida mexicana'
+puts 'ahí para atraparte con la guardia baja'
+puts 'con la esperanza de que respondería más'
+puts 'honestamente. Gracias de nuevo.'
+puts
+puts mojasLaCama
+```
 
 *Resultado:*
 
-    Hola, y gracias por tomarse el tiempo para
-    que me ayude con este experimento. Mi experimento
-    tiene que ver con tu gusto acerca de
-    la comida mexicana. Basta con pensar en la comida mexicana
-    y tratar de contestar todas las preguntas con honestidad,
-    ya sea con un "sí" o un "no". Mi experimento
-    no tiene nada que ver con mojar la cama.
+```html
+Hola, y gracias por tomarse el tiempo para
+que me ayude con este experimento. Mi experimento
+tiene que ver con tu gusto acerca de
+la comida mexicana. Basta con pensar en la comida mexicana
+y tratar de contestar todas las preguntas con honestidad,
+ya sea con un "sí" o un "no". Mi experimento
+no tiene nada que ver con mojar la cama.
 
-    ¿Te gusta comer tacos?
-    si
-    ¿Te gusta comer burritos?
-    si
-    ¡Mojas la cama?
-    de ninguna manera
-    Por favor, responda "si" o "no".
-    ¡Mojas la cama?
-    NO
-    ¿Te gusta comer chimichangas?
-    si
-    Solo una cuantas preguntas más...
-    ¿Te gusta comer sopapillas?
-    si
+¿Te gusta comer tacos?
+si
+¿Te gusta comer burritos?
+si
+¡Mojas la cama?
+de ninguna manera
+Por favor, responda "si" o "no".
+¡Mojas la cama?
+NO
+¿Te gusta comer chimichangas?
+si
+Solo una cuantas preguntas más...
+¿Te gusta comer sopapillas?
+si
 
-    Interrogatorio:
-    Gracias por tomarse el tiempo para ayudar con
-    este experimento. De hecho, este experimento
-    no tiene nada que ver con la comida mexicana. Es
-    un experimento sobre mojar la cama. La comida mexicana
-    ahí para atraparte con la guardia baja
-    con la esperanza de que respondería más
-    honestamente. Gracias de nuevo.
+Interrogatorio:
+Gracias por tomarse el tiempo para ayudar con
+este experimento. De hecho, este experimento
+no tiene nada que ver con la comida mexicana. Es
+un experimento sobre mojar la cama. La comida mexicana
+ahí para atraparte con la guardia baja
+con la esperanza de que respondería más
+honestamente. Gracias de nuevo.
 
-    false
+false
+```
 
 Ese fue un programa bastante largo, con mucha repetición.
 (Todas las secciones de código sobre las preguntas de comida
@@ -146,34 +150,39 @@ código en un gran bucle o iterador, porque a veces queremos
 hacer algo entre las preguntas. En situaciones como estas,
 es mejor escribir un método. Aquí está como:
 
-
-    def decirMu
-      puts 'muuuuuu...'
-    end
+```ruby
+def decirMu
+  puts 'muuuuuu...'
+end
+```
 
 Uy... nuestro programa no hizo `muuuuuu`. ¿Por qué no?, Porque no le dijimos que lo hiciera.
-Le dijimos *cómo* hacer `muuuuuu`, pero nunca le dijimos en realidad que lo <em>haga</em>.
+Le dijimos *cómo* hacer `muuuuuu`, pero nunca le dijimos en realidad que lo *haga*.
 Intentemos otra vez:
 
 *Código:*
 
-    def decirMu
-      puts 'muuuuuu...'
-    end
+```ruby
+def decirMu
+  puts 'muuuuuu...'
+end
 
-    decirMu
-    decirMu
-    puts 'coin-coin'
-    decirMu
-    decirMu
+decirMu
+decirMu
+puts 'coin-coin'
+decirMu
+decirMu
+```
 
 *Resultado:*
 
-    muuuuuu...
-    muuuuuu...
-    coin-coin
-    muuuuuu...
-    muuuuuu...
+```html
+muuuuuu...
+muuuuuu...
+coin-coin
+muuuuuu...
+muuuuuu...
+```
 
 Ah, mucho mejor. (En caso que no hables francés, eso fue un pato francés en medio del programa. En
 Francia los patos dicen *coin-coin*.)
@@ -197,19 +206,23 @@ Para agregar un parámetro a `decirMu` (digamos, el número de muuuuuu), haríam
 
 *Código:*
 
-    def decirMu numeroDeMus
-      puts 'muuuuuuu...'*numeroDeMus
-    end
+```ruby
+def decirMu numeroDeMus
+  puts 'muuuuuuu...'*numeroDeMus
+end
 
-    decirMu 3
-    puts 'oink-oink'
-    decirMu  #  Esto debería dar un error porque falta el parámetro.
+decirMu 3
+puts 'oink-oink'
+decirMu  #  Esto debería dar un error porque falta el parámetro.
+```
 
 *Resultado:*
 
-    muuuuuuu...muuuuuuu...muuuuuuu...
-    oink-oink
-    in `decirMu': wrong number of arguments (0 for 1) (ArgumentError)
+```html
+muuuuuuu...muuuuuuu...muuuuuuu...
+oink-oink
+in `decirMu': wrong number of arguments (0 for 1) (ArgumentError)
+```
 
 `numeroDeMus` es una variable que apunta al parámetro que se le ha pasado, lo voy a decir de nuevo,
 pero es un poco confuso: `numeroDeMus` es una variable que apunta al parámetro pasado. Por lo
@@ -229,16 +242,20 @@ En el siguiente programa hay dos variables:
 
 *Código:*
 
-    def duplicaEsto num
-      numeroVeces2 = num*2
-      puts num.to_s+' el doble es '+numeroVeces2.to_s
-    end
+```ruby
+def duplicaEsto num
+  numeroVeces2 = num*2
+  puts num.to_s+' el doble es '+numeroVeces2.to_s
+end
 
-    duplicaEsto 44
+duplicaEsto 44
+```
 
 *Resultado:*
 
-    44 el doble es 88
+```html
+44 el doble es 88
+```
 
 Las variables son `num` y `numeroVeces2`.
 Los dos se encuentran dentro del método `duplicaEsto`. Estas (y todas las variables
@@ -247,18 +264,22 @@ dentro del método y no pueden salir. Si lo intentas obtendrás un error:
 
 *Código:*
 
-    def duplicaEsto num
-      numeroVeces2 = num*2
-      puts num.to_s+' el doble es '+numeroVeces2.to_s
-    end
+```ruby
+def duplicaEsto num
+  numeroVeces2 = num*2
+  puts num.to_s+' el doble es '+numeroVeces2.to_s
+end
 
-    duplicaEsto 44
-    puts numeroVeces2.to_s
+duplicaEsto 44
+puts numeroVeces2.to_s
+```
 
 *Resultado:*
 
-    44 el doble es 88
-    in `<main>': undefined local variable or method `numeroVeces2' for main:Object (NameError)
+```html
+44 el doble es 88
+in `<main>': undefined local variable or method `numeroVeces2' for main:Object (NameError)
+```
 
 Variable local no definida ... De hecho, nos *hicieron* definir esa variable local, pero
 no es local donde traté de usarlo, es local en el método.
@@ -269,19 +290,23 @@ que ellos no tienen acceso a *tus* variables y por lo tanto no pueden meter la p
 
 *Código:*
 
-    def pequenaMascota var
-      var = nil
-      puts '¡HAHA!  ¡He malogrado tu variable!'
-    end
+```ruby
+def pequenaMascota var
+  var = nil
+  puts '¡HAHA!  ¡He malogrado tu variable!'
+end
 
-    var = '¡Tu ni siquiera puedes tocar mi variable!'
-    pequenaMascota var
-    puts var
+var = '¡Tu ni siquiera puedes tocar mi variable!'
+pequenaMascota var
+puts var
+```
 
 *Resultado:*
 
-    ¡HAHA!  ¡He malogrado tu variable!
-    ¡Tu ni siquiera puedes tocar mi variable!
+```html
+¡HAHA!  ¡He malogrado tu variable!
+¡Tu ni siquiera puedes tocar mi variable!
+```
 
 En realidad, hay *dos* variables en el programa que se llaman `var`: uno en el
 interior de `pequenaMascota` y otro fuera de él. Cuando llamamos a `pequenaMascota var`, nosotros
@@ -304,14 +329,17 @@ Entonces, ¿qué es lo que *hace* `puts` al retornar? No nos importó antes, per
 
 *Código:*
 
-    valorRetorno = puts 'Esto es lo que puts retorna:'
-    puts valorRetorno
+```ruby
+valorRetorno = puts 'Esto es lo que puts retorna:'
+puts valorRetorno
+```
 
 *Resultado:*
 
-    Esto es lo que puts retorna:
-    cero
+```html
+Esto es lo que puts retorna:
 
+```
 Así que el primer `puts` retornó `nil`. A pesar de que no lo prueba, el segundo `puts`
 también lo hizo, `puts` siempre retorna `nil`. Cada método tiene que devolver algo,
 incluso si el valor es solo `nil`.
@@ -326,18 +354,22 @@ sólo tenemos que ponerla al final de ellos:
 
 *Código:*
 
-    def decirMu numeroDeMus
-      puts 'muuuuuu...'*numeroDeMus
-      'submarino amarillo'
-    end
+```ruby
+def decirMu numeroDeMus
+  puts 'muuuuuu...'*numeroDeMus
+  'submarino amarillo'
+end
 
-    x = decirMu 2
-    puts x
+x = decirMu 2
+puts x
+```
 
 *Resultado:*
 
-    muuuuuu... muuuuuuu...
-    submarino amarillo
+```html
+muuuuuu... muuuuuuu...
+submarino amarillo
+```
 
 Vamos a tratar con el experimento de sicología otra vez, pero esta vez vamos a
 escribir un método que haga las preguntas por nosotros. Se tendrá que tomar la pregunta
@@ -349,73 +381,77 @@ que sea más fácil de leer:
 
 *Código:*
 
-    def preguntar pregunta
-      buenarespuesta = false
-      while (not buenarespuesta)
-        puts pregunta
-        reply = gets.chomp.downcase
+```ruby
+def preguntar pregunta
+  buenarespuesta = false
+  while (not buenarespuesta)
+    puts pregunta
+    reply = gets.chomp.downcase
 
-        if (reply == 'si' or reply == 'no')
-          buenarespuesta = true
-          if reply == 'si'
-            answer = true
-          else
-            answer = false
-          end
-        else
-          puts 'Por favor, responder "si" o "no".'
-        end
+    if (reply == 'si' or reply == 'no')
+      buenarespuesta = true
+      if reply == 'si'
+        answer = true
+      else
+        answer = false
       end
-
-      answer  #  Esto es lo que retorna (`true` o `false`).
+    else
+      puts 'Por favor, responder "si" o "no".'
     end
+  end
 
-    puts 'Hola, y gracias por...'
-    puts
+  answer  #  Esto es lo que retorna (`true` o `false`).
+end
 
-    preguntar '¿Te gusta comer tacos?'      #  Ignoramos la respuesta.
-    preguntar '¿Te gusta comer burritos?'
-    mojasLaCama = preguntar '¿Mojas la cama?'  #  Salvamos el valor retornado.
-    preguntar '¿Te gusta comer chimichangas?'
-    preguntar '¿Te gusta comer sopapillas?'
-    preguntar '¿Te gusta comer tamales?'
-    puts 'Solo unas preguntas mas...'
-    preguntar '¿Te gusta beber horchata?'
-    preguntar '¿Te gusta comer flautas?'
+puts 'Hola, y gracias por...'
+puts
 
-    puts
-    puts 'Interrogatorio:'
-    puts 'Gracias por...'
-    puts
-    puts mojasLaCama
+preguntar '¿Te gusta comer tacos?'      #  Ignoramos la respuesta.
+preguntar '¿Te gusta comer burritos?'
+mojasLaCama = preguntar '¿Mojas la cama?'  #  Salvamos el valor retornado.
+preguntar '¿Te gusta comer chimichangas?'
+preguntar '¿Te gusta comer sopapillas?'
+preguntar '¿Te gusta comer tamales?'
+puts 'Solo unas preguntas mas...'
+preguntar '¿Te gusta beber horchata?'
+preguntar '¿Te gusta comer flautas?'
+
+puts
+puts 'Interrogatorio:'
+puts 'Gracias por...'
+puts
+puts mojasLaCama
+```
 
 *Resultado:*
 
-    ¿Te gusta comer tacos?
-    si
-    ¿Te gusta comer burritos?
-    si
-    ¿Mojas la cama?
-    de ninguna manera
-    Por favor, responder "si" o "no".
-    ¿Mojas la cama?
-    NO
-    ¿Te gusta comer chimichangas?
-    si
-    ¿Te gusta comer sopapillas?
-    si
-    ¿Te gusta comer tamales?
-    si
-    Solo unas preguntas mas...
-    ¿Te gusta beber horchata?
-    si
-    ¿Te gusta comer flautas?
-    si
+```html
+¿Te gusta comer tacos?
+si
+¿Te gusta comer burritos?
+si
+¿Mojas la cama?
+de ninguna manera
+Por favor, responder "si" o "no".
+¿Mojas la cama?
+NO
+¿Te gusta comer chimichangas?
+si
+¿Te gusta comer sopapillas?
+si
+¿Te gusta comer tamales?
+si
+Solo unas preguntas mas...
+¿Te gusta beber horchata?
+si
+¿Te gusta comer flautas?
+si
 
-    Interrogatorio:
-    Gracias por...
+Interrogatorio:
+Gracias por...
 
-    false
+false
+```
 
 No está mal, ¿eh?. Hemos sido capaces de añadir más preguntas (y la adición de
 preguntas ahora es *fácil*), y nuestro programa es aún más corto!. Es una gran mejora -
@@ -434,145 +470,149 @@ Debe quedar claro en el contexto de cómo funcionan estos.)*
 
 *Código:*
 
-    def numeroEnEspanol numero
-      #  Solo estamos considerando los números de 0-100.
-      if numero < 0
-        return 'Por favor ingrese un numero mayor o igual a cero.'
+```ruby
+def numeroEnEspanol numero
+  #  Solo estamos considerando los números de 0-100.
+  if numero < 0
+    return 'Por favor ingrese un numero mayor o igual a cero.'
+  end
+  if numero > 100
+    return 'Por favor ingrese un numero menor o igual a 100'
+  end
+
+  numeroDeTexto  = ''  #  Esta es el texto que retorna.
+
+  #  "izquierda" es cuanto del número aún falta escribir.
+  #  "escrito" es la parte que estamos escribiendo en estos momentos.
+  #  escrito y izquierda... lo captas?  :)
+  izquierda  = numero
+  escrito = izquierda/100          #  Cuantos cientos faltan escribir?
+  izquierda  = izquierda - escrito*100  #  Restar estos cientos.
+
+  if escrito > 0
+    return 'cien'
+  end
+
+  escrito = izquierda/10          #  Cuantas decenas faltan escribir?
+  izquierda  = izquierda - escrito*10  #  Restar las decenas.
+
+  if escrito > 0
+    if escrito == 1  #  Ah-ah...
+      #  No podemos escribir "diezidos" en lugar de "doce",
+      #  hemos realizado una excepción especial .
+      if    izquierda == 0
+        numeroDeTexto = numeroDeTexto + 'diez'
+      elsif izquierda == 1
+        numeroDeTexto = numeroDeTexto + 'once'
+      elsif izquierda == 2
+        numeroDeTexto = numeroDeTexto + 'doce'
+      elsif izquierda == 3
+        numeroDeTexto = numeroDeTexto + 'trece'
+      elsif izquierda == 4
+        numeroDeTexto = numeroDeTexto + 'catorce'
+      elsif izquierda == 5
+        numeroDeTexto = numeroDeTexto + 'quince'
+      elsif izquierda == 6
+        numeroDeTexto = numeroDeTexto + 'dieciseis'
+      elsif izquierda == 7
+        numeroDeTexto = numeroDeTexto + 'diecisiete'
+      elsif izquierda == 8
+        numeroDeTexto = numeroDeTexto + 'dieciocho'
+      elsif izquierda == 9
+        numeroDeTexto = numeroDeTexto + 'diecinueve'
       end
-      if numero > 100
-        return 'Por favor ingrese un numero menor o igual a 100'
+      #  Desde que ya tomamos el digito faltante,
+      #  ya no tenemos nada que escribir.
+      izquierda = 0
+    elsif escrito == 2
+      #  Como no podemos decir "veinteiuno",
+      #  tenemos que eliminar la "e" final.
+      if izquierda == 0
+        numeroDeTexto = numeroDeTexto + 'veinte'
+      else
+        numeroDeTexto = numeroDeTexto + 'veint'
       end
-
-      numeroDeTexto  = ''  #  Esta es el texto que retorna.
-
-      #  "izquierda" es cuanto del número aún falta escribir.
-      #  "escrito" es la parte que estamos escribiendo en estos momentos.
-      #  escrito y izquierda... lo captas?  :)
-      izquierda  = numero
-      escrito = izquierda/100          #  Cuantos cientos faltan escribir?
-      izquierda  = izquierda - escrito*100  #  Restar estos cientos.
-
-      if escrito > 0
-        return 'cien'
-      end
-
-      escrito = izquierda/10          #  Cuantas decenas faltan escribir?
-      izquierda  = izquierda - escrito*10  #  Restar las decenas.
-
-      if escrito > 0
-        if escrito == 1  #  Ah-ah...
-          #  No podemos escribir "diezidos" en lugar de "doce",
-          #  hemos realizado una excepción especial .
-          if    izquierda == 0
-            numeroDeTexto = numeroDeTexto + 'diez'
-          elsif izquierda == 1
-            numeroDeTexto = numeroDeTexto + 'once'
-          elsif izquierda == 2
-            numeroDeTexto = numeroDeTexto + 'doce'
-          elsif izquierda == 3
-            numeroDeTexto = numeroDeTexto + 'trece'
-          elsif izquierda == 4
-            numeroDeTexto = numeroDeTexto + 'catorce'
-          elsif izquierda == 5
-            numeroDeTexto = numeroDeTexto + 'quince'
-          elsif izquierda == 6
-            numeroDeTexto = numeroDeTexto + 'dieciseis'
-          elsif izquierda == 7
-            numeroDeTexto = numeroDeTexto + 'diecisiete'
-          elsif izquierda == 8
-            numeroDeTexto = numeroDeTexto + 'dieciocho'
-          elsif izquierda == 9
-            numeroDeTexto = numeroDeTexto + 'diecinueve'
-          end
-          #  Desde que ya tomamos el digito faltante,
-          #  ya no tenemos nada que escribir.
-          izquierda = 0
-        elsif escrito == 2
-          #  Como no podemos decir "veinteiuno",
-          #  tenemos que eliminar la "e" final.
-          if izquierda == 0
-            numeroDeTexto = numeroDeTexto + 'veinte'
-          else
-            numeroDeTexto = numeroDeTexto + 'veint'
-          end
-        elsif escrito == 3
-          numeroDeTexto = numeroDeTexto + 'treinta'
-        elsif escrito == 4
-          numeroDeTexto = numeroDeTexto + 'cuartenta'
-        elsif escrito == 5
-          numeroDeTexto = numeroDeTexto + 'cincuenta'
-        elsif escrito == 6
-          numeroDeTexto = numeroDeTexto + 'sesenta'
-        elsif escrito == 7
-          numeroDeTexto = numeroDeTexto + 'setenta'
-        elsif escrito == 8
-          numeroDeTexto = numeroDeTexto + 'ochenta'
-        elsif escrito == 9
-          numeroDeTexto = numeroDeTexto + 'noventa'
-        end
-
-        if izquierda > 0
-          numeroDeTexto = numeroDeTexto + 'i'
-        end
-      end
-
-      escrito = izquierda  #  Cuanto falta para el número?
-      izquierda  = 0     #  Restar lo que falta.
-
-      if escrito > 0
-        if    escrito == 1
-          numeroDeTexto = numeroDeTexto + 'uno'
-        elsif escrito == 2
-          numeroDeTexto = numeroDeTexto + 'dos'
-        elsif escrito == 3
-          numeroDeTexto = numeroDeTexto + 'tres'
-        elsif escrito == 4
-          numeroDeTexto = numeroDeTexto + 'cuatro'
-        elsif escrito == 5
-          numeroDeTexto = numeroDeTexto + 'cinco'
-        elsif escrito == 6
-          numeroDeTexto = numeroDeTexto + 'seis'
-        elsif escrito == 7
-          numeroDeTexto = numeroDeTexto + 'siete'
-        elsif escrito == 8
-          numeroDeTexto = numeroDeTexto + 'ocho'
-        elsif escrito == 9
-          numeroDeTexto = numeroDeTexto + 'nueve'
-        end
-      end
-
-      if numeroDeTexto == ''
-        #  La unica forma que "numeroDeTexto" este vacio es que
-        #  "numero" sea 0.
-        return 'cero'
-      end
-
-      #  Si numeroDeTexto os hasta hasta aqui es que tenemos un numero
-      #  entre 0 y 100, por lo que debemos retornar "numeroDeTexto".
-      numeroDeTexto
+    elsif escrito == 3
+      numeroDeTexto = numeroDeTexto + 'treinta'
+    elsif escrito == 4
+      numeroDeTexto = numeroDeTexto + 'cuartenta'
+    elsif escrito == 5
+      numeroDeTexto = numeroDeTexto + 'cincuenta'
+    elsif escrito == 6
+      numeroDeTexto = numeroDeTexto + 'sesenta'
+    elsif escrito == 7
+      numeroDeTexto = numeroDeTexto + 'setenta'
+    elsif escrito == 8
+      numeroDeTexto = numeroDeTexto + 'ochenta'
+    elsif escrito == 9
+      numeroDeTexto = numeroDeTexto + 'noventa'
     end
 
-    puts numeroEnEspanol(  0)
-    puts numeroEnEspanol(  9)
-    puts numeroEnEspanol( 10)
-    puts numeroEnEspanol( 21)
-    puts numeroEnEspanol( 17)
-    puts numeroEnEspanol( 32)
-    puts numeroEnEspanol( 88)
-    puts numeroEnEspanol( 99)
-    puts numeroEnEspanol(100)
+    if izquierda > 0
+      numeroDeTexto = numeroDeTexto + 'i'
+    end
+  end
+
+  escrito = izquierda  #  Cuanto falta para el número?
+  izquierda  = 0     #  Restar lo que falta.
+
+  if escrito > 0
+    if    escrito == 1
+      numeroDeTexto = numeroDeTexto + 'uno'
+    elsif escrito == 2
+      numeroDeTexto = numeroDeTexto + 'dos'
+    elsif escrito == 3
+      numeroDeTexto = numeroDeTexto + 'tres'
+    elsif escrito == 4
+      numeroDeTexto = numeroDeTexto + 'cuatro'
+    elsif escrito == 5
+      numeroDeTexto = numeroDeTexto + 'cinco'
+    elsif escrito == 6
+      numeroDeTexto = numeroDeTexto + 'seis'
+    elsif escrito == 7
+      numeroDeTexto = numeroDeTexto + 'siete'
+    elsif escrito == 8
+      numeroDeTexto = numeroDeTexto + 'ocho'
+    elsif escrito == 9
+      numeroDeTexto = numeroDeTexto + 'nueve'
+    end
+  end
+
+  if numeroDeTexto == ''
+    #  La unica forma que "numeroDeTexto" este vacio es que
+    #  "numero" sea 0.
+    return 'cero'
+  end
+
+  #  Si numeroDeTexto os hasta hasta aqui es que tenemos un numero
+  #  entre 0 y 100, por lo que debemos retornar "numeroDeTexto".
+  numeroDeTexto
+end
+
+puts numeroEnEspanol(  0)
+puts numeroEnEspanol(  9)
+puts numeroEnEspanol( 10)
+puts numeroEnEspanol( 21)
+puts numeroEnEspanol( 17)
+puts numeroEnEspanol( 32)
+puts numeroEnEspanol( 88)
+puts numeroEnEspanol( 99)
+puts numeroEnEspanol(100)
+```
 
 *Resultado:*
 
-    cero
-    nueve
-    diez
-    veintiuno
-    diecisiete
-    treintaidos
-    ochentaiocho
-    noventainueve
-    cien
+```html
+cero
+nueve
+diez
+veintiuno
+diecisiete
+treintaidos
+ochentaiocho
+noventainueve
+cien
+```
 
 Bueno, sin duda hay algunas cosas acerca de este programa que no me gustan. En primer
 lugar hay demasiada repetición. En segundo lugar, no se ocupa de los números mayores de
@@ -581,127 +621,131 @@ algunas matrices y tratar de limpiar un poco:
 
 *Código:*
 
-    def numeroEnEspanol numero
-      if numero < 0  #  No numeros negativos
-        return 'Por favor ingresar un numero que nos ea negativo.'
-      end
-      if numero == 0
-        return 'cero'
-      end
+```ruby
+def numeroEnEspanol numero
+  if numero < 0  #  No numeros negativos
+    return 'Por favor ingresar un numero que nos ea negativo.'
+  end
+  if numero == 0
+    return 'cero'
+  end
 
-      #  No mas casos especiales!  No mas returns!
+  #  No mas casos especiales!  No mas returns!
 
-      numeroDeTexto = ''  #  Esta es el texto que se retornara.
+  numeroDeTexto = ''  #  Esta es el texto que se retornara.
 
-      primeraPosicion = ['uno',     'dos',       'tres',    'cuatro',     'cinco',
-                   'seis',     'siete',     'ocho',    'nueve']
-      segundaPosicion = ['diez',     'veinte',    'treinta',   'cuarenta',    'cincuenta',
-                   'sesenta',   'setenta',   'ochenta',   'noventa']
-      entre11Y19 = ['once',  'doce',    'trece', 'catorce', 'quince',
-                   'dieciseis', 'diecisiete', 'dieciocho', 'diecinueve']
-      entre21Y29 = ['veintiuno',  'veintidos',    'veintitres', 'veinticuatro', 'veinticinco',
-                   'veintiseis', 'veintisiete', 'veintiiocho', 'veintinueve']
+  primeraPosicion = ['uno',     'dos',       'tres',    'cuatro',     'cinco',
+               'seis',     'siete',     'ocho',    'nueve']
+  segundaPosicion = ['diez',     'veinte',    'treinta',   'cuarenta',    'cincuenta',
+               'sesenta',   'setenta',   'ochenta',   'noventa']
+  entre11Y19 = ['once',  'doce',    'trece', 'catorce', 'quince',
+               'dieciseis', 'diecisiete', 'dieciocho', 'diecinueve']
+  entre21Y29 = ['veintiuno',  'veintidos',    'veintitres', 'veinticuatro', 'veinticinco',
+               'veintiseis', 'veintisiete', 'veintiiocho', 'veintinueve']
 
-      #  "izquierda" es cuanto del numero aun falta escribir
-      #  "escrito" es la parte que estamos escribiendo en este momento.
-      #  escrito y izquierda... lo captas?  :)
-      izquierda  = numero
-      escrito = izquierda/100          #  Cuantos cientos faltan escribir?
-      izquierda  = izquierda - escrito*100  #  La esta de estos cientos
+  #  "izquierda" es cuanto del numero aun falta escribir
+  #  "escrito" es la parte que estamos escribiendo en este momento.
+  #  escrito y izquierda... lo captas?  :)
+  izquierda  = numero
+  escrito = izquierda/100          #  Cuantos cientos faltan escribir?
+  izquierda  = izquierda - escrito*100  #  La esta de estos cientos
 
-      if escrito > 0
-        #  Ahora hacemos un pequeño truco:
-        cientos  = numeroEnEspanol escrito
-        numeroDeTexto = numeroDeTexto + cientos + ' ciento'
+  if escrito > 0
+    #  Ahora hacemos un pequeño truco:
+    cientos  = numeroEnEspanol escrito
+    numeroDeTexto = numeroDeTexto + cientos + ' ciento'
 
-        # Eso se llama "recursividad". Entonces, ¿Qué acabo de hacer?
-        # Le dije a este método para llamarse a sí mismo, pero con "escrito" en vez de
-        # "numero". Recuerde que "escrito" es (por el momento) el número de
-        # cientos que tenemos que escribir. Después añadimos "hundred" de "numeroDeTexto",
-        # añadimos la cadena 'cien' después de él. Así, por ejemplo, si
-        # se llamó originalmente numeroEnEspanol con el 1999 (por lo que "numero" = 1999),
-        # y luego en este momento "escrito" sería 19, y la "izquierda" sería 99.
-        # La más perezoso que se puede hacer en ese momento es que numeroEnEspanol
-        # escriba 'diecinueve' para nosotros, entonces escribimos 'cien',
-        # y luego el resto de numeroEnEspanol escribe "noventa y nueve".
+    # Eso se llama "recursividad". Entonces, ¿Qué acabo de hacer?
+    # Le dije a este método para llamarse a sí mismo, pero con "escrito" en vez de
+    # "numero". Recuerde que "escrito" es (por el momento) el número de
+    # cientos que tenemos que escribir. Después añadimos "hundred" de "numeroDeTexto",
+    # añadimos la cadena 'cien' después de él. Así, por ejemplo, si
+    # se llamó originalmente numeroEnEspanol con el 1999 (por lo que "numero" = 1999),
+    # y luego en este momento "escrito" sería 19, y la "izquierda" sería 99.
+    # La más perezoso que se puede hacer en ese momento es que numeroEnEspanol
+    # escriba 'diecinueve' para nosotros, entonces escribimos 'cien',
+    # y luego el resto de numeroEnEspanol escribe "noventa y nueve".
 
-        if izquierda > 0
-          #  So escribir  'dos ciencincuentaiuno'...
-          numeroDeTexto = numeroDeTexto + ' '
-        end
-      end
+    if izquierda > 0
+      #  So escribir  'dos ciencincuentaiuno'...
+      numeroDeTexto = numeroDeTexto + ' '
+    end
+  end
 
-      escrito = izquierda/10          #  Cuantas decenas faltan escribir?
-      izquierda  = izquierda - escrito*10  #  Resta de estas decenas.
+  escrito = izquierda/10          #  Cuantas decenas faltan escribir?
+  izquierda  = izquierda - escrito*10  #  Resta de estas decenas.
 
-      if escrito > 0
-        if ((escrito == 1) and (izquierda > 0))
-          #  No podemos escribir "diez-dos" instead of "doce",
-          #  hacemos una excepción especial .
-          numeroDeTexto = numeroDeTexto + entre11Y19[izquierda-1]
-          #  Es "-1" porque entre11Y19[3] ess 'catorce', no 'trece'.
+  if escrito > 0
+    if ((escrito == 1) and (izquierda > 0))
+      #  No podemos escribir "diez-dos" instead of "doce",
+      #  hacemos una excepción especial .
+      numeroDeTexto = numeroDeTexto + entre11Y19[izquierda-1]
+      #  Es "-1" porque entre11Y19[3] ess 'catorce', no 'trece'.
 
-          #  Ya que tomamos el digito que nos faltaba,
-          #  no tenemos nada mas que escribir.
-          izquierda = 0
-        elsif ((escrito ==2 and (izquierda>0)))
-          #  Similar para los veintipico
-          numeroDeTexto = numeroDeTexto + entre21Y29[izquierda-1]
-          izquierda = 0
-        else
-          numeroDeTexto = numeroDeTexto + segundaPosicion[escrito-1]
-          #  Es "-1" porque segundaPosicion[3] es 'cuarenta', no 'treinta'.
-        end
-
-        if izquierda > 0
-          #  No escribiremos 'sesentacuatro'...
-          numeroDeTexto = numeroDeTexto + 'i'
-        end
-      end
-
-      escrito = izquierda  #  Cuantos faltan?
-      izquierda  = 0     #  Restar lo que falta.
-
-      if escrito > 0
-        numeroDeTexto = numeroDeTexto + primeraPosicion[escrito-1]
-        #  Es "-1" porque primeraPosicion[3] es 'cuatro', no 'tres'.
-      end
-
-      #  Ahora solo retornamos "numeroDeTexto"...
-      numeroDeTexto
+      #  Ya que tomamos el digito que nos faltaba,
+      #  no tenemos nada mas que escribir.
+      izquierda = 0
+    elsif ((escrito ==2 and (izquierda>0)))
+      #  Similar para los veintipico
+      numeroDeTexto = numeroDeTexto + entre21Y29[izquierda-1]
+      izquierda = 0
+    else
+      numeroDeTexto = numeroDeTexto + segundaPosicion[escrito-1]
+      #  Es "-1" porque segundaPosicion[3] es 'cuarenta', no 'treinta'.
     end
 
-    puts numeroEnEspanol(  0)
-    puts numeroEnEspanol(  9)
-    puts numeroEnEspanol( 10)
-    puts numeroEnEspanol( 11)
-    puts numeroEnEspanol( 17)
-    puts numeroEnEspanol( 32)
-    puts numeroEnEspanol( 88)
-    puts numeroEnEspanol( 99)
-    puts numeroEnEspanol(100)
-    puts numeroEnEspanol(101)
-    puts numeroEnEspanol(234)
-    puts numeroEnEspanol(3211)
-    puts numeroEnEspanol(999999)
-    puts numeroEnEspanol(1000000000000)
+    if izquierda > 0
+      #  No escribiremos 'sesentacuatro'...
+      numeroDeTexto = numeroDeTexto + 'i'
+    end
+  end
+
+  escrito = izquierda  #  Cuantos faltan?
+  izquierda  = 0     #  Restar lo que falta.
+
+  if escrito > 0
+    numeroDeTexto = numeroDeTexto + primeraPosicion[escrito-1]
+    #  Es "-1" porque primeraPosicion[3] es 'cuatro', no 'tres'.
+  end
+
+  #  Ahora solo retornamos "numeroDeTexto"...
+  numeroDeTexto
+end
+
+puts numeroEnEspanol(  0)
+puts numeroEnEspanol(  9)
+puts numeroEnEspanol( 10)
+puts numeroEnEspanol( 11)
+puts numeroEnEspanol( 17)
+puts numeroEnEspanol( 32)
+puts numeroEnEspanol( 88)
+puts numeroEnEspanol( 99)
+puts numeroEnEspanol(100)
+puts numeroEnEspanol(101)
+puts numeroEnEspanol(234)
+puts numeroEnEspanol(3211)
+puts numeroEnEspanol(999999)
+puts numeroEnEspanol(1000000000000)
+```
 
 *Resultado:*
 
-    cero
-    nueve
-    diez
-    once
-    diecisiete
-    treintaidos
-    ochentaiocho
-    noventainueve
-    uno ciento
-    uno ciento uno
-    dos ciento treintaicuatro
-    treintaidos ciento once
-    noventainueve ciento noventainueve ciento noventainueve
-    uno ciento ciento ciento ciento ciento ciento
+```html
+cero
+nueve
+diez
+once
+diecisiete
+treintaidos
+ochentaiocho
+noventainueve
+uno ciento
+uno ciento uno
+dos ciento treintaicuatro
+treintaidos ciento once
+noventainueve ciento noventainueve ciento noventainueve
+uno ciento ciento ciento ciento ciento ciento
+```
 
 *Ahhhh ....* Eso está mucho, mucho mejor. El programa es bastante denso, por lo
 que puse varios comentarios. También funciona con números grandes ... aunque no
@@ -719,7 +763,7 @@ en lugar de `un mil mil`. A continuación, pruebe a añadir miles de millones y 
 ¿Qué tan alto puede llegar?
 
 * ¿Qué hay de `tiempoDeMatrimonio`? Deberá trabajar casi como `numeroEnEspanol`, excepto que se
-debe insertar la palabra "y" por todo el lugar, volviendo las cosas como ``mil novecientos
+debe insertar la palabra "y" por todo el lugar, volviendo las cosas como `'mil novecientos
 setenta y dos'`, o como se supone deben verse en las invitaciones de la boda. Te daría
 más ejemplos, pero yo no lo entiendo completamente. Es posible que necesite ponerse en
 contacto con un coordinador de bodas para que le ayude.

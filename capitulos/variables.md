@@ -7,13 +7,17 @@ veces, necesitamos escribirlo dos veces:
 
 *Código:*
 
-    puts '...puedes decir eso de nuevo...'
-    puts '...puedes decir eso de nuevo...'
+```ruby
+puts '...puedes decir eso de nuevo...'
+puts '...puedes decir eso de nuevo...'
+```
 
 *Resultado:*
 
-    ...puedes decir eso de nuevo...
-    ...puedes decir eso de nuevo...
+```html
+...puedes decir eso de nuevo...
+...puedes decir eso de nuevo...
+```
 
 Sería bueno si pudiesemos escribirlo solo una vez y quedárnoslo...
 guardarlo en algún lado. Bueno, sí podemos, por supuesto; de otra
@@ -29,15 +33,18 @@ nombre, por ejemplo `'str'` or `'myOwnLittleString'` or `'henryTheEighth'`).
 
 *Código:*
 
-    myString = '...puedes decir eso de nuevo...'
-    puts myString
-    puts myString
+```ruby
+myString = '...puedes decir eso de nuevo...'
+puts myString
+puts myString
+```
 
 *Resultado:*
 
-    ...puedes decir eso de nuevo...
-    ...puedes decir eso de nuevo...
-
+```html
+...puedes decir eso de nuevo...
+...puedes decir eso de nuevo...
+```
 
 En todo momento cuando haces referencia a `'myString'`, el programa usa en su
 reemplazo `"'...puedes decir eso de nuevo...'"`. Puedes pensar en la variable
@@ -46,14 +53,18 @@ Este es un ejemplo un poco más interesante.
 
 *Código:*
 
-    name = 'Patricia Rosanna Jessica Mildred Oppenheimer'
-    puts 'Me llamo ' + name + '.'
-    puts 'Wow!  "' + name + '" es un nombre realmente largo!'
+```ruby
+name = 'Patricia Rosanna Jessica Mildred Oppenheimer'
+puts 'Me llamo ' + name + '.'
+puts 'Wow!  "' + name + '" es un nombre realmente largo!'
+```
 
 *Resultado:*
 
-    Me llamo Patricia Rosanna Jessica Mildred Oppenheimer
-    Wow! Patricia Rosanna Jessica Mildred Oppenheimer es un nombre realmente largo!
+```html
+Me llamo Patricia Rosanna Jessica Mildred Oppenheimer
+Wow! Patricia Rosanna Jessica Mildred Oppenheimer es un nombre realmente largo!
+```
 
 También, así como podemos **asignar** un objeto a una variable,
 podemos **reasignar** un objeto diferente a esa variable
@@ -61,56 +72,67 @@ podemos **reasignar** un objeto diferente a esa variable
 
 *Código:*
 
-    composer = 'Mozart'
-    puts composer + ' fue "el amo", en su día.'
+```ruby
+composer = 'Mozart'
+puts composer + ' fue "el amo", en su día.'
 
-    composer = 'Beethoven'
-    puts 'Pero yo prefiero a ' + composer + ', personalmente.'
+composer = 'Beethoven'
+puts 'Pero yo prefiero a ' + composer + ', personalmente.'
+```
 
 *Resultado:*
 
-    Mozart fue "el amo", en su día.
-    Pero yo prefiero a Beethoven, personalmente.
+```html
+Mozart fue "el amo", en su día.
+Pero yo prefiero a Beethoven, personalmente.
+```
 
 Por supuesto, las variables pueden apuntar a cualquier tipo de objeto, no
 sólo texto:
 
 *Código:*
 
-    var = 'solo otro ' + 'texto'
-    puts var
+```ruby
+var = 'solo otro ' + 'texto'
+puts var
 
-    var = 5 * (1+2)
-    puts var
+var = 5 * (1+2)
+puts var
+```
 
 *Resultado:*
 
-    solo otro texto
-    15
+```html
+solo otro texto
+15
+```
 
 De hecho, las variables pueden apuntar a casi cualquier cosa...
 excepto otras variables. ¿Pero qué pasa si lo intentamos?
 
 *Código:*
 
-    var1 = 8
-    var2 = var1
-    puts var1
-    puts var2
+```ruby
+var1 = 8
+var2 = var1
+puts var1
+puts var2
 
-    puts ''
+puts ''
 
-    var1 = 'ocho'
-    puts var1
-    puts var2
+var1 = 'ocho'
+puts var1
+puts var2
+```
 
 *Resultado:*
+```html
+8
+8
 
-    8
-    8
-
-    ocho
-    8
+ocho
+8
+```
 
 Primero, cuando tratamos de apuntar `var2` a `var1` en realidad apuntamos a `8` (que
 es el valor al cual apuntaba `var1`). Luego cuando apuntamos `var1` a `'ocho'`, el

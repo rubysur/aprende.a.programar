@@ -10,19 +10,23 @@ objeto de una cierta clase, usamos `new`:
 
 *Código:*
 
-    a = Array.new  + [12345]  #  Array  agregado.
-    b = String.new + 'hello'  #  String agregado.
-    c = Time.new
+```ruby
+a = Array.new  + [12345]  #  Array  agregado.
+b = String.new + 'hello'  #  String agregado.
+c = Time.new
 
-    puts 'a = '+a.to_s
-    puts 'b = '+b.to_s
-    puts 'c = '+c.to_s
+puts 'a = '+a.to_s
+puts 'b = '+b.to_s
+puts 'c = '+c.to_s
+```
 
 *Resultado:*
 
-    a = [12345]
-    b = hello
-    c = 2012-06-01 12:52:06 -0500
+```html
+a = [12345]
+b = hello
+c = 2012-06-01 12:52:06 -0500
+```
 
 Porque podemos crear matrices y textos usando  `[...]` y `' ... '`
 respectivamente es que rara vez los creamos usando `new`. (Aunque
@@ -40,28 +44,36 @@ a un tiempo hace un tiempo nuevo segundo y medio más tarde:
 
 *Código:*
 
-    hora  = Time.new   #  El momento que se ejecutó esta código
-    hora2 = hora + 60  #  Un minuto más tarde.
+```ruby
+hora  = Time.new   #  El momento que se ejecutó esta código
+hora2 = hora + 60  #  Un minuto más tarde.
 
-    puts hora
-    puts hora2
+puts hora
+puts hora2
+```
 
 *Resultado:*
 
-    2012-06-01 12:55:49 -0500
-    2012-06-01 12:56:49 -0500
+```html
+2012-06-01 12:55:49 -0500
+2012-06-01 12:56:49 -0500
+```
 
 También puedes obtener el tiempo para un momento específico utilizando `Time.mktime`:
 
 *Código:*
 
-    puts Time.mktime(2000, 1, 1)          #  Y2K.
-    puts Time.mktime(1976, 8, 3, 10, 11)  #  Cuando nació Chris.
+```ruby
+puts Time.mktime(2000, 1, 1)          #  Y2K.
+puts Time.mktime(1976, 8, 3, 10, 11)  #  Cuando nació Chris.
+```
 
 *Resultado:*
 
-    2000-01-01 00:00:00 -0500
-    1976-08-03 10:11:00 -0500
+```html
+2000-01-01 00:00:00 -0500
+1976-08-03 10:11:00 -0500
+```
 
 Nota: yo nací en el horario de verano del Pacífico (PDT).
 Cuando se presentó el problema del año 2000, sin embargo, era hora
@@ -96,31 +108,35 @@ yo uso para las diferentes partes del código con las que he creado este tutoria
 
 *Código:*
 
-    colorArray = []  #  igual a Array.new
-    colorHash  = {}  #  igual a Hash.new
+```ruby
+colorArray = []  #  igual a Array.new
+colorHash  = {}  #  igual a Hash.new
 
-    colorArray[0]         = '#FF0000'
-    colorArray[1]         = '#008000'
-    colorArray[2]         = '#0000FF'
-    colorHash['textos ']  = '#FF0000'   # rojo
-    colorHash['numeros']  = '#008000'   # verde
-    colorHash['claves ']  = '#0000FF'   # azul
+colorArray[0]         = '#FF0000'
+colorArray[1]         = '#008000'
+colorArray[2]         = '#0000FF'
+colorHash['textos ']  = '#FF0000'   # rojo
+colorHash['numeros']  = '#008000'   # verde
+colorHash['claves ']  = '#0000FF'   # azul
 
-    colorArray.each do |color|
-      puts color
-    end
-    colorHash.each do |tipoCodigo, color|
-      puts tipoCodigo + ' :  ' + color
-    end
+colorArray.each do |color|
+  puts color
+end
+colorHash.each do |tipoCodigo, color|
+  puts tipoCodigo + ' :  ' + color
+end
+```
 
 *Resultado:*
 
-    #FF0000
-    #008000
-    #0000FF
-    textos  :  #FF0000
-    numeros :  #008000
-    claves  :  #0000FF
+```html
+#FF0000
+#008000
+#0000FF
+textos  :  #FF0000
+numeros :  #008000
+claves  :  #0000FF
+```
 
 Si utilizo una matriz, tengo que recordar que la ranura `0` es para los textos,
 la ranura `1` es para los números, etc, pero si puedo usar un hash, ¡es muy fácil!
@@ -134,11 +150,13 @@ Aunque la gente suele utilizar textos para nombrar las ranuras de un hash, se
 puede utilizar cualquier tipo de objeto, incluso las matrices y los hashes de
 otros (aunque yo no puedo pensar en por qué querría hacer esto ...):
 
-    weirdHash = Hash.new
+```ruby
+weirdHash = Hash.new
 
-    weirdHash[12] = 'monos'
-    weirdHash[[]] = 'el vacío'
-    weirdHash[Time.new] = 'ningun momento como el actual'
+weirdHash[12] = 'monos'
+weirdHash[[]] = 'el vacío'
+weirdHash[Time.new] = 'ningun momento como el actual'
+```
 
 Hashes y matrices son buenos para cosas diferentes, depende de ti decidir cuál
 es el mejor para un problema particular.
@@ -152,26 +170,30 @@ escribir algo como `22.to_esp` en lugar de `numeroEspanol  22`?. He aquí cómo 
 
 *Código:*
 
-    class Integer
-      def to_esp
-        if self == 5
-          espanol = 'cinco'
-        else
-          espanol = 'cincuenta y ocho'
-        end
-
-        espanol
-      end
+```ruby
+class Integer
+  def to_esp
+    if self == 5
+      espanol = 'cinco'
+    else
+      espanol = 'cincuenta y ocho'
     end
 
-    #  Mejor probarlo en un par de números...
-    puts 5.to_esp
-    puts 58.to_esp
+    espanol
+  end
+end
+
+#  Mejor probarlo en un par de números...
+puts 5.to_esp
+puts 58.to_esp
+```
 
 *Resultado:*
 
-    cinco
-    cincuenta y ocho
+```html
+cinco
+cincuenta y ocho
+```
 
 Bueno, lo he probado y parece que funciona. ;)
 
@@ -200,26 +222,30 @@ hacer la clase Dado:
 
 *Código:*
 
-    class Dado
+```ruby
+class Dado
 
-      def roll
-        1 + rand(6)
-      end
+  def roll
+    1 + rand(6)
+  end
 
-    end
+end
 
-    #  Vamos a crear un par de dados...
-    dados = [Dado.new, Dado.new]
+#  Vamos a crear un par de dados...
+dados = [Dado.new, Dado.new]
 
-    #  ...y hacerlos rodar.
-    dados.each do |dado|
-      puts dado.roll
-    end
+#  ...y hacerlos rodar.
+dados.each do |dado|
+  puts dado.roll
+end
+```
 
 *Resultado:*
 
-    3
-    4
+```html
+3
+4
+```
 
 (Si se ha saltado la sección de números aleatorios,  `rand(6)`
 sólo da un número aleatorio entre  0 y 5 .)
@@ -257,32 +283,36 @@ ellos tienen `@` delante de sus nombres:
 
 *Código:*
 
-    class Dado
+```ruby
+class Dado
 
-      def rodar
-        @numeroMostrado = 1 + rand(6)
-      end
+  def rodar
+    @numeroMostrado = 1 + rand(6)
+  end
 
-      def mostrar
-        @numeroMostrado
-      end
+  def mostrar
+    @numeroMostrado
+  end
 
-    end
+end
 
-    dado = Dado.new
-    dado.rodar
-    puts dado.mostrar
-    puts dado.mostrar
-    dado.rodar
-    puts dado.mostrar
-    puts dado.mostrar
+dado = Dado.new
+dado.rodar
+puts dado.mostrar
+puts dado.mostrar
+dado.rodar
+puts dado.mostrar
+puts dado.mostrar
+```
 
 *Resultado:*
 
-    1
-    1
-    5
-    5
+```html
+1
+1
+5
+5
+```
 
 ¡Muy bien!. `rodar` rueda el dado y `mostrar` nos dice el número que muestra.
 Sin embargo, que pasa si tratamos de mostrar lo que existía antes de rodar el dado
@@ -290,25 +320,29 @@ Sin embargo, que pasa si tratamos de mostrar lo que existía antes de rodar el d
 
 *Código:*
 
-    class Dado
+```ruby
+class Dado
 
-      def rodar
-        @nummeroMostrado = 1 + rand(6)
-      end
+  def rodar
+    @nummeroMostrado = 1 + rand(6)
+  end
 
-      def mostrar
-        @numeroMostrado
-      end
+  def mostrar
+    @numeroMostrado
+  end
 
-    end
+end
 
-    # Ya que no voy a usar este dado de nuevo,
-    # No es necesario guardarlo en una variable.
-    puts Dado.new.mostrar
+# Ya que no voy a usar este dado de nuevo,
+# No es necesario guardarlo en una variable.
+puts Dado.new.mostrar
+```
 
 *Resultado:*
 
-    nil
+```html
+nil
+```
 
 Hmmm ... bueno, al menos no nos muestra un error. Aún así, no tiene mucho
 sentido para un dado "no rodado" mostrar `nil` o lo que sea que se supone
@@ -317,29 +351,33 @@ Dado es creado. Para esto esta `initialize`:
 
 *Código:*
 
-    class Dado
+```ruby
+class Dado
 
-      def initialize
-        # Voy a tirar el dado, a pesar de que
-        # podria hacer otra cosa si quisieramos
-          rodar
-      end
+  def initialize
+    # Voy a tirar el dado, a pesar de que
+    # podria hacer otra cosa si quisieramos
+      rodar
+  end
 
-      def rodar
-        @numeroMostrado = 1 + rand(6)
-      end
+  def rodar
+    @numeroMostrado = 1 + rand(6)
+  end
 
-      def mostrar
-        @numeroMostrado
-      end
+  def mostrar
+    @numeroMostrado
+  end
 
-    end
+end
 
-    puts Dado.new.mostrar
+puts Dado.new.mostrar
+```
 
 *Resultado:*
 
-    6
+```html
+6
+```
 
 Cuando se crea un objeto, su método `initialize` (si se ha definido
 uno) siempre es llamado.
@@ -365,157 +403,161 @@ Muy bien, continuemos:
 
 *Código:*
 
-    class Dragon
+```ruby
+class Dragon
 
-      def initialize nombre
-        @nombre = nombre
+  def initialize nombre
+    @nombre = nombre
+    @dormido = false
+    @panzaLlena     = 10  #  Esta lleno.
+    @intestinoLleno  =  0  #  No necesita ir.
+
+    puts @nombre + ' nace.'
+  end
+
+  def alimentar
+    puts 'Alimentas a ' + @nombre + '.'
+    @panzaLlena = 10
+    pasoDelTiempo
+  end
+
+  def caminar
+    puts 'Haces caminar a ' + @nombre + '.'
+    @intestinoLleno  = 0
+    pasoDelTiempo
+  end
+
+  def dormir
+    puts 'Colocas a ' + @nombre + ' en la cama.'
+    @dormido = true
+    3.times do
+      if @dormido
+        pasoDelTiempo
+      end
+      if @dormido
+        puts @nombre + ' ronca, llenando el cuarto con humo.'
+      end
+    end
+    if @dormido
+      @dormido = false
+      puts @nombre + ' despierta lentamente.'
+    end
+  end
+
+  def lanzar
+    puts 'Lanzas a ' + @nombre + ' en el aire.'
+    puts 'Sonrie, sus cejas se mueven.'
+    pasoDelTiempo
+  end
+
+  def acunar
+    puts 'Acunas a ' + @nombre + ' suavemente.'
+    @dormido = true
+    puts 'Rapidamente se queda dormido...'
+    pasoDelTiempo
+    if @dormido
+      @dormido = false
+      puts '...pero despierta cuando te detienes.'
+    end
+  end
+
+  private
+
+  #  "private" significa que los metodos definidos aqui son
+  #  metodos internos al objeto.  (Puedes alimentar a
+  #  tu dragon, pero no puedes preguntar si esta hambriento.)
+
+  def hambriento?
+    #  Los nombres de los metodos pueden terminar en "?".
+    #  Generalmente, hacemos esto si el método debe
+    #  devolver verdadero o falso, como esto:
+    @panzaLlena <= 2
+  end
+
+  def ganas?
+    @intestinoLleno >= 8
+  end
+
+  def pasoDelTiempo
+    if @panzaLlena > 0
+      #  Mueve el alimento del vientre al intestino.
+      @panzaLlena      = @panzaLlena      - 1
+      @intestinoLleno  = @intestinoLleno  + 1
+    else  #  Nuestro dragon esta hambriento!
+      if @dormido
         @dormido = false
-        @panzaLlena     = 10  #  Esta lleno.
-        @intestinoLleno  =  0  #  No necesita ir.
-
-        puts @nombre + ' nace.'
+        puts '¡Se despierta de repente!'
       end
-
-      def alimentar
-        puts 'Alimentas a ' + @nombre + '.'
-        @panzaLlena = 10
-        pasoDelTiempo
-      end
-
-      def caminar
-        puts 'Haces caminar a ' + @nombre + '.'
-        @intestinoLleno  = 0
-        pasoDelTiempo
-      end
-
-      def dormir
-        puts 'Colocas a ' + @nombre + ' en la cama.'
-        @dormido = true
-        3.times do
-          if @dormido
-            pasoDelTiempo
-          end
-          if @dormido
-            puts @nombre + ' ronca, llenando el cuarto con humo.'
-          end
-        end
-        if @dormido
-          @dormido = false
-          puts @nombre + ' despierta lentamente.'
-        end
-      end
-
-      def lanzar
-        puts 'Lanzas a ' + @nombre + ' en el aire.'
-        puts 'Sonrie, sus cejas se mueven.'
-        pasoDelTiempo
-      end
-
-      def acunar
-        puts 'Acunas a ' + @nombre + ' suavemente.'
-        @dormido = true
-        puts 'Rapidamente se queda dormido...'
-        pasoDelTiempo
-        if @dormido
-          @dormido = false
-          puts '...pero despierta cuando te detienes.'
-        end
-      end
-
-      private
-
-      #  "private" significa que los metodos definidos aqui son
-      #  metodos internos al objeto.  (Puedes alimentar a
-      #  tu dragon, pero no puedes preguntar si esta hambriento.)
-
-      def hambriento?
-        #  Los nombres de los metodos pueden terminar en "?".
-        #  Generalmente, hacemos esto si el método debe
-        #  devolver verdadero o falso, como esto:
-        @panzaLlena <= 2
-      end
-
-      def ganas?
-        @intestinoLleno >= 8
-      end
-
-      def pasoDelTiempo
-        if @panzaLlena > 0
-          #  Mueve el alimento del vientre al intestino.
-          @panzaLlena      = @panzaLlena      - 1
-          @intestinoLleno  = @intestinoLleno  + 1
-        else  #  Nuestro dragon esta hambriento!
-          if @dormido
-            @dormido = false
-            puts '¡Se despierta de repente!'
-          end
-          puts '¡' + @nombre + ' esta hambriento!  En su desesperacion, ¡te COMIO!'
-          exit  #  Sale del programa.
-        end
-
-        if @intestinoLleno  >= 10
-          @intestinoLleno  = 0
-          puts '¡Uy!  ' + @nombre + ' tuvo un accidente...'
-        end
-
-        if hambriento?
-          if @dormido
-            @dormido = false
-            puts '¡Se despierta de repente!'
-          end
-          puts 'El estomago de ' + @nombre + 'retumba...'
-        end
-
-        if ganas?
-          if @dormido
-            @dormido = false
-            puts 'Se despierta de repente!'
-          end
-          puts @nombre + ' hace la danza del baño...'
-        end
-      end
-
+      puts '¡' + @nombre + ' esta hambriento!  En su desesperacion, ¡te COMIO!'
+      exit  #  Sale del programa.
     end
 
-    mascota = Dragon.new 'Norbert'
-    mascota.alimentar
-    mascota.lanzar
-    mascota.caminar
-    mascota.dormir
-    mascota.acunar
-    mascota.dormir
-    mascota.dormir
-    mascota.dormir
-    mascota.dormir
+    if @intestinoLleno  >= 10
+      @intestinoLleno  = 0
+      puts '¡Uy!  ' + @nombre + ' tuvo un accidente...'
+    end
+
+    if hambriento?
+      if @dormido
+        @dormido = false
+        puts '¡Se despierta de repente!'
+      end
+      puts 'El estomago de ' + @nombre + 'retumba...'
+    end
+
+    if ganas?
+      if @dormido
+        @dormido = false
+        puts 'Se despierta de repente!'
+      end
+      puts @nombre + ' hace la danza del baño...'
+    end
+  end
+
+end
+
+mascota = Dragon.new 'Norbert'
+mascota.alimentar
+mascota.lanzar
+mascota.caminar
+mascota.dormir
+mascota.acunar
+mascota.dormir
+mascota.dormir
+mascota.dormir
+mascota.dormir
+```
 
 *Resultado:*
 
-    Norbert nace.
-    Alimentas a Norbert.
-    Lanzas a Norbert en el aire.
-    Sonrie, sus cejas se mueven.
-    Haces caminar a Norbert.
-    Colocas a Norbert en la cama.
-    Norbert ronca, llenando el cuarto con humo.
-    Norbert ronca, llenando el cuarto con humo.
-    Norbert ronca, llenando el cuarto con humo.
-    Norbert despierta lentamente.
-    Acunas a Norbert suavemente.
-    Rapidamente se queda dormido...
-    ...pero despierta cuando te detienes.
-    Colocas a Norbert en la cama.
-    ¡Se despierta de repente!
-    El estomago de Norbertretumba...
-    Colocas a Norbert en la cama.
-    ¡Se despierta de repente!
-    El estomago de Norbertretumba...
-    Colocas a Norbert en la cama.
-    ¡Se despierta de repente!
-    El estomago de Norbertretumba...
-    Norbert hace la danza del baño...
-    Colocas a Norbert en la cama.
-    ¡Se despierta de repente!
-    ¡Norbert esta hambriento!  En su desesperacion, ¡te COMIO!
+```html
+Norbert nace.
+Alimentas a Norbert.
+Lanzas a Norbert en el aire.
+Sonrie, sus cejas se mueven.
+Haces caminar a Norbert.
+Colocas a Norbert en la cama.
+Norbert ronca, llenando el cuarto con humo.
+Norbert ronca, llenando el cuarto con humo.
+Norbert ronca, llenando el cuarto con humo.
+Norbert despierta lentamente.
+Acunas a Norbert suavemente.
+Rapidamente se queda dormido...
+...pero despierta cuando te detienes.
+Colocas a Norbert en la cama.
+¡Se despierta de repente!
+El estomago de Norbertretumba...
+Colocas a Norbert en la cama.
+¡Se despierta de repente!
+El estomago de Norbertretumba...
+Colocas a Norbert en la cama.
+¡Se despierta de repente!
+El estomago de Norbertretumba...
+Norbert hace la danza del baño...
+Colocas a Norbert en la cama.
+¡Se despierta de repente!
+¡Norbert esta hambriento!  En su desesperacion, ¡te COMIO!
+```
 
 *¡Ouau!* Por supuesto, sería mejor si fuese un programa interactivo,
 pero puedes modificarlo. Yo sólo estaba tratando de mostrarte las partes

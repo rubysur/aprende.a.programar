@@ -17,19 +17,23 @@ otro objeto. Es hora de un ejemplo:
 
 *Código:*
 
-    toast = Proc.new do
-      puts '¡Aplausos!'
-    end
+```ruby
+toast = Proc.new do
+  puts '¡Aplausos!'
+end
 
-    toast.call
-    toast.call
-    toast.call
+toast.call
+toast.call
+toast.call
+```
 
 *Resultado:*
 
-    ¡Aplausos!
-    ¡Aplausos!
-    ¡Aplausos!
+```html
+¡Aplausos!
+¡Aplausos!
+¡Aplausos!
+```
 
 Entonces creé un proc (el cual pienso debería ser pronunciado como "procedimiento") que
 contiene un bloque de código, y llamé (*call*ed) el proc tres
@@ -40,17 +44,21 @@ tomar parámetros:
 
 *Código:*
 
-    teGusta = Proc.new do |algoRico|
-      puts '¡Me gusta *realmente* el '+algoRico+'!'
-    end
+```ruby
+teGusta = Proc.new do |algoRico|
+  puts '¡Me gusta *realmente* el '+algoRico+'!'
+end
 
-    teGusta.call 'chocolate'
-    teGusta.call 'ruby'
+teGusta.call 'chocolate'
+teGusta.call 'ruby'
+```
 
 *Resultado:*
 
-    ¡Me gusta *realmente* el chocolate!
-    ¡Me gusta *realmente* el ruby!
+```html
+¡Me gusta *realmente* el chocolate!
+¡Me gusta *realmente* el ruby!
+```
 
 Muy bien, entonces hemos visto que son los bloques y procs, y como usarlos, pero
 ¿cuál es el punto? ¿Porqué no utilizar simplemente métodos? Bueno, esto es porque
@@ -70,31 +78,35 @@ se esta ejecutando:
 
 *Código:*
 
-    def hacerAlgoImportante unProc
-      puts '¡Todo el mundo DETENGANSE!  Tengo algo que hacer...'
-      unProc.call
-      puts 'A todos: Está hecho.  Continuen con lo que estaban haciendo.'
-    end
+```ruby
+def hacerAlgoImportante unProc
+  puts '¡Todo el mundo DETENGANSE!  Tengo algo que hacer...'
+  unProc.call
+  puts 'A todos: Está hecho.  Continuen con lo que estaban haciendo.'
+end
 
-    decirHola = Proc.new do
-      puts 'hola'
-    end
+decirHola = Proc.new do
+  puts 'hola'
+end
 
-    decirAdios = Proc.new do
-      puts 'adios'
-    end
+decirAdios = Proc.new do
+  puts 'adios'
+end
 
-    hacerAlgoImportante decirHola
-    hacerAlgoImportante decirAdios
+hacerAlgoImportante decirHola
+hacerAlgoImportante decirAdios
+```
 
 *Resultado:*
 
-    ¡Todo el mundo DETENGANSE!  Tengo algo que hacer...
-    hola
-    A todos: Está hecho.  Continuen con lo que estaban haciendo.'
-    ¡Todo el mundo DETENGANSE!  Tengo algo que hacer...
-    adios
-    A todos: Está hecho.  Continuen con lo que estaban haciendo.'
+```html
+¡Todo el mundo DETENGANSE!  Tengo algo que hacer...
+hola
+A todos: Está hecho.  Continuen con lo que estaban haciendo.'
+¡Todo el mundo DETENGANSE!  Tengo algo que hacer...
+adios
+A todos: Está hecho.  Continuen con lo que estaban haciendo.'
+```
 
 Quizá esto no parezca muy fabuloso... pero lo es. :-)
 Es común en programacion tener requerimientos estrictos acerca de
@@ -115,29 +127,31 @@ y otro el cual lo llamará el doble de veces:
 
 *Código:*
 
-    def puedeHacerse unProc
-      if rand(2) == 0
-        unProc.call
-      end
-    end
+```ruby
+def puedeHacerse unProc
+  if rand(2) == 0
+    unProc.call
+  end
+end
 
-    def hacerDosVeces unProc
-      unProc.call
-      unProc.call
-    end
+def hacerDosVeces unProc
+  unProc.call
+  unProc.call
+end
 
-    parpadeo = Proc.new do
-      puts '<parpadeo>'
-    end
+parpadeo = Proc.new do
+  puts '<parpadeo>'
+end
 
-    mirada = Proc.new do
-      puts '<mirada>'
-    end
+mirada = Proc.new do
+  puts '<mirada>'
+end
 
-    puedeHacerse parpadeo
-    puedeHacerse mirada
-    hacerDosVeces parpadeo
-    hacerDosVeces mirada
+puedeHacerse parpadeo
+puedeHacerse mirada
+hacerDosVeces parpadeo
+hacerDosVeces mirada
+```
 
 *Resultado:*
 
@@ -164,40 +178,44 @@ el proc.
 
 *Código:*
 
-    def hacerHastaQueSeaFalso primeraentrada, unProc
-      entrada  = primeraentrada
-      salida = primeraentrada
+```ruby
+def hacerHastaQueSeaFalso primeraentrada, unProc
+  entrada  = primeraentrada
+  salida = primeraentrada
 
-      while salida
-        entrada  = salida
-        salida = unProc.call entrada
-      end
+  while salida
+    entrada  = salida
+    salida = unProc.call entrada
+  end
 
-      entrada
-    end
+  entrada
+end
 
-    construirMatrizDeCuadrados = Proc.new do |array|
-      ultimonumero = array.last
-      if ultimonumero <= 0
-        false
-      else
-        array.pop                         #  Quitar el último número...
-        array.push ultimonumero*ultimonumero  #  ...y reemplazar este con el último número elevado al cuadrado...
-        array.push ultimonumero-1           #  ...seguido por un número menor.
-      end
-    end
+construirMatrizDeCuadrados = Proc.new do |array|
+  ultimonumero = array.last
+  if ultimonumero <= 0
+    false
+  else
+    array.pop                         #  Quitar el último número...
+    array.push ultimonumero*ultimonumero  #  ...y reemplazar este con el último número elevado al cuadrado...
+    array.push ultimonumero-1           #  ...seguido por un número menor.
+  end
+end
 
-    siempreFalso = Proc.new do |soloIgnorame|
-      false
-    end
+siempreFalso = Proc.new do |soloIgnorame|
+  false
+end
 
-    puts hacerHastaQueSeaFalso([5], construirMatrizDeCuadrados).inspect
-    puts hacerHastaQueSeaFalso('Estoy escribiendo esto a las 3:00 am; ¡alguien que lo finalice!', siempreFalso)
+puts hacerHastaQueSeaFalso([5], construirMatrizDeCuadrados).inspect
+puts hacerHastaQueSeaFalso('Estoy escribiendo esto a las 3:00 am; ¡alguien que lo finalice!', siempreFalso)
+```
 
 *Resultado:*
 
-    [25, 16, 9, 4, 1, 0]
-    Estoy escribiendo esto a las 3:00 am, ¡alguien que lo finalice!
+```html
+[25, 16, 9, 4, 1, 0]
+Estoy escribiendo esto a las 3:00 am, ¡alguien que lo finalice!
+```
 
 Está bien, este es un ejemplo bastante raro, debo admitirlo. Pero esto muestra como
 actúa diferente nuestro método cuando le damos diferentes procs.
@@ -228,30 +246,34 @@ proc.
 
 *Código:*
 
-    def compone proc1, proc2
-      Proc.new do |x|
-        proc2.call(proc1.call(x))
-      end
-    end
+```ruby
+def compone proc1, proc2
+  Proc.new do |x|
+    proc2.call(proc1.call(x))
+  end
+end
 
-    cuadrado = Proc.new do |x|
-      x * x
-    end
+cuadrado = Proc.new do |x|
+  x * x
+end
 
-    doble = Proc.new do |x|
-      x + x
-    end
+doble = Proc.new do |x|
+  x + x
+end
 
-    dobleYCuadrado = compone doble, cuadrado
-    cuadradoYDoble = compone cuadrado, doble
+dobleYCuadrado = compone doble, cuadrado
+cuadradoYDoble = compone cuadrado, doble
 
-    puts dobleYCuadrado.call(5)
-    puts cuadradoYDoble.call(5)
+puts dobleYCuadrado.call(5)
+puts cuadradoYDoble.call(5)
+```
 
-    *Resultado:*
+*Resultado:*
 
-    100
-    50
+```html
+100
+50
+```
 
 Ten en cuenta que la llamada a `proc1` tenía que estar dentro de los
 paréntesis para `proc2` con el fin de que se haga en primer lugar.
@@ -271,39 +293,43 @@ Te mostraré primero un ejemplo rápido, y luego vamos a hablar de ello.
 
 *Código:*
 
-    class Array
-      def cadaPar(&fueBloque_ahoraesProc)
-        esPar = true  #  Empezamos con "true" porque las matrices comienzan con 0
+```ruby
+class Array
+  def cadaPar(&fueBloque_ahoraesProc)
+    esPar = true  #  Empezamos con "true" porque las matrices comienzan con 0
 
-        self.each do |objeto|
-          if esPar
-            fueBloque_ahoraesProc.call objeto
-          end
-
-          esPar = (not esPar)  #  Cambiar de pares a impares o viceversa
-        end
+    self.each do |objeto|
+      if esPar
+        fueBloque_ahoraesProc.call objeto
       end
 
+      esPar = (not esPar)  #  Cambiar de pares a impares o viceversa
     end
+  end
 
-    ['manzana', 'manzana podrida', 'cereza', 'durian'].cadaPar do |fruta|
-      puts '¡Yum!  Me encantan los pasteles de '+fruta+', ¿no?'
-    end
+end
 
-    #  Recuerda,, estamos tratando de conseguir los numeros pares
-    #  de la Matriz.
+['manzana', 'manzana podrida', 'cereza', 'durian'].cadaPar do |fruta|
+  puts '¡Yum!  Me encantan los pasteles de '+fruta+', ¿no?'
+end
 
-    [1, 2, 3, 4, 5].cadaPar do |bolaImpar|
-      puts bolaImpar.to_s+' NO es un número par!'
-    end
+#  Recuerda,, estamos tratando de conseguir los numeros pares
+#  de la Matriz.
+
+[1, 2, 3, 4, 5].cadaPar do |bolaImpar|
+  puts bolaImpar.to_s+' NO es un número par!'
+end
+```
 
 *Resultado:*
 
-    ¡Yum! Me encantan los pasteles de manzana, ¿no?
-    ¡Yum! Me encanta pasteles de cereza, ¿no?
-    1 NO es un número par!
-    3 NO es un número par!
-    5 NO es un número par!
+```html
+¡Yum! Me encantan los pasteles de manzana, ¿no?
+¡Yum! Me encanta pasteles de cereza, ¿no?
+1 NO es un número par!
+3 NO es un número par!
+5 NO es un número par!
+```
 
 Así que para pasar un bloque de `cadaPar` todo lo que tenía que hacer
 era pegar el bloque después del método. Puedes pasar un bloque
@@ -331,39 +357,43 @@ pero no lo necesito, ya que probablemente fue algo como esto:
 
 *Código:*
 
-    def profile descripcionDeBloque, &bloque
-      inicioHora = Time.now
+```ruby
+def profile descripcionDeBloque, &bloque
+  inicioHora = Time.now
 
-      bloque.call
+  bloque.call
 
-      duracion = Time.now - inicioHora
+  duracion = Time.now - inicioHora
 
-      puts descripcionDeBloque+':  '+duracion.to_s+' segundos'
-    end
+  puts descripcionDeBloque+':  '+duracion.to_s+' segundos'
+end
 
-    profile '25000 duplicaciones' do
-      numero = 1
+profile '25000 duplicaciones' do
+  numero = 1
 
-      25000.times do
-        numero = numero + numero
-      end
+  25000.times do
+    numero = numero + numero
+  end
 
-      puts numero.to_s.length.to_s+' digitos'  #  El numero de digitos en este numero ENORME.
-    end
+  puts numero.to_s.length.to_s+' digitos'  #  El numero de digitos en este numero ENORME.
+end
 
-    profile 'contar hasta un millon' do
-      numero = 0
+profile 'contar hasta un millon' do
+  numero = 0
 
-      1000000.times do
-        numero = numero + 1
-      end
-    end
+  1000000.times do
+    numero = numero + 1
+  end
+end
+```
 
 *Resultado:*
 
-    7526 digitos
-    25000 duplicaciones:  0.246768 segundos
-    contar hasta un millon:  0.90245 segundos
+```html
+7526 digitos
+25000 duplicaciones:  0.246768 segundos
+contar hasta un millon:  0.90245 segundos
+```
 
 ¡Qué sencillo! Qué elegante! Con ese pequeño método puedo fácilmente saber
 cuanto tiempo demora parte de cualquier programa que quiero, solo ejecuto el
@@ -430,4 +460,4 @@ Porque lo hice. Yo también recibí un montón de ayuda con el código de los ej
 de este tutorial. Pero, ¿dónde estaba *yo* buscando estas cosas y donde *yo* pido
 ayuda?.
 
-<a href="/capitulos/11-despues-de-esta-guia.html">Te voy a enseñar...</a>
+[Te voy a enseñar...](/aprende.a.programar/capitulos/fin.html)
