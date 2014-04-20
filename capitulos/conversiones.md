@@ -1,9 +1,9 @@
 Conversiones
 ============
 
-Hemos revisado distintos tipos de objetos ([números](/capitulos/01-numeros.md#n%C3%BAmeros)
-y [textos](/capitulos/02-textos.md#textos))
-y hemos hecho que [variables](/capitulos/03-variables.md#variables)
+Hemos revisado distintos tipos de objetos ([números](/aprende.a.programar/capitulos/numeros.html)
+y [textos](/aprende.a.programar/capitulos/textos.html))
+y hemos hecho que [variables](/aprende.a.programar/capitulos/variables.html)
 apunten a ellos; lo que queremos hacer después es que funcionen todos juntos.
 
 Hemos visto que si queremos que un programa imprima `25`, lo que sigue ***no***
@@ -11,14 +11,18 @@ funciona, porque no puedes sumar números y texto:
 
 *Código:*
 
-    var1 = 2
-    var2 = '5'
+```ruby
+var1 = 2
+var2 = '5'
 
-    puts var1 + var2
+puts var1 + var2
+```
 
 *Resultado:*
 
-    in `+': String can't be coerced into Fixnum (TypeError)
+```html
+in `+': String can't be coerced into Fixnum (TypeError)
+```
 
 Parte del problema es que tu computadora no sabe si estabas tratando de obtener `7`
 (`2 + 5`) o si querías obtener `'25'` (`'2' + '5'`).
@@ -33,14 +37,18 @@ después de el objeto:
 
 *Código:*
 
-    var1 = 2
-    var2 = '5'
+```ruby
+var1 = 2
+var2 = '5'
 
-    puts var1.to_s + var2
+puts var1.to_s + var2
+```
 
 *Resultado:*
 
-    25
+```html
+25
+```
 
 De la misma manera, `to_i` devuelve la versión numérica entera de un objeto y `to_f`
 devuelve la versión de punto flotante, o sea la que lleva decimales. Veamos que hacen
@@ -48,16 +56,20 @@ estos tres métodos (y lo que *no* hacen) un poco más de cerca:
 
 *Código:*
 
-    var1 = 2
-    var2 = '5'
+```ruby
+var1 = 2
+var2 = '5'
 
-    puts var1.to_s + var2
-    puts var1 + var2.to_i
+puts var1.to_s + var2
+puts var1 + var2.to_i
+```
 
 *Resultado:*
 
-    25
-    7
+```html
+25
+7
+```
 
 Nota que, inclusive después de que obtuvimos la versión en texto de `var1` al llamar
 `to_s`, `var1` siempre apuntó a `2`, y nunca a `'2'`. A menos que reasignes
@@ -68,25 +80,29 @@ Ahora probemos conversiones más interesantes (y un poco raras):
 
 *Código:*
 
-    puts '15'.to_f
-    puts '99.999'.to_f
-    puts '99.999'.to_i
-    puts '5 es mi numero favorito.'.to_i
-    puts '¿Quién pregunta acerca de 5 o lo que sea?'.to_i
-    puts 'Tu mamá hizo.'.to_f
-    puts 'fibroso'.to_s
-    puts 3.to_i
+```ruby
+puts '15'.to_f
+puts '99.999'.to_f
+puts '99.999'.to_i
+puts '5 es mi numero favorito.'.to_i
+puts '¿Quién pregunta acerca de 5 o lo que sea?'.to_i
+puts 'Tu mamá hizo.'.to_f
+puts 'fibroso'.to_s
+puts 3.to_i
+```
 
 *Resultado:*
 
-    15.0
-    99.999
-    99
-    5
-    0
-    0.0
-    fibroso
-    3
+```html
+15.0
+99.999
+99
+5
+0
+0.0
+fibroso
+3
+```
 
 Ésto probablemente te ha sorprendido un poco. El primero es bastante estándar,
 devolviendo `15.0`. Después de eso, convertimos el texto `'99.999'` a un número de
@@ -105,15 +121,19 @@ Hay algo extraño en nuestro método favorito... Mira esto:
 
 *Código:*
 
-    puts 20
-    puts 20.to_s
-    puts '20'
+```ruby
+puts 20
+puts 20.to_s
+puts '20'
+```
 
 *Resultado:*
 
-    20
-    20
-    20
+```html
+20
+20
+20
+```
 
 ¿Por qué estas tres líneas retornan el mismo resultado? Bueno, las últimas dos deberían,
 ya que `20.to_s` *es* `'20'`. Pero, ¿qué pasa con la primera, el entero `20`? Para tal
@@ -147,12 +167,15 @@ lee todo lo que tipeas hasta que presionas `Enter`. Intentémoslo:
 
 *Código:*
 
-    puts gets
-
+```ruby
+puts gets
+```
 *Resultado:*
 
-    *¿Hay eco aquí?*
-    ¿Hay eco aquí?
+```html
+*¿Hay eco aquí?*
+¿Hay eco aquí?
+```
 
 Por supuesto, lo que sea que escribas simplemente será impreso en pantalla por ti.
 Ejecútalo unas cuantas veces e intenta escribir cosas distintas.
@@ -160,20 +183,23 @@ Ejecútalo unas cuantas veces e intenta escribir cosas distintas.
 ¡Ahora podemos escribir programas interactivos! En este caso, escribe tu
 nombre y te saludará:
 
-    puts 'Hola, ¿cuál es tu nombre?'
-    name = gets
-    puts '¿Tu nombre es ' + name + '?  ¡Es un nombre adorable!'
-    puts 'Encantado de conocerte, ' + name + '.  :)'
+```ruby
+puts 'Hola, ¿cuál es tu nombre?'
+name = gets
+puts '¿Tu nombre es ' + name + '?  ¡Es un nombre adorable!'
+puts 'Encantado de conocerte, ' + name + '.  :)'
+```
 
 *Uhm!* Acabo de ejecutarlo, escribí mi nombre y esto es lo que he obtenido:
 
-    Hola, ¿cuál es tu nombre?
-    *Chris*
-    ¿Tu nombre es Chris
-    ?  ¡Es un nombre adorable!
-    Encantado de conocerte, Chris
-    .  :)
-
+```html
+Hola, ¿cuál es tu nombre?
+*Chris*
+¿Tu nombre es Chris
+?  ¡Es un nombre adorable!
+Encantado de conocerte, Chris
+.  :)
+```
 
 Hmmm... parece que cuando escribí las letras *C*, *h*, *r*, *i*, *s*, y luego presioné
 `Enter`, `gets` recibió todas las letras de mi nombre *y* el `Enter`! Afortunadamente,
@@ -183,18 +209,21 @@ que nos ayude:
 
 *Código:*
 
-    puts 'Hola, ¿cuál es tu nombre?'
-    name = gets.chomp
-    puts '¿Tu nombre es ' + name + '?  ¡Es un nombre adorable!'
-    puts 'Encantado de conocerte, ' + name + '.  :)'
+```ruby
+puts 'Hola, ¿cuál es tu nombre?'
+name = gets.chomp
+puts '¿Tu nombre es ' + name + '?  ¡Es un nombre adorable!'
+puts 'Encantado de conocerte, ' + name + '.  :)'
+```
 
 *Resultado:*
 
-    Hola, ¿cuál es tu nombre?
-    Chris
-    ¿Tu nombre es Chris?  ¡Es un nombre adorable!
-    Encantado de conocerte, Chris.  :)
-
+```html
+Hola, ¿cuál es tu nombre?
+Chris
+¿Tu nombre es Chris?  ¡Es un nombre adorable!
+Encantado de conocerte, Chris.  :)
+```
 
 ¡Mucho mejor! Nota que ya que `name` apunta a `gets.chomp`, no tenemos que usar
 `name.chomp`; `name` ya fue procesado por `chomp.

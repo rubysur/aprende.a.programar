@@ -20,26 +20,34 @@ si un objeto es mayor o menor que otro, usaremos los métodos `>` y `<`, así:
 
 *Código:*
 
-    puts 1 > 2
-    puts 1 < 2
+```ruby
+puts 1 > 2
+puts 1 < 2
+```
 
 *Resultado:*
 
-    false
-    true
+```html
+false
+true
+```
 
 Sin problemas. De igual manera, podemos identificar si un objeto es mayor-o-igual-que otro o
 menor-o-igual-que con los métodos `>=` y `<=`
 
 *Código:*
 
-    puts 5 >= 5
-    puts 5 <= 4
+```ruby
+puts 5 >= 5
+puts 5 <= 4
+```
 
 *Resultado:*
 
-    true
-    false
+```html
+true
+false
+```
 
 Finalmente, podemos ver si dos objetos son iguales o no utilizando `==` (que
 significa "¿son éstos iguales?") y `!=` (que significa "¿son éstos diferentes?").
@@ -50,25 +58,32 @@ a que objeto apuntar (asignación) y `==` se utiliza para responder la pregunta:
 
 *Código:*
 
-    puts 1 == 1
-    puts 2 != 1
+```ruby
+puts 1 == 1
+puts 2 != 1
+```
 
 *Resultado:*
 
-    true
-    true
-
+```html
+true
+true
+```
 Por supuesto, podemos comparar textos también. Cuando los textos se comparan,
 comparan su _ordenamiento lexicográfico_, que básicamente significa su orden en
 un diccionario. `gato` aparece antes que `perro` en el diccionario, así que:
 
 *Código:*
 
-    puts 'gato' < 'perro'
+```ruby
+puts 'gato' < 'perro'
+```
 
 *Resultado:*
 
-    true
+```html
+true
+```
 
 Sin embargo, hay algo que tener en cuenta: la manera en que las computadoras
 normalmente asumen que las letras mayúsculas vienen antes que las letras
@@ -95,25 +110,31 @@ solo te lo mostraré:
 
 *Código:*
 
-    puts 'Hola, ¿cual es tu nombre?'
-    name = gets.chomp
-    puts 'Hola, ' + name + '.'
-    if name == 'Chris'
-      puts '¡Que nombre tan hermoso!'
-    end
+```ruby
+puts 'Hola, ¿cual es tu nombre?'
+name = gets.chomp
+puts 'Hola, ' + name + '.'
+if name == 'Chris'
+  puts '¡Que nombre tan hermoso!'
+end
+```
 
 *si respondemos 'Chris':*
 
-    Hola, ¿cual es tu nombre?
-    Chris
-    Hola, Chris.
-    ¡Que nombre tan hermoso!
+```html
+Hola, ¿cual es tu nombre?
+Chris
+Hola, Chris.
+¡Que nombre tan hermoso!
+```
 
 *pero si ponemos otro nombre:*
 
-    Hola, ¿cual es tu nombre?
-    Chewbacca
-    Hola, Chewbacca.
+```html
+Hola, ¿cual es tu nombre?
+Chewbacca
+Hola, Chewbacca.
+```
 
 Y eso es una ramificación. Si lo que viene luego del `if` es `true` (es decir, si es
 cierto), se ejecutará el código entre el `if` y el `end`. Y no se ejecutará si lo que
@@ -129,27 +150,33 @@ es `true`, y otra cosa si es que es `false`.  Para eso es que existe `else`:
 
 *Código:*
 
-    puts 'Soy un adivino. Dime tu nombre:'
-    name = gets.chomp
-    if name == 'Chris'
-      puts 'Veo grandes cosas en tu futuro.'
-    else
-      puts 'Tu futuro es... ¡Oh! ¡Mira la hora!'
-      puts 'Realmente debo irme, ¡lo siento!'
-    end
+```ruby
+puts 'Soy un adivino. Dime tu nombre:'
+name = gets.chomp
+if name == 'Chris'
+  puts 'Veo grandes cosas en tu futuro.'
+else
+  puts 'Tu futuro es... ¡Oh! ¡Mira la hora!'
+  puts 'Realmente debo irme, ¡lo siento!'
+end
+```
 
 *si respondemos 'Chris':*
 
-    Soy un adivino. Dime tu nombre:
-    Chris
-    Veo grandes cosas en tu futuro.
+```html
+Soy un adivino. Dime tu nombre:
+Chris
+Veo grandes cosas en tu futuro.
+```
 
 *Si tratamos con un nombre diferente:*
 
-    Soy un adivino. Dime tu nombre:
-    Ringo
-    Tu futuro es... ¡Oh! ¡Mira la hora!
-    Realmente debo irme, ¡lo siento!
+```html
+Soy un adivino. Dime tu nombre:
+Ringo
+Tu futuro es... ¡Oh! ¡Mira la hora!
+Realmente debo irme, ¡lo siento!
+```
 
 Las ramificaciones son como encontrar una bifurcación en el código:
 ¿Seguimos el camino de las personas cuyo `name == 'Chris'` o el camino de
@@ -160,65 +187,75 @@ otras ramificaciones:
 
 *Código:*
 
-    puts 'Hola, y bienvenido a la clase de 7mo año.'
-    puts 'Me llamo Mrs. Gabbard. ¿Tú nombre es...?'
-    nombre = gets.chomp
+```ruby
+puts 'Hola, y bienvenido a la clase de 7mo año.'
+puts 'Me llamo Mrs. Gabbard. ¿Tú nombre es...?'
+nombre = gets.chomp
 
-    if nombre == nombre.capitalize
-      puts 'Por favor, toma asiento ' + nombre + '.'
-    else
-      puts '¿' + nombre + '? Quieres decir ' + nombre.capitalize + ', ¿cierto?'
-      puts '¿No sabes escribir tu propio nombre?'
-      respuesta = gets.chomp
+if nombre == nombre.capitalize
+  puts 'Por favor, toma asiento ' + nombre + '.'
+else
+  puts '¿' + nombre + '? Quieres decir ' + nombre.capitalize + ', ¿cierto?'
+  puts '¿No sabes escribir tu propio nombre?'
+  respuesta = gets.chomp
 
-      if respuesta.downcase == 'si'
-        puts '¡Hum!  Bueno, ¡siéntese!'
-      else
-        puts '¡SALGA DEL SALON!'
-      end
-    end
+  if respuesta.downcase == 'si'
+    puts '¡Hum!  Bueno, ¡siéntese!'
+  else
+    puts '¡SALGA DEL SALON!'
+  end
+end
+```
 
 *si respondemos el nombre en minúsculas:*
 
-    Hola, y bienvenido a la clase de 7mo año.
-    Me llamo Mrs. Gabbard. ¿Tú nombre es...?
-    chris
-    ¿chris? Quieres decir Chris, ¿cierto?
-    ¿No sabes escribir tu propio nombre?
-    si
-    ¡Hum!  Bueno, ¡siéntese!
+```html
+Hola, y bienvenido a la clase de 7mo año.
+Me llamo Mrs. Gabbard. ¿Tú nombre es...?
+chris
+¿chris? Quieres decir Chris, ¿cierto?
+¿No sabes escribir tu propio nombre?
+si
+¡Hum!  Bueno, ¡siéntese!
+```
 
 *y si respondemos el nombre como debe ser:*
 
-    Hola, y bienvenido a la clase de 7mo año.
-    Me llamo Mrs. Gabbard. ¿Tú nombre es...?
-    Chris
-    Por favor, toma asiento Chris.
+```html
+Hola, y bienvenido a la clase de 7mo año.
+Me llamo Mrs. Gabbard. ¿Tú nombre es...?
+Chris
+Por favor, toma asiento Chris.
+```
 
 Algunas veces puede ser algo confuso entender donde todos los `if`s, `else`s, y
 `end`s van. Lo que yo hago es escribir el `end` _al mismo tiempo_ que escribo el
 `if`.  Así es que como se veía al principio el programa de arriba según lo iba
 escribiendo:
 
-    puts 'Hola, y bienvenido a la clase de 7mo año.'
-    puts 'Me llamo Mrs. Gabbard. ¿Tú nombre es...?'
-    nombre = gets.chomp
+```ruby
+puts 'Hola, y bienvenido a la clase de 7mo año.'
+puts 'Me llamo Mrs. Gabbard. ¿Tú nombre es...?'
+nombre = gets.chomp
 
-    if nombre == nombre.capitalize
-    else
-    end
+if nombre == nombre.capitalize
+else
+end
+```
 
 Entonces lo llené con _comentarios_, cosas en el código que la computadora ignorará:
 
-    puts 'Hola, y bienvenido a la clase de 7mo año.'
-    puts 'Me llamo Mrs. Gabbard. ¿Tú nombre es...?'
-    nombre = gets.chomp
+```ruby
+puts 'Hola, y bienvenido a la clase de 7mo año.'
+puts 'Me llamo Mrs. Gabbard. ¿Tú nombre es...?'
+nombre = gets.chomp
 
-    if nombre == nombre.capitalize
-      #  Me trata como una persona normal.
-    else
-      #  Se vuelve loca.
-    end
+if nombre == nombre.capitalize
+  #  Me trata como una persona normal.
+else
+  #  Se vuelve loca.
+end
+```
 
 Todo lo que aparezca luego de un `#` se considera un comentario  (a menos, claro,
 que estés en un texto). Después de eso, reemplacé los comentarios con
@@ -229,21 +266,23 @@ Actualmente los encuentro algo distrayentes la mayor parte del tiempo. Es una op
 personal; tú encontrarás tu propio estilo (siempre en evolución). Así que mi siguiente
 paso se veía así:
 
-    puts 'Hola, y bienvenido a la clase de 7mo año.'
-    puts 'Me llamo Mrs. Gabbard. ¿Tú nombre es...?'
-    nombre = gets.chomp
+```ruby
+puts 'Hola, y bienvenido a la clase de 7mo año.'
+puts 'Me llamo Mrs. Gabbard. ¿Tú nombre es...?'
+nombre = gets.chomp
 
-    if nombre == nombre.capitalize
-      puts 'Por favor, toma asiento ' + nombre + '.'
-    else
-      puts '¿' + nombre + '? Quieres decir ' + nombre.capitalize + ', ¿cierto?'
-      puts '¿No sabes escribir tu propio nombre?'
-      respuesta = gets.chomp
+if nombre == nombre.capitalize
+  puts 'Por favor, toma asiento ' + nombre + '.'
+else
+  puts '¿' + nombre + '? Quieres decir ' + nombre.capitalize + ', ¿cierto?'
+  puts '¿No sabes escribir tu propio nombre?'
+  respuesta = gets.chomp
 
-      if respuesta.downcase == 'si'
-      else
-      end
-    end
+  if respuesta.downcase == 'si'
+  else
+  end
+end
+```
 
 De nuevo, escribí los `if`, `else`, y `end` juntos. Realmente me ayuda para saber
 "donde estoy" en el código. Tambien permite que el trabajo parezca más sencillo ya que
@@ -271,27 +310,31 @@ ciertas partes de un programa mientras (`while`) una cierta condición sea ciert
 
 *Código:*
 
-    comando = ''
+```ruby
+comando = ''
 
-    while comando != 'adios'
-      puts comando
-      comando = gets.chomp
-    end
+while comando != 'adios'
+  puts comando
+  comando = gets.chomp
+end
 
-    puts '¡Vuelve pronto!'
+puts '¡Vuelve pronto!'
+```
 
 *Respuesta:*
 
-    ¿Hola?
-    ¿Hola?
-    ¡Hola!
-    ¡Hola!
-    Un gusto conocerlo
-    Un gusto conocerlo
-    ¡Oh... que amable!
-    ¡Oh... que amable!
-    adios
-    ¡Vuelve pronto!
+```html
+¿Hola?
+¿Hola?
+¡Hola!
+¡Hola!
+Un gusto conocerlo
+Un gusto conocerlo
+¡Oh... que amable!
+¡Oh... que amable!
+adios
+¡Vuelve pronto!
+```
 
 Y eso es un bucle. (Tal vez te has dado cuenta de la línea vacía que sale al inicio del resultado;
 viene de ejecutar el primer `puts`, antes del primer `gets`. ¿Cómo cambiarías el programa
@@ -316,23 +359,27 @@ le dice que _ella_ tiene un nombre hermoso. Yo no querría herir sus sentimiento
 
 *Código:*
 
-    puts 'Hola, ¿cual es tu nombre?'
-    nombre = gets.chomp
-    puts 'Hola, ' + nombre + '.'
-    if nombre == 'Chris'
-      puts '¡Que nombre tan hermoso!'
-    else
-      if nombre == 'Katy'
-        puts '¡Que nombre tan hermoso!'
-      end
-    end
+```ruby
+puts 'Hola, ¿cual es tu nombre?'
+nombre = gets.chomp
+puts 'Hola, ' + nombre + '.'
+if nombre == 'Chris'
+  puts '¡Que nombre tan hermoso!'
+else
+  if nombre == 'Katy'
+    puts '¡Que nombre tan hermoso!'
+  end
+end
+```
 
 *Respuesta:*
 
-    Hola, ¿cual es tu nombre?
-    Katy
-    Hola, Katy.
-    ¡Que nombre tan hermoso!
+```html
+Hola, ¿cual es tu nombre?
+Katy
+Hola, Katy.
+¡Que nombre tan hermoso!
+```
 
 Bueno, funciona... pero no es un programa muy bonito. ¿Por qué no? Bueno, la mejor
 regla que he aprendido de programación es la regla _DRY_: Don't Repeat Yourself_ ("No
@@ -346,62 +393,70 @@ o `'Katy'`, entonces realmente debería hacer exactamente _la misma cosa_:
 
 *Código:*
 
-    puts 'Hola, ¿cual es tu nombre?'
-    nombre = gets.chomp
-    puts 'Hola, ' + nombre + '.'
-    if (nombre == 'Chris' or nombre == 'Katy')
-      puts '¡Que nombre tan hermoso!'
-    end
+```ruby
+puts 'Hola, ¿cual es tu nombre?'
+nombre = gets.chomp
+puts 'Hola, ' + nombre + '.'
+if (nombre == 'Chris' or nombre == 'Katy')
+  puts '¡Que nombre tan hermoso!'
+end
+```
 
 *Respuesta:*
 
-    Hola, ¿cual es tu nombre?
-    Katy
-    Hola, Katy.
-    ¡Que nombre tan hermoso!
+```html
+Hola, ¿cual es tu nombre?
+Katy
+Hola, Katy.
+¡Que nombre tan hermoso!
+```
 
-Mucho mejor. Para hacer que funcione, he utilizado el operador `or`. Los otros <em>operadores
-lógicos</em> son `and` y `not`. Siempre es una buena idea usar los paréntesis cuando trabajamos
+Mucho mejor. Para hacer que funcione, he utilizado el operador `or`. Los otros *operadores
+lógicos* son `and` y `not`. Siempre es una buena idea usar los paréntesis cuando trabajamos
 con éstos. Veamos como funcionan:
 
 *Código:*
 
-    soyChris        = true
-    soyMorado       = false
-    meGustaLaComida = true
-    comoRocas       = false
+```ruby
+soyChris        = true
+soyMorado       = false
+meGustaLaComida = true
+comoRocas       = false
 
-    puts (soyChris and meGustaLaComida)
-    puts (meGustaLaComida and comoRocas)
-    puts (soyMorado and meGustaLaComida)
-    puts (soyMorado and comoRocas)
-    puts
-    puts (soyChris or meGustaLaComida)
-    puts (meGustaLaComida or comoRocas)
-    puts (soyMorado or meGustaLaComida)
-    puts (soyMorado or comoRocas)
-    puts
-    puts (not soyMorado)
-    puts (not soyChris)
+puts (soyChris and meGustaLaComida)
+puts (meGustaLaComida and comoRocas)
+puts (soyMorado and meGustaLaComida)
+puts (soyMorado and comoRocas)
+puts
+puts (soyChris or meGustaLaComida)
+puts (meGustaLaComida or comoRocas)
+puts (soyMorado or meGustaLaComida)
+puts (soyMorado or comoRocas)
+puts
+puts (not soyMorado)
+puts (not soyChris)
+```
 
 *Respuesta:*
 
-    true
-    false
-    false
-    false
+```html
+true
+false
+false
+false
 
-    true
-    true
-    true
-    false
+true
+true
+true
+false
 
-    true
-    false
+true
+false
+```
 
 La única de esas sentencias que te podría confundir es el `or`. En español normalmente decimos
 "uno u otro, pero no los dos". Por ejemplo, tu mamá podría decir "Para postre puedes pedir pie o
-torta". ¡Ella <em>no</em> quiso decir que podrías tener ambos!
+torta". ¡Ella *no* quiso decir que podrías tener ambos!
 
 Una computadora, por otro lado, usa `or` (o) para decir "uno u otro o los dos"  (Otra manera de
 decirlo es "al menos una de estas debe ser cierta"). Es por eso que las computadoras son más divertidas
@@ -410,33 +465,34 @@ que mamá.
 Algunas cosas por intentar
 --------------------------
 
-&bull;<em>"99 botellas de cerveza en la pared..."</em> Escribe un programa que imprima la letra del clásico
+&bull;*"99 botellas de cerveza en la pared..."* Escribe un programa que imprima la letra del clásico
 en viajes <a href="http://en.wikipedia.org/wiki/99_Bottles_of_Beer">99 botellas de cerveza en la pared"</a>
 
 &bull;Escribe un programa de la Abuela Sorda. Lo que sea que le digas a la abuela (lo que sea que escribas),
-ella deberá responder con HUH?!  ¡HABLA MAS FUERTE, HIJO!`, a menos que le grites (escribas todo
+ella deberá responder con HUH?!  ¡HABLA MAS FUERTE, HIJO!, a menos que le grites (escribas todo
 en mayúsculas) Si le gritas, ella te escuchará (o al menos creerá eso) y te gritará de vuelta NO, ¡NO
-DESDE 1938!`. Para hacer el programa <em>realmente</em> creíble, haz que la abuela grite un año
+DESDE 1938!. Para hacer el programa *realmente* creíble, haz que la abuela grite un año
 distinto cada vez; tal vez un año aleatorio entre 1930 y 1950.  (Esta parte es opcional y sería mucho
 más facil si lees la sección sobre generadores de números aleatorios de Ruby al final del capítulo
-<a href="/capitulos/05-acerca-de-metodos.markdown">métodos</a>) No podrás dejar de
-hablar con la abuela hasta que le grites `ADIOS`.<br />
-<em><strong>Pista:</strong> ¡No te olvides que </em>`chomp`<em>!  ¡</em>`'ADIOS'`<em>con un Enter
-no es lo mismo que </em>`'ADIOS'`<em> sin uno!</em><br />. <em><strong>Pista 2:</strong> Trata de pensar
-que partes del programa deberían suceder una y otra vez. Todas ellas deberían estar en tu bucle</em> `while`.
+[métodos](/aprende.a.programar/capitulos/metodos.html)) No podrás dejar de
+hablar con la abuela hasta que le grites `ADIOS`.
+**Pista:** *¡No te olvides que *`chomp`*!  ¡*`'ADIOS'`*con un Enter no es lo
+mismo que *`'ADIOS'`* sin uno!*.
+**Pista 2:* *Trata de pensar que partes del programa deberían suceder una y
+otra vez. Todas ellas deberían estar en tu bucle* `while`.
 
 &bull; Extiende el programa de la Abuela Sorda. ¿Qué pasaría si la abuela no quiere que te vayas?
 Cuando le grites `ADIOS`, ella podría pretender que no te escucha. Cambia el programa previo para
-que tengas que gritar `ADIOS` tres veces <em>seguidas</em>. Asegúrate que tu programa: si gritas ADIOS`
+que tengas que gritar `ADIOS` tres veces *seguidas*. Asegúrate que tu programa: si gritas `ADIOS`
 tres veces, pero no seguidas, deberías seguir hablando con la abuela.
 
 &bull; Años bisiestos. Escribe un programa que pregunte por un año de inicio y uno de fin, y luego
 imprima (`puts`) todos los años bisiestos que han ocurrido entre ellos (incluyéndolos si también han
 sido estos años bisiestos). Los años bisiestos son divisibles entre cuatro (como 1984 y 2004). Sin
-embargo, los años divisibles entre 100 <em>no</em> son años bisiestos (como 1800 y 1900) <strong><em>a
-menos</em></strong> que sean divisibles por 400 (como 1600 y 2000, los cuales fueron, de hecho, bisiestos).
-<em>(Sí, todo es bastante confuso, pero no tanto como tener Enero en medio del invierno, lo cual es
-algo que a veces sucede)</em>
+embargo, los años divisibles entre 100 *no* son años bisiestos (como 1800 y 1900) **a
+menos** que sean divisibles por 400 (como 1600 y 2000, los cuales fueron, de hecho, bisiestos).
+*(Sí, todo es bastante confuso, pero no tanto como tener Enero en medio del invierno, lo cual es
+algo que a veces sucede)*
 
 Cuando termines con ellos, ¡tómate un descanso! Haz aprendido un montón hasta ahora. ¡Felicitaciones! ¿Estás
 sorprendido de la cantidad de cosas que le puedes pedir hacer a una computadora? Unos capítulos más y

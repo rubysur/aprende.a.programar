@@ -25,7 +25,7 @@ probando esto.
 
 ## El Pico: "Programming Ruby"
 
-Absolutamente <em>el</em> libro Ruby a tener es "Programming Ruby 1.9,
+Absolutamente *el* libro Ruby a tener es "Programming Ruby 1.9,
 The Pragmatic Programmer's Guide", por Dave Thomas, Chad Fowler y Andrew
 Hunt (The Pragmatic Programmers). Mientras que recomiendo tomar la
 <a href="http://pragprog.com/press_releases/programming-ruby-1-9">tercera edición</a>
@@ -57,7 +57,7 @@ el lugar para esto es ruby-talk, la lista de mails Ruby. Esta lleno de gente
 amigable, inteligente y con ganas de ayudar. Para aprender más de esto, o suscribirte,
 mira <a href="http://www.ruby-lang.org/es/community/mailing-lists/">aquí</a>.
 
-<strong>ADVERTENCIA:</strong> Hay <em>muchos</em> emails en
+**ADVERTENCIA:** Hay *muchos* emails en
 esta lista de correos cada día. Tuve que enviar directamente estos
 a diferentes carpetas de mail para que no me molesten. Si no quieres
 ocuparte de todos esos emails, pienso, no debes inscribirte. La lista
@@ -74,7 +74,7 @@ More Than One Way To Do It*): *Hay Más De Una Forma DE Hacer Esto*.
 Algunos te dirán que TMTOWTDI es maravillos mientras otros
 puedan pensar algo diferente. No tengo fuertes sentimientos de las
 cosas en general, pero pienso que esto es
-una <em>terrible</em> forma de enseñar a programar a alguién.
+una *terrible* forma de enseñar a programar a alguién.
 (Como si aprender a programar de una forma no fuera suficiente desafío y confuso!)
 
 Sin embargo, ahora que te estás moviendose más allá de este tutorial, verás mucha
@@ -91,13 +91,17 @@ Otro lindo atajo que puedes usar con `if`,
 
 *Código:*
 
-    #  Estas lineas son de un programa que escribi para generar palabras
-    puts 'grobably combergearl kitatently thememberate' if 5 == 2**2 + 1**1
-    puts 'enlestrationshifter supposine follutify blace' unless 'Chris'.length == 5
+```ruby
+#  Estas lineas son de un programa que escribi para generar palabras
+puts 'grobably combergearl kitatently thememberate' if 5 == 2**2 + 1**1
+puts 'enlestrationshifter supposine follutify blace' unless 'Chris'.length == 5
+```
 
 *Resultado:*
 
-    grobably combergearl kitatently thememberate
+```html
+grobably combergearl kitatently thememberate
+```
 
 Y finalmente, hay otro camino para escribir métodos la cual toma bloques
 (no procs). Vimos la parte donde tomabamos el bloque y lo convertíamos
@@ -108,37 +112,45 @@ es más confuso). En lugar de esto:
 
 *Código:*
 
-    def hacerDosVeces(&block)
-      block.call
-      block.call
-    end
+```ruby
+def hacerDosVeces(&block)
+  block.call
+  block.call
+end
 
-    hacerDosVeces do
-      puts 'murditivent flavitemphan siresent litics'
-    end
+hacerDosVeces do
+  puts 'murditivent flavitemphan siresent litics'
+end
+```
 
 *Resultado:*
 
-    murditivent flavitemphan siresent litics
-    murditivent flavitemphan siresent litics
+```html
+murditivent flavitemphan siresent litics
+murditivent flavitemphan siresent litics
+```
 
 ...haces esto:
 
 *Código:*
 
-    def hacerDosVeces
-      yield
-      yield
-    end
+```ruby
+def hacerDosVeces
+  yield
+  yield
+end
 
-    hacerDosVeces do
-      puts 'buritiate mustripe lablic acticise'
-    end
+hacerDosVeces do
+  puts 'buritiate mustripe lablic acticise'
+end
+```
 
 *Resultado:*
 
-    buritiate mustripe lablic acticise
-    buritiate mustripe lablic acticise
+```html
+buritiate mustripe lablic acticise
+buritiate mustripe lablic acticise
+```
 
 No sé... ¿qué piensas? Quizás solo sea yo, pero... ¡¿`yield`?!
 Si esto fue algo como  `call_the_hidden_block` o otra cosa más,
@@ -151,4 +163,4 @@ y yo lo haré a mi manera.
 
 Usa esto para lo bueno y no para lo malo. :-)  Y si encuentras este tutorial
 útil (o confuso, o si encuentras un error),
-<a href="https://github.com/rubysur/aprendeaprogramar.pe/issues">avísanos</a>!
+[avísanos](https://github.com/rubysur/aprende.a.programar/issues)!

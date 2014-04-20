@@ -1,7 +1,7 @@
 Textos
 ======
 
-Así que hemos aprendido todo acerca de [números](aprende.a.programar/capitulos/numeros.html),
+Así que hemos aprendido todo acerca de [números](/aprende.a.programar/capitulos/numeros.html),
 ¿pero qué hay acerca de letras?, ¿palabras? o ¿textos?
 
 Nos referimos a grupos de letras en un programa como **textos**. Tú puedes
@@ -167,7 +167,7 @@ puts "2" * "5"
 **Resultado:**
 
 ```html
-can't convert Fixnum into String (TypeError)
+in `+': no implicit conversion of Fixnum into String (TypeError)
 ```
 
 Hmmm... un mensaje de error. El problema es que en realidad no puedes sumar

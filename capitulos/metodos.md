@@ -36,13 +36,17 @@ Por ejemplo:
 
 *Código:*
 
-    puts 'hola '.+ 'mundo'
-    puts (10.* 9).+ 9
+```ruby
+puts 'hola '.+ 'mundo'
+puts (10.* 9).+ 9
+```
 
 *Resultado:*
 
-    hola mundo
-    99
+```html
+hola mundo
+99
+```
 
 Esto no es muy lindo, por lo que no vamos a escribir siempre como ahora;
 sin embargo, es importante para entender que sucede *realmente*.
@@ -69,14 +73,18 @@ Observa lo siguiente:
 
 *Código:*
 
-    NoPuedoCreerQueUnaVariableConNombreTanLargoApunteA3 = 3
-    puts NoPuedoCreerQueUnaVariableConNombreTanLargoApunteA3
-    self.puts NoPuedoCreerQueUnaVariableConNombreTanLargoApunteA3
+```ruby
+NoPuedoCreerQueUnaVariableConNombreTanLargoApunteA3 = 3
+puts NoPuedoCreerQueUnaVariableConNombreTanLargoApunteA3
+self.puts NoPuedoCreerQueUnaVariableConNombreTanLargoApunteA3
+```
 
 *Resultado:*
 
-    3
-    in `<main>': private method `puts' called for main:Object (NoMethodError)
+```html
+3
+in `<main>': private method `puts' called for main:Object (NoMethodError)
+```
 
 Si no alcanzaste a comprender todo, está bien. Lo importante es que
 todo método está siendo propiedad de un objeto, incluso si no tiene
@@ -105,25 +113,29 @@ el cual nos da una version invertida de un texto:
 
 *Código:*
 
-    var1 = 'parar'
-    var2 = 'subrayado'
-    var3 = 'Puedes pronunciar esta oración al reves?'
+```ruby
+var1 = 'parar'
+var2 = 'subrayado'
+var3 = 'Puedes pronunciar esta oración al reves?'
 
-    puts var1.reverse
-    puts var2.reverse
-    puts var3.reverse
-    puts var1
-    puts var2
-    puts var3
+puts var1.reverse
+puts var2.reverse
+puts var3.reverse
+puts var1
+puts var2
+puts var3
+```
 
 *Resultado:*
 
-    rarap
-    odayarbus
-    ?sever la nóicaro atse raicnunorp sedeuP
-    parar
-    subrayado
-    Puedes pronunciar esta oración al reves?
+```html
+rarap
+odayarbus
+?sever la nóicaro atse raicnunorp sedeuP
+parar
+subrayado
+Puedes pronunciar esta oración al reves?
+```
 
 Como puedes ver, `reverse` no revierte el orden en el string original; éste
 sólo hace una nueva versión de éste en reversa. Esto es porque `var1` continua
@@ -134,15 +146,19 @@ Otro método para texto es `length`, el cual nos dice el número de caracteres
 
 *Código:*
 
-    puts 'Cuál es tu nombre completo?'
-    name = gets.chomp
-    puts '¿Sabes que hay ' + name.length + ' caracteres en tu nombre, ' + name + '?'
+```ruby
+puts 'Cuál es tu nombre completo?'
+name = gets.chomp
+puts '¿Sabes que hay ' + name.length + ' caracteres en tu nombre, ' + name + '?'
+```
 
 *Resultado:*
 
-    Cuál es tu nombre completo?
-    Christopher David Pine
-    #<TypeError: can't convert Fixnum into String>
+```html
+Cuál es tu nombre completo?
+Christopher David Pine
+in `+': no implicit conversion of Fixnum into String (TypeError)
+```
 
 ¡¡Uhh!! Algo salió mal, y esto parece que ocurrió después la línea
 `name = gets.chomp`... ¿Puedes ver el problema? Fijate si puedes darte cuenta.
@@ -152,15 +168,19 @@ un texto. Esto es fácil, necesitamos solo agregar `to_s` (y cruzar nuestros ded
 
 *Código:*
 
-    puts 'Cuál es tu nombre completo?'
-    name = gets.chomp
-    puts '¿Sabías que hay ' + name.length.to_s + ' caracteres en tu nombre, ' + name + '?'
+```ruby
+puts 'Cuál es tu nombre completo?'
+name = gets.chomp
+puts '¿Sabías que hay ' + name.length.to_s + ' caracteres en tu nombre, ' + name + '?'
+```
 
 *Resultado:*
 
-    Cuál es tu nombre completo?
-    Christopher David Pine
-    Sabías que hay 22 caracteres en tu nombre, Christopher David Pine
+```html
+Cuál es tu nombre completo?
+Christopher David Pine
+Sabías que hay 22 caracteres en tu nombre, Christopher David Pine
+```
 
 No, no conocía esto.  **Nota:** esto es el número de
 *caracteres* en mi nombre, no el número de *letras*. Supongo
@@ -180,22 +200,26 @@ mayúsculas(si es una letra).
 
 *Código:*
 
-    letters = 'aAbBcCdDeE'
-    puts letters.upcase
-    puts letters.downcase
-    puts letters.swapcase
-    puts letters.capitalize
-    puts ' a'.capitalize
-    puts letters
+```ruby
+letters = 'aAbBcCdDeE'
+puts letters.upcase
+puts letters.downcase
+puts letters.swapcase
+puts letters.capitalize
+puts ' a'.capitalize
+puts letters
+```
 
 *Resultado:*
 
-    AABBCCDDEE
-    aabbccddee
-    AaBbCcDdEe
-    Aabbccddee
-     a
-    aAbBcCdDeE
+```html
+AABBCCDDEE
+aabbccddee
+AaBbCcDdEe
+Aabbccddee
+ a
+aAbBcCdDeE
+```
 
 Esto es bastante estándar. Como puedes ver desde la linea `puts ' a'.capitalize`,
 el método `capitalize` sólo deja en mayúsculas el primer *carácter*, no
@@ -212,13 +236,15 @@ centrar las lineas de un poema, debería hacer algo como esto:
 
 *Código:*
 
-    lineWidth = 50
-    puts(                'Old Mother Hubbard'.center(lineWidth))
-    puts(               'Sat in her cupboard'.center(lineWidth))
-    puts(         'Eating her curds an whey,'.center(lineWidth))
-    puts(          'When along came a spider'.center(lineWidth))
-    puts(         'Which sat down beside her'.center(lineWidth))
-    puts('And scared her poor shoe dog away.'.center(lineWidth))
+```ruby
+lineWidth = 50
+puts(                'Old Mother Hubbard'.center(lineWidth))
+puts(               'Sat in her cupboard'.center(lineWidth))
+puts(         'Eating her curds an whey,'.center(lineWidth))
+puts(          'When along came a spider'.center(lineWidth))
+puts(         'Which sat down beside her'.center(lineWidth))
+puts('And scared her poor shoe dog away.'.center(lineWidth))
+```
 
 *Resultado:*
 
@@ -258,12 +284,14 @@ Vamos a verlos en acción:
 
 *Código:*
 
-    lineWidth = 40
-    str = '--> text <--'
-    puts str.ljust  lineWidth
-    puts str.center lineWidth
-    puts str.rjust  lineWidth
-    puts str.ljust(lineWidth/2) + str.rjust(lineWidth/2)
+```ruby
+lineWidth = 40
+str = '--> text <--'
+puts str.ljust  lineWidth
+puts str.center lineWidth
+puts str.rjust  lineWidth
+puts str.ljust(lineWidth/2) + str.rjust(lineWidth/2)
+```
 
 *Resultado:*
 
@@ -321,19 +349,23 @@ de 1. Vamos a ver como es que trabaja en un programa:
 
 *Código:*
 
-    puts 5**2
-    puts 5**0.5
-    puts 7/3
-    puts 7%3
-    puts 365%7
+```ruby
+puts 5**2
+puts 5**0.5
+puts 7/3
+puts 7%3
+puts 365%7
+```
 
 *Resultado:*
 
-    25
-    2.23606797749979
-    2
-    1
-    1
+```html
+25
+2.23606797749979
+2
+1
+1
+```
 
 De la última línea, aprendimos que un año (no bisiesto) tienen algún
 número de semanas, más un día. Entonces si tu cumpleaños fue un Martes
@@ -346,13 +378,17 @@ Hay un último método para mencionar antes de revisar el método `random`:
 
 *Código:*
 
-    puts((5-2).abs)
-    puts((2-5).abs)
+```ruby
+puts((5-2).abs)
+puts((2-5).abs)
+```
 
 *Resultado:*
 
-    3
-    3
+```html
+3
+3
+```
 
 Números aleatorios
 ------------------
@@ -368,33 +404,37 @@ Vamos a ver `rand`  en acción.
 
 *Código:*
 
-    puts rand
-    puts rand
-    puts rand
-    puts(rand(100))
-    puts(rand(100))
-    puts(rand(100))
-    puts(rand(1))
-    puts(rand(1))
-    puts(rand(1))
-    puts(rand(99999999999999999999999999999999999999999999999999999999999))
-    puts('El pronosticador del tiempo dijo que hay '+rand(101).to_s+'% chances de que llueva,')
-    puts('pero nunca debes confiar en el.')
+```ruby
+puts rand
+puts rand
+puts rand
+puts(rand(100))
+puts(rand(100))
+puts(rand(100))
+puts(rand(1))
+puts(rand(1))
+puts(rand(1))
+puts(rand(99999999999999999999999999999999999999999999999999999999999))
+puts('El pronosticador del tiempo dijo que hay '+rand(101).to_s+'% chances de que llueva,')
+puts('pero nunca debes confiar en el.')
+```
 
 *Resultado:*
 
-    0.866769322351658
-    0.155609260113273
-    0.208355946789083
-    61
-    46
-    92
-    0
-    0
-    0
-    22982477508131860231954108773887523861600693989518495699862
-    El pronosticador del tiempo dijo que hay 47% chances de que llueva,
-    pero nunca debes confiar en el.
+```html
+0.866769322351658
+0.155609260113273
+0.208355946789083
+61
+46
+92
+0
+0
+0
+22982477508131860231954108773887523861600693989518495699862
+El pronosticador del tiempo dijo que hay 47% chances de que llueva,
+pero nunca debes confiar en el.
+```
 
 Fijate que utilicé `rand(101)` para obtener números entre `0`
 y `100`, y que el `rand(1)` siempre devuelve `0`. No
@@ -416,34 +456,37 @@ lo siguiente:
 
 *Código:*
 
-    srand 1776
-    puts(rand(100))
-    puts(rand(100))
-    puts(rand(100))
-    puts(rand(100))
-    puts(rand(100))
-    puts ''
-    srand 1776
-    puts(rand(100))
-    puts(rand(100))
-    puts(rand(100))
-    puts(rand(100))
-    puts(rand(100))
+```ruby
+srand 1776
+puts(rand(100))
+puts(rand(100))
+puts(rand(100))
+puts(rand(100))
+puts(rand(100))
+puts ''
+srand 1776
+puts(rand(100))
+puts(rand(100))
+puts(rand(100))
+puts(rand(100))
+puts(rand(100))
+```
 
- *Resultado:*
+*Resultado:*
 
-    24
-    35
-    36
-    58
-    70
+```html
+24
+35
+36
+58
+70
 
-    24
-    35
-    36
-    58
-    70
-
+24
+35
+36
+58
+70
+```
 
 Esto hará la misma cosa cada vez que inicies con el mismo número. Si quieres
 obtener diferentes números(como pasaría si nunca utilizaras `srand`),
@@ -459,21 +502,25 @@ ir directamente a este:
 
 *Código:*
 
-    puts(Math::PI)
-    puts(Math::E)
-    puts(Math.cos(Math::PI/3))
-    puts(Math.tan(Math::PI/4))
-    puts(Math.log(Math::E**2))
-    puts((1 + Math.sqrt(5))/2)
+```ruby
+puts(Math::PI)
+puts(Math::E)
+puts(Math.cos(Math::PI/3))
+puts(Math.tan(Math::PI/4))
+puts(Math.log(Math::E**2))
+puts((1 + Math.sqrt(5))/2)
+```
 
 *Resultado:*
 
-    3.14159265358979
-    2.71828182845905
-    0.5
-    1.0
-    2.0
-    1.61803398874989
+```html
+3.14159265358979
+2.71828182845905
+0.5
+1.0
+2.0
+1.61803398874989
+```
 
 La primera cosa de la que te habrás dado cuenta es probablemente de
 la notación `::`. Explicando el *alcance del operador*
