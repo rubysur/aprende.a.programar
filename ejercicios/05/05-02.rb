@@ -1,3 +1,0 @@
-NoPuedoCreerQueUnaVariableConNombreTanLargoApunteA3 = 3
-puts NoPuedoCreerQueUnaVariableConNombreTanLargoApunteA3
-self.puts NoPuedoCreerQueUnaVariableConNombreTanLargoApunteA3

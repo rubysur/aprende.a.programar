@@ -1,1 +1,0 @@
-puts 'parpadeo ' * 4
