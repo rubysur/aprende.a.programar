@@ -23,7 +23,7 @@ $ sudo apt-get install ruby
 
 En **CentOS**, **Fedora** o **RHEL**, puedes usar `yum`:
 
-```
+```html
 $ sudo yum install ruby
 ```
 
