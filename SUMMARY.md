@@ -1,6 +1,7 @@
 Summary
 =======
 
+* [Instalación](capitulos/instalacion.md)
 * [Números](capitulos/numeros.md)
 * [Textos](capitulos/textos.md)
 * [Variables](capitulos/variables.md)
