@@ -13,4 +13,4 @@ publish:
 	$(bin)/grunt publish
 
 server:
-	$(bin)/gitbook serve
+	$(bin)/gitbook serve --theme theme
