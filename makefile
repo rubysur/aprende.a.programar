@@ -1,5 +1,8 @@
+bin = ./node_modules/.bin
+
 install:
-	npm install -g grunt-cli
+	npm install gitbook@0.2.4
+	npm install grunt-cli@0.1.13
 	npm install grunt@0.4.1
 	npm install grunt-gitbook@0.2.0
 	npm install grunt-gh-pages@0.9.1
@@ -7,7 +10,7 @@ install:
 
 publish:
 	git push
-	grunt publish
+	$(bin)/grunt publish
 
 server:
-	gitbook serve --theme theme
+	$(bin)/gitbook serve
