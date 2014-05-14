@@ -326,7 +326,7 @@ Matemáticas Avanzadas
 
 *(Esta sección es totalmente opcional. Asume un conocimiento
 previo de matemáticas. Si no estás interesado, puedes ir directamente
-al siguiente capítulo [Control de Flujo](/aprende.a.programar/capitulos/condicionales.md)
+al siguiente capítulo [Control de Flujo](/aprende.a.programar/capitulos/condicionales.html)
 sin problemas. Aunque, una rápida vista de esta sección sobre
 **Números aleatorios** debería venir bien.)*
 
@@ -531,4 +531,4 @@ esperar de una calculadora científica decente. Y como siempre, los
 flotantes están *realmente cerca* de ser la respuesta
 correcta.
 
-Entonces ahora vamos a ver [control de flujo](/aprende.a.programar/capitulos/condicionales.md).
+Entonces ahora vamos a ver [control de flujo](/aprende.a.programar/capitulos/condicionales.html).
