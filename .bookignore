@@ -1,1 +1,4 @@
+.bookignore
 publish
+book.json
+package.json
