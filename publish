@@ -15,4 +15,4 @@ cd .site
 
 git add -A .
 git commit -m 'Updates'
-git push origin gh-pages
+git push -f origin gh-pages
