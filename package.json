@@ -1,6 +1,0 @@
-{
-    "dependencies": {
-        "gitbook": "0.4.5",
-        "gitbook-plugin-ga": "0.0.1"
-    }
-}

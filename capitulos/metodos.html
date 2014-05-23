@@ -1,0 +1,748 @@
+<!DOCTYPE HTML>
+<html lang="en-US" manifest="../manifest.appcache">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Métodos | Aprende a Programar con Ruby</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="rubysur">
+        <meta name="description" content="Aprende a programar con Ruby">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../capitulos/condicionales.html" />
+        
+        
+        <link rel="prev" href="../capitulos/conversiones.html" />
+        
+
+        <meta property="og:title" content="Métodos | Aprende a Programar con Ruby">
+        <meta property="og:site_name" content="Aprende a Programar con Ruby">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/rubysur">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    </head>
+    <body>
+        
+
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+
+
+        
+    <div class="book" data-github="rubysur/aprende.a.programar" data-level="6" data-basepath=".." data-revision="1400875183053">
+    <div class="book-header">
+    <!-- Actions Left -->
+    
+    <a href="https://github.com/rubysur/aprende.a.programar" target="_blank" class="btn pull-left home-bookmark" aria-label="GitHub home"><i class="fa fa-bookmark-o"></i></a>
+    
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
+    <span id="font-settings-wrapper">
+        <a href="#" class="btn pull-left toggle-font-settings" aria-label="Toggle font settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="btn-group btn-block">
+        <button id="reduce-font-size" class="btn btn-default">A</button>
+        <button id="enlarge-font-size" class="btn btn-default">A</button>
+    </div>
+
+    <ul class="list-group font-family-list">
+        <li class="list-group-item" data-font="0">Serif</li>
+        <li class="list-group-item" data-font="1">Sans</li>
+    </ul>
+
+    <div class="btn-group btn-group-xs btn-block color-theme-list">
+        <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
+        <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
+        <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </span>
+
+    <!-- Actions Right -->
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
+    
+
+    
+    <a href="https://github.com/rubysur/aprende.a.programar/stargazers" target="_blank" class="btn pull-right count-star hidden-xs"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/rubysur/aprende.a.programar/watchers" target="_blank" class="btn pull-right count-watch hidden-xs"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-spinner fa-spin"></i>
+        <a href="../" >Aprende a Programar con Ruby</a>
+    </h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        <li>
+            <a href="https://github.com/rubysur" target="blank" class="author-link">About the author</a>
+        </li>
+        
+
+        
+        <li>
+            <a href="https://github.com/rubysur/aprende.a.programar/issues" target="blank"class="issues-link">Questions and Issues</a>
+        </li>
+        
+
+        
+        <li>
+            <a href="https://github.com/rubysur/aprende.a.programar/edit/master/capitulos/metodos.md" target="blank" class="contribute-link">Edit and Contribute</a>
+        </li>
+        
+
+        
+
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li class="chapter " data-level="1" data-path="capitulos/instalacion.html">
+                
+                <a href="../capitulos/instalacion.html">
+                    <i class="fa fa-check"></i> <b>1.</b> Instalación
+                </a>
+                
+                
+            </li>
+        
+            <li class="chapter " data-level="2" data-path="capitulos/numeros.html">
+                
+                <a href="../capitulos/numeros.html">
+                    <i class="fa fa-check"></i> <b>2.</b> Números
+                </a>
+                
+                
+            </li>
+        
+            <li class="chapter " data-level="3" data-path="capitulos/textos.html">
+                
+                <a href="../capitulos/textos.html">
+                    <i class="fa fa-check"></i> <b>3.</b> Textos
+                </a>
+                
+                
+            </li>
+        
+            <li class="chapter " data-level="4" data-path="capitulos/variables.html">
+                
+                <a href="../capitulos/variables.html">
+                    <i class="fa fa-check"></i> <b>4.</b> Variables
+                </a>
+                
+                
+            </li>
+        
+            <li class="chapter " data-level="5" data-path="capitulos/conversiones.html">
+                
+                <a href="../capitulos/conversiones.html">
+                    <i class="fa fa-check"></i> <b>5.</b> Conversiones
+                </a>
+                
+                
+            </li>
+        
+            <li class="chapter " data-level="6" data-path="capitulos/metodos.html">
+                
+                <a href="../capitulos/metodos.html">
+                    <i class="fa fa-check"></i> <b>6.</b> Métodos
+                </a>
+                
+                
+            </li>
+        
+            <li class="chapter " data-level="7" data-path="capitulos/condicionales.html">
+                
+                <a href="../capitulos/condicionales.html">
+                    <i class="fa fa-check"></i> <b>7.</b> Condicionales
+                </a>
+                
+                
+            </li>
+        
+            <li class="chapter " data-level="8" data-path="capitulos/matrices.html">
+                
+                <a href="../capitulos/matrices.html">
+                    <i class="fa fa-check"></i> <b>8.</b> Matrices e Iteraciones
+                </a>
+                
+                
+            </li>
+        
+            <li class="chapter " data-level="9" data-path="capitulos/metodos_propios.html">
+                
+                <a href="../capitulos/metodos_propios.html">
+                    <i class="fa fa-check"></i> <b>9.</b> Métodos Propios
+                </a>
+                
+                
+            </li>
+        
+            <li class="chapter " data-level="10" data-path="capitulos/clases.html">
+                
+                <a href="../capitulos/clases.html">
+                    <i class="fa fa-check"></i> <b>10.</b> Clases
+                </a>
+                
+                
+            </li>
+        
+            <li class="chapter " data-level="11" data-path="capitulos/bloques.html">
+                
+                <a href="../capitulos/bloques.html">
+                    <i class="fa fa-check"></i> <b>11.</b> Bloques
+                </a>
+                
+                
+            </li>
+        
+            <li class="chapter " data-level="12" data-path="capitulos/fin.html">
+                
+                <a href="../capitulos/fin.html">
+                    <i class="fa fa-check"></i> <b>12.</b> Fin
+                </a>
+                
+                
+            </li>
+        
+            <li class="chapter " data-level="13" data-path="capitulos/acerca.html">
+                
+                <a href="../capitulos/acerca.html">
+                    <i class="fa fa-check"></i> <b>13.</b> Acerca de
+                </a>
+                
+                
+            </li>
+        
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Generated using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="page-wrapper" tabindex="-1">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 76.92307692307692%;min-width: 69.23076923076923%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../capitulos/instalacion.html" title="Instalación" class="chapter done new-chapter" data-progress="1" style="left: 7.6923076923076925%;"></a>
+    
+        <a href="../capitulos/clases.html" title="Clases" class="chapter done " data-progress="10" style="left: 15.384615384615385%;"></a>
+    
+        <a href="../capitulos/bloques.html" title="Bloques" class="chapter done " data-progress="11" style="left: 23.076923076923077%;"></a>
+    
+        <a href="../capitulos/fin.html" title="Fin" class="chapter done " data-progress="12" style="left: 30.76923076923077%;"></a>
+    
+        <a href="../capitulos/acerca.html" title="Acerca de" class="chapter done " data-progress="13" style="left: 38.46153846153846%;"></a>
+    
+        <a href="../capitulos/numeros.html" title="Números" class="chapter done new-chapter" data-progress="2" style="left: 46.15384615384615%;"></a>
+    
+        <a href="../capitulos/textos.html" title="Textos" class="chapter done new-chapter" data-progress="3" style="left: 53.84615384615385%;"></a>
+    
+        <a href="../capitulos/variables.html" title="Variables" class="chapter done new-chapter" data-progress="4" style="left: 61.53846153846154%;"></a>
+    
+        <a href="../capitulos/conversiones.html" title="Conversiones" class="chapter done new-chapter" data-progress="5" style="left: 69.23076923076923%;"></a>
+    
+        <a href="../capitulos/metodos.html" title="Métodos" class="chapter done new-chapter" data-progress="6" style="left: 76.92307692307692%;"></a>
+    
+        <a href="../capitulos/condicionales.html" title="Condicionales" class="chapter  new-chapter" data-progress="7" style="left: 84.61538461538461%;"></a>
+    
+        <a href="../capitulos/matrices.html" title="Matrices e Iteraciones" class="chapter  new-chapter" data-progress="8" style="left: 92.3076923076923%;"></a>
+    
+        <a href="../capitulos/metodos_propios.html" title="Métodos Propios" class="chapter  new-chapter" data-progress="9" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_10">
+                    
+                        <h1 id="m-todos">Métodos</h1>
+<p>Hemos visto diferentes métodos: <code>puts</code>,  <code>gets</code>,
+etc. (<strong><em>Prueba:</em></strong> <em>Listar todos los métodos que hemos
+visto hasta ahora!. Hay diez de ellos, la respuesta está abajo</em>), pero no hemos
+realmente hablado sobre que hacen los métodos. Sabemos que hacen, pero no lo que son.</p>
+<p>Pero realmente, esto <em>es</em> lo que son: cosas que generan otras.
+Si objetos (como textos, enteros y flotantes) son los sujetos en
+el lenguaje Ruby, entonces los métodos son como verbos. Y, justo como en el
+español, tú no puedes tener un verbo sin un sustantivo para <em>hacer</em> algo.
+Por ejemplo, tic-tac no es algo que sólo ocurre; un reloj (o algo) tiene que hacer
+esto. En español podemos decir: &quot;El reloj hace tic-tac&quot;. En Ruby podemos decir
+<code>clock.tick</code> (asumiendo por supuesto que <code>clock</code> es un objeto Ruby).
+Los programadores pueden decir que estamos &quot;llamando el método <code>tick</code> de
+<code>clock</code>&quot; o llamamos al &quot;<code>tick</code> de <code>clock</code>&quot;.</p>
+<p>Entonces, ¿has hecho la prueba? Bien. Bueno, estoy seguro que
+recordaras los métodos <code>puts</code>, <code>gets</code>, y
+<code>chomp</code>, dado que ya hablamos sobre ellos.
+Probablemente también recuerdas los métodos de conversión
+<code>to_i</code>, <code>to_f</code>, y <code>to_s</code>. Sin embargo,
+¿has visto los otros cuatro? Porque, estos no son otros que
+nuestros viejos amigos para la aritmética ¡<code>+</code>,
+<code>-</code>, <code>*</code>, y <code>/</code>!</p>
+<p>Entonces, como cada verbo necesita un sustantivo,
+entonces cada método necesita un objeto. Esto es generalmente fácil de
+indicar: es el que viene justo antes de un punto, como nuestro
+ejemplo <code>clock.tick</code>, o en <code>101.to_s</code>.
+Algunas veces, sin embargo, esto no es tan obvio; como con los métodos
+aritméticos. Como resulta, <code>5 + 5</code>  es solo otra forma fácil de
+escribir <code>5.+ 5</code>.
+Por ejemplo:</p>
+<p><em>Código:</em></p>
+<pre><code class="lang-ruby">puts <span class="hljs-string">'hola '</span>.+ <span class="hljs-string">'mundo'</span>
+puts (<span class="hljs-number">10</span>.* <span class="hljs-number">9</span>).+ <span class="hljs-number">9</span>
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">hola mundo
+99
+</code></pre>
+<p>Esto no es muy lindo, por lo que no vamos a escribir siempre como ahora;
+sin embargo, es importante para entender que sucede <em>realmente</em>.</p>
+<p>Esto también nos da un profundo entendimiento de porque podemos hacer
+<code>&#39;pig&#39;*5</code> pero no podemos hacer <code>5*&#39;pig&#39;</code>: <code>&#39;pig&#39;*5</code>
+está diciendo a <code>&#39;pig&#39;</code> de hacer de multiplicando, pero <code>5*&#39;pig&#39;</code>
+está diciendo a <code>5</code> de hacer de multiplicando. <code>&#39;pig&#39;</code> sabe como
+hacer <code>5</code> copias de si mismo y agregar todos ellos juntos; sin embargo,
+<code>5</code> tendrá mucha mas dificultad en tiempo de hacer <code>&#39;pig&#39;</code> copias
+de si <em>mismo</em> y sumarlos a todos juntos.</p>
+<p>Y, por supuesto, continuaremos teniendo <code>puts</code> y <code>gets</code> para explicar.
+¿Dónde están sus objetos? En español, puedes algunas veces dejar fuera el sustantivo;
+por ejemplo, si un villano grita &quot;¡Muere!&quot;, el sustantivo implícito es a quien él
+está gritando. En Ruby, si digo <code>puts &#39;ser o no ser&#39;</code>, lo que realmente estoy
+diciendo es <code>self.puts &#39;ser o no ser&#39;</code>.</p>
+<p>Entonces ¿que es <code>self</code>? Ésta es una variable especial que apunta al objeto en
+el que estás. No siempre sabemos como estar <em>en</em> un objeto, pero hasta que nos
+demos cuenta, siempre iremos a estar en un gran objeto que es... ¡el programa entero! (sin
+embargo en este caso no es posible llamarlo en forma explícita)
+Observa lo siguiente:</p>
+<p><em>Código:</em></p>
+<pre><code class="lang-ruby"><span class="hljs-constant">NoPuedoCreerQueUnaVariableConNombreTanLargoApunteA3</span> = <span class="hljs-number">3</span>
+puts <span class="hljs-constant">NoPuedoCreerQueUnaVariableConNombreTanLargoApunteA3</span>
+<span class="hljs-keyword">self</span>.puts <span class="hljs-constant">NoPuedoCreerQueUnaVariableConNombreTanLargoApunteA3</span>
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">3
+in `<span class="hljs-tag">&lt;<span class="hljs-title">main</span>&gt;</span>': private method `puts' called for main:Object (NoMethodError)
+</code></pre>
+<p>Si no alcanzaste a comprender todo, está bien. Lo importante es que
+todo método está siendo propiedad de un objeto, incluso si no tiene
+un punto enfrente de este. Si entiendes esto estás preparado.</p>
+<h2 id="m-todos-imaginativos-acerca-de-strings">Métodos imaginativos acerca de Strings</h2>
+<p>Vamos a aprender unos pocos pero interesantes métodos. No tienes
+porque memorizar todos; puedes mirar esta pagina de nuevo si te
+olvidas de alguno. Yo sólo quiero mostrarte una <em>pequeña</em>
+parte de lo que puede hacer un texto. De hecho, no recuerdo ni
+siquiera la mitad de los métodos para textos; pero está bien, porque
+hay buenas referencias en internet con todo acerca de textos
+listados y explicados (Voy a mostrarte donde encontrar esas referencias
+al final del tutorial).</p>
+<p>Realmente, tampoco <em>quiero</em> saber todo acerca de los métodos para textos;
+sino sería como tratar de conocer cada palabra en el diccionario. Puedo hablar
+español bien sin conocer cada una de las palabras del diccionario... ¿y no es
+ese realmente el objetivo del diccionario? Entonces ¿no <em>tienes</em>
+que conocer que hay en éste?</p>
+<p>Entonces, nuestro primer método para texto es <code>reverse</code>,
+el cual nos da una version invertida de un texto:</p>
+<p><em>Código:</em></p>
+<pre><code class="lang-ruby">var1 = <span class="hljs-string">'parar'</span>
+var2 = <span class="hljs-string">'subrayado'</span>
+var3 = <span class="hljs-string">'Puedes pronunciar esta oración al reves?'</span>
+
+puts var1.reverse
+puts var2.reverse
+puts var3.reverse
+puts var1
+puts var2
+puts var3
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">rarap
+odayarbus
+?sever la nóicaro atse raicnunorp sedeuP
+parar
+subrayado
+Puedes pronunciar esta oración al reves?
+</code></pre>
+<p>Como puedes ver, <code>reverse</code> no revierte el orden en el string original; éste
+sólo hace una nueva versión de éste en reversa. Esto es porque <code>var1</code> continua
+<code>&#39;parar&#39;</code> aún después de que llamamos  <code>reverse</code> sobre  <code>var1</code>.</p>
+<p>Otro método para texto es <code>length</code>, el cual nos dice el número de caracteres
+(incluyendo caracteres) en el texto:</p>
+<p><em>Código:</em></p>
+<pre><code class="lang-ruby">puts <span class="hljs-string">'Cuál es tu nombre completo?'</span>
+name = gets.chomp
+puts <span class="hljs-string">'¿Sabes que hay '</span> + name.length + <span class="hljs-string">' caracteres en tu nombre, '</span> + name + <span class="hljs-string">'?'</span>
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">Cuál es tu nombre completo?
+Christopher David Pine
+in `+&#39;: no implicit conversion of Fixnum into String (TypeError)
+</code></pre>
+<p>¡¡Uhh!! Algo salió mal, y esto parece que ocurrió después la línea
+<code>name = gets.chomp</code>... ¿Puedes ver el problema? Fijate si puedes darte cuenta.</p>
+<p>El problema es con <code>length</code>: esto te devuelve un número, pero nosotros queremos
+un texto. Esto es fácil, necesitamos solo agregar <code>to_s</code> (y cruzar nuestros dedos):</p>
+<p><em>Código:</em></p>
+<pre><code class="lang-ruby">puts <span class="hljs-string">'Cuál es tu nombre completo?'</span>
+name = gets.chomp
+puts <span class="hljs-string">'¿Sabías que hay '</span> + name.length.to_s + <span class="hljs-string">' caracteres en tu nombre, '</span> + name + <span class="hljs-string">'?'</span>
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">Cuál es tu nombre completo?
+Christopher David Pine
+Sabías que hay 22 caracteres en tu nombre, Christopher David Pine
+</code></pre>
+<p>No, no conocía esto.  <strong>Nota:</strong> esto es el número de
+<em>caracteres</em> en mi nombre, no el número de <em>letras</em>. Supongo
+que podríamos escribir un programa el cual nos pregunte por nuestro primer
+nombre, segundo nombre y apellidos individualmente, y entonces sumar estos tamaños
+todos juntos... hey, ¡porque no haces ésto! Comienza, esperaré.</p>
+<p>¿Lo hiciste? ¡Bien! Es un lindo programa, ¿no? Después de unos pocos capítulos más,
+pienso, estarás sorprendido de lo que podrás hacer.</p>
+<p>Entonces, hay también un número de métodos para texto los cuales cambian
+el contenido (mayúsculas y minúsculas) de tu texto. <code>upcase</code>
+cambian cada minúscula por mayúscula. <code>swapcase</code> cambia en cada
+letra en el string(&quot;Hola&quot;.swapcase  #=&gt; &quot;hOLA&quot;), y finalmente, <code>capitalize</code>
+es como <code>downcase</code>, excepto que esto cambia solo el primer carácter a
+mayúsculas(si es una letra).</p>
+<p><em>Código:</em></p>
+<pre><code class="lang-ruby">letters = <span class="hljs-string">'aAbBcCdDeE'</span>
+puts letters.upcase
+puts letters.downcase
+puts letters.swapcase
+puts letters.capitalize
+puts <span class="hljs-string">' a'</span>.capitalize
+puts letters
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">AABBCCDDEE
+aabbccddee
+AaBbCcDdEe
+Aabbccddee
+ a
+aAbBcCdDeE
+</code></pre>
+<p>Esto es bastante estándar. Como puedes ver desde la linea <code>puts &#39; a&#39;.capitalize</code>,
+el método <code>capitalize</code> sólo deja en mayúsculas el primer <em>carácter</em>, no
+la primera <em>letra</em>. También, como hemos visto antes, en todas estas llamadas a
+métodos, <code>letters</code> permanece igual. No quiero decir que se dedica sólo a ésto,
+pero es importante entenderlo. Hay algunos métodos los cuales <em>hacen</em> cambios a los
+objetos asociados, pero no los hemos visto aún, y no lo haremos por algún tiempo.</p>
+<p>El último tipo de métodos que veremos son los de formato visual. El primero es, <code>center</code>,
+suma espacios al comienzo y final para hacer que este centrado. Sin embargo, sólo tienes
+que decir <code>puts</code> a lo que quieres imprimir, y <code>+</code> a lo que quieres sumar, pero
+tienes que decir a <code>center</code> que ancho tiene que tener el string centrado. Entonces si quiero
+centrar las lineas de un poema, debería hacer algo como esto:</p>
+<p><em>Código:</em></p>
+<pre><code class="lang-ruby">lineWidth = <span class="hljs-number">50</span>
+puts(                <span class="hljs-string">'Old Mother Hubbard'</span>.center(lineWidth))
+puts(               <span class="hljs-string">'Sat in her cupboard'</span>.center(lineWidth))
+puts(         <span class="hljs-string">'Eating her curds an whey,'</span>.center(lineWidth))
+puts(          <span class="hljs-string">'When along came a spider'</span>.center(lineWidth))
+puts(         <span class="hljs-string">'Which sat down beside her'</span>.center(lineWidth))
+puts(<span class="hljs-string">'And scared her poor shoe dog away.'</span>.center(lineWidth))
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code>          Old Mother Hubbard
+         Sat in her cupboard
+      Eating her curds an whey,
+       When along came a spider
+      Which sat down beside her
+  And scared her poor shoe dog away.
+</code></pre><p>Mmmm.. no pienso que esto es un campamento de verano, pero estoy muy
+cansado para buscar esto. (Entonces, quise alinear la parte
+<code>.center lineWidth</code> , entonces puse esos espacios extras antes
+de los textos. Esto es así sólo porque pienso que es más lindo de
+esta forma. Los programadores generalmente tienen duros conceptos acerca
+de que es lindo en un programa, y a menudo confrontan acerca de esto.
+Cuanto más programes, más lograras tu propio estilo.)  Hablando de ser
+perezoso a la hora de programar, lo cual no es siempre algo malo en
+programación. Por ejemplo, fíjate como guardé el ancho del poema en la
+variable  <code>lineWidth</code>? Esto es que si entonces quiero regresar
+más tarde y hacer el poema más ancho, solo tengo que cambiar la variable
+al comienzo del programa, antes que en cada línea. Con un poema muy largo,
+esto podría ahorrarme un montón de tiempo. Este tipo de pereza es realmente
+una virtud en programación.</p>
+<p>Entonces, acerca del centrado... tú te darás cuenta que esto no es muy
+lindo como podría serlo un procesador de texto. Si realmente quieres un
+perfecto centrado (y quizás una fuente mas linda), entonces deberías
+¡sólo usar un procesador de textos!. Ruby es una herramienta maravillosa,
+pero no la herramienta correcta para <em>cualquier</em> trabajo.</p>
+<p>Los otros dos métodos de formato de textos son <code>ljust</code> y
+<code>rjust</code>, lo cual significan <em>justificado izquierdo</em> y
+<em>justificado derecho</em>. Estos son similares a <code>center</code>,
+excepto que ellos rellenan los lados derecho e izquierdo respectivamente.
+Vamos a verlos en acción:</p>
+<p><em>Código:</em></p>
+<pre><code class="lang-ruby">lineWidth = <span class="hljs-number">40</span>
+str = <span class="hljs-string">'--&gt; text &lt;--'</span>
+puts str.ljust  lineWidth
+puts str.center lineWidth
+puts str.rjust  lineWidth
+puts str.ljust(lineWidth/<span class="hljs-number">2</span>) + str.rjust(lineWidth/<span class="hljs-number">2</span>)
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code>--&gt; text &lt;--
+              --&gt; text &lt;--
+                            --&gt; text &lt;--
+--&gt; text &lt;--                --&gt; text &lt;--
+</code></pre><h2 id="algunas-cosas-por-intentar">Algunas cosas por intentar</h2>
+<ul>
+<li><p>Escribe un programa <code>Jefe Enojado</code>. Este debe preguntar de mala
+manera qué quieres. Cualquier cosa que consultes, el Jefe Enojado deberá
+devolverte la consulta de mala forma, y luego despedirte. Por ejemplo,
+si tu escribes <code>Quiero un aumento.</code>, deberá contestarte
+<code>PERO QUE DICES HOMBRE &quot;¿¡¿QUIERES UN AUMENTO.&quot;?!?  ¡¡ESTAS DESPEDIDO!!</code></p>
+</li>
+<li><p>Entonces aquí hay algo para que puedas jugar un poco más con
+<code>center</code>, <code>ljust</code>, y <code>rjust</code>: Escribe un programa el
+cual muestre una Tabla de Contenidos que se parezca a lo siguiente:</p>
+</li>
+</ul>
+<p>Listado:</p>
+<pre><code>                Tabla de Contenidos
+
+Capítulo 1:  Números                        página 1
+Capítulo 2:  Letras                        página 72
+Capítulo 3:  Variables                    página 118
+</code></pre><h2 id="matem-ticas-avanzadas">Matemáticas Avanzadas</h2>
+<p><em>(Esta sección es totalmente opcional. Asume un conocimiento
+previo de matemáticas. Si no estás interesado, puedes ir directamente
+al siguiente capítulo <a href="/aprende.a.programar/capitulos/condicionales.html">Control de Flujo</a>
+sin problemas. Aunque, una rápida vista de esta sección sobre
+<strong>Números aleatorios</strong> debería venir bien.)</em></p>
+<p>No hay tantos métodos numéricos como los hay para textos (pienso
+que aun no los conozco a todos sin recurrir a la ayuda de documentación).
+Aquí, vamos a mirar el resto de los métodos aritméticos, un generador
+de números aleatorios, y el objeto <code>Math</code> , con sus métodos trigonométricos
+y transcendentales.</p>
+<h2 id="m-s-de-aritm-tica">Más de aritmética</h2>
+<p>Los otros dos métodos aritméticos son <code>**</code> (potencia) y <code>%</code>
+(módulo). Entonces si quieres decir &quot;cinco al cuadrado&quot; en Ruby, deberías
+escribir algo así <code>5**2</code>. También puedes usar flotantes para tus
+exponentes, entonces si quieres una raíz cuadrada de 5, deberías escribir
+<code>5**0.5</code>. Los métodos módulo te dan el sobrante después de una división
+por un número. Entonces, por ejemplo, si divido 7 por 3, obtengo 2 con un remanente
+de 1. Vamos a ver como es que trabaja en un programa:</p>
+<p><em>Código:</em></p>
+<pre><code class="lang-ruby">puts <span class="hljs-number">5</span>**<span class="hljs-number">2</span>
+puts <span class="hljs-number">5</span>**<span class="hljs-number">0</span>.<span class="hljs-number">5</span>
+puts <span class="hljs-number">7</span>/<span class="hljs-number">3</span>
+puts <span class="hljs-number">7</span>%<span class="hljs-number">3</span>
+puts <span class="hljs-number">365</span>%<span class="hljs-number">7</span>
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">25
+2.23606797749979
+2
+1
+1
+</code></pre>
+<p>De la última línea, aprendimos que un año (no bisiesto) tienen algún
+número de semanas, más un día. Entonces si tu cumpleaños fue un Martes
+este año, el próximo año será un Miércoles. Tu también puedes usar
+flotantes con el método módulo (<code>%</code>). Básicamente, funciona de una manera
+lógica... pero voy a mostrar un poco mas como trabajar con esto.</p>
+<p>Hay un último método para mencionar antes de revisar el método <code>random</code>:
+ <code>abs</code>. Éste sólo toma el valor absoluto de un número:</p>
+<p><em>Código:</em></p>
+<pre><code class="lang-ruby">puts((<span class="hljs-number">5</span>-<span class="hljs-number">2</span>).abs)
+puts((<span class="hljs-number">2</span>-<span class="hljs-number">5</span>).abs)
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">3
+3
+</code></pre>
+<h2 id="n-meros-aleatorios">Números aleatorios</h2>
+<p>Ruby viene con un lindo generador de números aleatorios. El método para obtener
+un número aleatorio es <code>rand</code>. Si llamas <code>rand</code> , obtendrás un
+número flotante mayor o igual a <code>0.0</code> y menor a <code>1.0</code>. Si
+le proporcionas a <code>rand</code> un número entero (<code>5</code> por ejemplo),
+esto te devolverá un entero mayor o igual a <code>0</code> y menor a <code>5</code>
+(entonces son cinco números posibles, de <code>0</code> a <code>4</code>).</p>
+<p>Vamos a ver <code>rand</code>  en acción.</p>
+<p><em>Código:</em></p>
+<pre><code class="lang-ruby">puts rand
+puts rand
+puts rand
+puts(rand(<span class="hljs-number">100</span>))
+puts(rand(<span class="hljs-number">100</span>))
+puts(rand(<span class="hljs-number">100</span>))
+puts(rand(<span class="hljs-number">1</span>))
+puts(rand(<span class="hljs-number">1</span>))
+puts(rand(<span class="hljs-number">1</span>))
+puts(rand(<span class="hljs-number">99999999999999999999999999999999999999999999999999999999999</span>))
+puts(<span class="hljs-string">'El pronosticador del tiempo dijo que hay '</span>+rand(<span class="hljs-number">101</span>).to_s+<span class="hljs-string">'% chances de que llueva,'</span>)
+puts(<span class="hljs-string">'pero nunca debes confiar en el.'</span>)
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">0.866769322351658
+0.155609260113273
+0.208355946789083
+61
+46
+92
+0
+0
+0
+22982477508131860231954108773887523861600693989518495699862
+El pronosticador del tiempo dijo que hay 47% chances de que llueva,
+pero nunca debes confiar en el.
+</code></pre>
+<p>Fijate que utilicé <code>rand(101)</code> para obtener números entre <code>0</code>
+y <code>100</code>, y que el <code>rand(1)</code> siempre devuelve <code>0</code>. No
+entender el rango posible de retorno de valores es el error más grande que veo
+en gente que hace <code>rand</code>; aún programadores profesionales, más aún en
+productos finalizados que puedes comprar. Incluso tenía un reproductor de CD
+que si se configuraba en &quot;Reproducción aleatoria,&quot; reproducia
+todas las canciones menos la última ... (Me pregunto ¿qué hubiera pasado si hubiera
+puesto un CD con sólo una canción en ella?)</p>
+<p>Algunas veces querrás que <code>rand</code> retorne el <em>mismo</em>
+random de números incluso en la misma secuencia en dos diferentes ejecuciones
+de tu programa. (Por ejemplo, una vez estaba utilizando números generados
+aleatoriamente para crear un mundo al azar por un juego de computadoras.
+Encontré un mundo que realmente me gustó, quizás me hubiera gustado jugar de nuevo
+con éste o enviarlo a un amigo.) Con el fin de hacer esto, tu necesitas configurar
+la <em>&quot;generación de éste&quot;</em>, lo que se puede hacer con <code>srand</code>. Como
+lo siguiente:</p>
+<p><em>Código:</em></p>
+<pre><code class="lang-ruby">srand <span class="hljs-number">1776</span>
+puts(rand(<span class="hljs-number">100</span>))
+puts(rand(<span class="hljs-number">100</span>))
+puts(rand(<span class="hljs-number">100</span>))
+puts(rand(<span class="hljs-number">100</span>))
+puts(rand(<span class="hljs-number">100</span>))
+puts <span class="hljs-string">''</span>
+srand <span class="hljs-number">1776</span>
+puts(rand(<span class="hljs-number">100</span>))
+puts(rand(<span class="hljs-number">100</span>))
+puts(rand(<span class="hljs-number">100</span>))
+puts(rand(<span class="hljs-number">100</span>))
+puts(rand(<span class="hljs-number">100</span>))
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">24
+35
+36
+58
+70
+
+24
+35
+36
+58
+70
+</code></pre>
+<p>Esto hará la misma cosa cada vez que inicies con el mismo número. Si quieres
+obtener diferentes números(como pasaría si nunca utilizaras <code>srand</code>),
+entonces sólo llamas a <code>srand 0</code>. Esto inicializa con un número
+realmente raro, utilizando (además de otras cosas) la hora actual de tu
+computadora, hasta los milisegundos.</p>
+<h2 id="el-objeto-math-">El Objeto <code>Math</code></h2>
+<p>Finalmente, vamos a echar un vistazo al objeto <code>Math</code>. Deberíamos
+ir directamente a este:</p>
+<p><em>Código:</em></p>
+<pre><code class="lang-ruby">puts(<span class="hljs-constant">Math::PI</span>)
+puts(<span class="hljs-constant">Math::E</span>)
+puts(<span class="hljs-constant">Math</span>.cos(<span class="hljs-constant">Math::PI</span>/<span class="hljs-number">3</span>))
+puts(<span class="hljs-constant">Math</span>.tan(<span class="hljs-constant">Math::PI</span>/<span class="hljs-number">4</span>))
+puts(<span class="hljs-constant">Math</span>.log(<span class="hljs-constant">Math::E</span>**<span class="hljs-number">2</span>))
+puts((<span class="hljs-number">1</span> + <span class="hljs-constant">Math</span>.sqrt(<span class="hljs-number">5</span>))/<span class="hljs-number">2</span>)
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">3.14159265358979
+2.71828182845905
+0.5
+1.0
+2.0
+1.61803398874989
+</code></pre>
+<p>La primera cosa de la que te habrás dado cuenta es probablemente de
+la notación <code>::</code>. Explicando el <em>alcance del operador</em>
+(que es esto) esta fuera del objetivo de este tutorial.</p>
+<p>Como puedes ver, <code>Math</code> tiene todas las cosas que podrías
+esperar de una calculadora científica decente. Y como siempre, los
+flotantes están <em>realmente cerca</em> de ser la respuesta
+correcta.</p>
+<p>Entonces ahora vamos a ver <a href="/aprende.a.programar/capitulos/condicionales.html">control de flujo</a>.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../capitulos/conversiones.html" class="navigation navigation-prev " aria-label="Previous page: Conversiones"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../capitulos/condicionales.html" class="navigation navigation-next " aria-label="Next page: Condicionales"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-ga/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"ga":{"token":"TOKEN"}};
+    gitbook.start(config);
+});
+</script>
+
+    </body>
+</html>

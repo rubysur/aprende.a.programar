@@ -1,0 +1,585 @@
+<!DOCTYPE HTML>
+<html lang="en-US" manifest="../manifest.appcache">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Matrices e Iteraciones | Aprende a Programar con Ruby</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="rubysur">
+        <meta name="description" content="Aprende a programar con Ruby">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../capitulos/metodos_propios.html" />
+        
+        
+        <link rel="prev" href="../capitulos/condicionales.html" />
+        
+
+        <meta property="og:title" content="Matrices e Iteraciones | Aprende a Programar con Ruby">
+        <meta property="og:site_name" content="Aprende a Programar con Ruby">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/rubysur">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    </head>
+    <body>
+        
+
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+
+
+        
+    <div class="book" data-github="rubysur/aprende.a.programar" data-level="8" data-basepath=".." data-revision="1400875183053">
+    <div class="book-header">
+    <!-- Actions Left -->
+    
+    <a href="https://github.com/rubysur/aprende.a.programar" target="_blank" class="btn pull-left home-bookmark" aria-label="GitHub home"><i class="fa fa-bookmark-o"></i></a>
+    
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
+    <span id="font-settings-wrapper">
+        <a href="#" class="btn pull-left toggle-font-settings" aria-label="Toggle font settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="btn-group btn-block">
+        <button id="reduce-font-size" class="btn btn-default">A</button>
+        <button id="enlarge-font-size" class="btn btn-default">A</button>
+    </div>
+
+    <ul class="list-group font-family-list">
+        <li class="list-group-item" data-font="0">Serif</li>
+        <li class="list-group-item" data-font="1">Sans</li>
+    </ul>
+
+    <div class="btn-group btn-group-xs btn-block color-theme-list">
+        <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
+        <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
+        <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </span>
+
+    <!-- Actions Right -->
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
+    
+
+    
+    <a href="https://github.com/rubysur/aprende.a.programar/stargazers" target="_blank" class="btn pull-right count-star hidden-xs"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/rubysur/aprende.a.programar/watchers" target="_blank" class="btn pull-right count-watch hidden-xs"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-spinner fa-spin"></i>
+        <a href="../" >Aprende a Programar con Ruby</a>
+    </h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        <li>
+            <a href="https://github.com/rubysur" target="blank" class="author-link">About the author</a>
+        </li>
+        
+
+        
+        <li>
+            <a href="https://github.com/rubysur/aprende.a.programar/issues" target="blank"class="issues-link">Questions and Issues</a>
+        </li>
+        
+
+        
+        <li>
+            <a href="https://github.com/rubysur/aprende.a.programar/edit/master/capitulos/matrices.md" target="blank" class="contribute-link">Edit and Contribute</a>
+        </li>
+        
+
+        
+
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li class="chapter " data-level="1" data-path="capitulos/instalacion.html">
+                
+                <a href="../capitulos/instalacion.html">
+                    <i class="fa fa-check"></i> <b>1.</b> Instalación
+                </a>
+                
+                
+            </li>
+        
+            <li class="chapter " data-level="2" data-path="capitulos/numeros.html">
+                
+                <a href="../capitulos/numeros.html">
+                    <i class="fa fa-check"></i> <b>2.</b> Números
+                </a>
+                
+                
+            </li>
+        
+            <li class="chapter " data-level="3" data-path="capitulos/textos.html">
+                
+                <a href="../capitulos/textos.html">
+                    <i class="fa fa-check"></i> <b>3.</b> Textos
+                </a>
+                
+                
+            </li>
+        
+            <li class="chapter " data-level="4" data-path="capitulos/variables.html">
+                
+                <a href="../capitulos/variables.html">
+                    <i class="fa fa-check"></i> <b>4.</b> Variables
+                </a>
+                
+                
+            </li>
+        
+            <li class="chapter " data-level="5" data-path="capitulos/conversiones.html">
+                
+                <a href="../capitulos/conversiones.html">
+                    <i class="fa fa-check"></i> <b>5.</b> Conversiones
+                </a>
+                
+                
+            </li>
+        
+            <li class="chapter " data-level="6" data-path="capitulos/metodos.html">
+                
+                <a href="../capitulos/metodos.html">
+                    <i class="fa fa-check"></i> <b>6.</b> Métodos
+                </a>
+                
+                
+            </li>
+        
+            <li class="chapter " data-level="7" data-path="capitulos/condicionales.html">
+                
+                <a href="../capitulos/condicionales.html">
+                    <i class="fa fa-check"></i> <b>7.</b> Condicionales
+                </a>
+                
+                
+            </li>
+        
+            <li class="chapter " data-level="8" data-path="capitulos/matrices.html">
+                
+                <a href="../capitulos/matrices.html">
+                    <i class="fa fa-check"></i> <b>8.</b> Matrices e Iteraciones
+                </a>
+                
+                
+            </li>
+        
+            <li class="chapter " data-level="9" data-path="capitulos/metodos_propios.html">
+                
+                <a href="../capitulos/metodos_propios.html">
+                    <i class="fa fa-check"></i> <b>9.</b> Métodos Propios
+                </a>
+                
+                
+            </li>
+        
+            <li class="chapter " data-level="10" data-path="capitulos/clases.html">
+                
+                <a href="../capitulos/clases.html">
+                    <i class="fa fa-check"></i> <b>10.</b> Clases
+                </a>
+                
+                
+            </li>
+        
+            <li class="chapter " data-level="11" data-path="capitulos/bloques.html">
+                
+                <a href="../capitulos/bloques.html">
+                    <i class="fa fa-check"></i> <b>11.</b> Bloques
+                </a>
+                
+                
+            </li>
+        
+            <li class="chapter " data-level="12" data-path="capitulos/fin.html">
+                
+                <a href="../capitulos/fin.html">
+                    <i class="fa fa-check"></i> <b>12.</b> Fin
+                </a>
+                
+                
+            </li>
+        
+            <li class="chapter " data-level="13" data-path="capitulos/acerca.html">
+                
+                <a href="../capitulos/acerca.html">
+                    <i class="fa fa-check"></i> <b>13.</b> Acerca de
+                </a>
+                
+                
+            </li>
+        
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Generated using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="page-wrapper" tabindex="-1">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 92.3076923076923%;min-width: 84.61538461538461%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../capitulos/instalacion.html" title="Instalación" class="chapter done new-chapter" data-progress="1" style="left: 7.6923076923076925%;"></a>
+    
+        <a href="../capitulos/clases.html" title="Clases" class="chapter done " data-progress="10" style="left: 15.384615384615385%;"></a>
+    
+        <a href="../capitulos/bloques.html" title="Bloques" class="chapter done " data-progress="11" style="left: 23.076923076923077%;"></a>
+    
+        <a href="../capitulos/fin.html" title="Fin" class="chapter done " data-progress="12" style="left: 30.76923076923077%;"></a>
+    
+        <a href="../capitulos/acerca.html" title="Acerca de" class="chapter done " data-progress="13" style="left: 38.46153846153846%;"></a>
+    
+        <a href="../capitulos/numeros.html" title="Números" class="chapter done new-chapter" data-progress="2" style="left: 46.15384615384615%;"></a>
+    
+        <a href="../capitulos/textos.html" title="Textos" class="chapter done new-chapter" data-progress="3" style="left: 53.84615384615385%;"></a>
+    
+        <a href="../capitulos/variables.html" title="Variables" class="chapter done new-chapter" data-progress="4" style="left: 61.53846153846154%;"></a>
+    
+        <a href="../capitulos/conversiones.html" title="Conversiones" class="chapter done new-chapter" data-progress="5" style="left: 69.23076923076923%;"></a>
+    
+        <a href="../capitulos/metodos.html" title="Métodos" class="chapter done new-chapter" data-progress="6" style="left: 76.92307692307692%;"></a>
+    
+        <a href="../capitulos/condicionales.html" title="Condicionales" class="chapter done new-chapter" data-progress="7" style="left: 84.61538461538461%;"></a>
+    
+        <a href="../capitulos/matrices.html" title="Matrices e Iteraciones" class="chapter done new-chapter" data-progress="8" style="left: 92.3076923076923%;"></a>
+    
+        <a href="../capitulos/metodos_propios.html" title="Métodos Propios" class="chapter  new-chapter" data-progress="9" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_9">
+                    
+                        <h1 id="matrices-e-iteraciones">Matrices e Iteraciones</h1>
+<p>Vamos a escribir un programa el cual nos pida digitar tantas
+palabras como nosotros querramos (una palabra por línea),
+continuando hasta que oprimamos <em>Enter</em> en una línea
+vacia), el cual luego nos devolverá las palabras en orden
+alfabetico. OK?</p>
+<p>Entonces... nosotros primero vamos; uh... um... hmmm...  Bueno,
+nosotros podríamos; er... um...</p>
+<p>Tú sabes, no pienso que podamos hacer esto. Necesitamos una
+forma de almacenar una cantidad desconocida de palabras y como
+obtener todas ellas juntas, entonces no se confundan con otras
+variables. Necesitamos colocarlas en un tipo de lista. Lo que
+necesitamos son <em>matrices</em>.</p>
+<p>Una matriz es solo una lista en su computadora. Cada  posición en
+la lista actúa como una variable: puedes ver que objeto en
+particular apunta a cada posición, y puedes hacer que este apunte
+a un objeto diferente. Vamos a echar un vistazo a algunas matrices:</p>
+<pre><code class="lang-ruby">[]
+[<span class="hljs-number">5</span>]
+[<span class="hljs-string">'Hola'</span>, <span class="hljs-string">'Adiós'</span>]
+
+flavor = <span class="hljs-string">'vainilla'</span>           <span class="hljs-comment">#  Esto no es una matriz, por supuesto...</span>
+[<span class="hljs-number">89.9</span>, flavor, [<span class="hljs-keyword">true</span>, <span class="hljs-keyword">false</span>]]  <span class="hljs-comment">#  ...pero esto sí lo es.</span>
+</code></pre>
+<p>Entonces primero tenemos una matriz vacía, luego una matriz
+conteniendo un número simple, luego una matriz que contiene
+dos textos. Siguiendo, tenemos una simple asignación, luego
+un array conteniendo tres objetos, de los cuales el último
+es la matriz <code>&#39;[true, false]&#39;</code>. Recuerda, variables
+no son objetos, entonces nuestra ultima matriz es en realidad
+un flotante, un <em>texto</em>, y una matriz. Aún asi si
+nosotros hubieramos puesto <code>&#39;flavor&#39;</code> a punto o algo más,
+esto no hubiera cambiado la matriz.</p>
+<p>Para ayudarnos a encontrar un objeto particular en una matriz,
+cada posición es dada por un índice numérico. Programadores
+(y, por cierto, la mayoría de los matemáticos) comienzan
+contando desde cero, por lo que la primera posicion del array
+es cero. Aquí es como nosotros deberíamos referenciar los
+objetos en una matriz:</p>
+<p><em>Código:</em></p>
+<pre><code class="lang-ruby">names = [<span class="hljs-string">'Ada'</span>, <span class="hljs-string">'Belle'</span>, <span class="hljs-string">'Chris'</span>]
+
+puts names
+puts names[<span class="hljs-number">0</span>]
+puts names[<span class="hljs-number">1</span>]
+puts names[<span class="hljs-number">2</span>]
+puts names[<span class="hljs-number">3</span>]  <span class="hljs-comment">#  Este esta fuera del rango.</span>
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">Ada
+Belle
+Chris
+Ada
+Belle
+Chris
+</code></pre>
+<p>Entonces, nosotros vemos que <code>&#39;puts names&#39;</code> imprime
+cada nombre en la matriz <code>&#39;names&#39;</code>. Luego usamos
+<code>&#39;puts names[0]&#39;</code> para imprimir el &quot;primer&quot; nombre en
+la matriz, y <code>&#39;puts names[1]&#39;</code> para imprimir el &quot;segundo&quot;
+... Estoy seguro que esto parece confuso, pero puedes
+acostumbrarte a esto. Tienes que realmente solo comenzar
+pensando que el contador comienza en cero, y dejas de usar
+palabras como &quot;primero&quot; y &quot;segundo&quot;</p>
+<p>Si tienes un conjunto de cinco cursos, no hablas acerca del &quot;primer&quot;
+curso, hablas acerca del curso cero (y en tu cabeza, estás pensando
+<code>&#39;course[0]&#39;</code>). Tú tienes cinco dedos en tu mano derecha,
+y sus números son 0, 1, 2, 3 y 4. Mi esposa y yo somos malabaristas.
+Cuando hacemos malabares con seis objetos, nosotros estamos con
+los objetos 0-5. Esperamos en los próximos meses, poder manejarnos
+con el objeto 6 (y por lo tanto trataremos de manejarnos con 7 objetos)
+Tu sabrás que lo has aprendido cuando comiences a usar la palabra
+&quot;cero&quot;. Sí, esto es real; pregunta a cualquier programador o
+matemático.</p>
+<p>Finalmente, tratamos <code>&#39;puts names[3]&#39;</code>, solo para ver
+que podría suceder. ¿Estabas esperando un error? Algunas veces
+cuando preguntas algo, tu pregunta no tiene sentido (al menos para
+tu computadora); ahí es cuando obtienes un error.
+Algunas veces, en cambio, tu puedes preguntar algo y la
+respuesta es nada. ¿Qué hay en la posición tres? Nada.
+¿Qué hay en <code>&#39;names[3]&#39;</code>?  <code>&#39;nil&#39;</code>: Es la forma Ruby
+de decir &quot;nada&quot;. <code>&#39;nil&#39;</code>  es un objeto especial que
+significa &quot;no hay ningún objeto&quot;.</p>
+<p>Si todo este divertido numerado de posiciones esta molestándote,
+¡no te preocupes! También, podemos evitar esto completamente usando
+varios metodos para matrices, como el que sigue:</p>
+<h2 id="el-metodo-each-">El Metodo <code>&#39;each&#39;</code></h2>
+<p><code>&#39;each&#39;</code> nos permite hacer algo (lo que queramos)
+a <em>cada</em> objeto que apunte. Asi, si queremos decir algo
+bueno acerca de cada lenguaje en la matriz de abajo, podriamos hacer
+esto:</p>
+<p><em>Código:</em></p>
+<pre><code class="lang-ruby">lenguajes = [<span class="hljs-string">'Inglés'</span>, <span class="hljs-string">'Alemán'</span>, <span class="hljs-string">'Ruby'</span>]
+
+lenguajes.each <span class="hljs-keyword">do</span> |leng|
+  puts <span class="hljs-string">'¡Me gusta '</span> + leng + <span class="hljs-string">'!'</span>
+  puts <span class="hljs-string">'¿A ti?'</span>
+<span class="hljs-keyword">end</span>
+
+puts <span class="hljs-string">'¡Y vamos a escuchar esto para C++!'</span>
+puts <span class="hljs-string">'...'</span>
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">¡Me gusta Inglés!
+¿A tí?
+¡Me gusta Alemán!
+¿A tí?
+¡Me gusta Ruby!
+¿A tí?
+¡Y vamos a escuchar esto para C++!
+...
+</code></pre>
+<p>¿Qué acaba de ocurrir? Bueno, tenemos permitido ir a través
+de cada objeto en la matriz sin utilizar ningun número, así
+esto es definitivamente mejor. Traducido al español
+diriamos que: Para cada <code>&#39;each&#39;</code> objeto en <code>&#39;lenguajes&#39;</code>,
+apunta la variable <code>&#39;leng&#39;</code> al objeto y entonces <code>&#39;do&#39;</code>
+(do = hacer) todo lo que te digo, hasta que llegues al <code>&#39;end&#39;</code>.
+(Sólo para que sepas, C++ es otro lenguaje de programación. Este es
+mucho mas difícil de aprender que Ruby; por lo general, un programa
+hecho en C++ será muchas veces más extenso que un programa en Ruby
+que haga la misma funcionalidad)</p>
+<p>Tú estarás pensando para ti mismo, &quot;Esto es un montón de bucles
+como los que hemos aprendido antes&quot;. Sí, esto es similar.
+Una diferencia importante es que el método <code>&#39;each&#39;</code> es solo eso:
+un método. <code>&#39;while&#39;</code> y <code>&#39;end&#39;</code>; tal como <code>&#39;do&#39;</code>,
+<code>&#39;if&#39;</code>, <code>&#39;else&#39;</code>, y todas las otras &quot;palabras&quot; no lo son.
+Ellos son una parte fundamental del lenguaje Ruby,
+tal como <code>&#39;=&#39;</code> y los paréntesis son tipos de puntuación como en español.</p>
+<p>Pero no <code>&#39;each&#39;</code>; <code>&#39;each&#39;</code> es solo otro método de la matriz.
+Métodos como `&#39;each&#39; los cuales &#39;actuan como&#39; bucles son a menudo
+llamados <em>iteradores</em>.</p>
+<p>Algo para saber sobre iteradores es que estos son siempre seguidos por
+<code>&#39;do&#39;</code>...<code>&#39;end&#39;</code>.
+<code>&#39;while&#39;</code> y <code>&#39;if&#39;</code> nunca tuvieron un <code>&#39;do&#39;</code> cerca de ellos;
+nosotros solo usamos <code>&#39;do&#39;</code> con iteradores</p>
+<p>Aquí hay otro pequeño iterador, pero esto no es un método para <em>matriz</em>... es un método
+para <em>entero</em>!</p>
+<p><em>Código:</em></p>
+<pre><code class="lang-ruby"><span class="hljs-number">3</span>.times <span class="hljs-keyword">do</span>
+  puts <span class="hljs-string">'Hip-Hip-Hooray!'</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">Hip-Hip-Hooray!
+Hip-Hip-Hooray!
+Hip-Hip-Hooray!
+</code></pre>
+<h2 id="mas-m-todos-para-matrices">Mas métodos para Matrices</h2>
+<p>Entonces hemos aprendido sobre <code>&#39;each&#39;</code>, pero hay muchos métodos
+más... al menos muchos como métodos para matrices. De hecho, algunos de ellos
+(como <code>&#39;length&#39;</code>, <code>&#39;reverse&#39;</code>, <code>&#39;+&#39;</code>, y <code>&#39;*&#39;</code> )
+trabajan igual que lo hacen para textos, excepto que ellos operan sobre
+las posiciones de una matriz y no sobre letras de un texto. Otros, como
+<code>&#39;last&#39;</code> y <code>&#39;join&#39;</code>, son específicos de matrices. Aún otros,
+como <code>&#39;push&#39;</code> y <code>&#39;pop&#39;</code>, en realidad cambian la matriz. Y
+así como con métodos para textos, no tienes que recordar todos, puedes
+recurrir a recordar sobre ellos buscando información.</p>
+<p>Primero, vamos a echar un vistazo a <code>&#39;to_s&#39;</code> y <code>&#39;join&#39;</code>.
+<code>&#39;join&#39;</code> trabaja tal como <code>&#39;to_s&#39;</code> lo hace, excepto que
+este agrega un texto entre los objetos de la matriz.
+Vamos a mirar un poco:</p>
+<p><em>Código:</em></p>
+<pre><code class="lang-ruby">alimentos = [<span class="hljs-string">'artichoke'</span>, <span class="hljs-string">'brioche'</span>, <span class="hljs-string">'caramel'</span>]
+
+puts alimentos
+puts
+puts alimentos.to_s
+puts
+puts alimentos.join(<span class="hljs-string">', '</span>)
+puts
+puts alimentos.join(<span class="hljs-string">'  :)  '</span>) + <span class="hljs-string">'  8)'</span>
+
+<span class="hljs-number">200</span>.times <span class="hljs-keyword">do</span>
+  puts []
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">artichoke
+brioche
+caramel
+
+[&quot;artichoke&quot;, &quot;brioche&quot;, &quot;caramel&quot;]
+
+artichoke, brioche, caramel
+
+artichoke  :)  brioche  :)  caramel  8)
+</code></pre>
+<p>Como puedes ver, <code>&#39;puts&#39;</code> trata la matriz diferente  a otros objetos:
+solo llama <code>&#39;puts&#39;</code> sobre cada uno de los objetos en la matriz.
+Esto es porque <code>&#39;puts&#39;</code> con una matriz vacía 200 veces no hace nada; la
+matriz no apunta a nada; entonces no hay nada para <code>&#39;puts&#39;</code>. (Hacer nada
+200 veces continúa siendo hacer nada)</p>
+<p>Trata de usar <code>&#39;puts&#39;</code> en una matriz conteniendo otras matrices; ¿hace lo
+que esperabas que hiciera?</p>
+<p>También, te habrás dado cuenta que dejé fuera el texto vacio cuando quise
+hacer <code>&#39;puts&#39;</code> de una línea en blanco? Esto hace lo mismo.</p>
+<p>Ahora vamos a echar un vistazo a <code>&#39;push&#39;</code>, <code>&#39;pop&#39;</code>, y  <code>&#39;last&#39;</code>.
+Los métodos <code>&#39;push&#39;</code> y <code>&#39;pop&#39;</code> son una suerte de métodos opuestos como
+lo son <code>&#39;+&#39;</code> y <code>&#39;-&#39;</code>. <code>&#39;push&#39;</code> agrega un objeto al final de la matriz,
+y <code>&#39;pop&#39;</code> quita el último objeto desde la matriz (y te dice que objeto es).
+<code>&#39;last&#39;</code> es similar a <code>&#39;pop&#39;</code> en el sentido que te indica que hay al final
+de la matriz, excepto que este deja la matriz. De nuevo, <code>&#39;push&#39;</code> y <code>&#39;pop&#39;</code>
+en realidad cambian la matriz:</p>
+<p><em>Código:</em></p>
+<pre><code class="lang-ruby">favoritos = []
+favoritos.push <span class="hljs-string">'lluvia de rosas'</span>
+favoritos.push <span class="hljs-string">'whisky en gatitos'</span>
+
+puts favoritos[<span class="hljs-number">0</span>]
+puts favoritos.last
+puts favoritos.length
+
+puts favoritos.pop
+puts favoritos
+puts favoritos.length
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">lluvia de rosas
+whisky en gatitos
+2
+whisky en gatitos
+lluvia de rosas
+1
+</code></pre>
+<h2 id="algunas-cosas-por-intentar">Algunas cosas por intentar</h2>
+<ul>
+<li><p>Escribe el programa del cual hablamos al principio de este capítulo.
+<strong>Consejo:</strong>  Hay un hermoso método para matrices el cual te dará la
+version ordenada de una matriz: <code>&#39;sort&#39;</code>. Usalo!</p>
+</li>
+<li><p>Escribe el programa sugerido anteriormente sin usar
+el método <code>&#39;sort&#39;</code>.  Una gran parte de la programación es la solución de
+problemas, entonces ¡obtén toda la practica que puedas!</p>
+</li>
+<li><p>Reescribe tu programa <code>Tabla de contenidos</code> (en el capítulo sobre <code>&#39;métodos&#39;</code>).
+Comienza el programa con una matriz conteniendo toda la información de tu
+Tabla de Contenidos (capítulo textos,
+capítulo números, etc.). Entonces imprime la información desde
+la matriz en una bien formada Tabla de Contenidos.</p>
+</li>
+</ul>
+<p>Hemos aprendido varios métodos diferentes. Ahora es tiempo de aprender como
+<a href="/aprende.a.programar/capitulos/metodos_propios.html">hacerlo por nosotros mismos</a>.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../capitulos/condicionales.html" class="navigation navigation-prev " aria-label="Previous page: Condicionales"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../capitulos/metodos_propios.html" class="navigation navigation-next " aria-label="Next page: Métodos Propios"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-ga/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"ga":{"token":"TOKEN"}};
+    gitbook.start(config);
+});
+</script>
+
+    </body>
+</html>

@@ -1,0 +1,875 @@
+<!DOCTYPE HTML>
+<html lang="en-US" manifest="../manifest.appcache">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Clases | Aprende a Programar con Ruby</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="rubysur">
+        <meta name="description" content="Aprende a programar con Ruby">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../capitulos/bloques.html" />
+        
+        
+        <link rel="prev" href="../capitulos/metodos_propios.html" />
+        
+
+        <meta property="og:title" content="Clases | Aprende a Programar con Ruby">
+        <meta property="og:site_name" content="Aprende a Programar con Ruby">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/rubysur">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    </head>
+    <body>
+        
+
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+
+
+        
+    <div class="book" data-github="rubysur/aprende.a.programar" data-level="10" data-basepath=".." data-revision="1400875183053">
+    <div class="book-header">
+    <!-- Actions Left -->
+    
+    <a href="https://github.com/rubysur/aprende.a.programar" target="_blank" class="btn pull-left home-bookmark" aria-label="GitHub home"><i class="fa fa-bookmark-o"></i></a>
+    
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
+    <span id="font-settings-wrapper">
+        <a href="#" class="btn pull-left toggle-font-settings" aria-label="Toggle font settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="btn-group btn-block">
+        <button id="reduce-font-size" class="btn btn-default">A</button>
+        <button id="enlarge-font-size" class="btn btn-default">A</button>
+    </div>
+
+    <ul class="list-group font-family-list">
+        <li class="list-group-item" data-font="0">Serif</li>
+        <li class="list-group-item" data-font="1">Sans</li>
+    </ul>
+
+    <div class="btn-group btn-group-xs btn-block color-theme-list">
+        <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
+        <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
+        <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </span>
+
+    <!-- Actions Right -->
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
+    
+
+    
+    <a href="https://github.com/rubysur/aprende.a.programar/stargazers" target="_blank" class="btn pull-right count-star hidden-xs"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/rubysur/aprende.a.programar/watchers" target="_blank" class="btn pull-right count-watch hidden-xs"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-spinner fa-spin"></i>
+        <a href="../" >Aprende a Programar con Ruby</a>
+    </h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        <li>
+            <a href="https://github.com/rubysur" target="blank" class="author-link">About the author</a>
+        </li>
+        
+
+        
+        <li>
+            <a href="https://github.com/rubysur/aprende.a.programar/issues" target="blank"class="issues-link">Questions and Issues</a>
+        </li>
+        
+
+        
+        <li>
+            <a href="https://github.com/rubysur/aprende.a.programar/edit/master/capitulos/clases.md" target="blank" class="contribute-link">Edit and Contribute</a>
+        </li>
+        
+
+        
+
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li class="chapter " data-level="1" data-path="capitulos/instalacion.html">
+                
+                <a href="../capitulos/instalacion.html">
+                    <i class="fa fa-check"></i> <b>1.</b> Instalación
+                </a>
+                
+                
+            </li>
+        
+            <li class="chapter " data-level="2" data-path="capitulos/numeros.html">
+                
+                <a href="../capitulos/numeros.html">
+                    <i class="fa fa-check"></i> <b>2.</b> Números
+                </a>
+                
+                
+            </li>
+        
+            <li class="chapter " data-level="3" data-path="capitulos/textos.html">
+                
+                <a href="../capitulos/textos.html">
+                    <i class="fa fa-check"></i> <b>3.</b> Textos
+                </a>
+                
+                
+            </li>
+        
+            <li class="chapter " data-level="4" data-path="capitulos/variables.html">
+                
+                <a href="../capitulos/variables.html">
+                    <i class="fa fa-check"></i> <b>4.</b> Variables
+                </a>
+                
+                
+            </li>
+        
+            <li class="chapter " data-level="5" data-path="capitulos/conversiones.html">
+                
+                <a href="../capitulos/conversiones.html">
+                    <i class="fa fa-check"></i> <b>5.</b> Conversiones
+                </a>
+                
+                
+            </li>
+        
+            <li class="chapter " data-level="6" data-path="capitulos/metodos.html">
+                
+                <a href="../capitulos/metodos.html">
+                    <i class="fa fa-check"></i> <b>6.</b> Métodos
+                </a>
+                
+                
+            </li>
+        
+            <li class="chapter " data-level="7" data-path="capitulos/condicionales.html">
+                
+                <a href="../capitulos/condicionales.html">
+                    <i class="fa fa-check"></i> <b>7.</b> Condicionales
+                </a>
+                
+                
+            </li>
+        
+            <li class="chapter " data-level="8" data-path="capitulos/matrices.html">
+                
+                <a href="../capitulos/matrices.html">
+                    <i class="fa fa-check"></i> <b>8.</b> Matrices e Iteraciones
+                </a>
+                
+                
+            </li>
+        
+            <li class="chapter " data-level="9" data-path="capitulos/metodos_propios.html">
+                
+                <a href="../capitulos/metodos_propios.html">
+                    <i class="fa fa-check"></i> <b>9.</b> Métodos Propios
+                </a>
+                
+                
+            </li>
+        
+            <li class="chapter " data-level="10" data-path="capitulos/clases.html">
+                
+                <a href="../capitulos/clases.html">
+                    <i class="fa fa-check"></i> <b>10.</b> Clases
+                </a>
+                
+                
+            </li>
+        
+            <li class="chapter " data-level="11" data-path="capitulos/bloques.html">
+                
+                <a href="../capitulos/bloques.html">
+                    <i class="fa fa-check"></i> <b>11.</b> Bloques
+                </a>
+                
+                
+            </li>
+        
+            <li class="chapter " data-level="12" data-path="capitulos/fin.html">
+                
+                <a href="../capitulos/fin.html">
+                    <i class="fa fa-check"></i> <b>12.</b> Fin
+                </a>
+                
+                
+            </li>
+        
+            <li class="chapter " data-level="13" data-path="capitulos/acerca.html">
+                
+                <a href="../capitulos/acerca.html">
+                    <i class="fa fa-check"></i> <b>13.</b> Acerca de
+                </a>
+                
+                
+            </li>
+        
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Generated using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="page-wrapper" tabindex="-1">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 15.384615384615385%;min-width: 7.6923076923076925%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../capitulos/instalacion.html" title="Instalación" class="chapter done new-chapter" data-progress="1" style="left: 7.6923076923076925%;"></a>
+    
+        <a href="../capitulos/clases.html" title="Clases" class="chapter done " data-progress="10" style="left: 15.384615384615385%;"></a>
+    
+        <a href="../capitulos/bloques.html" title="Bloques" class="chapter  " data-progress="11" style="left: 23.076923076923077%;"></a>
+    
+        <a href="../capitulos/fin.html" title="Fin" class="chapter  " data-progress="12" style="left: 30.76923076923077%;"></a>
+    
+        <a href="../capitulos/acerca.html" title="Acerca de" class="chapter  " data-progress="13" style="left: 38.46153846153846%;"></a>
+    
+        <a href="../capitulos/numeros.html" title="Números" class="chapter  new-chapter" data-progress="2" style="left: 46.15384615384615%;"></a>
+    
+        <a href="../capitulos/textos.html" title="Textos" class="chapter  new-chapter" data-progress="3" style="left: 53.84615384615385%;"></a>
+    
+        <a href="../capitulos/variables.html" title="Variables" class="chapter  new-chapter" data-progress="4" style="left: 61.53846153846154%;"></a>
+    
+        <a href="../capitulos/conversiones.html" title="Conversiones" class="chapter  new-chapter" data-progress="5" style="left: 69.23076923076923%;"></a>
+    
+        <a href="../capitulos/metodos.html" title="Métodos" class="chapter  new-chapter" data-progress="6" style="left: 76.92307692307692%;"></a>
+    
+        <a href="../capitulos/condicionales.html" title="Condicionales" class="chapter  new-chapter" data-progress="7" style="left: 84.61538461538461%;"></a>
+    
+        <a href="../capitulos/matrices.html" title="Matrices e Iteraciones" class="chapter  new-chapter" data-progress="8" style="left: 92.3076923076923%;"></a>
+    
+        <a href="../capitulos/metodos_propios.html" title="Métodos Propios" class="chapter  new-chapter" data-progress="9" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_4">
+                    
+                        <h1 id="clases">Clases</h1>
+<p>Hasta ahora hemos visto diferentes tipos o <em>clases</em> de objetos:
+textos, enteros, flotantes, matrices, y algunos objetos especiales
+(<code>true</code>, <code>false</code> y <code>nil</code>) de los cuales hablaremos más tarde.
+En Ruby, estas clases están siempre en mayúsculas: <code>String</code>, <code>Integer</code>,
+<code>Float</code>, <code>Array</code> ... etc. En general, si queremos crear un nuevo
+objeto de una cierta clase, usamos <code>new</code>:</p>
+<p><em>Código:</em></p>
+<pre><code class="lang-ruby">a = <span class="hljs-constant">Array</span>.new  + [<span class="hljs-number">12345</span>]  <span class="hljs-comment">#  Array  agregado.</span>
+b = <span class="hljs-constant">String</span>.new + <span class="hljs-string">'hello'</span>  <span class="hljs-comment">#  String agregado.</span>
+c = <span class="hljs-constant">Time</span>.new
+
+puts <span class="hljs-string">'a = '</span>+a.to_s
+puts <span class="hljs-string">'b = '</span>+b.to_s
+puts <span class="hljs-string">'c = '</span>+c.to_s
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">a = [12345]
+b = hello
+c = 2012-06-01 12:52:06 -0500
+</code></pre>
+<p>Porque podemos crear matrices y textos usando  <code>[...]</code> y <code>&#39; ... &#39;</code>
+respectivamente es que rara vez los creamos usando <code>new</code>. (Aunque
+no es muy evidente en el ejemplo anterior, <code>String.new</code> crea una
+cadena vacía y <code>Array.new</code> crea una matriz vacía) También, los
+números son excepciones especiales: no se puede crear un número
+entero con <code>Integer.new</code> . Sólo tienes que escribir el número entero.</p>
+<h2 id="la-clase-time-">La clase <code>Time</code></h2>
+<p>Entonces, ¿cuál es la historia con la clase <code>Time</code>?. Los objetos <code>Time</code>
+representan momentos en el tiempo. Usted puede sumar (o restar) números a
+(o desde) para obtener los nuevos tiempos: la adición de <code>1.5</code>
+a un tiempo hace un tiempo nuevo segundo y medio más tarde:</p>
+<p><em>Código:</em></p>
+<pre><code class="lang-ruby">hora  = <span class="hljs-constant">Time</span>.new   <span class="hljs-comment">#  El momento que se ejecutó esta código</span>
+hora2 = hora + <span class="hljs-number">60</span>  <span class="hljs-comment">#  Un minuto más tarde.</span>
+
+puts hora
+puts hora2
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">2012-06-01 12:55:49 -0500
+2012-06-01 12:56:49 -0500
+</code></pre>
+<p>También puedes obtener el tiempo para un momento específico utilizando <code>Time.mktime</code>:</p>
+<p><em>Código:</em></p>
+<pre><code class="lang-ruby">puts <span class="hljs-constant">Time</span>.mktime(<span class="hljs-number">2000</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>)          <span class="hljs-comment">#  Y2K.</span>
+puts <span class="hljs-constant">Time</span>.mktime(<span class="hljs-number">1976</span>, <span class="hljs-number">8</span>, <span class="hljs-number">3</span>, <span class="hljs-number">10</span>, <span class="hljs-number">11</span>)  <span class="hljs-comment">#  Cuando nació Chris.</span>
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">2000-01-01 00:00:00 -0500
+1976-08-03 10:11:00 -0500
+</code></pre>
+<p>Nota: yo nací en el horario de verano del Pacífico (PDT).
+Cuando se presentó el problema del año 2000, sin embargo, era hora
+estándar del Pacífico (PST), por lo menos para nosotros los de la
+Costa Oeste. Los paréntesis son para agrupar los parámetros a <code>mktime</code>.
+Los parámetros adicionales hacen más preciso el tiempo obtenido.</p>
+<p>Puedes comparar los tiempos usando los métodos de comparación
+(un tiempo anterior es <em>menos que</em> un tiempo posterior), y si se resta
+un tiempo de otro obtendrás el número de segundos entre ellos. Juega un poco con él!</p>
+<h2 id="algunas-cosas-para-probar">Algunas cosas para probar</h2>
+<ul>
+<li><p>Mil millones de segundos ... Descubre el segundo exacto en que naciste
+(si puedes). Averigua cuando tendrás (o tal vez cuando tuviste?) mil millones
+de segundos de edad, luego marcalo en tu calendario.</p>
+</li>
+<li><p>¡Feliz cumpleaños! Pregunta en qué año nació una persona, luego el mes, y luego el día.
+Calcula la edad que tiene y dale una gran ´¡NALGADA!´ por cada cumpleaños que ha tenido.</p>
+</li>
+</ul>
+<h2 id="la-clase-hash-">La clase <code>Hash</code></h2>
+<p>Otra clase muy útil es <code>Hash</code>. Los valores hash son muy parecidos a
+las matrices: tienen un montón de ranuras que pueden apuntar a objetos diferentes.
+Sin embargo, en una matriz, las ranuras están alineados en una fila y cada uno
+está numerado (empezando de cero). En un <code>hash</code>, las ranuras no están en una fila
+(que es sólo un tipo de mezcla), y se puede utilizar <em>cualquier</em> objeto
+para hacer referencia a un espacio no sólo un número. Es bueno utilizar
+hashes cuando se tiene un montón de cosas que no se desea perder de vista,
+pero que en realidad no encajan en una lista ordenada. Por ejemplo los colores que
+yo uso para las diferentes partes del código con las que he creado este tutorial:</p>
+<p><em>Código:</em></p>
+<pre><code class="lang-ruby">colorArray = []  <span class="hljs-comment">#  igual a Array.new</span>
+colorHash  = {}  <span class="hljs-comment">#  igual a Hash.new</span>
+
+colorArray[<span class="hljs-number">0</span>]         = <span class="hljs-string">'#FF0000'</span>
+colorArray[<span class="hljs-number">1</span>]         = <span class="hljs-string">'#008000'</span>
+colorArray[<span class="hljs-number">2</span>]         = <span class="hljs-string">'#0000FF'</span>
+colorHash[<span class="hljs-string">'textos '</span>]  = <span class="hljs-string">'#FF0000'</span>   <span class="hljs-comment"># rojo</span>
+colorHash[<span class="hljs-string">'numeros'</span>]  = <span class="hljs-string">'#008000'</span>   <span class="hljs-comment"># verde</span>
+colorHash[<span class="hljs-string">'claves '</span>]  = <span class="hljs-string">'#0000FF'</span>   <span class="hljs-comment"># azul</span>
+
+colorArray.each <span class="hljs-keyword">do</span> |color|
+  puts color
+<span class="hljs-keyword">end</span>
+colorHash.each <span class="hljs-keyword">do</span> |tipoCodigo, color|
+  puts tipoCodigo + <span class="hljs-string">' :  '</span> + color
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">#FF0000
+#008000
+#0000FF
+textos  :  #FF0000
+numeros :  #008000
+claves  :  #0000FF
+</code></pre>
+<p>Si utilizo una matriz, tengo que recordar que la ranura <code>0</code> es para los textos,
+la ranura <code>1</code> es para los números, etc, pero si puedo usar un hash, ¡es muy fácil!
+Ranura <code>&#39; textos &#39;</code> mantiene el color de las cadenas, por supuesto. No hay
+nada que recordar. Puedes haber notado que cuando se utiliza <code>each</code>
+los objetos en el hash no vienen en el mismo orden en que los pusiste adentro. (Al menos
+no lo hacían cuando escribí esto. Pueden que lo hagan ahora... nunca se sabe con los hashes).
+Matrices son para mantener las cosas en orden, no hashes.</p>
+<p>Aunque la gente suele utilizar textos para nombrar las ranuras de un hash, se
+puede utilizar cualquier tipo de objeto, incluso las matrices y los hashes de
+otros (aunque yo no puedo pensar en por qué querría hacer esto ...):</p>
+<pre><code class="lang-ruby">weirdHash = <span class="hljs-constant">Hash</span>.new
+
+weirdHash[<span class="hljs-number">12</span>] = <span class="hljs-string">'monos'</span>
+weirdHash[[]] = <span class="hljs-string">'el vacío'</span>
+weirdHash[<span class="hljs-constant">Time</span>.new] = <span class="hljs-string">'ningun momento como el actual'</span>
+</code></pre>
+<p>Hashes y matrices son buenos para cosas diferentes, depende de ti decidir cuál
+es el mejor para un problema particular.</p>
+<h2 id="extendiendo-las-clases">Extendiendo las clases</h2>
+<p>Al final del último capítulo escribiste un método para decir la frase en español
+de un número entero. No era un método de número entero, sin embargo;
+fue sólo un método genérico de un &quot;programa&quot;. ¿No sería agradable si pudieras
+escribir algo como <code>22.to_esp</code> en lugar de <code>numeroEspanol  22</code>?. He aquí cómo harías eso:</p>
+<p><em>Código:</em></p>
+<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Integer</span></span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>to_esp
+    <span class="hljs-keyword">if</span> <span class="hljs-keyword">self</span> == <span class="hljs-number">5</span>
+      espanol = <span class="hljs-string">'cinco'</span>
+    <span class="hljs-keyword">else</span>
+      espanol = <span class="hljs-string">'cincuenta y ocho'</span>
+    <span class="hljs-keyword">end</span>
+
+    espanol
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-comment">#  Mejor probarlo en un par de números...</span>
+puts <span class="hljs-number">5</span>.to_esp
+puts <span class="hljs-number">58</span>.to_esp
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">cinco
+cincuenta y ocho
+</code></pre>
+<p>Bueno, lo he probado y parece que funciona. ;)</p>
+<p>Por lo tanto, definimos un método del número entero ingresando en la clase <code>Integer</code>,
+definiendo el método allí y saliendo luego. Ahora todos los números enteros tienen
+este (algo incompleto) método. De hecho, si no te gusta la forma en que el método
+<code>to_s</code> trabaja, lo podrías definir en gran parte de la misma manera ... pero ¡yo no
+lo recomiendo! Lo mejor es dejar los viejos métodos y hacer otros nuevos cuando
+se quiere hacer algo nuevo.</p>
+<p>Así que ... ¿confundido? Permiteme explayarme más en ese último programa.
+Hasta ahora, cada vez que ejecutabas cualquier código o cualquier otro método definido se
+hacía por omisión en el &quot;programa&quot; del objeto. En nuestro último programa,
+dejamos el objeto por primera vez y nos fuimos a la clase <code>Integer</code>. Se definió
+un método allí (lo que lo convierte en un método de número entero) y que todos
+los números enteros pueden utilizar. Dentro de ese método se utiliza <code>self</code> para
+referirse al objeto (el entero) utilizando el método.</p>
+<h2 id="creando-clases">Creando clases</h2>
+<p>Hemos visto diferentes clases de objetos. Sin embargo, es fácil
+llegar a los tipos de objetos que Ruby no tiene. Por suerte, la
+creación de una nueva clase es tan fácil como la ampliación de una antigua.
+Digamos que hemos querido hacer algunos dados en Ruby. Así es como podemos
+hacer la clase Dado:</p>
+<p><em>Código:</em></p>
+<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dado</span></span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>roll
+    <span class="hljs-number">1</span> + rand(<span class="hljs-number">6</span>)
+  <span class="hljs-keyword">end</span>
+
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-comment">#  Vamos a crear un par de dados...</span>
+dados = [<span class="hljs-constant">Dado</span>.new, <span class="hljs-constant">Dado</span>.new]
+
+<span class="hljs-comment">#  ...y hacerlos rodar.</span>
+dados.each <span class="hljs-keyword">do</span> |dado|
+  puts dado.roll
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">3
+4
+</code></pre>
+<p>(Si se ha saltado la sección de números aleatorios,  <code>rand(6)</code>
+sólo da un número aleatorio entre  0 y 5 .)
+¡Y eso es todo! Nuestro propios objetos. Tira los dados
+un par de veces (con el botón de recarga) y mira lo que
+aparece.</p>
+<p>Podemos definir todo tipo de métodos para los objetos ... pero hay algo
+que falta. Trabajar con estos objetos se parece mucho a la programación
+antes de aprender acerca de las variables. ¡Mira los dados!, por ejemplo.
+Podemos rodarlos y cada vez nos dan números diferentes. Pero si
+quería guardar alguno de estos números habría que crear una variable que apunte
+al número.
+Parece que cualquier dado decente debe ser capaz de <em>tener</em> un número,
+y que rodando el dado nuevamente el número debe cambiar. Si hacemos un
+seguimiento del dado debemos tener también un registro del número mostrado.</p>
+<p>Sin embargo, si tratamos de guardar el número que salió en una variable
+(local) <code>roll</code> habrá desaparecido tan pronto como <code>roll</code> haya terminado.
+Tenemos que guardar el número en un tipo diferente de variable.</p>
+<h2 id="variables-de-instancia">Variables de instancia</h2>
+<p>Normalmente cuando queremos hablar de un texto, nos limitaremos a llamar a
+un <em>texto</em>. Sin embargo, también podría llamar un <em>objeto de texto</em>. Sin
+embargo, los programadores podrían llamar <em>una instancia de la clase <code>String</code></em>,
+pero esto es sólo una manera de representar a <em>texto</em>. Una <em>instancia</em> de una clase
+es sólo un objeto de esa clase.</p>
+<p>Por lo tanto las variables de instancia son variables de un objeto. Las
+variables locales de un método viven hasta que el método ha terminado. Las
+variables de instancia de un objeto, por otro lado, duran tanto como el objeto.
+Para diferenciar las variables de instancia de las variables locales,
+ellos tienen <code>@</code> delante de sus nombres:</p>
+<p><em>Código:</em></p>
+<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dado</span></span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>rodar
+    <span class="hljs-variable">@numeroMostrado</span> = <span class="hljs-number">1</span> + rand(<span class="hljs-number">6</span>)
+  <span class="hljs-keyword">end</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>mostrar
+    <span class="hljs-variable">@numeroMostrado</span>
+  <span class="hljs-keyword">end</span>
+
+<span class="hljs-keyword">end</span>
+
+dado = <span class="hljs-constant">Dado</span>.new
+dado.rodar
+puts dado.mostrar
+puts dado.mostrar
+dado.rodar
+puts dado.mostrar
+puts dado.mostrar
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">1
+1
+5
+5
+</code></pre>
+<p>¡Muy bien!. <code>rodar</code> rueda el dado y <code>mostrar</code> nos dice el número que muestra.
+Sin embargo, que pasa si tratamos de mostrar lo que existía antes de rodar el dado
+(antes de que lo hayamos guardado en <code>@numeroMostrado</code>)</p>
+<p><em>Código:</em></p>
+<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dado</span></span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>rodar
+    <span class="hljs-variable">@nummeroMostrado</span> = <span class="hljs-number">1</span> + rand(<span class="hljs-number">6</span>)
+  <span class="hljs-keyword">end</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>mostrar
+    <span class="hljs-variable">@numeroMostrado</span>
+  <span class="hljs-keyword">end</span>
+
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-comment"># Ya que no voy a usar este dado de nuevo,</span>
+<span class="hljs-comment"># No es necesario guardarlo en una variable.</span>
+puts <span class="hljs-constant">Dado</span>.new.mostrar
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">nil
+</code></pre>
+<p>Hmmm ... bueno, al menos no nos muestra un error. Aún así, no tiene mucho
+sentido para un dado &quot;no rodado&quot; mostrar <code>nil</code> o lo que sea que se supone
+que significa. Sería bueno si pudiéramos dar un valor cuando nuestro objeto
+Dado es creado. Para esto esta <code>initialize</code>:</p>
+<p><em>Código:</em></p>
+<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dado</span></span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>initialize
+    <span class="hljs-comment"># Voy a tirar el dado, a pesar de que</span>
+    <span class="hljs-comment"># podria hacer otra cosa si quisieramos</span>
+      rodar
+  <span class="hljs-keyword">end</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>rodar
+    <span class="hljs-variable">@numeroMostrado</span> = <span class="hljs-number">1</span> + rand(<span class="hljs-number">6</span>)
+  <span class="hljs-keyword">end</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>mostrar
+    <span class="hljs-variable">@numeroMostrado</span>
+  <span class="hljs-keyword">end</span>
+
+<span class="hljs-keyword">end</span>
+
+puts <span class="hljs-constant">Dado</span>.new.mostrar
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">6
+</code></pre>
+<p>Cuando se crea un objeto, su método <code>initialize</code> (si se ha definido
+uno) siempre es llamado.
+Nuestros dados son casi perfectos. La única cosa que podría hacer falta
+es una manera de decirle que lado del dado debe mostrar... ¿Por
+qué no escribir un método <code>timo</code> que hace justamente eso! Vuelve cuando
+hayas terminado (y que haya funcionado por supuesto). Asegúrese de que
+nadie pueda obtener un <code>7</code> con el dado!</p>
+<p>Hay varios temas interesante que apenas hemos revisado. Es difícil, sin
+embargo te voy a dar otro ejemplo más interesante. Digamos que queremos
+hacer una mascota virtual sencilla, un dragón bebé. Como la mayoría de los
+bebés debe ser capaz de comer, dormir y hacer sus necesidades, lo que
+significa que tendremos que ser capaces de darle de comer, de ponerlo en la
+cama y llevarlo a pasear. Internamente, nuestro dragón tendrá que realizar
+una verificación de si tiene hambre, está cansado o tiene que ir al baño
+pero no vamos a ser capaces de ver su estado cuando nos relacionamos con
+nuestro dragón al igual que no se puede preguntar a un bebé humano, &quot;¿Tienes
+hambre?&quot;. También vamos a añadir algunas otras maneras divertidas de
+interactuar con nuestro dragón bebé y cuando nace le daremos un nombre.
+(Lo que sea que pasen al método <code>new</code> al método <code>initialize</code>).
+Muy bien, continuemos:</p>
+<p><em>Código:</em></p>
+<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dragon</span></span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>initialize nombre
+    <span class="hljs-variable">@nombre</span> = nombre
+    <span class="hljs-variable">@dormido</span> = <span class="hljs-keyword">false</span>
+    <span class="hljs-variable">@panzaLlena</span>     = <span class="hljs-number">10</span>  <span class="hljs-comment">#  Esta lleno.</span>
+    <span class="hljs-variable">@intestinoLleno</span>  =  <span class="hljs-number">0</span>  <span class="hljs-comment">#  No necesita ir.</span>
+
+    puts <span class="hljs-variable">@nombre</span> + <span class="hljs-string">' nace.'</span>
+  <span class="hljs-keyword">end</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>alimentar
+    puts <span class="hljs-string">'Alimentas a '</span> + <span class="hljs-variable">@nombre</span> + <span class="hljs-string">'.'</span>
+    <span class="hljs-variable">@panzaLlena</span> = <span class="hljs-number">10</span>
+    pasoDelTiempo
+  <span class="hljs-keyword">end</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>caminar
+    puts <span class="hljs-string">'Haces caminar a '</span> + <span class="hljs-variable">@nombre</span> + <span class="hljs-string">'.'</span>
+    <span class="hljs-variable">@intestinoLleno</span>  = <span class="hljs-number">0</span>
+    pasoDelTiempo
+  <span class="hljs-keyword">end</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>dormir
+    puts <span class="hljs-string">'Colocas a '</span> + <span class="hljs-variable">@nombre</span> + <span class="hljs-string">' en la cama.'</span>
+    <span class="hljs-variable">@dormido</span> = <span class="hljs-keyword">true</span>
+    <span class="hljs-number">3</span>.times <span class="hljs-keyword">do</span>
+      <span class="hljs-keyword">if</span> <span class="hljs-variable">@dormido</span>
+        pasoDelTiempo
+      <span class="hljs-keyword">end</span>
+      <span class="hljs-keyword">if</span> <span class="hljs-variable">@dormido</span>
+        puts <span class="hljs-variable">@nombre</span> + <span class="hljs-string">' ronca, llenando el cuarto con humo.'</span>
+      <span class="hljs-keyword">end</span>
+    <span class="hljs-keyword">end</span>
+    <span class="hljs-keyword">if</span> <span class="hljs-variable">@dormido</span>
+      <span class="hljs-variable">@dormido</span> = <span class="hljs-keyword">false</span>
+      puts <span class="hljs-variable">@nombre</span> + <span class="hljs-string">' despierta lentamente.'</span>
+    <span class="hljs-keyword">end</span>
+  <span class="hljs-keyword">end</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>lanzar
+    puts <span class="hljs-string">'Lanzas a '</span> + <span class="hljs-variable">@nombre</span> + <span class="hljs-string">' en el aire.'</span>
+    puts <span class="hljs-string">'Sonrie, sus cejas se mueven.'</span>
+    pasoDelTiempo
+  <span class="hljs-keyword">end</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>acunar
+    puts <span class="hljs-string">'Acunas a '</span> + <span class="hljs-variable">@nombre</span> + <span class="hljs-string">' suavemente.'</span>
+    <span class="hljs-variable">@dormido</span> = <span class="hljs-keyword">true</span>
+    puts <span class="hljs-string">'Rapidamente se queda dormido...'</span>
+    pasoDelTiempo
+    <span class="hljs-keyword">if</span> <span class="hljs-variable">@dormido</span>
+      <span class="hljs-variable">@dormido</span> = <span class="hljs-keyword">false</span>
+      puts <span class="hljs-string">'...pero despierta cuando te detienes.'</span>
+    <span class="hljs-keyword">end</span>
+  <span class="hljs-keyword">end</span>
+
+  private
+
+  <span class="hljs-comment">#  "private" significa que los metodos definidos aqui son</span>
+  <span class="hljs-comment">#  metodos internos al objeto.  (Puedes alimentar a</span>
+  <span class="hljs-comment">#  tu dragon, pero no puedes preguntar si esta hambriento.)</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>hambriento?
+    <span class="hljs-comment">#  Los nombres de los metodos pueden terminar en "?".</span>
+    <span class="hljs-comment">#  Generalmente, hacemos esto si el método debe</span>
+    <span class="hljs-comment">#  devolver verdadero o falso, como esto:</span>
+    <span class="hljs-variable">@panzaLlena</span> &lt;= <span class="hljs-number">2</span>
+  <span class="hljs-keyword">end</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>ganas?
+    <span class="hljs-variable">@intestinoLleno</span> &gt;= <span class="hljs-number">8</span>
+  <span class="hljs-keyword">end</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>pasoDelTiempo
+    <span class="hljs-keyword">if</span> <span class="hljs-variable">@panzaLlena</span> &gt; <span class="hljs-number">0</span>
+      <span class="hljs-comment">#  Mueve el alimento del vientre al intestino.</span>
+      <span class="hljs-variable">@panzaLlena</span>      = <span class="hljs-variable">@panzaLlena</span>      - <span class="hljs-number">1</span>
+      <span class="hljs-variable">@intestinoLleno</span>  = <span class="hljs-variable">@intestinoLleno</span>  + <span class="hljs-number">1</span>
+    <span class="hljs-keyword">else</span>  <span class="hljs-comment">#  Nuestro dragon esta hambriento!</span>
+      <span class="hljs-keyword">if</span> <span class="hljs-variable">@dormido</span>
+        <span class="hljs-variable">@dormido</span> = <span class="hljs-keyword">false</span>
+        puts <span class="hljs-string">'¡Se despierta de repente!'</span>
+      <span class="hljs-keyword">end</span>
+      puts <span class="hljs-string">'¡'</span> + <span class="hljs-variable">@nombre</span> + <span class="hljs-string">' esta hambriento!  En su desesperacion, ¡te COMIO!'</span>
+      exit  <span class="hljs-comment">#  Sale del programa.</span>
+    <span class="hljs-keyword">end</span>
+
+    <span class="hljs-keyword">if</span> <span class="hljs-variable">@intestinoLleno</span>  &gt;= <span class="hljs-number">10</span>
+      <span class="hljs-variable">@intestinoLleno</span>  = <span class="hljs-number">0</span>
+      puts <span class="hljs-string">'¡Uy!  '</span> + <span class="hljs-variable">@nombre</span> + <span class="hljs-string">' tuvo un accidente...'</span>
+    <span class="hljs-keyword">end</span>
+
+    <span class="hljs-keyword">if</span> hambriento?
+      <span class="hljs-keyword">if</span> <span class="hljs-variable">@dormido</span>
+        <span class="hljs-variable">@dormido</span> = <span class="hljs-keyword">false</span>
+        puts <span class="hljs-string">'¡Se despierta de repente!'</span>
+      <span class="hljs-keyword">end</span>
+      puts <span class="hljs-string">'El estomago de '</span> + <span class="hljs-variable">@nombre</span> + <span class="hljs-string">'retumba...'</span>
+    <span class="hljs-keyword">end</span>
+
+    <span class="hljs-keyword">if</span> ganas?
+      <span class="hljs-keyword">if</span> <span class="hljs-variable">@dormido</span>
+        <span class="hljs-variable">@dormido</span> = <span class="hljs-keyword">false</span>
+        puts <span class="hljs-string">'Se despierta de repente!'</span>
+      <span class="hljs-keyword">end</span>
+      puts <span class="hljs-variable">@nombre</span> + <span class="hljs-string">' hace la danza del baño...'</span>
+    <span class="hljs-keyword">end</span>
+  <span class="hljs-keyword">end</span>
+
+<span class="hljs-keyword">end</span>
+
+mascota = <span class="hljs-constant">Dragon</span>.new <span class="hljs-string">'Norbert'</span>
+mascota.alimentar
+mascota.lanzar
+mascota.caminar
+mascota.dormir
+mascota.acunar
+mascota.dormir
+mascota.dormir
+mascota.dormir
+mascota.dormir
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">Norbert nace.
+Alimentas a Norbert.
+Lanzas a Norbert en el aire.
+Sonrie, sus cejas se mueven.
+Haces caminar a Norbert.
+Colocas a Norbert en la cama.
+Norbert ronca, llenando el cuarto con humo.
+Norbert ronca, llenando el cuarto con humo.
+Norbert ronca, llenando el cuarto con humo.
+Norbert despierta lentamente.
+Acunas a Norbert suavemente.
+Rapidamente se queda dormido...
+...pero despierta cuando te detienes.
+Colocas a Norbert en la cama.
+¡Se despierta de repente!
+El estomago de Norbertretumba...
+Colocas a Norbert en la cama.
+¡Se despierta de repente!
+El estomago de Norbertretumba...
+Colocas a Norbert en la cama.
+¡Se despierta de repente!
+El estomago de Norbertretumba...
+Norbert hace la danza del baño...
+Colocas a Norbert en la cama.
+¡Se despierta de repente!
+¡Norbert esta hambriento!  En su desesperacion, ¡te COMIO!
+</code></pre>
+<p><em>¡Ouau!</em> Por supuesto, sería mejor si fuese un programa interactivo,
+pero puedes modificarlo. Yo sólo estaba tratando de mostrarte las partes
+relacionadas directamente con la creación de una nueva clase de dragón.</p>
+<p>Vimos algunas cosas nuevas en ese ejemplo. La primera es simple: <code>exit</code>
+termina el programa en ese mismo momento. La segunda es la
+palabra <code>private</code>, que pusimos en la definición de nuestra clase.
+Podría haberlos mantenido afuera, pero yo quería reforzar la idea
+de que hay ciertos métodos que hacen cosas que puede hacer un dragón
+y otros que simplemente se establecen dentro el dragón. Usted puede
+pensar en ellos como &quot;bajo el capó&quot;: a menos que seas un mecánico de automóviles
+todo lo que necesitas saber es el pedal del acelerador, el pedal del
+freno y el volante. Un programador puede llamar a esto <em>interfaz pública</em> del
+automóvil. Sin embargo, cómo saber cuando la bolsa de aire se activará es algo
+interno del automóvil, el usuario típico (el conductor) no tiene por qué saberlo.</p>
+<p>En realidad, para un ejemplo más concreto en ese sentido vamos a hablar
+sobre cómo se podría representar un coche en un videojuego (que pasa a ser
+mi línea de trabajo). En primer lugar, tienes que decidir como deseas
+que tu interfaz pública se parezca, es decir, los métodos de la gente
+debería ser capaz de llamar por cada uno de los objetos de su coche.
+Bueno, tienes que ser capaz de empujar el pedal del acelerador y el
+pedal de freno, pero que también tienes que ser capaz de especificar lo
+fuerte que estás empujando el pedal. (Hay una gran diferencia entre pisar y
+golpear) También tendrías que ser capaz de dirigir el timón, y otra vez,
+tendrías que ser capaz de decir lo mucho que estás moviendo la rueda del
+timón. Supongo que se podría ir más allá y añadir un embrague, direccionales,
+lanzacohetes, cámara de post-combustión, condensador de flujo, etc ..
+depende del tipo de juego que estás haciendo.</p>
+<p>Internamente al objeto coche, sin embargo, tendríamos que hacer mucho más
+cosas; otras cosas que necesita un coche son una velocidad, una dirección
+y una posición (que son las cosas más básicas). Estos atributos se
+modificarían pulsando sobre el gas o los pedales de freno y girando la rueda,
+pero el usuario no sería capaz de establecer la posición directamente (que
+sería como una deformación). Usted también podría patinar o dañar si se ha
+volcado y así sucesivamente. Todo esto sería interno a su objeto coche.</p>
+<h2 id="algunas-cosas-por-intentar">Algunas cosas por intentar</h2>
+<ul>
+<li><p>Hacer una clase <code>arbolNaranja</code>. Deberá tener un método <code>altura</code> que devuelve su altura
+y un método <code>paso365Dias</code> que cuando se le llama aumenta la edad del árbol en un año.
+Cada año crece el árbol más alto (mucho más de lo que piensas que un naranjo debe crecer en un año),
+y después de un cierto número de años (de nuevo, tu llamada) el árbol debe morir.
+En los primeros años el árbol no debe producir fruta, pero después de un tiempo debería hacerlo,
+y supongo que los árboles más viejos producen más cada año que los árboles más jóvenes ...
+lo que pienses que tiene más sentido. Y, por supuesto, tú deberás ser capaz de
+<code>contarNaranjas</code> (que devuelve el número de naranjas en el árbol), y <code>tomarUnaNaranja</code> (que
+reduce la <code>@numeroNaranjas</code>en uno y devuelve un texto que te dice cómo la naranja era deliciosa,
+o de lo contrario sólo te dice que no hay naranjas más para elegir este año) Asegúrate
+que las naranjas que no se recogen en un año se caen antes del próximo año.</p>
+</li>
+<li><p>Escribir un programa para que pueda interactuar con tu bebé dragón. Deberás
+ser capaz de introducir comandos como <code>alimentar</code> y <code>caminar</code>, y hacer que esos métodos se
+llamen en tu dragón. Por supuesto, ya que lo que estás ingresando son sólo textos,
+tendrás que tener algún tipo de <em>método de envío</em>, donde el programa revise los textos
+que se han ingresado y luego llama al método adecuado.</p>
+</li>
+</ul>
+<p>¡Y eso es casi todo lo que hay que hacer! Pero espera un segundo ...
+Yo no he hablado de ninguna de esas clases para hacer cosas como enviar un
+correo electrónico o guardar y cargar archivos en el computador, o cómo crear ventanas
+y botones, o los mundos en 3D, ¡ni nada! Bueno, hay <em>tantas</em> clases que pueden utilizar
+que no es posible mostrar a todos, ¡yo no conozco la mayoría de ellos! Lo <em>que</em> puedo
+decir es que para saber más sobre ellos tienen que saber acerca de los que deseas que el
+programa haga. Antes de terminar hay una característica más de Ruby que deberás conocer,
+algo que la mayoría de lenguajes de programación no tiene pero sin las cuales
+simplemente no podría vivir:
+<a href="/aprende.a.programar/capitulos/bloques.html">bloques y procedimientos</a>.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../capitulos/metodos_propios.html" class="navigation navigation-prev " aria-label="Previous page: Métodos Propios"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../capitulos/bloques.html" class="navigation navigation-next " aria-label="Next page: Bloques"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-ga/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"ga":{"token":"TOKEN"}};
+    gitbook.start(config);
+});
+</script>
+
+    </body>
+</html>
