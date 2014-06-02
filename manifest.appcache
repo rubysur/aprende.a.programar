@@ -1,12 +1,12 @@
 CACHE MANIFEST
-# Revision 1400875183054
+# Revision 1401748328712
 
 CACHE:
 index.html
 capitulos/instalacion.html
-capitulos/acerca.html
 capitulos/clases.html
 capitulos/condicionales.html
+capitulos/acerca.html
 capitulos/conversiones.html
 capitulos/fin.html
 capitulos/bloques.html
