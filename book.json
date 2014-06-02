@@ -1,9 +1,9 @@
 {
-    "description": "Aprende a programar con Ruby",
+    "description": "Aprende a programar con Ruby.",
     "plugins": ["ga", "-mixpanel", "-mathjax"],
     "pluginsConfig": {
         "ga": {
-            "token": "TOKEN"
+            "token": "UA-50838803-4"
         }
     }
 }
