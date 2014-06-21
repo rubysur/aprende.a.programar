@@ -1,12 +1,12 @@
 CACHE MANIFEST
-# Revision 1401748328712
+# Revision 1403384758643
 
 CACHE:
 index.html
 capitulos/instalacion.html
-capitulos/clases.html
-capitulos/condicionales.html
 capitulos/acerca.html
+capitulos/condicionales.html
+capitulos/clases.html
 capitulos/conversiones.html
 capitulos/fin.html
 capitulos/bloques.html
@@ -17,12 +17,6 @@ capitulos/numeros.html
 capitulos/textos.html
 capitulos/variables.html
 gitbook/app.js
-gitbook/fonts/anonymouspro/400.woff
-gitbook/fonts/anonymouspro/400i.woff
-gitbook/fonts/anonymouspro/700.woff
-gitbook/fonts/anonymouspro/700i.woff
-gitbook/fonts/ebgaramond/400.woff
-gitbook/fonts/ebgaramond/400i.woff
 gitbook/fonts/fontawesome/FontAwesome.otf
 gitbook/fonts/fontawesome/fontawesome-webfont.eot
 gitbook/fonts/fontawesome/fontawesome-webfont.svg
