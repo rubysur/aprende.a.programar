@@ -226,7 +226,7 @@ Encantado de conocerte, Chris.  :)
 ```
 
 ¡Mucho mejor! Nota que ya que `name` apunta a `gets.chomp`, no tenemos que usar
-`name.chomp`; `name` ya fue procesado por `chomp.
+`name.chomp`; `name` ya fue procesado por `chomp`.
 
 Algunas cosas por intentar
 --------------------------
