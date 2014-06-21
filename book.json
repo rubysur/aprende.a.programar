@@ -5,5 +5,8 @@
         "ga": {
             "token": "UA-50838803-4"
         }
+    },
+    "links": {
+        "about": "http://rubysur.org"
     }
 }
