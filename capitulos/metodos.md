@@ -326,7 +326,7 @@ Matemáticas Avanzadas
 
 *(Esta sección es totalmente opcional. Asume un conocimiento
 previo de matemáticas. Si no estás interesado, puedes ir directamente
-al siguiente capítulo [Control de Flujo](/aprende.a.programar/capitulos/condicionales.html)
+al siguiente capítulo [Condicionales](/aprende.a.programar/capitulos/condicionales.html)
 sin problemas. Aunque, una rápida vista de esta sección sobre
 **Números aleatorios** debería venir bien.)*
 
