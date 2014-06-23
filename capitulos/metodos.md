@@ -224,7 +224,7 @@ aAbBcCdDeE
 Esto es bastante estándar. Como puedes ver desde la linea `puts ' a'.capitalize`,
 el método `capitalize` sólo deja en mayúsculas el primer *carácter*, no
 la primera *letra*. También, como hemos visto antes, en todas estas llamadas a
-métodos, `letters` permanece igual. No quiero decir que se dedica sólo a ésto,
+métodos, `letters` permanece igual. No quiero ser pesado con esto,
 pero es importante entenderlo. Hay algunos métodos los cuales *hacen* cambios a los
 objetos asociados, pero no los hemos visto aún, y no lo haremos por algún tiempo.
 
