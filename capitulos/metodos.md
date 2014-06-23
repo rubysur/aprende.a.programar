@@ -196,7 +196,7 @@ el contenido (mayúsculas y minúsculas) de tu texto. `upcase`
 cambian cada minúscula por mayúscula. `swapcase` cambia en cada
 letra en el string("Hola".swapcase  #=> "hOLA"), y finalmente, `capitalize`
 es como `downcase`, excepto que esto cambia solo el primer carácter a
-mayúsculas(si es una letra).
+mayúsculas (si es una letra).
 
 *Código:*
 
