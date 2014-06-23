@@ -373,8 +373,8 @@ este año, el próximo año será un Miércoles. Tu también puedes usar
 flotantes con el método módulo (`%`). Básicamente, funciona de una manera
 lógica... pero voy a mostrar un poco mas como trabajar con esto.
 
-Hay un último método para mencionar antes de revisar el método `random`:
- `abs`. Éste sólo toma el valor absoluto de un número:
+Hay un último método para mencionar: `abs`. Éste sólo toma el valor
+absoluto de un número:
 
 *Código:*
 
