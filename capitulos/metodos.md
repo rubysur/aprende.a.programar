@@ -142,7 +142,7 @@ sólo hace una nueva versión de éste en reversa. Esto es porque `var1` continu
 `'parar'` aún después de que llamamos  `reverse` sobre  `var1`.
 
 Otro método para texto es `length`, el cual nos dice el número de caracteres
-(incluyendo caracteres) en el texto:
+(incluyendo espacios) en el texto:
 
 *Código:*
 
