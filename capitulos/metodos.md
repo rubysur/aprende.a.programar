@@ -489,7 +489,7 @@ puts(rand(100))
 ```
 
 Esto hará la misma cosa cada vez que inicies con el mismo número. Si quieres
-obtener diferentes números(como pasaría si nunca utilizaras `srand`),
+obtener diferentes números (como pasaría si nunca utilizaras `srand`),
 entonces sólo llamas a `srand 0`. Esto inicializa con un número
 realmente raro, utilizando (además de otras cosas) la hora actual de tu
 computadora, hasta los milisegundos.
