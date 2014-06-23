@@ -522,10 +522,6 @@ puts((1 + Math.sqrt(5))/2)
 1.61803398874989
 ```
 
-La primera cosa de la que te habrás dado cuenta es probablemente de
-la notación `::`. Explicando el *alcance del operador*
-(que es esto) esta fuera del objetivo de este tutorial.
-
 Como puedes ver, `Math` tiene todas las cosas que podrías
 esperar de una calculadora científica decente. Y como siempre, los
 flotantes están *realmente cerca* de ser la respuesta
