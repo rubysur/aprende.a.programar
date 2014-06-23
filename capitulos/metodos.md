@@ -523,8 +523,8 @@ puts((1 + Math.sqrt(5))/2)
 ```
 
 La primera cosa de la que te habrás dado cuenta es probablemente de
-la notación `::`. Explicando el *alcance del operador*
-(que es esto) esta fuera del objetivo de este tutorial.
+la notación `::`. Explicar el *operador scope*
+(que es lo que esto es) esta fuera del objetivo de este tutorial.
 
 Como puedes ver, `Math` tiene todas las cosas que podrías
 esperar de una calculadora científica decente. Y como siempre, los
