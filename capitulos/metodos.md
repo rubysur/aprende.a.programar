@@ -147,7 +147,7 @@ Otro método para texto es `length`, el cual nos dice el número de caracteres
 *Código:*
 
 ```ruby
-puts 'Cuál es tu nombre completo?'
+puts '¿Cuál es tu nombre completo?'
 name = gets.chomp
 puts '¿Sabes que hay ' + name.length + ' caracteres en tu nombre, ' + name + '?'
 ```
@@ -155,7 +155,7 @@ puts '¿Sabes que hay ' + name.length + ' caracteres en tu nombre, ' + name + '?
 *Resultado:*
 
 ```html
-Cuál es tu nombre completo?
+¿Cuál es tu nombre completo?
 Christopher David Pine
 in `+': no implicit conversion of Fixnum into String (TypeError)
 ```
@@ -169,7 +169,7 @@ un texto. Esto es fácil, necesitamos solo agregar `to_s` (y cruzar nuestros ded
 *Código:*
 
 ```ruby
-puts 'Cuál es tu nombre completo?'
+puts '¿Cuál es tu nombre completo?'
 name = gets.chomp
 puts '¿Sabías que hay ' + name.length.to_s + ' caracteres en tu nombre, ' + name + '?'
 ```
@@ -177,7 +177,7 @@ puts '¿Sabías que hay ' + name.length.to_s + ' caracteres en tu nombre, ' + na
 *Resultado:*
 
 ```html
-Cuál es tu nombre completo?
+¿Cuál es tu nombre completo?
 Christopher David Pine
 Sabías que hay 22 caracteres en tu nombre, Christopher David Pine
 ```
