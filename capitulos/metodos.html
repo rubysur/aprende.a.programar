@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-github="rubysur/aprende.a.programar" data-level="6" data-basepath=".." data-revision="1403384758642">
+    <div class="book" data-github="rubysur/aprende.a.programar" data-level="6" data-basepath=".." data-revision="1403556171805">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -514,14 +514,14 @@ Puedes pronunciar esta oración al reves?
 sólo hace una nueva versión de éste en reversa. Esto es porque <code>var1</code> continua
 <code>&#39;parar&#39;</code> aún después de que llamamos  <code>reverse</code> sobre  <code>var1</code>.</p>
 <p>Otro método para texto es <code>length</code>, el cual nos dice el número de caracteres
-(incluyendo caracteres) en el texto:</p>
+(incluyendo espacios) en el texto:</p>
 <p><em>Código:</em></p>
-<pre><code class="lang-ruby">puts <span class="hljs-string">'Cuál es tu nombre completo?'</span>
+<pre><code class="lang-ruby">puts <span class="hljs-string">'¿Cuál es tu nombre completo?'</span>
 name = gets.chomp
 puts <span class="hljs-string">'¿Sabes que hay '</span> + name.length + <span class="hljs-string">' caracteres en tu nombre, '</span> + name + <span class="hljs-string">'?'</span>
 </code></pre>
 <p><em>Resultado:</em></p>
-<pre><code class="lang-html">Cuál es tu nombre completo?
+<pre><code class="lang-html">¿Cuál es tu nombre completo?
 Christopher David Pine
 in `+&#39;: no implicit conversion of Fixnum into String (TypeError)
 </code></pre>
@@ -530,12 +530,12 @@ in `+&#39;: no implicit conversion of Fixnum into String (TypeError)
 <p>El problema es con <code>length</code>: esto te devuelve un número, pero nosotros queremos
 un texto. Esto es fácil, necesitamos solo agregar <code>to_s</code> (y cruzar nuestros dedos):</p>
 <p><em>Código:</em></p>
-<pre><code class="lang-ruby">puts <span class="hljs-string">'Cuál es tu nombre completo?'</span>
+<pre><code class="lang-ruby">puts <span class="hljs-string">'¿Cuál es tu nombre completo?'</span>
 name = gets.chomp
 puts <span class="hljs-string">'¿Sabías que hay '</span> + name.length.to_s + <span class="hljs-string">' caracteres en tu nombre, '</span> + name + <span class="hljs-string">'?'</span>
 </code></pre>
 <p><em>Resultado:</em></p>
-<pre><code class="lang-html">Cuál es tu nombre completo?
+<pre><code class="lang-html">¿Cuál es tu nombre completo?
 Christopher David Pine
 Sabías que hay 22 caracteres en tu nombre, Christopher David Pine
 </code></pre>
@@ -551,7 +551,7 @@ el contenido (mayúsculas y minúsculas) de tu texto. <code>upcase</code>
 cambian cada minúscula por mayúscula. <code>swapcase</code> cambia en cada
 letra en el string(&quot;Hola&quot;.swapcase  #=&gt; &quot;hOLA&quot;), y finalmente, <code>capitalize</code>
 es como <code>downcase</code>, excepto que esto cambia solo el primer carácter a
-mayúsculas(si es una letra).</p>
+mayúsculas (si es una letra).</p>
 <p><em>Código:</em></p>
 <pre><code class="lang-ruby">letters = <span class="hljs-string">'aAbBcCdDeE'</span>
 puts letters.upcase
@@ -572,7 +572,7 @@ aAbBcCdDeE
 <p>Esto es bastante estándar. Como puedes ver desde la linea <code>puts &#39; a&#39;.capitalize</code>,
 el método <code>capitalize</code> sólo deja en mayúsculas el primer <em>carácter</em>, no
 la primera <em>letra</em>. También, como hemos visto antes, en todas estas llamadas a
-métodos, <code>letters</code> permanece igual. No quiero decir que se dedica sólo a ésto,
+métodos, <code>letters</code> permanece igual. No quiero ser pesado con esto,
 pero es importante entenderlo. Hay algunos métodos los cuales <em>hacen</em> cambios a los
 objetos asociados, pero no los hemos visto aún, y no lo haremos por algún tiempo.</p>
 <p>El último tipo de métodos que veremos son los de formato visual. El primero es, <code>center</code>,
@@ -655,7 +655,7 @@ Capítulo 3:  Variables                    página 118
 </code></pre><h2 id="matem-ticas-avanzadas">Matemáticas Avanzadas</h2>
 <p><em>(Esta sección es totalmente opcional. Asume un conocimiento
 previo de matemáticas. Si no estás interesado, puedes ir directamente
-al siguiente capítulo <a href="/aprende.a.programar/capitulos/condicionales.html">Control de Flujo</a>
+al siguiente capítulo <a href="/aprende.a.programar/capitulos/condicionales.html">Condicionales</a>
 sin problemas. Aunque, una rápida vista de esta sección sobre
 <strong>Números aleatorios</strong> debería venir bien.)</em></p>
 <p>No hay tantos métodos numéricos como los hay para textos (pienso
@@ -690,8 +690,8 @@ número de semanas, más un día. Entonces si tu cumpleaños fue un Martes
 este año, el próximo año será un Miércoles. Tu también puedes usar
 flotantes con el método módulo (<code>%</code>). Básicamente, funciona de una manera
 lógica... pero voy a mostrar un poco mas como trabajar con esto.</p>
-<p>Hay un último método para mencionar antes de revisar el método <code>random</code>:
- <code>abs</code>. Éste sólo toma el valor absoluto de un número:</p>
+<p>Hay un último método para mencionar: <code>abs</code>. Éste sólo toma el valor
+absoluto de un número:</p>
 <p><em>Código:</em></p>
 <pre><code class="lang-ruby">puts((<span class="hljs-number">5</span>-<span class="hljs-number">2</span>).abs)
 puts((<span class="hljs-number">2</span>-<span class="hljs-number">5</span>).abs)
@@ -781,7 +781,7 @@ puts(rand(<span class="hljs-number">100</span>))
 70
 </code></pre>
 <p>Esto hará la misma cosa cada vez que inicies con el mismo número. Si quieres
-obtener diferentes números(como pasaría si nunca utilizaras <code>srand</code>),
+obtener diferentes números (como pasaría si nunca utilizaras <code>srand</code>),
 entonces sólo llamas a <code>srand 0</code>. Esto inicializa con un número
 realmente raro, utilizando (además de otras cosas) la hora actual de tu
 computadora, hasta los milisegundos.</p>
@@ -804,9 +804,6 @@ puts((<span class="hljs-number">1</span> + <span class="hljs-constant">Math</spa
 2.0
 1.61803398874989
 </code></pre>
-<p>La primera cosa de la que te habrás dado cuenta es probablemente de
-la notación <code>::</code>. Explicando el <em>alcance del operador</em>
-(que es esto) esta fuera del objetivo de este tutorial.</p>
 <p>Como puedes ver, <code>Math</code> tiene todas las cosas que podrías
 esperar de una calculadora científica decente. Y como siempre, los
 flotantes están <em>realmente cerca</em> de ser la respuesta
