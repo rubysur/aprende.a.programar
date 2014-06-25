@@ -29,7 +29,7 @@ proceso como **asignación** y llaman a los nombres **variables**. Esta variable
 puede ser cualquier secuencia de letras o números, pero el primer caracter
 necesita ser minúscula. Probemos nuestro programa de nuevo, pero esta vez
 voy a darle el nombre `'myString'` al texto (aunque podría haber usado cualquier
-nombre, por ejemplo `'str'` or `'myOwnLittleString'` or `'henryTheEighth'`).
+nombre, por ejemplo `'str'` o `'myOwnLittleString'` o `'enriqueOctavo'`).
 
 *Código:*
 
