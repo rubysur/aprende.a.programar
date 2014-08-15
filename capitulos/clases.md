@@ -599,7 +599,7 @@ volcado y así sucesivamente. Todo esto sería interno a su objeto coche.
 
 ## Algunas cosas por intentar
 
-* Hacer una clase `arbolNaranja`. Deberá tener un método `altura` que devuelve su altura
+* Hacer una clase `ArbolNaranja`. Deberá tener un método `altura` que devuelve su altura
 y un método `paso365Dias` que cuando se le llama aumenta la edad del árbol en un año.
 Cada año crece el árbol más alto (mucho más de lo que piensas que un naranjo debe crecer en un año),
 y después de un cierto número de años (de nuevo, tu llamada) el árbol debe morir.
