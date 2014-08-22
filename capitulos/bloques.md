@@ -408,7 +408,7 @@ importante) ¡fuera de mi camino!
 * *Reloj del Abuelo*. Escriba un método que toma un bloque y lo llame una vez
 por cada hora que ha pasado hoy. De esta manera, si paso al bloque `do puts 'DONG!' end`
 la campana debería sonar (más o menos) como un reloj de péndulo. Pon a prueba
-tu método con unas pocos bloques (incluyendo la que acabo de darte). ***Sugerencia:***
+tu método con unos pocos bloques (incluyendo la que acabo de darte). ***Sugerencia:***
 Puede utilizar `Time.now.hour` para obtener la hora actual. Sin embargo, este
 devuelve un número entre `0` y `23`, por lo que tendrá que modificar los números
 a fin de obtener valores clásicos de un reloj de este tipo (`1` *al* `12`).
@@ -425,10 +425,10 @@ En otras palabras, su salida debería ser algo como esto:
 
     A partir del "bloque externo" ...
     A partir de "un bloque pequeño" ...
-    ... "Algún pequeño bloque" terminó, regreso: 5
+    ... "un bloque pequeño" terminó, regreso: 5
     A partir del "otro bloque" ...
-    ... "Otro bloque", terminó, regreso: me gusta la comida tailandesa!
-    ... "Bloque exterior", terminó, regreso: false
+    ... "otro bloque", terminó, regreso: me gusta la comida tailandesa!
+    ... "bloque externo", terminó, regreso: false
 
 * *Mejores Logger*. El resultado del último logger fue un poco difícil de leer y
 debería empeorar cuanto más se use. Sería mucho más fácil de leer si se indenta
