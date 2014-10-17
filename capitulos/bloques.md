@@ -431,7 +431,7 @@ En otras palabras, su salida debería ser algo como esto:
     ... "bloque externo", terminó, regreso: false
 
 * *Mejores Logger*. El resultado del último logger fue un poco difícil de leer y
-debería empeorar cuanto más se use. Sería mucho más fácil de leer si se indenta
+debería empeorar cuanto más se use. Sería mucho más fácil de leer si se indentan
 las líneas en los bloques interiores. Para ello, tendrás que llevar la cuenta
 de cuán profundamente estás anidado cada vez que el logger quiere escribir algo.
 Para ello, utilice una *variable global*, una variable que se puede ver en
@@ -441,14 +441,14 @@ su nombre con el símbolo `$` , como los siguientes:  `$global`, `$nestingDepth`
 
 *Listado:*
 
-    A partir del "bloque exterior" ...
+    A partir del "bloque externo" ...
       A partir de "un bloque pequeño" ...
         A partir del "pequeñito-minúsculo bloque" ...
         ... "pequeñito-minúsculo bloque" terminó, regreso: un montón de amor
       ... "un bloque pequeño" terminó, regreso: 42
       A partir del "otro bloque" ...
       ... "otro bloque", terminó, regreso: me encanta la comida india!
-    ... "bloque exterior", terminó, regreso: true
+    ... "bloque externo", terminó, regreso: true
 
 Bueno, eso es todo lo que vas a aprender de este tutorial. ¡Felicitaciones!
 ¡Has aprendido un montón! Tal vez no tienes ganas de recordar todo, o te has
