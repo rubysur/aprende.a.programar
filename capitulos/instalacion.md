@@ -6,7 +6,7 @@ Antes de comenzar, necesitas descargar e instalar Ruby en tu computadora.
 Para instalar Ruby en **Windows**, descarga [Ruby Installer](http://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.0.0-p451.exe?direct).
 Luego, ejecuta el instalador, sigue los pasos de instalación y listo!
 
-Si estás en **Mac y OS X**, ya tienes instalado Ruby. Pero si quieres la
+Si estás en **Mac OS X**, ya tienes instalado Ruby. Pero si quieres la
 última versión de Ruby, puedes tenerla a través de [Homebrew](http://brew.sh/):
 
 ```html
