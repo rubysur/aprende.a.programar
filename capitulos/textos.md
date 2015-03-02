@@ -43,7 +43,7 @@ Aritmética de textos
 --------------------
 
 Al igual que hacer aritmética con números, ¡tú también puedes hacer
-aritmética con textos! Bueno, algo así ... digamos que puedes suma
+aritmética con textos! Bueno, algo así... digamos que puedes sumar
 textos. Intentemos sumar dos textos y ver que hace `puts` con eso.
 
 **Código:**
@@ -81,7 +81,7 @@ Me gusta el pastel de manzana.
 Como puedes ver, no importó a que texto le agregué el espacio.
 
 Así que puedes sumar textos, pero ... ¡también puedes multiplicarlos! (por
-un número ...). Observa esto:
+un número...). Observa esto:
 
 **Código:**
 
@@ -112,7 +112,7 @@ Antes de ir más allá, debemos asegurarnos de entender la diferencia entre
 números y dígitos. `12` es un número, pero `"12"` es un texto de dos
 dígitos.
 
-Juguemos con esto un poco:
+Juguemos un poco con esto:
 
 **Código:**
 
@@ -149,7 +149,7 @@ puts "2  *  5"
 ```
 
 Estos ejemplos fueron bastante directos. De cualquier modo, si no tienes
-cuidado en cómo mezclas textos y números podrías encontrarte con ...
+cuidado en cómo mezclas textos y números podrías encontrarte con...
 
 Problemas
 ---------
