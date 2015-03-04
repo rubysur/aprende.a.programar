@@ -33,7 +33,7 @@ textual (en 'letras') de `var1`, o la representación numérica de `var2`.
 ## Conversiones
 
 Para obtener la representación en texto de un objeto, simplemente escribiendo `.to_s`
-después de el objeto:
+después del objeto:
 
 *Código:*
 
@@ -84,7 +84,7 @@ Ahora probemos conversiones más interesantes (y un poco raras):
 puts '15'.to_f
 puts '99.999'.to_f
 puts '99.999'.to_i
-puts '5 es mi numero favorito.'.to_i
+puts '5 es mi número favorito.'.to_i
 puts '¿Quién pregunta acerca de 5 o lo que sea?'.to_i
 puts 'Tu mamá hizo.'.to_f
 puts 'fibroso'.to_s
@@ -109,7 +109,7 @@ devolviendo `15.0`. Después de eso, convertimos el texto `'99.999'` a un númer
 punto flotante y a un entero. El primero hizo lo que esperábamos; el entero fue,
 como siempre, redondeado hacia abajo.
 
-Luego, tuvimos ejemplos de algunos textos... *inusuales* ...  convertidos a números
+Luego, tuvimos ejemplos de algunos textos... *inusuales*...  convertidos a números
 `to_i` ignora lo primero que no entienda, y el resto del texto a partir de ahí. Así
 que lo primero va a ser convertido a `5`, pero los otros, ya que comenzaban con letras,
 fueron ignorados completamente... así que la computadora simplemente elige usar cero.
@@ -138,7 +138,7 @@ puts '20'
 ¿Por qué estas tres líneas retornan el mismo resultado? Bueno, las últimas dos deberían,
 ya que `20.to_s` *es* `'20'`. Pero, ¿qué pasa con la primera, el entero `20`? Para tal
 caso, ¿qué significa escribir *el entero* 20? Cuando escribes *2* y luego *0* en un
-papel, estas escribiendo texto, no un entero. *El entero* 20 es el número de dedos
+papel, estás escribiendo texto, no un entero. *El entero* 20 es el número de dedos
 que tengo; no es *2* seguido de un *0*.
 
 Bueno, ahí está el secreto de nuestro amigo `puts`. Antes de que `puts` trate de
@@ -236,7 +236,7 @@ luego el segundo nombre y luego el apellido. Finalmente, debería saludar
 a la persona con el nombre completo.
 
 * Escribe un programa que pregunte por el número favorito del
-usuario. Haz que tu programa agregue un número, luego sugiera el resultado
+usuario. Haz que tu programa agregue un número, luego sugiere el resultado
 como el número favorito pero _más grande y mejorado_ (Pero hazlo con tacto).
 
 Una vez que hayas terminado los dos programas (y otros que hayas
