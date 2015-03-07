@@ -109,7 +109,7 @@ devolviendo `15.0`. Después de eso, convertimos el texto `'99.999'` a un númer
 punto flotante y a un entero. El primero hizo lo que esperábamos; el entero fue,
 como siempre, redondeado hacia abajo.
 
-Luego, tuvimos ejemplos de algunos textos... *inusuales* ...  convertidos a números
+Luego, tuvimos ejemplos de algunos textos... *inusuales*...  convertidos a números
 `to_i` ignora lo primero que no entienda, y el resto del texto a partir de ahí. Así
 que lo primero va a ser convertido a `5`, pero los otros, ya que comenzaban con letras,
 fueron ignorados completamente... así que la computadora simplemente elige usar cero.
@@ -138,21 +138,21 @@ puts '20'
 ¿Por qué estas tres líneas retornan el mismo resultado? Bueno, las últimas dos deberían,
 ya que `20.to_s` *es* `'20'`. Pero, ¿qué pasa con la primera, el entero `20`? Para tal
 caso, ¿qué significa escribir *el entero* 20? Cuando escribes *2* y luego *0* en un
-papel, estas escribiendo texto, no un entero. *El entero* 20 es el número de dedos
+papel, estás escribiendo texto, no un entero. *El entero* 20 es el número de dedos
 que tengo; no es *2* seguido de un *0*.
 
 Bueno, ahí está el secreto de nuestro amigo `puts`. Antes de que `puts` trate de
 imprimir un objeto, usa `to_s` para obtener la versión en texto de ese objeto. De
 hecho, la *s* en `puts` significa *string* (que en español significa texto); `puts`
-realmente significa *put string* (que en español significa imprimir texto).
+realmente significa *put string* (que en español significa *imprimir texto*).
 
 Esto puede no parecer muy emocionante ahora, pero hay muchos, *muchos* objetos en
 Ruby (¡inclusive vas a aprender a crear tus propios objetos!), y es bueno saber que
 va a pasar cuando trates de ejecutar `puts` con un objeto bastante raro, como la
-foto de tu abuela, o un archivo de música, etc. Pero eso vendrá después ...
+foto de tu abuela o un archivo de música, etc. Pero eso vendrá después ...
 
 Mientras tanto, tenemos unos cuantos métodos para ti, y ellos nos permiten
-escribir todo tipo de programas divertidos ...
+escribir todo tipo de programas divertidos...
 
 Los Métodos `gets` y `chomp`
 ----------------------------
