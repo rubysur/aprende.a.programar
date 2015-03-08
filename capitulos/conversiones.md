@@ -33,7 +33,7 @@ textual (en 'letras') de `var1`, o la representación numérica de `var2`.
 ## Conversiones
 
 Para obtener la representación en texto de un objeto, simplemente escribiendo `.to_s`
-después de el objeto:
+después del objeto:
 
 *Código:*
 
@@ -84,7 +84,7 @@ Ahora probemos conversiones más interesantes (y un poco raras):
 puts '15'.to_f
 puts '99.999'.to_f
 puts '99.999'.to_i
-puts '5 es mi numero favorito.'.to_i
+puts '5 es mi número favorito.'.to_i
 puts '¿Quién pregunta acerca de 5 o lo que sea?'.to_i
 puts 'Tu mamá hizo.'.to_f
 puts 'fibroso'.to_s
@@ -236,7 +236,7 @@ luego el segundo nombre y luego el apellido. Finalmente, debería saludar
 a la persona con el nombre completo.
 
 * Escribe un programa que pregunte por el número favorito del
-usuario. Haz que tu programa agregue un número, luego sugiera el resultado
+usuario. Haz que tu programa agregue un número, luego sugiere el resultado
 como el número favorito pero _más grande y mejorado_ (Pero hazlo con tacto).
 
 Una vez que hayas terminado los dos programas (y otros que hayas
