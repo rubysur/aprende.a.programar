@@ -373,7 +373,7 @@ submarino amarillo
 
 Vamos a tratar con el experimento de sicología otra vez, pero esta vez vamos a
 escribir un método que haga las preguntas por nosotros. Se tendrá que tomar la pregunta
-como un parámetro, y devolver `true` si contestan que `sí`, y `false` si responden que `no`.
+como un parámetro, y devolver `true` si contestan que `sí` y `false` si responden que `no`.
 (Aún cuando la mayoría de veces ignoramos la respuesta, sigue siendo una buena idea
 que nuestro método devuelva la respuesta. De esta manera se puede utilizar para la pregunta
 de mojar la cama también.) También voy a acortar el saludo y el interrogatorio de manera
@@ -412,7 +412,7 @@ mojasLaCama = preguntar '¿Mojas la cama?'  #  Salvamos el valor retornado.
 preguntar '¿Te gusta comer chimichangas?'
 preguntar '¿Te gusta comer sopapillas?'
 preguntar '¿Te gusta comer tamales?'
-puts 'Solo unas preguntas mas...'
+puts 'Solo unas preguntas más...'
 preguntar '¿Te gusta beber horchata?'
 preguntar '¿Te gusta comer flautas?'
 
@@ -441,7 +441,7 @@ si
 si
 ¿Te gusta comer tamales?
 si
-Solo unas preguntas mas...
+Solo unas preguntas más...
 ¿Te gusta beber horchata?
 si
 ¿Te gusta comer flautas?
@@ -474,32 +474,32 @@ Debe quedar claro en el contexto de cómo funcionan estos.)*
 def numeroEnEspanol numero
   #  Solo estamos considerando los números de 0-100.
   if numero < 0
-    return 'Por favor ingrese un numero mayor o igual a cero.'
+    return 'Por favor ingrese un número mayor o igual a cero.'
   end
   if numero > 100
-    return 'Por favor ingrese un numero menor o igual a 100'
+    return 'Por favor ingrese un número menor o igual a 100'
   end
 
-  numeroDeTexto  = ''  #  Esta es el texto que retorna.
+  numeroDeTexto  = ''  #  Este es el texto que retorna.
 
-  #  "izquierda" es cuanto del número aún falta escribir.
+  #  "izquierda" es cuando del número aún falta escribir.
   #  "escrito" es la parte que estamos escribiendo en estos momentos.
   #  escrito y izquierda... lo captas?  :)
   izquierda  = numero
-  escrito = izquierda/100          #  Cuantos cientos faltan escribir?
+  escrito = izquierda/100          #  Cuántos cientos faltan escribir?
   izquierda  = izquierda - escrito*100  #  Restar estos cientos.
 
   if escrito > 0
     return 'cien'
   end
 
-  escrito = izquierda/10          #  Cuantas decenas faltan escribir?
+  escrito = izquierda/10          #  Cuántas decenas faltan escribir?
   izquierda  = izquierda - escrito*10  #  Restar las decenas.
 
   if escrito > 0
     if escrito == 1  #  Ah-ah...
       #  No podemos escribir "diezidos" en lugar de "doce",
-      #  hemos realizado una excepción especial .
+      #  hemos realizado una excepción especial.
       if    izquierda == 0
         numeroDeTexto = numeroDeTexto + 'diez'
       elsif izquierda == 1
@@ -521,7 +521,7 @@ def numeroEnEspanol numero
       elsif izquierda == 9
         numeroDeTexto = numeroDeTexto + 'diecinueve'
       end
-      #  Desde que ya tomamos el digito faltante,
+      #  Desde que ya tomamos el dígito faltante,
       #  ya no tenemos nada que escribir.
       izquierda = 0
     elsif escrito == 2
@@ -535,7 +535,7 @@ def numeroEnEspanol numero
     elsif escrito == 3
       numeroDeTexto = numeroDeTexto + 'treinta'
     elsif escrito == 4
-      numeroDeTexto = numeroDeTexto + 'cuartenta'
+      numeroDeTexto = numeroDeTexto + 'cuarenta'
     elsif escrito == 5
       numeroDeTexto = numeroDeTexto + 'cincuenta'
     elsif escrito == 6
@@ -553,7 +553,7 @@ def numeroEnEspanol numero
     end
   end
 
-  escrito = izquierda  #  Cuanto falta para el número?
+  escrito = izquierda  #  Cuánto falta para el número?
   izquierda  = 0     #  Restar lo que falta.
 
   if escrito > 0
@@ -579,12 +579,12 @@ def numeroEnEspanol numero
   end
 
   if numeroDeTexto == ''
-    #  La unica forma que "numeroDeTexto" este vacio es que
+    #  La única forma que "numeroDeTexto" esté vacío es que
     #  "numero" sea 0.
     return 'cero'
   end
 
-  #  Si numeroDeTexto os hasta hasta aqui es que tenemos un numero
+  #  Si numeroDeTexto os hasta aqui es que tenemos un número
   #  entre 0 y 100, por lo que debemos retornar "numeroDeTexto".
   numeroDeTexto
 end
@@ -624,15 +624,15 @@ algunas matrices y tratar de limpiar un poco:
 ```ruby
 def numeroEnEspanol numero
   if numero < 0  #  No numeros negativos
-    return 'Por favor ingresar un numero que nos ea negativo.'
+    return 'Por favor ingresar un numero que no sea negativo.'
   end
   if numero == 0
     return 'cero'
   end
 
-  #  No mas casos especiales!  No mas returns!
+  #  No más casos especiales!  No más returns!
 
-  numeroDeTexto = ''  #  Esta es el texto que se retornara.
+  numeroDeTexto = ''  #  Este es el texto que se devolverá.
 
   primeraPosicion = ['uno',     'dos',       'tres',    'cuatro',     'cinco',
                'seis',     'siete',     'ocho',    'nueve']
@@ -672,18 +672,18 @@ def numeroEnEspanol numero
     end
   end
 
-  escrito = izquierda/10          #  Cuantas decenas faltan escribir?
+  escrito = izquierda/10          #  Cuántas decenas faltan escribir?
   izquierda  = izquierda - escrito*10  #  Resta de estas decenas.
 
   if escrito > 0
     if ((escrito == 1) and (izquierda > 0))
-      #  No podemos escribir "diez-dos" instead of "doce",
-      #  hacemos una excepción especial .
+      #  No podemos escribir "diez-dos" en vez de "doce",
+      #  hacemos una excepción especial.
       numeroDeTexto = numeroDeTexto + entre11Y19[izquierda-1]
-      #  Es "-1" porque entre11Y19[3] ess 'catorce', no 'trece'.
+      #  Es "-1" porque entre11Y19[3] es 'catorce', no 'trece'.
 
-      #  Ya que tomamos el digito que nos faltaba,
-      #  no tenemos nada mas que escribir.
+      #  Ya que tomamos el dígito que nos faltaba,
+      #  no tenemos nada más que escribir.
       izquierda = 0
     elsif ((escrito ==2 and (izquierda>0)))
       #  Similar para los veintipico
@@ -700,7 +700,7 @@ def numeroEnEspanol numero
     end
   end
 
-  escrito = izquierda  #  Cuantos faltan?
+  escrito = izquierda  #  Cuántos faltan?
   izquierda  = 0     #  Restar lo que falta.
 
   if escrito > 0
@@ -748,15 +748,15 @@ uno ciento ciento ciento ciento ciento ciento
 ```
 
 *Ahhhh ....* Eso está mucho, mucho mejor. El programa es bastante denso, por lo
-que puse varios comentarios. También funciona con números grandes ... aunque no
+que puse varios comentarios. También funciona con números grandes... aunque no
 tan bien como cabría esperar. Por ejemplo, creo que ' un millón de millones ' sería
-un valor de retorno más agradable para que el último número. De hecho, puedes hacer
-eso en este momento ...
+un valor de retorno más agradable para el último número. De hecho, puedes hacer
+eso en este momento...
 
 ## Algunas cosas por intentar
 
 * Ampliar al `numeroEnEspanol` . En primer lugar, poner en miles. Por lo tanto, debe devolver `un mil`
-en lugar de `diez cien` y `diez mil` en lugar de `cien cien` .
+en lugar de `diez cien` y `diez mil` en lugar de `cien cien`.
 
 * Ampliar al `numeroEnEspanol` un poco más. Ahora ponga en millones, para que pueda obtener `un millón`
 en lugar de `un mil mil`. A continuación, pruebe a añadir miles de millones y billones.
@@ -768,7 +768,7 @@ setenta y dos'`, o como se supone deben verse en las invitaciones de la boda. Te
 más ejemplos, pero yo no lo entiendo completamente. Es posible que necesite ponerse en
 contacto con un coordinador de bodas para que le ayude.
 
-* Las *"Noventa y nueve botellas de cerveza ..."* Usando numeroEnEspanol y el viejo programa,
+* Las *"Noventa y nueve botellas de cerveza..."* Usando numeroEnEspanol y el viejo programa,
 escribir las letras de esta canción en forma *correcta* esta vez.
 Penalizar a tu computador: hacer que se inicie en 9999. (No elegir un número demasiado
 grande, ya que al escribir todo eso en la pantalla de tu computador toma un buen tiempo. Cien
