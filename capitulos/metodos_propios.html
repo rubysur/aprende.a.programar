@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-github="rubysur/aprende.a.programar" data-level="9" data-basepath=".." data-revision="1408716849364">
+    <div class="book" data-github="rubysur/aprende.a.programar" data-level="9" data-basepath=".." data-revision="1425855275426">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -704,7 +704,7 @@ submarino amarillo
 </code></pre>
 <p>Vamos a tratar con el experimento de sicología otra vez, pero esta vez vamos a
 escribir un método que haga las preguntas por nosotros. Se tendrá que tomar la pregunta
-como un parámetro, y devolver <code>true</code> si contestan que <code>sí</code>, y <code>false</code> si responden que <code>no</code>.
+como un parámetro, y devolver <code>true</code> si contestan que <code>sí</code> y <code>false</code> si responden que <code>no</code>.
 (Aún cuando la mayoría de veces ignoramos la respuesta, sigue siendo una buena idea
 que nuestro método devuelva la respuesta. De esta manera se puede utilizar para la pregunta
 de mojar la cama también.) También voy a acortar el saludo y el interrogatorio de manera
@@ -740,7 +740,7 @@ mojasLaCama = preguntar <span class="hljs-string">'¿Mojas la cama?'</span>  <sp
 preguntar <span class="hljs-string">'¿Te gusta comer chimichangas?'</span>
 preguntar <span class="hljs-string">'¿Te gusta comer sopapillas?'</span>
 preguntar <span class="hljs-string">'¿Te gusta comer tamales?'</span>
-puts <span class="hljs-string">'Solo unas preguntas mas...'</span>
+puts <span class="hljs-string">'Solo unas preguntas más...'</span>
 preguntar <span class="hljs-string">'¿Te gusta beber horchata?'</span>
 preguntar <span class="hljs-string">'¿Te gusta comer flautas?'</span>
 
@@ -766,7 +766,7 @@ si
 si
 ¿Te gusta comer tamales?
 si
-Solo unas preguntas mas...
+Solo unas preguntas más...
 ¿Te gusta beber horchata?
 si
 ¿Te gusta comer flautas?
@@ -792,32 +792,32 @@ Debe quedar claro en el contexto de cómo funcionan estos.)</em></p>
 <pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> </span>numeroEnEspanol numero
   <span class="hljs-comment">#  Solo estamos considerando los números de 0-100.</span>
   <span class="hljs-keyword">if</span> numero &lt; <span class="hljs-number">0</span>
-    <span class="hljs-keyword">return</span> <span class="hljs-string">'Por favor ingrese un numero mayor o igual a cero.'</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-string">'Por favor ingrese un número mayor o igual a cero.'</span>
   <span class="hljs-keyword">end</span>
   <span class="hljs-keyword">if</span> numero &gt; <span class="hljs-number">100</span>
-    <span class="hljs-keyword">return</span> <span class="hljs-string">'Por favor ingrese un numero menor o igual a 100'</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-string">'Por favor ingrese un número menor o igual a 100'</span>
   <span class="hljs-keyword">end</span>
 
-  numeroDeTexto  = <span class="hljs-string">''</span>  <span class="hljs-comment">#  Esta es el texto que retorna.</span>
+  numeroDeTexto  = <span class="hljs-string">''</span>  <span class="hljs-comment">#  Este es el texto que retorna.</span>
 
-  <span class="hljs-comment">#  "izquierda" es cuanto del número aún falta escribir.</span>
+  <span class="hljs-comment">#  "izquierda" es cuando del número aún falta escribir.</span>
   <span class="hljs-comment">#  "escrito" es la parte que estamos escribiendo en estos momentos.</span>
   <span class="hljs-comment">#  escrito y izquierda... lo captas?  :)</span>
   izquierda  = numero
-  escrito = izquierda/<span class="hljs-number">100</span>          <span class="hljs-comment">#  Cuantos cientos faltan escribir?</span>
+  escrito = izquierda/<span class="hljs-number">100</span>          <span class="hljs-comment">#  Cuántos cientos faltan escribir?</span>
   izquierda  = izquierda - escrito*<span class="hljs-number">100</span>  <span class="hljs-comment">#  Restar estos cientos.</span>
 
   <span class="hljs-keyword">if</span> escrito &gt; <span class="hljs-number">0</span>
     <span class="hljs-keyword">return</span> <span class="hljs-string">'cien'</span>
   <span class="hljs-keyword">end</span>
 
-  escrito = izquierda/<span class="hljs-number">10</span>          <span class="hljs-comment">#  Cuantas decenas faltan escribir?</span>
+  escrito = izquierda/<span class="hljs-number">10</span>          <span class="hljs-comment">#  Cuántas decenas faltan escribir?</span>
   izquierda  = izquierda - escrito*<span class="hljs-number">10</span>  <span class="hljs-comment">#  Restar las decenas.</span>
 
   <span class="hljs-keyword">if</span> escrito &gt; <span class="hljs-number">0</span>
     <span class="hljs-keyword">if</span> escrito == <span class="hljs-number">1</span>  <span class="hljs-comment">#  Ah-ah...</span>
       <span class="hljs-comment">#  No podemos escribir "diezidos" en lugar de "doce",</span>
-      <span class="hljs-comment">#  hemos realizado una excepción especial .</span>
+      <span class="hljs-comment">#  hemos realizado una excepción especial.</span>
       <span class="hljs-keyword">if</span>    izquierda == <span class="hljs-number">0</span>
         numeroDeTexto = numeroDeTexto + <span class="hljs-string">'diez'</span>
       <span class="hljs-keyword">elsif</span> izquierda == <span class="hljs-number">1</span>
@@ -839,7 +839,7 @@ Debe quedar claro en el contexto de cómo funcionan estos.)</em></p>
       <span class="hljs-keyword">elsif</span> izquierda == <span class="hljs-number">9</span>
         numeroDeTexto = numeroDeTexto + <span class="hljs-string">'diecinueve'</span>
       <span class="hljs-keyword">end</span>
-      <span class="hljs-comment">#  Desde que ya tomamos el digito faltante,</span>
+      <span class="hljs-comment">#  Desde que ya tomamos el dígito faltante,</span>
       <span class="hljs-comment">#  ya no tenemos nada que escribir.</span>
       izquierda = <span class="hljs-number">0</span>
     <span class="hljs-keyword">elsif</span> escrito == <span class="hljs-number">2</span>
@@ -853,7 +853,7 @@ Debe quedar claro en el contexto de cómo funcionan estos.)</em></p>
     <span class="hljs-keyword">elsif</span> escrito == <span class="hljs-number">3</span>
       numeroDeTexto = numeroDeTexto + <span class="hljs-string">'treinta'</span>
     <span class="hljs-keyword">elsif</span> escrito == <span class="hljs-number">4</span>
-      numeroDeTexto = numeroDeTexto + <span class="hljs-string">'cuartenta'</span>
+      numeroDeTexto = numeroDeTexto + <span class="hljs-string">'cuarenta'</span>
     <span class="hljs-keyword">elsif</span> escrito == <span class="hljs-number">5</span>
       numeroDeTexto = numeroDeTexto + <span class="hljs-string">'cincuenta'</span>
     <span class="hljs-keyword">elsif</span> escrito == <span class="hljs-number">6</span>
@@ -871,7 +871,7 @@ Debe quedar claro en el contexto de cómo funcionan estos.)</em></p>
     <span class="hljs-keyword">end</span>
   <span class="hljs-keyword">end</span>
 
-  escrito = izquierda  <span class="hljs-comment">#  Cuanto falta para el número?</span>
+  escrito = izquierda  <span class="hljs-comment">#  Cuánto falta para el número?</span>
   izquierda  = <span class="hljs-number">0</span>     <span class="hljs-comment">#  Restar lo que falta.</span>
 
   <span class="hljs-keyword">if</span> escrito &gt; <span class="hljs-number">0</span>
@@ -897,12 +897,12 @@ Debe quedar claro en el contexto de cómo funcionan estos.)</em></p>
   <span class="hljs-keyword">end</span>
 
   <span class="hljs-keyword">if</span> numeroDeTexto == <span class="hljs-string">''</span>
-    <span class="hljs-comment">#  La unica forma que "numeroDeTexto" este vacio es que</span>
+    <span class="hljs-comment">#  La única forma que "numeroDeTexto" esté vacío es que</span>
     <span class="hljs-comment">#  "numero" sea 0.</span>
     <span class="hljs-keyword">return</span> <span class="hljs-string">'cero'</span>
   <span class="hljs-keyword">end</span>
 
-  <span class="hljs-comment">#  Si numeroDeTexto os hasta hasta aqui es que tenemos un numero</span>
+  <span class="hljs-comment">#  Si numeroDeTexto os hasta aqui es que tenemos un número</span>
   <span class="hljs-comment">#  entre 0 y 100, por lo que debemos retornar "numeroDeTexto".</span>
   numeroDeTexto
 <span class="hljs-keyword">end</span>
@@ -937,15 +937,15 @@ algunas matrices y tratar de limpiar un poco:</li>
 <p><em>Código:</em></p>
 <pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> </span>numeroEnEspanol numero
   <span class="hljs-keyword">if</span> numero &lt; <span class="hljs-number">0</span>  <span class="hljs-comment">#  No numeros negativos</span>
-    <span class="hljs-keyword">return</span> <span class="hljs-string">'Por favor ingresar un numero que nos ea negativo.'</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-string">'Por favor ingresar un numero que no sea negativo.'</span>
   <span class="hljs-keyword">end</span>
   <span class="hljs-keyword">if</span> numero == <span class="hljs-number">0</span>
     <span class="hljs-keyword">return</span> <span class="hljs-string">'cero'</span>
   <span class="hljs-keyword">end</span>
 
-  <span class="hljs-comment">#  No mas casos especiales!  No mas returns!</span>
+  <span class="hljs-comment">#  No más casos especiales!  No más returns!</span>
 
-  numeroDeTexto = <span class="hljs-string">''</span>  <span class="hljs-comment">#  Esta es el texto que se retornara.</span>
+  numeroDeTexto = <span class="hljs-string">''</span>  <span class="hljs-comment">#  Este es el texto que se devolverá.</span>
 
   primeraPosicion = [<span class="hljs-string">'uno'</span>,     <span class="hljs-string">'dos'</span>,       <span class="hljs-string">'tres'</span>,    <span class="hljs-string">'cuatro'</span>,     <span class="hljs-string">'cinco'</span>,
                <span class="hljs-string">'seis'</span>,     <span class="hljs-string">'siete'</span>,     <span class="hljs-string">'ocho'</span>,    <span class="hljs-string">'nueve'</span>]
@@ -985,18 +985,18 @@ algunas matrices y tratar de limpiar un poco:</li>
     <span class="hljs-keyword">end</span>
   <span class="hljs-keyword">end</span>
 
-  escrito = izquierda/<span class="hljs-number">10</span>          <span class="hljs-comment">#  Cuantas decenas faltan escribir?</span>
+  escrito = izquierda/<span class="hljs-number">10</span>          <span class="hljs-comment">#  Cuántas decenas faltan escribir?</span>
   izquierda  = izquierda - escrito*<span class="hljs-number">10</span>  <span class="hljs-comment">#  Resta de estas decenas.</span>
 
   <span class="hljs-keyword">if</span> escrito &gt; <span class="hljs-number">0</span>
     <span class="hljs-keyword">if</span> ((escrito == <span class="hljs-number">1</span>) <span class="hljs-keyword">and</span> (izquierda &gt; <span class="hljs-number">0</span>))
-      <span class="hljs-comment">#  No podemos escribir "diez-dos" instead of "doce",</span>
-      <span class="hljs-comment">#  hacemos una excepción especial .</span>
+      <span class="hljs-comment">#  No podemos escribir "diez-dos" en vez de "doce",</span>
+      <span class="hljs-comment">#  hacemos una excepción especial.</span>
       numeroDeTexto = numeroDeTexto + entre11Y19[izquierda-<span class="hljs-number">1</span>]
-      <span class="hljs-comment">#  Es "-1" porque entre11Y19[3] ess 'catorce', no 'trece'.</span>
+      <span class="hljs-comment">#  Es "-1" porque entre11Y19[3] es 'catorce', no 'trece'.</span>
 
-      <span class="hljs-comment">#  Ya que tomamos el digito que nos faltaba,</span>
-      <span class="hljs-comment">#  no tenemos nada mas que escribir.</span>
+      <span class="hljs-comment">#  Ya que tomamos el dígito que nos faltaba,</span>
+      <span class="hljs-comment">#  no tenemos nada más que escribir.</span>
       izquierda = <span class="hljs-number">0</span>
     <span class="hljs-keyword">elsif</span> ((escrito ==<span class="hljs-number">2</span> <span class="hljs-keyword">and</span> (izquierda&gt;<span class="hljs-number">0</span>)))
       <span class="hljs-comment">#  Similar para los veintipico</span>
@@ -1013,7 +1013,7 @@ algunas matrices y tratar de limpiar un poco:</li>
     <span class="hljs-keyword">end</span>
   <span class="hljs-keyword">end</span>
 
-  escrito = izquierda  <span class="hljs-comment">#  Cuantos faltan?</span>
+  escrito = izquierda  <span class="hljs-comment">#  Cuántos faltan?</span>
   izquierda  = <span class="hljs-number">0</span>     <span class="hljs-comment">#  Restar lo que falta.</span>
 
   <span class="hljs-keyword">if</span> escrito &gt; <span class="hljs-number">0</span>
@@ -1057,14 +1057,14 @@ noventainueve ciento noventainueve ciento noventainueve
 uno ciento ciento ciento ciento ciento ciento
 </code></pre>
 <p><em>Ahhhh ....</em> Eso está mucho, mucho mejor. El programa es bastante denso, por lo
-que puse varios comentarios. También funciona con números grandes ... aunque no
+que puse varios comentarios. También funciona con números grandes... aunque no
 tan bien como cabría esperar. Por ejemplo, creo que &#39; un millón de millones &#39; sería
-un valor de retorno más agradable para que el último número. De hecho, puedes hacer
-eso en este momento ...</p>
+un valor de retorno más agradable para el último número. De hecho, puedes hacer
+eso en este momento...</p>
 <h2 id="algunas-cosas-por-intentar">Algunas cosas por intentar</h2>
 <ul>
 <li><p>Ampliar al <code>numeroEnEspanol</code> . En primer lugar, poner en miles. Por lo tanto, debe devolver <code>un mil</code>
-en lugar de <code>diez cien</code> y <code>diez mil</code> en lugar de <code>cien cien</code> .</p>
+en lugar de <code>diez cien</code> y <code>diez mil</code> en lugar de <code>cien cien</code>.</p>
 </li>
 <li><p>Ampliar al <code>numeroEnEspanol</code> un poco más. Ahora ponga en millones, para que pueda obtener <code>un millón</code>
 en lugar de <code>un mil mil</code>. A continuación, pruebe a añadir miles de millones y billones.
@@ -1076,7 +1076,7 @@ setenta y dos&#39;</code>, o como se supone deben verse en las invitaciones de l
 más ejemplos, pero yo no lo entiendo completamente. Es posible que necesite ponerse en
 contacto con un coordinador de bodas para que le ayude.</p>
 </li>
-<li><p>Las <em>&quot;Noventa y nueve botellas de cerveza ...&quot;</em> Usando numeroEnEspanol y el viejo programa,
+<li><p>Las <em>&quot;Noventa y nueve botellas de cerveza...&quot;</em> Usando numeroEnEspanol y el viejo programa,
 escribir las letras de esta canción en forma <em>correcta</em> esta vez.
 Penalizar a tu computador: hacer que se inicie en 9999. (No elegir un número demasiado
 grande, ya que al escribir todo eso en la pantalla de tu computador toma un buen tiempo. Cien

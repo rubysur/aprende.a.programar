@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-github="rubysur/aprende.a.programar" data-level="7" data-basepath=".." data-revision="1408716849364">
+    <div class="book" data-github="rubysur/aprende.a.programar" data-level="7" data-basepath=".." data-revision="1425855275426">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -403,7 +403,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_4">
+                    <section class="normal" id="section-gitbook_5">
                     
                         <h1 id="condicionales">Condicionales</h1>
 <p>Ahhhh, control de flujo. Acá es donde todo empieza a encajar. A pesar que este
@@ -589,8 +589,8 @@ nombre = gets.chomp
 que estés en un texto). Después de eso, reemplacé los comentarios con
 código funcional. Algunas personas prefieren dejar los comentarios; personalmente,
 pienso que un código bien escrito normalmente habla por si mismo. Solía utilizar más
-comentarios, pero mientras más &quot;flúido&quot; me volvía con Ruby menos los utiliza.
-Actualmente los encuentro algo distrayentes la mayor parte del tiempo. Es una opción
+comentarios, pero mientras más &quot;fluido&quot; me volvía con Ruby, menos los utilizo.
+Actualmente los encuentro algo distractivos la mayor parte del tiempo. Es una opción
 personal; tú encontrarás tu propio estilo (siempre en evolución). Así que mi siguiente
 paso se veía así:</p>
 <pre><code class="lang-ruby">puts <span class="hljs-string">'Hola, y bienvenido a la clase de 7mo año.'</span>
@@ -626,7 +626,7 @@ de todo se supone que en eso son buenas las computadoras&mdash;.</p>
 parar. Las computadoras nunca se aburren asi que si no le indicas cuando hacerlo nunca
 lo harán. Nos aseguramos que esto no pase al indicarle a la computadora que repita
 ciertas partes de un programa mientras (<code>while</code>) una cierta condición sea cierta.
-Ésto funciona de manera muy similar a como lo hace <code>if</code>:</p>
+Esto funciona de manera muy similar a como lo hace <code>if</code>:</p>
 <p><em>Código:</em></p>
 <pre><code class="lang-ruby">comando = <span class="hljs-string">''</span>
 
@@ -665,44 +665,44 @@ permitirán hacer nuestro trabajo más facil.</p>
 le dice que <em>ella</em> tiene un nombre hermoso. Yo no querría herir sus sentimientos
 (o dormir en el sillón) así que reescribámoslo:</p>
 <p><em>Código:</em></p>
-<pre><code class="lang-ruby">puts <span class="hljs-string">'Hola, ¿cual es tu nombre?'</span>
+<pre><code class="lang-ruby">puts <span class="hljs-string">'Hola, ¿cuál es tu nombre?'</span>
 nombre = gets.chomp
 puts <span class="hljs-string">'Hola, '</span> + nombre + <span class="hljs-string">'.'</span>
 <span class="hljs-keyword">if</span> nombre == <span class="hljs-string">'Chris'</span>
-  puts <span class="hljs-string">'¡Que nombre tan hermoso!'</span>
+  puts <span class="hljs-string">'¡Qué nombre tan hermoso!'</span>
 <span class="hljs-keyword">else</span>
   <span class="hljs-keyword">if</span> nombre == <span class="hljs-string">'Katy'</span>
-    puts <span class="hljs-string">'¡Que nombre tan hermoso!'</span>
+    puts <span class="hljs-string">'¡Qué nombre tan hermoso!'</span>
   <span class="hljs-keyword">end</span>
 <span class="hljs-keyword">end</span>
 </code></pre>
 <p><em>Respuesta:</em></p>
-<pre><code class="lang-html">Hola, ¿cual es tu nombre?
+<pre><code class="lang-html">Hola, ¿cuál es tu nombre?
 Katy
 Hola, Katy.
-¡Que nombre tan hermoso!
+¡Qué nombre tan hermoso!
 </code></pre>
 <p>Bueno, funciona... pero no es un programa muy bonito. ¿Por qué no? Bueno, la mejor
-regla que he aprendido de programación es la regla <em>DRY</em>: Don&#39;t Repeat Yourself_ (&quot;No
+regla que he aprendido de programación es la regla <em>DRY</em>: Don&#39;t Repeat Yourself (&quot;No
 te repitas&quot; en español). Probablemente podría escribir un libro pequeño sobre por qué es tan buena
-esta regla. En nuestro caso, hemos repetido la línea <code>puts &#39;Que nombre tan hermoso!&#39;</code>. ¿Por qué
+esta regla. En nuestro caso, hemos repetido la línea <code>puts &#39;Qué nombre tan hermoso!&#39;</code>. ¿Por qué
 es tan problemático esto? Bueno, que pasaría si cometiera un error al escribir los textos cuando
-reescribí el programa? ¿Que tal si hubiera querido cambiar de <code>&#39;hermoso&#39;</code> a <code>&#39;bonito&#39;</code> en ambas líneas?</p>
+reescribí el programa? ¿Qué tal si hubiera querido cambiar de <code>&#39;hermoso&#39;</code> a <code>&#39;bonito&#39;</code> en ambas líneas?</p>
 <p>Soy flojo, ¿recuerdas? Básicamente si quisiera que el programa haga lo mismo cuando reciba <code>&#39;Chris&#39;</code>
 o <code>&#39;Katy&#39;</code>, entonces realmente debería hacer exactamente <em>la misma cosa</em>:</p>
 <p><em>Código:</em></p>
-<pre><code class="lang-ruby">puts <span class="hljs-string">'Hola, ¿cual es tu nombre?'</span>
+<pre><code class="lang-ruby">puts <span class="hljs-string">'Hola, ¿cuál es tu nombre?'</span>
 nombre = gets.chomp
 puts <span class="hljs-string">'Hola, '</span> + nombre + <span class="hljs-string">'.'</span>
 <span class="hljs-keyword">if</span> (nombre == <span class="hljs-string">'Chris'</span> <span class="hljs-keyword">or</span> nombre == <span class="hljs-string">'Katy'</span>)
-  puts <span class="hljs-string">'¡Que nombre tan hermoso!'</span>
+  puts <span class="hljs-string">'¡Qué nombre tan hermoso!'</span>
 <span class="hljs-keyword">end</span>
 </code></pre>
 <p><em>Respuesta:</em></p>
-<pre><code class="lang-html">Hola, ¿cual es tu nombre?
+<pre><code class="lang-html">Hola, ¿cuál es tu nombre?
 Katy
 Hola, Katy.
-¡Que nombre tan hermoso!
+¡Qué nombre tan hermoso!
 </code></pre>
 <p>Mucho mejor. Para hacer que funcione, he utilizado el operador <code>or</code>. Los otros <em>operadores
 lógicos</em> son <code>and</code> y <code>not</code>. Siempre es una buena idea usar los paréntesis cuando trabajamos
@@ -750,20 +750,20 @@ que mamá.</p>
 <p>&bull;<em>&quot;99 botellas de cerveza en la pared...&quot;</em> Escribe un programa que imprima la letra del clásico
 en viajes <a href="http://en.wikipedia.org/wiki/99_Bottles_of_Beer">99 botellas de cerveza en la pared&quot;</a></p>
 <p>&bull;Escribe un programa de la Abuela Sorda. Lo que sea que le digas a la abuela (lo que sea que escribas),
-ella deberá responder con HUH?!  ¡HABLA MAS FUERTE, HIJO!, a menos que le grites (escribas todo
+ella deberá responder con HUH?!  ¡HABLA MAS FUERTE, HIJO!, a menos que le grites (que escribas todo
 en mayúsculas) Si le gritas, ella te escuchará (o al menos creerá eso) y te gritará de vuelta NO, ¡NO
 DESDE 1938!. Para hacer el programa <em>realmente</em> creíble, haz que la abuela grite un año
-distinto cada vez; tal vez un año aleatorio entre 1930 y 1950.  (Esta parte es opcional y sería mucho
-más facil si lees la sección sobre generadores de números aleatorios de Ruby al final del capítulo
+distinto cada vez; tal vez un año aleatorio entre 1930 y 1950. (Esta parte es opcional y sería mucho
+más fácil si lees la sección sobre generadores de números aleatorios de Ruby al final del capítulo
 <a href="/aprende.a.programar/capitulos/metodos.html">métodos</a>) No podrás dejar de
 hablar con la abuela hasta que le grites <code>ADIOS</code>.
-<strong>Pista:</strong> <em>¡No te olvides que </em><code>chomp</code><em>!  ¡</em><code>&#39;ADIOS&#39;</code><em>con un Enter no es lo
+<strong>Pista:</strong> <em>¡No te olvides de </em><code>chomp</code><em>!  ¡</em><code>&#39;ADIOS&#39;</code><em>con un Enter no es lo
 mismo que </em><code>&#39;ADIOS&#39;</code><em> sin uno!</em>.
 <em>*Pista 2:</em> <em>Trata de pensar que partes del programa deberían suceder una y
 otra vez. Todas ellas deberían estar en tu bucle</em> <code>while</code>.</p>
 <p>&bull; Extiende el programa de la Abuela Sorda. ¿Qué pasaría si la abuela no quiere que te vayas?
 Cuando le grites <code>ADIOS</code>, ella podría pretender que no te escucha. Cambia el programa previo para
-que tengas que gritar <code>ADIOS</code> tres veces <em>seguidas</em>. Asegúrate que tu programa: si gritas <code>ADIOS</code>
+que tengas que gritar <code>ADIOS</code> tres veces <em>seguidas</em>. Asegúrate que tu programa si gritas <code>ADIOS</code>
 tres veces, pero no seguidas, deberías seguir hablando con la abuela.</p>
 <p>&bull; Años bisiestos. Escribe un programa que pregunte por un año de inicio y uno de fin, y luego
 imprima (<code>puts</code>) todos los años bisiestos que han ocurrido entre ellos (incluyéndolos si también han
@@ -771,10 +771,10 @@ sido estos años bisiestos). Los años bisiestos son divisibles entre cuatro (co
 embargo, los años divisibles entre 100 <em>no</em> son años bisiestos (como 1800 y 1900) <strong>a
 menos</strong> que sean divisibles por 400 (como 1600 y 2000, los cuales fueron, de hecho, bisiestos).
 <em>(Sí, todo es bastante confuso, pero no tanto como tener Enero en medio del invierno, lo cual es
-algo que a veces sucede)</em></p>
+algo que a veces sucede).</em></p>
 <p>Cuando termines con ellos, ¡tómate un descanso! Haz aprendido un montón hasta ahora. ¡Felicitaciones! ¿Estás
 sorprendido de la cantidad de cosas que le puedes pedir hacer a una computadora? Unos capítulos más y
-serás capaz de programar cualquier cosas. ¡En serio! Solo mira la cantidad de cosas que puedes hacer ahora
+serás capaz de programar cualquier cosa. ¡En serio! Solo mira la cantidad de cosas que puedes hacer ahora
 que antes cuando no tenías bucles y ramificaciones.</p>
 <p>Ahora, aprendamos sobre un nuevo tipo de objeto, que permite tener control de listas de otros objetos:
 <a href="/aprende.a.programar/capitulos/matrices.html">matrices</a>.</p>

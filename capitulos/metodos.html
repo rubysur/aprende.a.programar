@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-github="rubysur/aprende.a.programar" data-level="6" data-basepath=".." data-revision="1408716849364">
+    <div class="book" data-github="rubysur/aprende.a.programar" data-level="6" data-basepath=".." data-revision="1425855275426">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -403,7 +403,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_9">
+                    <section class="normal" id="section-gitbook_10">
                     
                         <h1 id="m-todos">Métodos</h1>
 <p>Hemos visto diferentes métodos: <code>puts</code>,  <code>gets</code>,
@@ -420,13 +420,13 @@ esto. En español podemos decir: &quot;El reloj hace tic-tac&quot;. En Ruby pode
 Los programadores pueden decir que estamos &quot;llamando el método <code>tick</code> de
 <code>clock</code>&quot; o llamamos al &quot;<code>tick</code> de <code>clock</code>&quot;.</p>
 <p>Entonces, ¿has hecho la prueba? Bien. Bueno, estoy seguro que
-recordaras los métodos <code>puts</code>, <code>gets</code>, y
-<code>chomp</code>, dado que ya hablamos sobre ellos.
+recordarás los métodos <code>puts</code>, <code>gets</code> y
+<code>chomp</code>; dado que ya hablamos sobre ellos.
 Probablemente también recuerdas los métodos de conversión
 <code>to_i</code>, <code>to_f</code>, y <code>to_s</code>. Sin embargo,
 ¿has visto los otros cuatro? Porque, estos no son otros que
 nuestros viejos amigos para la aritmética ¡<code>+</code>,
-<code>-</code>, <code>*</code>, y <code>/</code>!</p>
+<code>-</code>, <code>*</code> y <code>/</code>!</p>
 <p>Entonces, como cada verbo necesita un sustantivo,
 entonces cada método necesita un objeto. Esto es generalmente fácil de
 indicar: es el que viene justo antes de un punto, como nuestro
@@ -450,17 +450,17 @@ sin embargo, es importante para entender que sucede <em>realmente</em>.</p>
 está diciendo a <code>&#39;pig&#39;</code> de hacer de multiplicando, pero <code>5*&#39;pig&#39;</code>
 está diciendo a <code>5</code> de hacer de multiplicando. <code>&#39;pig&#39;</code> sabe como
 hacer <code>5</code> copias de si mismo y agregar todos ellos juntos; sin embargo,
-<code>5</code> tendrá mucha mas dificultad en tiempo de hacer <code>&#39;pig&#39;</code> copias
+<code>5</code> tendrá mucha más dificultad en tiempo de hacer <code>&#39;pig&#39;</code> copias
 de si <em>mismo</em> y sumarlos a todos juntos.</p>
 <p>Y, por supuesto, continuaremos teniendo <code>puts</code> y <code>gets</code> para explicar.
 ¿Dónde están sus objetos? En español, puedes algunas veces dejar fuera el sustantivo;
 por ejemplo, si un villano grita &quot;¡Muere!&quot;, el sustantivo implícito es a quien él
 está gritando. En Ruby, si digo <code>puts &#39;ser o no ser&#39;</code>, lo que realmente estoy
 diciendo es <code>self.puts &#39;ser o no ser&#39;</code>.</p>
-<p>Entonces ¿que es <code>self</code>? Ésta es una variable especial que apunta al objeto en
+<p>Entonces ¿qué es <code>self</code>? Ésta es una variable especial que apunta al objeto en
 el que estás. No siempre sabemos como estar <em>en</em> un objeto, pero hasta que nos
 demos cuenta, siempre iremos a estar en un gran objeto que es... ¡el programa entero! (sin
-embargo en este caso no es posible llamarlo en forma explícita)
+embargo en este caso no es posible llamarlo en forma explícita).
 Observa lo siguiente:</p>
 <p><em>Código:</em></p>
 <pre><code class="lang-ruby"><span class="hljs-constant">NoPuedoCreerQueUnaVariableConNombreTanLargoApunteA3</span> = <span class="hljs-number">3</span>
@@ -473,10 +473,10 @@ in `<span class="hljs-tag">&lt;<span class="hljs-title">main</span>&gt;</span>':
 </code></pre>
 <p>Si no alcanzaste a comprender todo, está bien. Lo importante es que
 todo método está siendo propiedad de un objeto, incluso si no tiene
-un punto enfrente de este. Si entiendes esto estás preparado.</p>
+un punto enfrente de éste. Si entiendes esto estás preparado.</p>
 <h2 id="m-todos-imaginativos-acerca-de-strings">Métodos imaginativos acerca de Strings</h2>
 <p>Vamos a aprender unos pocos pero interesantes métodos. No tienes
-porque memorizar todos; puedes mirar esta pagina de nuevo si te
+porque memorizar todos; puedes mirar esta página de nuevo si te
 olvidas de alguno. Yo sólo quiero mostrarte una <em>pequeña</em>
 parte de lo que puede hacer un texto. De hecho, no recuerdo ni
 siquiera la mitad de los métodos para textos; pero está bien, porque
@@ -493,7 +493,7 @@ el cual nos da una version invertida de un texto:</p>
 <p><em>Código:</em></p>
 <pre><code class="lang-ruby">var1 = <span class="hljs-string">'parar'</span>
 var2 = <span class="hljs-string">'subrayado'</span>
-var3 = <span class="hljs-string">'Puedes pronunciar esta oración al reves?'</span>
+var3 = <span class="hljs-string">'Puedes pronunciar esta oración al revés?'</span>
 
 puts var1.reverse
 puts var2.reverse
@@ -505,10 +505,10 @@ puts var3
 <p><em>Resultado:</em></p>
 <pre><code class="lang-html">rarap
 odayarbus
-?sever la nóicaro atse raicnunorp sedeuP
+?séver la nóicaro atse raicnunorp sedeuP
 parar
 subrayado
-Puedes pronunciar esta oración al reves?
+Puedes pronunciar esta oración al revés?
 </code></pre>
 <p>Como puedes ver, <code>reverse</code> no revierte el orden en el string original; éste
 sólo hace una nueva versión de éste en reversa. Esto es porque <code>var1</code> continua
@@ -543,7 +543,7 @@ Sabías que hay 22 caracteres en tu nombre, Christopher David Pine
 <em>caracteres</em> en mi nombre, no el número de <em>letras</em>. Supongo
 que podríamos escribir un programa el cual nos pregunte por nuestro primer
 nombre, segundo nombre y apellidos individualmente, y entonces sumar estos tamaños
-todos juntos... hey, ¡porque no haces ésto! Comienza, esperaré.</p>
+todos juntos... hey, ¡porque no haces esto! Comienza, esperaré.</p>
 <p>¿Lo hiciste? ¡Bien! Es un lindo programa, ¿no? Después de unos pocos capítulos más,
 pienso, estarás sorprendido de lo que podrás hacer.</p>
 <p>Entonces, hay también un número de métodos para texto los cuales cambian
@@ -576,7 +576,7 @@ métodos, <code>letters</code> permanece igual. No quiero ser pesado con esto,
 pero es importante entenderlo. Hay algunos métodos los cuales <em>hacen</em> cambios a los
 objetos asociados, pero no los hemos visto aún, y no lo haremos por algún tiempo.</p>
 <p>El último tipo de métodos que veremos son los de formato visual. El primero es, <code>center</code>,
-suma espacios al comienzo y final para hacer que este centrado. Sin embargo, sólo tienes
+suma espacios al comienzo y final para hacer que esté centrado. Sin embargo, sólo tienes
 que decir <code>puts</code> a lo que quieres imprimir, y <code>+</code> a lo que quieres sumar, pero
 tienes que decir a <code>center</code> que ancho tiene que tener el string centrado. Entonces si quiero
 centrar las lineas de un poema, debería hacer algo como esto:</p>
@@ -602,7 +602,7 @@ cansado para buscar esto. (Entonces, quise alinear la parte
 de los textos. Esto es así sólo porque pienso que es más lindo de
 esta forma. Los programadores generalmente tienen duros conceptos acerca
 de que es lindo en un programa, y a menudo confrontan acerca de esto.
-Cuanto más programes, más lograras tu propio estilo.)  Hablando de ser
+Cuanto más programes, más lograrás tu propio estilo.)  Hablando de ser
 perezoso a la hora de programar, lo cual no es siempre algo malo en
 programación. Por ejemplo, fíjate como guardé el ancho del poema en la
 variable  <code>lineWidth</code>? Esto es que si entonces quiero regresar
@@ -612,7 +612,7 @@ esto podría ahorrarme un montón de tiempo. Este tipo de pereza es realmente
 una virtud en programación.</p>
 <p>Entonces, acerca del centrado... tú te darás cuenta que esto no es muy
 lindo como podría serlo un procesador de texto. Si realmente quieres un
-perfecto centrado (y quizás una fuente mas linda), entonces deberías
+perfecto centrado (y quizás una fuente más linda), entonces deberías
 ¡sólo usar un procesador de textos!. Ruby es una herramienta maravillosa,
 pero no la herramienta correcta para <em>cualquier</em> trabajo.</p>
 <p>Los otros dos métodos de formato de textos son <code>ljust</code> y
@@ -689,7 +689,7 @@ puts <span class="hljs-number">365</span>%<span class="hljs-number">7</span>
 número de semanas, más un día. Entonces si tu cumpleaños fue un Martes
 este año, el próximo año será un Miércoles. Tu también puedes usar
 flotantes con el método módulo (<code>%</code>). Básicamente, funciona de una manera
-lógica... pero voy a mostrar un poco mas como trabajar con esto.</p>
+lógica... pero voy a mostrar un poco más como trabajar con esto.</p>
 <p>Hay un último método para mencionar: <code>abs</code>. Éste sólo toma el valor
 absoluto de un número:</p>
 <p><em>Código:</em></p>
@@ -720,7 +720,7 @@ puts(rand(<span class="hljs-number">1</span>))
 puts(rand(<span class="hljs-number">1</span>))
 puts(rand(<span class="hljs-number">99999999999999999999999999999999999999999999999999999999999</span>))
 puts(<span class="hljs-string">'El pronosticador del tiempo dijo que hay '</span>+rand(<span class="hljs-number">101</span>).to_s+<span class="hljs-string">'% chances de que llueva,'</span>)
-puts(<span class="hljs-string">'pero nunca debes confiar en el.'</span>)
+puts(<span class="hljs-string">'pero nunca debes confiar en él.'</span>)
 </code></pre>
 <p><em>Resultado:</em></p>
 <pre><code class="lang-html">0.866769322351658
@@ -734,20 +734,20 @@ puts(<span class="hljs-string">'pero nunca debes confiar en el.'</span>)
 0
 22982477508131860231954108773887523861600693989518495699862
 El pronosticador del tiempo dijo que hay 47% chances de que llueva,
-pero nunca debes confiar en el.
+pero nunca debes confiar en él.
 </code></pre>
 <p>Fijate que utilicé <code>rand(101)</code> para obtener números entre <code>0</code>
 y <code>100</code>, y que el <code>rand(1)</code> siempre devuelve <code>0</code>. No
 entender el rango posible de retorno de valores es el error más grande que veo
 en gente que hace <code>rand</code>; aún programadores profesionales, más aún en
 productos finalizados que puedes comprar. Incluso tenía un reproductor de CD
-que si se configuraba en &quot;Reproducción aleatoria,&quot; reproducia
+que si se configuraba en &quot;Reproducción aleatoria,&quot; reproducía
 todas las canciones menos la última ... (Me pregunto ¿qué hubiera pasado si hubiera
 puesto un CD con sólo una canción en ella?)</p>
 <p>Algunas veces querrás que <code>rand</code> retorne el <em>mismo</em>
 random de números incluso en la misma secuencia en dos diferentes ejecuciones
 de tu programa. (Por ejemplo, una vez estaba utilizando números generados
-aleatoriamente para crear un mundo al azar por un juego de computadoras.
+aleatoriamente para crear un mundo al azar para un juego de computadoras.
 Encontré un mundo que realmente me gustó, quizás me hubiera gustado jugar de nuevo
 con éste o enviarlo a un amigo.) Con el fin de hacer esto, tu necesitas configurar
 la <em>&quot;generación de éste&quot;</em>, lo que se puede hacer con <code>srand</code>. Como

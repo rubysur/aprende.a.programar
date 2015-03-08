@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-github="rubysur/aprende.a.programar" data-level="5" data-basepath=".." data-revision="1408716849364">
+    <div class="book" data-github="rubysur/aprende.a.programar" data-level="5" data-basepath=".." data-revision="1425855275426">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -427,7 +427,7 @@ puts var1 + var2
 textual (en &#39;letras&#39;) de <code>var1</code>, o la representación numérica de <code>var2</code>.</p>
 <h2 id="conversiones">Conversiones</h2>
 <p>Para obtener la representación en texto de un objeto, simplemente escribiendo <code>.to_s</code>
-después de el objeto:</p>
+después del objeto:</p>
 <p><em>Código:</em></p>
 <pre><code class="lang-ruby">var1 = <span class="hljs-number">2</span>
 var2 = <span class="hljs-string">'5'</span>
@@ -460,7 +460,7 @@ duración del programa.</p>
 <pre><code class="lang-ruby">puts <span class="hljs-string">'15'</span>.to_f
 puts <span class="hljs-string">'99.999'</span>.to_f
 puts <span class="hljs-string">'99.999'</span>.to_i
-puts <span class="hljs-string">'5 es mi numero favorito.'</span>.to_i
+puts <span class="hljs-string">'5 es mi número favorito.'</span>.to_i
 puts <span class="hljs-string">'¿Quién pregunta acerca de 5 o lo que sea?'</span>.to_i
 puts <span class="hljs-string">'Tu mamá hizo.'</span>.to_f
 puts <span class="hljs-string">'fibroso'</span>.to_s
@@ -480,7 +480,7 @@ fibroso
 devolviendo <code>15.0</code>. Después de eso, convertimos el texto <code>&#39;99.999&#39;</code> a un número de
 punto flotante y a un entero. El primero hizo lo que esperábamos; el entero fue,
 como siempre, redondeado hacia abajo.</p>
-<p>Luego, tuvimos ejemplos de algunos textos... <em>inusuales</em> ...  convertidos a números
+<p>Luego, tuvimos ejemplos de algunos textos... <em>inusuales</em>...  convertidos a números
 <code>to_i</code> ignora lo primero que no entienda, y el resto del texto a partir de ahí. Así
 que lo primero va a ser convertido a <code>5</code>, pero los otros, ya que comenzaban con letras,
 fueron ignorados completamente... así que la computadora simplemente elige usar cero.</p>
@@ -500,18 +500,18 @@ puts <span class="hljs-string">'20'</span>
 <p>¿Por qué estas tres líneas retornan el mismo resultado? Bueno, las últimas dos deberían,
 ya que <code>20.to_s</code> <em>es</em> <code>&#39;20&#39;</code>. Pero, ¿qué pasa con la primera, el entero <code>20</code>? Para tal
 caso, ¿qué significa escribir <em>el entero</em> 20? Cuando escribes <em>2</em> y luego <em>0</em> en un
-papel, estas escribiendo texto, no un entero. <em>El entero</em> 20 es el número de dedos
+papel, estás escribiendo texto, no un entero. <em>El entero</em> 20 es el número de dedos
 que tengo; no es <em>2</em> seguido de un <em>0</em>.</p>
 <p>Bueno, ahí está el secreto de nuestro amigo <code>puts</code>. Antes de que <code>puts</code> trate de
 imprimir un objeto, usa <code>to_s</code> para obtener la versión en texto de ese objeto. De
 hecho, la <em>s</em> en <code>puts</code> significa <em>string</em> (que en español significa texto); <code>puts</code>
-realmente significa <em>put string</em> (que en español significa imprimir texto).</p>
+realmente significa <em>put string</em> (que en español significa <em>imprimir texto</em>).</p>
 <p>Esto puede no parecer muy emocionante ahora, pero hay muchos, <em>muchos</em> objetos en
 Ruby (¡inclusive vas a aprender a crear tus propios objetos!), y es bueno saber que
 va a pasar cuando trates de ejecutar <code>puts</code> con un objeto bastante raro, como la
-foto de tu abuela, o un archivo de música, etc. Pero eso vendrá después ...</p>
+foto de tu abuela o un archivo de música, etc. Pero eso vendrá después ...</p>
 <p>Mientras tanto, tenemos unos cuantos métodos para ti, y ellos nos permiten
-escribir todo tipo de programas divertidos ...</p>
+escribir todo tipo de programas divertidos...</p>
 <h2 id="los-m-todos-gets-y-chomp-">Los Métodos <code>gets</code> y <code>chomp</code></h2>
 <p>Si <code>puts</code> significa <em>put string</em>, estoy seguro que puedes adivinar que significa
 <code>gets</code>, <em>get string</em> (recibir texto). Y así como <code>puts</code> siempre devuelve texto,
@@ -569,7 +569,7 @@ luego el segundo nombre y luego el apellido. Finalmente, debería saludar
 a la persona con el nombre completo.</p>
 </li>
 <li><p>Escribe un programa que pregunte por el número favorito del
-usuario. Haz que tu programa agregue un número, luego sugiera el resultado
+usuario. Haz que tu programa agregue un número, luego sugiere el resultado
 como el número favorito pero <em>más grande y mejorado</em> (Pero hazlo con tacto).</p>
 </li>
 </ul>

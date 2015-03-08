@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-github="rubysur/aprende.a.programar" data-level="8" data-basepath=".." data-revision="1408716849364">
+    <div class="book" data-github="rubysur/aprende.a.programar" data-level="8" data-basepath=".." data-revision="1425855275426">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -403,7 +403,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_10">
+                    <section class="normal" id="section-gitbook_9">
                     
                         <h1 id="matrices-e-iteraciones">Matrices e Iteraciones</h1>
 <p>Vamos a escribir un programa el cual nos pida digitar tantas
@@ -434,8 +434,8 @@ conteniendo un número simple, luego una matriz que contiene
 dos textos. Siguiendo, tenemos una simple asignación, luego
 un array conteniendo tres objetos, de los cuales el último
 es la matriz <code>&#39;[true, false]&#39;</code>. Recuerda, variables
-no son objetos, entonces nuestra ultima matriz es en realidad
-un flotante, un <em>texto</em>, y una matriz. Aún asi si
+no son objetos, entonces nuestra última matriz es en realidad
+un flotante, un <em>texto</em> y una matriz. Aún si
 nosotros hubieramos puesto <code>&#39;flavor&#39;</code> a punto o algo más,
 esto no hubiera cambiado la matriz.</p>
 <p>Para ayudarnos a encontrar un objeto particular en una matriz,
@@ -451,7 +451,7 @@ puts names
 puts names[<span class="hljs-number">0</span>]
 puts names[<span class="hljs-number">1</span>]
 puts names[<span class="hljs-number">2</span>]
-puts names[<span class="hljs-number">3</span>]  <span class="hljs-comment">#  Este esta fuera del rango.</span>
+puts names[<span class="hljs-number">3</span>]  <span class="hljs-comment">#  Éste está fuera del rango.</span>
 </code></pre>
 <p><em>Resultado:</em></p>
 <pre><code class="lang-html">Ada
@@ -488,13 +488,13 @@ respuesta es nada. ¿Qué hay en la posición tres? Nada.
 ¿Qué hay en <code>&#39;names[3]&#39;</code>?  <code>&#39;nil&#39;</code>: Es la forma Ruby
 de decir &quot;nada&quot;. <code>&#39;nil&#39;</code>  es un objeto especial que
 significa &quot;no hay ningún objeto&quot;.</p>
-<p>Si todo este divertido numerado de posiciones esta molestándote,
+<p>Si todo este divertido numerado de posiciones está molestándote,
 ¡no te preocupes! También, podemos evitar esto completamente usando
 varios metodos para matrices, como el que sigue:</p>
 <h2 id="el-metodo-each-">El Metodo <code>&#39;each&#39;</code></h2>
 <p><code>&#39;each&#39;</code> nos permite hacer algo (lo que queramos)
-a <em>cada</em> objeto que apunte. Asi, si queremos decir algo
-bueno acerca de cada lenguaje en la matriz de abajo, podriamos hacer
+a <em>cada</em> objeto que apunte. Así, si queremos decir algo
+bueno acerca de cada lenguaje en la matriz de abajo, podríamos hacer
 esto:</p>
 <p><em>Código:</em></p>
 <pre><code class="lang-ruby">lenguajes = [<span class="hljs-string">'Inglés'</span>, <span class="hljs-string">'Alemán'</span>, <span class="hljs-string">'Ruby'</span>]
@@ -518,13 +518,13 @@ puts <span class="hljs-string">'...'</span>
 ...
 </code></pre>
 <p>¿Qué acaba de ocurrir? Bueno, tenemos permitido ir a través
-de cada objeto en la matriz sin utilizar ningun número, así
+de cada objeto en la matriz sin utilizar ningún número, así
 esto es definitivamente mejor. Traducido al español
-diriamos que: Para cada <code>&#39;each&#39;</code> objeto en <code>&#39;lenguajes&#39;</code>,
+diriamos que: para cada <code>&#39;each&#39;</code> objeto en <code>&#39;lenguajes&#39;</code>,
 apunta la variable <code>&#39;leng&#39;</code> al objeto y entonces <code>&#39;do&#39;</code>
 (do = hacer) todo lo que te digo, hasta que llegues al <code>&#39;end&#39;</code>.
 (Sólo para que sepas, C++ es otro lenguaje de programación. Este es
-mucho mas difícil de aprender que Ruby; por lo general, un programa
+mucho más difícil de aprender que Ruby; por lo general, un programa
 hecho en C++ será muchas veces más extenso que un programa en Ruby
 que haga la misma funcionalidad)</p>
 <p>Tú estarás pensando para ti mismo, &quot;Esto es un montón de bucles
@@ -535,7 +535,7 @@ un método. <code>&#39;while&#39;</code> y <code>&#39;end&#39;</code>; tal como 
 Ellos son una parte fundamental del lenguaje Ruby,
 tal como <code>&#39;=&#39;</code> y los paréntesis son tipos de puntuación como en español.</p>
 <p>Pero no <code>&#39;each&#39;</code>; <code>&#39;each&#39;</code> es solo otro método de la matriz.
-Métodos como `&#39;each&#39; los cuales &#39;actuan como&#39; bucles son a menudo
+Métodos como <code>&#39;each&#39;</code> los cuales &#39;actuan como&#39; bucles son a menudo
 llamados <em>iteradores</em>.</p>
 <p>Algo para saber sobre iteradores es que estos son siempre seguidos por
 <code>&#39;do&#39;</code>...<code>&#39;end&#39;</code>.
@@ -553,10 +553,10 @@ para <em>entero</em>!</p>
 Hip-Hip-Hooray!
 Hip-Hip-Hooray!
 </code></pre>
-<h2 id="mas-m-todos-para-matrices">Mas métodos para Matrices</h2>
+<h2 id="m-s-m-todos-para-matrices">Más métodos para Matrices</h2>
 <p>Entonces hemos aprendido sobre <code>&#39;each&#39;</code>, pero hay muchos métodos
 más... al menos muchos como métodos para matrices. De hecho, algunos de ellos
-(como <code>&#39;length&#39;</code>, <code>&#39;reverse&#39;</code>, <code>&#39;+&#39;</code>, y <code>&#39;*&#39;</code> )
+(como <code>&#39;length&#39;</code>, <code>&#39;reverse&#39;</code>, <code>&#39;+&#39;</code>, y <code>&#39;*&#39;</code>)
 trabajan igual que lo hacen para textos, excepto que ellos operan sobre
 las posiciones de una matriz y no sobre letras de un texto. Otros, como
 <code>&#39;last&#39;</code> y <code>&#39;join&#39;</code>, son específicos de matrices. Aún otros,
@@ -565,7 +565,7 @@ así como con métodos para textos, no tienes que recordar todos, puedes
 recurrir a recordar sobre ellos buscando información.</p>
 <p>Primero, vamos a echar un vistazo a <code>&#39;to_s&#39;</code> y <code>&#39;join&#39;</code>.
 <code>&#39;join&#39;</code> trabaja tal como <code>&#39;to_s&#39;</code> lo hace, excepto que
-este agrega un texto entre los objetos de la matriz.
+éste agrega un texto entre los objetos de la matriz.
 Vamos a mirar un poco:</p>
 <p><em>Código:</em></p>
 <pre><code class="lang-ruby">alimentos = [<span class="hljs-string">'artichoke'</span>, <span class="hljs-string">'brioche'</span>, <span class="hljs-string">'caramel'</span>]
@@ -597,17 +597,17 @@ artichoke  :)  brioche  :)  caramel  8)
 solo llama <code>&#39;puts&#39;</code> sobre cada uno de los objetos en la matriz.
 Esto es porque <code>&#39;puts&#39;</code> con una matriz vacía 200 veces no hace nada; la
 matriz no apunta a nada; entonces no hay nada para <code>&#39;puts&#39;</code>. (Hacer nada
-200 veces continúa siendo hacer nada)</p>
+200 veces continúa siendo hacer nada).</p>
 <p>Trata de usar <code>&#39;puts&#39;</code> en una matriz conteniendo otras matrices; ¿hace lo
 que esperabas que hiciera?</p>
-<p>También, te habrás dado cuenta que dejé fuera el texto vacio cuando quise
+<p>También, te habrás dado cuenta que dejé fuera el texto vacío cuando quise
 hacer <code>&#39;puts&#39;</code> de una línea en blanco? Esto hace lo mismo.</p>
-<p>Ahora vamos a echar un vistazo a <code>&#39;push&#39;</code>, <code>&#39;pop&#39;</code>, y  <code>&#39;last&#39;</code>.
+<p>Ahora vamos a echar un vistazo a <code>&#39;push&#39;</code>, <code>&#39;pop&#39;</code> y  <code>&#39;last&#39;</code>.
 Los métodos <code>&#39;push&#39;</code> y <code>&#39;pop&#39;</code> son una suerte de métodos opuestos como
 lo son <code>&#39;+&#39;</code> y <code>&#39;-&#39;</code>. <code>&#39;push&#39;</code> agrega un objeto al final de la matriz,
 y <code>&#39;pop&#39;</code> quita el último objeto desde la matriz (y te dice que objeto es).
 <code>&#39;last&#39;</code> es similar a <code>&#39;pop&#39;</code> en el sentido que te indica que hay al final
-de la matriz, excepto que este deja la matriz. De nuevo, <code>&#39;push&#39;</code> y <code>&#39;pop&#39;</code>
+de la matriz, excepto que éste deja la matriz. De nuevo, <code>&#39;push&#39;</code> y <code>&#39;pop&#39;</code>
 en realidad cambian la matriz:</p>
 <p><em>Código:</em></p>
 <pre><code class="lang-ruby">favoritos = []
@@ -638,7 +638,7 @@ version ordenada de una matriz: <code>&#39;sort&#39;</code>. Usalo!</p>
 </li>
 <li><p>Escribe el programa sugerido anteriormente sin usar
 el método <code>&#39;sort&#39;</code>.  Una gran parte de la programación es la solución de
-problemas, entonces ¡obtén toda la practica que puedas!</p>
+problemas, entonces ¡obtén toda la práctica que puedas!</p>
 </li>
 <li><p>Reescribe tu programa <code>Tabla de contenidos</code> (en el capítulo sobre <code>&#39;métodos&#39;</code>).
 Comienza el programa con una matriz conteniendo toda la información de tu

@@ -1,17 +1,17 @@
 CACHE MANIFEST
-# Revision 1408716849365
+# Revision 1425855275427
 
 CACHE:
 index.html
 capitulos/instalacion.html
+capitulos/clases.html
 capitulos/acerca.html
 capitulos/condicionales.html
-capitulos/clases.html
 capitulos/conversiones.html
 capitulos/fin.html
 capitulos/bloques.html
-capitulos/metodos.html
 capitulos/matrices.html
+capitulos/metodos.html
 capitulos/metodos_propios.html
 capitulos/numeros.html
 capitulos/textos.html
