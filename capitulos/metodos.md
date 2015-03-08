@@ -17,13 +17,13 @@ Los programadores pueden decir que estamos "llamando el método `tick` de
 `clock`" o llamamos al "`tick` de `clock`".
 
 Entonces, ¿has hecho la prueba? Bien. Bueno, estoy seguro que
-recordaras los métodos `puts`, `gets`, y
-`chomp`, dado que ya hablamos sobre ellos.
+recordarás los métodos `puts`, `gets` y
+`chomp`; dado que ya hablamos sobre ellos.
 Probablemente también recuerdas los métodos de conversión
 `to_i`, `to_f`, y `to_s`. Sin embargo,
 ¿has visto los otros cuatro? Porque, estos no son otros que
 nuestros viejos amigos para la aritmética ¡`+`,
-`-`, `*`, y `/`!
+`-`, `*` y `/`!
 
 Entonces, como cada verbo necesita un sustantivo,
 entonces cada método necesita un objeto. Esto es generalmente fácil de
@@ -56,7 +56,7 @@ Esto también nos da un profundo entendimiento de porque podemos hacer
 está diciendo a `'pig'` de hacer de multiplicando, pero `5*'pig'`
 está diciendo a `5` de hacer de multiplicando. `'pig'` sabe como
 hacer `5` copias de si mismo y agregar todos ellos juntos; sin embargo,
-`5` tendrá mucha mas dificultad en tiempo de hacer `'pig'` copias
+`5` tendrá mucha más dificultad en tiempo de hacer `'pig'` copias
 de si *mismo* y sumarlos a todos juntos.
 
 Y, por supuesto, continuaremos teniendo `puts` y `gets` para explicar.
@@ -65,10 +65,10 @@ por ejemplo, si un villano grita "¡Muere!", el sustantivo implícito es a quien
 está gritando. En Ruby, si digo `puts 'ser o no ser'`, lo que realmente estoy
 diciendo es `self.puts 'ser o no ser'`.
 
-Entonces ¿que es `self`? Ésta es una variable especial que apunta al objeto en
+Entonces ¿qué es `self`? Ésta es una variable especial que apunta al objeto en
 el que estás. No siempre sabemos como estar *en* un objeto, pero hasta que nos
 demos cuenta, siempre iremos a estar en un gran objeto que es... ¡el programa entero! (sin
-embargo en este caso no es posible llamarlo en forma explícita)
+embargo en este caso no es posible llamarlo en forma explícita).
 Observa lo siguiente:
 
 *Código:*
@@ -88,13 +88,13 @@ in `<main>': private method `puts' called for main:Object (NoMethodError)
 
 Si no alcanzaste a comprender todo, está bien. Lo importante es que
 todo método está siendo propiedad de un objeto, incluso si no tiene
-un punto enfrente de este. Si entiendes esto estás preparado.
+un punto enfrente de éste. Si entiendes esto estás preparado.
 
 Métodos imaginativos acerca de Strings
 --------------------------------------
 
 Vamos a aprender unos pocos pero interesantes métodos. No tienes
-porque memorizar todos; puedes mirar esta pagina de nuevo si te
+porque memorizar todos; puedes mirar esta página de nuevo si te
 olvidas de alguno. Yo sólo quiero mostrarte una *pequeña*
 parte de lo que puede hacer un texto. De hecho, no recuerdo ni
 siquiera la mitad de los métodos para textos; pero está bien, porque
@@ -116,7 +116,7 @@ el cual nos da una version invertida de un texto:
 ```ruby
 var1 = 'parar'
 var2 = 'subrayado'
-var3 = 'Puedes pronunciar esta oración al reves?'
+var3 = 'Puedes pronunciar esta oración al revés?'
 
 puts var1.reverse
 puts var2.reverse
@@ -131,10 +131,10 @@ puts var3
 ```html
 rarap
 odayarbus
-?sever la nóicaro atse raicnunorp sedeuP
+?séver la nóicaro atse raicnunorp sedeuP
 parar
 subrayado
-Puedes pronunciar esta oración al reves?
+Puedes pronunciar esta oración al revés?
 ```
 
 Como puedes ver, `reverse` no revierte el orden en el string original; éste
@@ -186,7 +186,7 @@ No, no conocía esto.  **Nota:** esto es el número de
 *caracteres* en mi nombre, no el número de *letras*. Supongo
 que podríamos escribir un programa el cual nos pregunte por nuestro primer
 nombre, segundo nombre y apellidos individualmente, y entonces sumar estos tamaños
-todos juntos... hey, ¡porque no haces ésto! Comienza, esperaré.
+todos juntos... hey, ¡porque no haces esto! Comienza, esperaré.
 
 ¿Lo hiciste? ¡Bien! Es un lindo programa, ¿no? Después de unos pocos capítulos más,
 pienso, estarás sorprendido de lo que podrás hacer.
@@ -229,7 +229,7 @@ pero es importante entenderlo. Hay algunos métodos los cuales *hacen* cambios a
 objetos asociados, pero no los hemos visto aún, y no lo haremos por algún tiempo.
 
 El último tipo de métodos que veremos son los de formato visual. El primero es, `center`,
-suma espacios al comienzo y final para hacer que este centrado. Sin embargo, sólo tienes
+suma espacios al comienzo y final para hacer que esté centrado. Sin embargo, sólo tienes
 que decir `puts` a lo que quieres imprimir, y `+` a lo que quieres sumar, pero
 tienes que decir a `center` que ancho tiene que tener el string centrado. Entonces si quiero
 centrar las lineas de un poema, debería hacer algo como esto:
@@ -261,7 +261,7 @@ cansado para buscar esto. (Entonces, quise alinear la parte
 de los textos. Esto es así sólo porque pienso que es más lindo de
 esta forma. Los programadores generalmente tienen duros conceptos acerca
 de que es lindo en un programa, y a menudo confrontan acerca de esto.
-Cuanto más programes, más lograras tu propio estilo.)  Hablando de ser
+Cuanto más programes, más lograrás tu propio estilo.)  Hablando de ser
 perezoso a la hora de programar, lo cual no es siempre algo malo en
 programación. Por ejemplo, fíjate como guardé el ancho del poema en la
 variable  `lineWidth`? Esto es que si entonces quiero regresar
@@ -272,7 +272,7 @@ una virtud en programación.
 
 Entonces, acerca del centrado... tú te darás cuenta que esto no es muy
 lindo como podría serlo un procesador de texto. Si realmente quieres un
-perfecto centrado (y quizás una fuente mas linda), entonces deberías
+perfecto centrado (y quizás una fuente más linda), entonces deberías
 ¡sólo usar un procesador de textos!. Ruby es una herramienta maravillosa,
 pero no la herramienta correcta para *cualquier* trabajo.
 
@@ -371,7 +371,7 @@ De la última línea, aprendimos que un año (no bisiesto) tienen algún
 número de semanas, más un día. Entonces si tu cumpleaños fue un Martes
 este año, el próximo año será un Miércoles. Tu también puedes usar
 flotantes con el método módulo (`%`). Básicamente, funciona de una manera
-lógica... pero voy a mostrar un poco mas como trabajar con esto.
+lógica... pero voy a mostrar un poco más como trabajar con esto.
 
 Hay un último método para mencionar: `abs`. Éste sólo toma el valor
 absoluto de un número:
@@ -416,7 +416,7 @@ puts(rand(1))
 puts(rand(1))
 puts(rand(99999999999999999999999999999999999999999999999999999999999))
 puts('El pronosticador del tiempo dijo que hay '+rand(101).to_s+'% chances de que llueva,')
-puts('pero nunca debes confiar en el.')
+puts('pero nunca debes confiar en él.')
 ```
 
 *Resultado:*
@@ -433,7 +433,7 @@ puts('pero nunca debes confiar en el.')
 0
 22982477508131860231954108773887523861600693989518495699862
 El pronosticador del tiempo dijo que hay 47% chances de que llueva,
-pero nunca debes confiar en el.
+pero nunca debes confiar en él.
 ```
 
 Fijate que utilicé `rand(101)` para obtener números entre `0`
@@ -441,14 +441,14 @@ y `100`, y que el `rand(1)` siempre devuelve `0`. No
 entender el rango posible de retorno de valores es el error más grande que veo
 en gente que hace `rand`; aún programadores profesionales, más aún en
 productos finalizados que puedes comprar. Incluso tenía un reproductor de CD
-que si se configuraba en "Reproducción aleatoria," reproducia
+que si se configuraba en "Reproducción aleatoria," reproducía
 todas las canciones menos la última ... (Me pregunto ¿qué hubiera pasado si hubiera
 puesto un CD con sólo una canción en ella?)
 
 Algunas veces querrás que `rand` retorne el *mismo*
 random de números incluso en la misma secuencia en dos diferentes ejecuciones
 de tu programa. (Por ejemplo, una vez estaba utilizando números generados
-aleatoriamente para crear un mundo al azar por un juego de computadoras.
+aleatoriamente para crear un mundo al azar para un juego de computadoras.
 Encontré un mundo que realmente me gustó, quizás me hubiera gustado jugar de nuevo
 con éste o enviarlo a un amigo.) Con el fin de hacer esto, tu necesitas configurar
 la *"generación de éste"*, lo que se puede hacer con `srand`. Como
