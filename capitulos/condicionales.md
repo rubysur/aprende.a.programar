@@ -261,8 +261,8 @@ Todo lo que aparezca luego de un `#` se considera un comentario  (a menos, claro
 que estés en un texto). Después de eso, reemplacé los comentarios con
 código funcional. Algunas personas prefieren dejar los comentarios; personalmente,
 pienso que un código bien escrito normalmente habla por si mismo. Solía utilizar más
-comentarios, pero mientras más "flúido" me volvía con Ruby menos los utiliza.
-Actualmente los encuentro algo distrayentes la mayor parte del tiempo. Es una opción
+comentarios, pero mientras más "fluido" me volvía con Ruby, menos los utilizo.
+Actualmente los encuentro algo distractivos la mayor parte del tiempo. Es una opción
 personal; tú encontrarás tu propio estilo (siempre en evolución). Así que mi siguiente
 paso se veía así:
 
@@ -306,7 +306,7 @@ Cuando le dices a la computadora que siga repitiendo algo, también debes decirl
 parar. Las computadoras nunca se aburren asi que si no le indicas cuando hacerlo nunca
 lo harán. Nos aseguramos que esto no pase al indicarle a la computadora que repita
 ciertas partes de un programa mientras (`while`) una cierta condición sea cierta.
-Ésto funciona de manera muy similar a como lo hace `if`:
+Esto funciona de manera muy similar a como lo hace `if`:
 
 *Código:*
 
@@ -360,14 +360,14 @@ le dice que _ella_ tiene un nombre hermoso. Yo no querría herir sus sentimiento
 *Código:*
 
 ```ruby
-puts 'Hola, ¿cual es tu nombre?'
+puts 'Hola, ¿cuál es tu nombre?'
 nombre = gets.chomp
 puts 'Hola, ' + nombre + '.'
 if nombre == 'Chris'
-  puts '¡Que nombre tan hermoso!'
+  puts '¡Qué nombre tan hermoso!'
 else
   if nombre == 'Katy'
-    puts '¡Que nombre tan hermoso!'
+    puts '¡Qué nombre tan hermoso!'
   end
 end
 ```
@@ -375,18 +375,18 @@ end
 *Respuesta:*
 
 ```html
-Hola, ¿cual es tu nombre?
+Hola, ¿cuál es tu nombre?
 Katy
 Hola, Katy.
-¡Que nombre tan hermoso!
+¡Qué nombre tan hermoso!
 ```
 
 Bueno, funciona... pero no es un programa muy bonito. ¿Por qué no? Bueno, la mejor
-regla que he aprendido de programación es la regla _DRY_: Don't Repeat Yourself_ ("No
+regla que he aprendido de programación es la regla _DRY_: Don't Repeat Yourself ("No
 te repitas" en español). Probablemente podría escribir un libro pequeño sobre por qué es tan buena
-esta regla. En nuestro caso, hemos repetido la línea `puts 'Que nombre tan hermoso!'`. ¿Por qué
+esta regla. En nuestro caso, hemos repetido la línea `puts 'Qué nombre tan hermoso!'`. ¿Por qué
 es tan problemático esto? Bueno, que pasaría si cometiera un error al escribir los textos cuando
-reescribí el programa? ¿Que tal si hubiera querido cambiar de `'hermoso'` a `'bonito'` en ambas líneas?
+reescribí el programa? ¿Qué tal si hubiera querido cambiar de `'hermoso'` a `'bonito'` en ambas líneas?
 
 Soy flojo, ¿recuerdas? Básicamente si quisiera que el programa haga lo mismo cuando reciba `'Chris'`
 o `'Katy'`, entonces realmente debería hacer exactamente _la misma cosa_:
@@ -394,21 +394,21 @@ o `'Katy'`, entonces realmente debería hacer exactamente _la misma cosa_:
 *Código:*
 
 ```ruby
-puts 'Hola, ¿cual es tu nombre?'
+puts 'Hola, ¿cuál es tu nombre?'
 nombre = gets.chomp
 puts 'Hola, ' + nombre + '.'
 if (nombre == 'Chris' or nombre == 'Katy')
-  puts '¡Que nombre tan hermoso!'
+  puts '¡Qué nombre tan hermoso!'
 end
 ```
 
 *Respuesta:*
 
 ```html
-Hola, ¿cual es tu nombre?
+Hola, ¿cuál es tu nombre?
 Katy
 Hola, Katy.
-¡Que nombre tan hermoso!
+¡Qué nombre tan hermoso!
 ```
 
 Mucho mejor. Para hacer que funcione, he utilizado el operador `or`. Los otros *operadores
@@ -469,21 +469,21 @@ Algunas cosas por intentar
 en viajes <a href="http://en.wikipedia.org/wiki/99_Bottles_of_Beer">99 botellas de cerveza en la pared"</a>
 
 &bull;Escribe un programa de la Abuela Sorda. Lo que sea que le digas a la abuela (lo que sea que escribas),
-ella deberá responder con HUH?!  ¡HABLA MAS FUERTE, HIJO!, a menos que le grites (escribas todo
+ella deberá responder con HUH?!  ¡HABLA MAS FUERTE, HIJO!, a menos que le grites (que escribas todo
 en mayúsculas) Si le gritas, ella te escuchará (o al menos creerá eso) y te gritará de vuelta NO, ¡NO
 DESDE 1938!. Para hacer el programa *realmente* creíble, haz que la abuela grite un año
-distinto cada vez; tal vez un año aleatorio entre 1930 y 1950.  (Esta parte es opcional y sería mucho
-más facil si lees la sección sobre generadores de números aleatorios de Ruby al final del capítulo
+distinto cada vez; tal vez un año aleatorio entre 1930 y 1950. (Esta parte es opcional y sería mucho
+más fácil si lees la sección sobre generadores de números aleatorios de Ruby al final del capítulo
 [métodos](/aprende.a.programar/capitulos/metodos.html)) No podrás dejar de
 hablar con la abuela hasta que le grites `ADIOS`.
-**Pista:** *¡No te olvides que *`chomp`*!  ¡*`'ADIOS'`*con un Enter no es lo
+**Pista:** *¡No te olvides de *`chomp`*!  ¡*`'ADIOS'`*con un Enter no es lo
 mismo que *`'ADIOS'`* sin uno!*.
 **Pista 2:* *Trata de pensar que partes del programa deberían suceder una y
 otra vez. Todas ellas deberían estar en tu bucle* `while`.
 
 &bull; Extiende el programa de la Abuela Sorda. ¿Qué pasaría si la abuela no quiere que te vayas?
 Cuando le grites `ADIOS`, ella podría pretender que no te escucha. Cambia el programa previo para
-que tengas que gritar `ADIOS` tres veces *seguidas*. Asegúrate que tu programa: si gritas `ADIOS`
+que tengas que gritar `ADIOS` tres veces *seguidas*. Asegúrate que tu programa si gritas `ADIOS`
 tres veces, pero no seguidas, deberías seguir hablando con la abuela.
 
 &bull; Años bisiestos. Escribe un programa que pregunte por un año de inicio y uno de fin, y luego
@@ -492,11 +492,11 @@ sido estos años bisiestos). Los años bisiestos son divisibles entre cuatro (co
 embargo, los años divisibles entre 100 *no* son años bisiestos (como 1800 y 1900) **a
 menos** que sean divisibles por 400 (como 1600 y 2000, los cuales fueron, de hecho, bisiestos).
 *(Sí, todo es bastante confuso, pero no tanto como tener Enero en medio del invierno, lo cual es
-algo que a veces sucede)*
+algo que a veces sucede).*
 
 Cuando termines con ellos, ¡tómate un descanso! Haz aprendido un montón hasta ahora. ¡Felicitaciones! ¿Estás
 sorprendido de la cantidad de cosas que le puedes pedir hacer a una computadora? Unos capítulos más y
-serás capaz de programar cualquier cosas. ¡En serio! Solo mira la cantidad de cosas que puedes hacer ahora
+serás capaz de programar cualquier cosa. ¡En serio! Solo mira la cantidad de cosas que puedes hacer ahora
 que antes cuando no tenías bucles y ramificaciones.
 
 Ahora, aprendamos sobre un nuevo tipo de objeto, que permite tener control de listas de otros objetos:
