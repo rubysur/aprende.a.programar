@@ -2,7 +2,7 @@ Bloques y Procedimientos
 ========================
 
 Esta es definitivamente una de las mejores herramientas de Ruby.
-Algunos lenguajes tienen esta herramienta, pienso que la llamaran
+Algunos lenguajes tienen esta herramienta, pienso que la llamarán
 de otra forma (como *closures*), pero la mayoría de los más
 populares no lo hacen, una pena.
 
@@ -65,16 +65,16 @@ Muy bien, entonces hemos visto que son los bloques y procs, y como usarlos, pero
 hay más cosas que no podemos hacer con métodos. En particular, no
 puedes pasar métodos a otros métodos (pero puedes pasar procs dentro de métodos),
 y métodos no pueden retornar otros métodos (pero ellos pueden retornar procs). Esto
-es simplemente porque procs son objetos; los métodos no son objetos
+es simplemente porque procs son objetos; los métodos no son objetos.
 
 (De hecho, ¿es algo familiar para tí? Sí, tu has visto bloques antes... cuando aprendiste
-sobre iteradores. Pero vamos a hablar un poco más acerca de esto en breve)
+sobre iteradores. Pero vamos a hablar un poco más acerca de esto en breve).
 
 ## Métodos que reciben Procedimientos
 
 Cuando pasamos un proc en un método podemos controlar cómo o cuántas veces llamamos
 el proc. Por ejemplo, vamos a decir que queremos hacer antes y después de cierto código que
-se esta ejecutando:
+se está ejecutando:
 
 *Código:*
 
@@ -109,7 +109,7 @@ A todos: Está hecho.  Continuen con lo que estaban haciendo.'
 ```
 
 Quizá esto no parezca muy fabuloso... pero lo es. :-)
-Es común en programacion tener requerimientos estrictos acerca de
+Es común en programación tener requerimientos estrictos acerca de
 que debe ser hecho y cuando. Si quieres salvar un archivo, por ejemplo,
 tienes que abrir el archivo, escribir la informacion que quieres que
 contenga y luego cerrar el archivo. El olvido de cerrar el archivo puede
@@ -118,7 +118,7 @@ o cargar uno tienes que hacer lo mismo: abrir el archivo, hacer lo que
 *realmente* quieres hacer y luego cerrar el archivo. Esto es tedioso
 y fácil de olvidar. En Ruby, guardar (o cargar) archivos trabaja en forma similar
 al código anterior, entonces no tienes que preocuparte por nada más que por
-lo que quieres guardar(o cargar). (En el próximo capitulo mostraré donde
+lo que quieres guardar (o cargar). (En el próximo capítulo mostraré donde
 encontrar información sobre guardar y cargar archivos.)
 
 También puedes escribir métodos que determinan cuantas veces, o incluso *si*
@@ -163,13 +163,13 @@ hacerDosVeces mirada
 
 (Si ejecutas el programa un par de veces, verás que la salida cambiará) Estos son
 algunos de los casos comunes de uso de procs lo que le permite hacer cosas, utilizando
-simplemente métodos no podriamos hacerlo. Seguramente, podrías escribir un método para
+simplemente métodos no podríamos hacerlo. Seguramente, podrías escribir un método para
 que parpadee dos veces, pero no podrías escribir uno que haga *algo* dos veces!
 
 Antes de continuar, vamos a ver un último ejemplo. Los procs que
 hemos visto son bastante similares. Es tiempo de ver algo diferente,
-entonces vamos a ver cuanto un método depende de un proc pasado a este.
-Nuestro método tomará algun objeto y un proc, y llamará a este proc
+entonces vamos a ver cuanto un método depende de un proc pasado a éste.
+Nuestro método tomará algún objeto y un proc, y llamará a este proc
 sobre este objeto. Si el proc retorna falso, terminamos; en caso contrario
 llamaremos al proc con el objeto. Continuaremos haciendo esto hasta
 que el proc retorne falso (esto es mejor, o el programa finalizará con
@@ -197,7 +197,7 @@ construirMatrizDeCuadrados = Proc.new do |array|
     false
   else
     array.pop                         #  Quitar el último número...
-    array.push ultimonumero*ultimonumero  #  ...y reemplazar este con el último número elevado al cuadrado...
+    array.push ultimonumero*ultimonumero  #  ...y reemplazar éste con el último número elevado al cuadrado...
     array.push ultimonumero-1           #  ...seguido por un número menor.
   end
 end
@@ -286,7 +286,7 @@ Gran parte del problema es que hay tres pasos que se tienen que realizar
 que solo debería haber dos (definir el método y pasar el *bloque* correcto dentro
 del método, sin necesidad de usar un proc) ya que la mayoría de las veces usted
 no desea utilizar el proc/bloque después de pasarlo al método. Bueno, no lo sabes,
-Ruby tiene todo resuelto por nosotros! De hecho, ya ha estabas haciendolo cada
+Ruby tiene todo resuelto por nosotros! De hecho, ya estabas haciéndolo cada
 vez que utilizabas iteradores.
 
 Te mostraré primero un ejemplo rápido, y luego vamos a hablar de ello.
@@ -313,7 +313,7 @@ end
   puts '¡Yum!  Me encantan los pasteles de '+fruta+', ¿no?'
 end
 
-#  Recuerda,, estamos tratando de conseguir los numeros pares
+#  Recuerda,, estamos tratando de conseguir los números pares
 #  de la Matriz.
 
 [1, 2, 3, 4, 5].cadaPar do |bolaImpar|
@@ -335,7 +335,7 @@ Así que para pasar un bloque de `cadaPar` todo lo que tenía que hacer
 era pegar el bloque después del método. Puedes pasar un bloque
 dentro de cualquier método de esta manera, aunque muchos métodos simplemente
 ignorarán el bloque. Con el fin de hacer que tu método *no* ignore el bloque
-debes apoderarse de él y convertirlo en un proc y poner el nombre del proc
+debes apoderarte de él y convertirlo en un proc y poner el nombre del proc
 al final de la lista de parámetros de tu método precedida por el signo `&`.
 Así que esa parte es un poco difícil pero no demasiado y sólo tienes que
 hacer esto una vez (cuando se define el método). A continuación, puedes
@@ -378,7 +378,7 @@ profile '25000 duplicaciones' do
   puts numero.to_s.length.to_s+' digitos'  #  El numero de digitos en este numero ENORME.
 end
 
-profile 'contar hasta un millon' do
+profile 'contar hasta un millón' do
   numero = 0
 
   1000000.times do
@@ -392,7 +392,7 @@ end
 ```html
 7526 digitos
 25000 duplicaciones:  0.246768 segundos
-contar hasta un millon:  0.90245 segundos
+contar hasta un millón:  0.90245 segundos
 ```
 
 ¡Qué sencillo! Qué elegante! Con ese pequeño método puedo fácilmente saber
@@ -425,10 +425,10 @@ En otras palabras, su salida debería ser algo como esto:
 
     A partir del "bloque externo" ...
     A partir de "un bloque pequeño" ...
-    ... "un bloque pequeño" terminó, regreso: 5
+    ... "un bloque pequeño" terminó, regresó: 5
     A partir del "otro bloque" ...
-    ... "otro bloque", terminó, regreso: me gusta la comida tailandesa!
-    ... "bloque externo", terminó, regreso: false
+    ... "otro bloque", terminó, regresó: me gusta la comida tailandesa!
+    ... "bloque externo", terminó, regresó: false
 
 * *Mejores Logger*. El resultado del último logger fue un poco difícil de leer y
 debería empeorar cuanto más se use. Sería mucho más fácil de leer si se indentan
@@ -441,18 +441,18 @@ su nombre con el símbolo `$` , como los siguientes:  `$global`, `$nestingDepth`
 
 *Listado:*
 
-    A partir del "bloque externo" ...
-      A partir de "un bloque pequeño" ...
-        A partir del "pequeñito-minúsculo bloque" ...
-        ... "pequeñito-minúsculo bloque" terminó, regreso: un montón de amor
-      ... "un bloque pequeño" terminó, regreso: 42
-      A partir del "otro bloque" ...
-      ... "otro bloque", terminó, regreso: me encanta la comida india!
-    ... "bloque externo", terminó, regreso: true
+    A partir del "bloque externo"...
+      A partir de "un bloque pequeño"...
+        A partir del "pequeñito-minúsculo bloque"...
+        ..."pequeñito-minúsculo bloque" terminó, regresó: un montón de amor
+      ..."un bloque pequeño" terminó, regresó: 42
+      A partir del "otro bloque"...
+      ..."otro bloque", terminó, regresó: me encanta la comida india!
+    ... "bloque externo", terminó, regresó: true
 
 Bueno, eso es todo lo que vas a aprender de este tutorial. ¡Felicitaciones!
 ¡Has aprendido un montón! Tal vez no tienes ganas de recordar todo, o te has
-saltado unas partes ... Realmente, eso está bien. La programación no es sobre
+saltado unas partes... Realmente, eso está bien. La programación no es sobre
 lo que sabes, se trata de lo que puedes imaginar. Como siempre que se sepa
 dónde encontrar las cosas que habías olvidado, lo estás haciendo muy bien.
 ¡Espero que no pienses que escribí todo esto sin revisar estas cosas a cada minuto!
