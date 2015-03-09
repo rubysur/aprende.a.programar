@@ -2,10 +2,10 @@ Clases
 ======
 
 Hasta ahora hemos visto diferentes tipos o *clases* de objetos:
-textos, enteros, flotantes, matrices, y algunos objetos especiales
+textos, enteros, flotantes, matrices y algunos objetos especiales
 (`true`, `false` y `nil`) de los cuales hablaremos más tarde.
 En Ruby, estas clases están siempre en mayúsculas: `String`, `Integer`,
-`Float`, `Array` ... etc. En general, si queremos crear un nuevo
+`Float`, `Array`... etc. En general, si queremos crear un nuevo
 objeto de una cierta clase, usamos `new`:
 
 *Código:*
@@ -45,7 +45,7 @@ a un tiempo hace un tiempo nuevo segundo y medio más tarde:
 *Código:*
 
 ```ruby
-hora  = Time.new   #  El momento que se ejecutó esta código
+hora  = Time.new   #  El momento que se ejecutó este código
 hora2 = hora + 60  #  Un minuto más tarde.
 
 puts hora
@@ -144,11 +144,11 @@ Ranura `' textos '` mantiene el color de las cadenas, por supuesto. No hay
 nada que recordar. Puedes haber notado que cuando se utiliza `each`
 los objetos en el hash no vienen en el mismo orden en que los pusiste adentro. (Al menos
 no lo hacían cuando escribí esto. Pueden que lo hagan ahora... nunca se sabe con los hashes).
-Matrices son para mantener las cosas en orden, no hashes.
+Las matrices son para mantener las cosas en orden, no los hashes.
 
 Aunque la gente suele utilizar textos para nombrar las ranuras de un hash, se
 puede utilizar cualquier tipo de objeto, incluso las matrices y los hashes de
-otros (aunque yo no puedo pensar en por qué querría hacer esto ...):
+otros (aunque yo no puedo pensar en por qué querría hacer esto...):
 
 ```ruby
 weirdHash = Hash.new
@@ -200,11 +200,11 @@ Bueno, lo he probado y parece que funciona. ;)
 Por lo tanto, definimos un método del número entero ingresando en la clase `Integer`,
 definiendo el método allí y saliendo luego. Ahora todos los números enteros tienen
 este (algo incompleto) método. De hecho, si no te gusta la forma en que el método
-`to_s` trabaja, lo podrías definir en gran parte de la misma manera ... pero ¡yo no
+`to_s` trabaja, lo podrías definir en gran parte de la misma manera... pero ¡yo no
 lo recomiendo! Lo mejor es dejar los viejos métodos y hacer otros nuevos cuando
 se quiere hacer algo nuevo.
 
-Así que ... ¿confundido? Permiteme explayarme más en ese último programa.
+Así que... ¿confundido? Permiteme explayarme más en ese último programa.
 Hasta ahora, cada vez que ejecutabas cualquier código o cualquier otro método definido se
 hacía por omisión en el "programa" del objeto. En nuestro último programa,
 dejamos el objeto por primera vez y nos fuimos a la clase `Integer`. Se definió
@@ -271,7 +271,7 @@ Tenemos que guardar el número en un tipo diferente de variable.
 
 Normalmente cuando queremos hablar de un texto, nos limitaremos a llamar a
 un *texto*. Sin embargo, también podría llamar un *objeto de texto*. Sin
-embargo, los programadores podrían llamar *una instancia de la clase `String`*,
+embargo, los programadores podrían llamar *una instancia de la clase* `String`,
 pero esto es sólo una manera de representar a *texto*. Una *instancia* de una clase
 es sólo un objeto de esa clase.
 
@@ -344,10 +344,10 @@ puts Dado.new.mostrar
 nil
 ```
 
-Hmmm ... bueno, al menos no nos muestra un error. Aún así, no tiene mucho
+Hmmm... bueno, al menos no nos muestra un error. Aún así, no tiene mucho
 sentido para un dado "no rodado" mostrar `nil` o lo que sea que se supone
 que significa. Sería bueno si pudiéramos dar un valor cuando nuestro objeto
-Dado es creado. Para esto esta `initialize`:
+Dado es creado. Para esto está `initialize`:
 
 *Código:*
 
@@ -356,7 +356,7 @@ class Dado
 
   def initialize
     # Voy a tirar el dado, a pesar de que
-    # podria hacer otra cosa si quisieramos
+    # podría hacer otra cosa si quisieramos
       rodar
   end
 
@@ -446,14 +446,14 @@ class Dragon
 
   def lanzar
     puts 'Lanzas a ' + @nombre + ' en el aire.'
-    puts 'Sonrie, sus cejas se mueven.'
+    puts 'Sonríe, sus cejas se mueven.'
     pasoDelTiempo
   end
 
   def acunar
     puts 'Acunas a ' + @nombre + ' suavemente.'
     @dormido = true
-    puts 'Rapidamente se queda dormido...'
+    puts 'Rápidamente se queda dormido...'
     pasoDelTiempo
     if @dormido
       @dormido = false
@@ -465,10 +465,10 @@ class Dragon
 
   #  "private" significa que los metodos definidos aqui son
   #  metodos internos al objeto.  (Puedes alimentar a
-  #  tu dragon, pero no puedes preguntar si esta hambriento.)
+  #  tu dragón, pero no puedes preguntar si está hambriento.)
 
   def hambriento?
-    #  Los nombres de los metodos pueden terminar en "?".
+    #  Los nombres de los métodos pueden terminar en "?".
     #  Generalmente, hacemos esto si el método debe
     #  devolver verdadero o falso, como esto:
     @panzaLlena <= 2
@@ -483,12 +483,12 @@ class Dragon
       #  Mueve el alimento del vientre al intestino.
       @panzaLlena      = @panzaLlena      - 1
       @intestinoLleno  = @intestinoLleno  + 1
-    else  #  Nuestro dragon esta hambriento!
+    else  #  Nuestro dragón está hambriento!
       if @dormido
         @dormido = false
         puts '¡Se despierta de repente!'
       end
-      puts '¡' + @nombre + ' esta hambriento!  En su desesperacion, ¡te COMIO!'
+      puts '¡' + @nombre + ' está hambriento!  En su desesperación, ¡te COMIO!'
       exit  #  Sale del programa.
     end
 
@@ -502,7 +502,7 @@ class Dragon
         @dormido = false
         puts '¡Se despierta de repente!'
       end
-      puts 'El estomago de ' + @nombre + 'retumba...'
+      puts 'El estómago de ' + @nombre + 'retumba...'
     end
 
     if ganas?
@@ -534,7 +534,7 @@ mascota.dormir
 Norbert nace.
 Alimentas a Norbert.
 Lanzas a Norbert en el aire.
-Sonrie, sus cejas se mueven.
+Sonríe, sus cejas se mueven.
 Haces caminar a Norbert.
 Colocas a Norbert en la cama.
 Norbert ronca, llenando el cuarto con humo.
@@ -542,21 +542,21 @@ Norbert ronca, llenando el cuarto con humo.
 Norbert ronca, llenando el cuarto con humo.
 Norbert despierta lentamente.
 Acunas a Norbert suavemente.
-Rapidamente se queda dormido...
+Rápidamente se queda dormido...
 ...pero despierta cuando te detienes.
 Colocas a Norbert en la cama.
 ¡Se despierta de repente!
-El estomago de Norbertretumba...
+El estómago de Norbert retumba...
 Colocas a Norbert en la cama.
 ¡Se despierta de repente!
-El estomago de Norbertretumba...
+El estómago de Norbert retumba...
 Colocas a Norbert en la cama.
 ¡Se despierta de repente!
-El estomago de Norbertretumba...
+El estómago de Norbert retumba...
 Norbert hace la danza del baño...
 Colocas a Norbert en la cama.
 ¡Se despierta de repente!
-¡Norbert esta hambriento!  En su desesperacion, ¡te COMIO!
+¡Norbert está hambriento!  En su desesperación, ¡te COMIO!
 ```
 
 *¡Ouau!* Por supuesto, sería mejor si fuese un programa interactivo,
@@ -586,7 +586,7 @@ fuerte que estás empujando el pedal. (Hay una gran diferencia entre pisar y
 golpear) También tendrías que ser capaz de dirigir el timón, y otra vez,
 tendrías que ser capaz de decir lo mucho que estás moviendo la rueda del
 timón. Supongo que se podría ir más allá y añadir un embrague, direccionales,
-lanzacohetes, cámara de post-combustión, condensador de flujo, etc ..
+lanzacohetes, cámara de post-combustión, condensador de flujo, etc...
 depende del tipo de juego que estás haciendo.
 
 Internamente al objeto coche, sin embargo, tendríamos que hacer mucho más
@@ -603,12 +603,12 @@ volcado y así sucesivamente. Todo esto sería interno a su objeto coche.
 y un método `paso365Dias` que cuando se le llama aumenta la edad del árbol en un año.
 Cada año crece el árbol más alto (mucho más de lo que piensas que un naranjo debe crecer en un año),
 y después de un cierto número de años (de nuevo, tu llamada) el árbol debe morir.
-En los primeros años el árbol no debe producir fruta, pero después de un tiempo debería hacerlo,
-y supongo que los árboles más viejos producen más cada año que los árboles más jóvenes ...
+En los primeros años el árbol, no debe producir fruta, pero después de un tiempo debería hacerlo,
+y supongo que los árboles más viejos producen más cada año que los árboles más jóvenes...
 lo que pienses que tiene más sentido. Y, por supuesto, tú deberás ser capaz de
 `contarNaranjas` (que devuelve el número de naranjas en el árbol), y `tomarUnaNaranja` (que
 reduce la `@numeroNaranjas`en uno y devuelve un texto que te dice cómo la naranja era deliciosa,
-o de lo contrario sólo te dice que no hay naranjas más para elegir este año) Asegúrate
+o de lo contrario sólo te dice que no hay naranjas más para elegir este año). Asegúrate
 que las naranjas que no se recogen en un año se caen antes del próximo año.
 
 * Escribir un programa para que pueda interactuar con tu bebé dragón. Deberás
@@ -617,13 +617,13 @@ llamen en tu dragón. Por supuesto, ya que lo que estás ingresando son sólo te
 tendrás que tener algún tipo de *método de envío*, donde el programa revise los textos
 que se han ingresado y luego llama al método adecuado.
 
-¡Y eso es casi todo lo que hay que hacer! Pero espera un segundo ...
+¡Y eso es casi todo lo que hay que hacer! Pero espera un segundo...
 Yo no he hablado de ninguna de esas clases para hacer cosas como enviar un
 correo electrónico o guardar y cargar archivos en el computador, o cómo crear ventanas
 y botones, o los mundos en 3D, ¡ni nada! Bueno, hay *tantas* clases que pueden utilizar
 que no es posible mostrar a todos, ¡yo no conozco la mayoría de ellos! Lo *que* puedo
 decir es que para saber más sobre ellos tienen que saber acerca de los que deseas que el
 programa haga. Antes de terminar hay una característica más de Ruby que deberás conocer,
-algo que la mayoría de lenguajes de programación no tiene pero sin las cuales
+algo que la mayoría de lenguajes de programación no tienen pero sin las cuales
 simplemente no podría vivir:
 [bloques y procedimientos](/aprende.a.programar/capitulos/bloques.html).
