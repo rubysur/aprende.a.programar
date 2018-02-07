@@ -154,4 +154,4 @@ Aquí hay una pregunta más difícil:
 * Si tengo 1031 millones de segundos de edad, ¿cuántos años tengo?
 
 Cuando termines de jugar con números, echemos un vistazo a cómo manejar
-[textos](/aprende.a.programar/capitulos/textos.html) en Ruby.
+[textos](/aprende.a.programar/capitulos/textos.md) en Ruby.
