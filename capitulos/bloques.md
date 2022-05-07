@@ -2,7 +2,7 @@ Bloques y Procedimientos
 ========================
 
 Esta es definitivamente una de las mejores herramientas de Ruby.
-Algunos lenguajes tienen esta herramienta, pienso que la llamaran
+Algunos lenguajes tienen esta herramienta, pienso que la llamarán
 de otra forma (como *closures*), pero la mayoría de los más
 populares no lo hacen, una pena.
 
@@ -10,7 +10,7 @@ Entonces ¿qué es esto que es tan bueno? Esto tiene la habilidad
 de tomar un *bloque* de código (código entre **do**
 y **end**) y encapsularlo dentro de un objeto (llamado *proc*) y
 guardarlo en una variable o pasarlo a un método, y ejecutar el código del
-bloque donde te guste (más de una vez, si quieres) Entonces esto es
+bloque donde te guste (más de una vez, si quieres). Entonces esto es
 como un tipo método excepto que no está dentro de un objeto
 (este bloque *es* un objeto), y puedes almacenarlo o pasarlo como cualquier
 otro objeto. Es hora de un ejemplo:
@@ -36,7 +36,7 @@ toast.call
 ```
 
 Entonces creé un proc (el cual pienso debería ser pronunciado como "procedimiento") que
-contiene un bloque de código, y llamé (*call*ed) el proc tres
+contiene un bloque de código, y llamé (*call*ed) el *proc* tres
 veces. Como puedes ver, esto es como un método.
 
 En realidad, son más parecidos a los métodos que te he mostrado, porque los bloques pueden
@@ -64,17 +64,17 @@ Muy bien, entonces hemos visto que son los bloques y procs, y como usarlos, pero
 ¿cuál es el punto? ¿Porqué no utilizar simplemente métodos? Bueno, esto es porque
 hay más cosas que no podemos hacer con métodos. En particular, no
 puedes pasar métodos a otros métodos (pero puedes pasar procs dentro de métodos),
-y métodos no pueden retornar otros métodos (pero ellos pueden retornar procs). Esto
-es simplemente porque procs son objetos; los métodos no son objetos
+y los métodos no pueden retornar otros métodos (pero ellos pueden retornar procs). Esto
+es simplemente porque los procs son objetos; los métodos no son objetos.
 
 (De hecho, ¿es algo familiar para tí? Sí, tu has visto bloques antes... cuando aprendiste
 sobre iteradores. Pero vamos a hablar un poco más acerca de esto en breve)
 
 ## Métodos que reciben Procedimientos
 
-Cuando pasamos un proc en un método podemos controlar cómo o cuántas veces llamamos
+Cuando pasamos un proc en un método, podemos controlar cómo o cuántas veces llamamos
 el proc. Por ejemplo, vamos a decir que queremos hacer antes y después de cierto código que
-se esta ejecutando:
+se está ejecutando:
 
 *Código:*
 
@@ -111,14 +111,14 @@ A todos: Está hecho.  Continuen con lo que estaban haciendo.'
 Quizá esto no parezca muy fabuloso... pero lo es. :-)
 Es común en programacion tener requerimientos estrictos acerca de
 que debe ser hecho y cuando. Si quieres salvar un archivo, por ejemplo,
-tienes que abrir el archivo, escribir la informacion que quieres que
+tienes que abrir el archivo, escribir la información que quieres que
 contenga y luego cerrar el archivo. El olvido de cerrar el archivo puede
 traer malas consecuencias. Pero cada vez que quieras salvar un archivo
 o cargar uno tienes que hacer lo mismo: abrir el archivo, hacer lo que
 *realmente* quieres hacer y luego cerrar el archivo. Esto es tedioso
 y fácil de olvidar. En Ruby, guardar (o cargar) archivos trabaja en forma similar
 al código anterior, entonces no tienes que preocuparte por nada más que por
-lo que quieres guardar(o cargar). (En el próximo capitulo mostraré donde
+lo que quieres guardar (o cargar). (En el próximo capitulo mostraré donde
 encontrar información sobre guardar y cargar archivos.)
 
 También puedes escribir métodos que determinan cuantas veces, o incluso *si*
@@ -161,9 +161,9 @@ hacerDosVeces mirada
     <mirada>
     <mirada>
 
-(Si ejecutas el programa un par de veces, verás que la salida cambiará) Estos son
+(Si ejecutas el programa un par de veces, verás que la salida cambiará). Estos son
 algunos de los casos comunes de uso de procs lo que le permite hacer cosas, utilizando
-simplemente métodos no podriamos hacerlo. Seguramente, podrías escribir un método para
+simplemente métodos no podríamos hacerlo. Seguramente, podrías escribir un método para
 que parpadee dos veces, pero no podrías escribir uno que haga *algo* dos veces!
 
 Antes de continuar, vamos a ver un último ejemplo. Los procs que
@@ -286,7 +286,7 @@ Gran parte del problema es que hay tres pasos que se tienen que realizar
 que solo debería haber dos (definir el método y pasar el *bloque* correcto dentro
 del método, sin necesidad de usar un proc) ya que la mayoría de las veces usted
 no desea utilizar el proc/bloque después de pasarlo al método. Bueno, no lo sabes,
-Ruby tiene todo resuelto por nosotros! De hecho, ya ha estabas haciendolo cada
+Ruby tiene todo resuelto por nosotros! De hecho, ya estabas haciéndolo cada
 vez que utilizabas iteradores.
 
 Te mostraré primero un ejemplo rápido, y luego vamos a hablar de ello.
@@ -335,7 +335,7 @@ Así que para pasar un bloque de `cadaPar` todo lo que tenía que hacer
 era pegar el bloque después del método. Puedes pasar un bloque
 dentro de cualquier método de esta manera, aunque muchos métodos simplemente
 ignorarán el bloque. Con el fin de hacer que tu método *no* ignore el bloque
-debes apoderarse de él y convertirlo en un proc y poner el nombre del proc
+debes apoderarte de él y convertirlo en un proc y poner el nombre del proc
 al final de la lista de parámetros de tu método precedida por el signo `&`.
 Así que esa parte es un poco difícil pero no demasiado y sólo tienes que
 hacer esto una vez (cuando se define el método). A continuación, puedes
@@ -436,7 +436,7 @@ las líneas en los bloques interiores. Para ello, tendrás que llevar la cuenta
 de cuán profundamente estás anidado cada vez que el logger quiere escribir algo.
 Para ello, utilice una *variable global*, una variable que se puede ver en
 cualquier parte de tu código. Para hacer una variable global, sólo precede a
-su nombre con el símbolo `$` , como los siguientes:  `$global`, `$nestingDepth` y
+su nombre con el símbolo `$`, como los siguientes:  `$global`, `$nestingDepth` y
 `$bigTopPeeWee`. Al final, el logger debe generar un código como este:
 
 *Listado:*
