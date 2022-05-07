@@ -9,18 +9,18 @@ Para mí, hay realmente solo tres lugares donde busco ayuda sobre Ruby.
 Si es una pequeña pregunta, y pienso que puedo experimentar yo mismo para
 encontrar la respuesta, utilizo *irb*. Si es una gran pregunta,
 busco por esto dentro de mis *herramientas*. Y si no puedo darme
-cuenta por mi mismo, entonces pregunto por ayuda en *ruby-talk*.
+cuenta por mí mismo, entonces pregunto por ayuda en *ruby-talk*.
 
 ## IRB:  Ruby Interactivo
 
 Si instalaste Ruby, entonces tienes instalado irb. Para usarlo, solo
-ve a consola y tipea `irb`.  Cuando estes en irb, puedes tipear cualquier
-expresion ruby que quieras, y este te dirá el valor de esto. Tipea `1 + 2`,
+ve a consola y tipea `irb`.  Cuando estés en irb, puedes tipear cualquier
+expresión ruby que quieras, y este te dirá el valor de esto. Tipea `1 + 2`,
 y este te devolverá `3`. (Puedes darte cuenta que no tienes que utilizar
 `puts`.) Esto es como una calculadora Ruby gigante. Cuando finalizes, solo
 debes tipear `exit`.
 
-Hay un montón de cosas ademas para irb, pero puedes aprender mucho más
+Hay un montón de cosas además para irb, pero puedes aprender mucho más
 probando esto.
 
 ## El Pico: "Programming Ruby"
@@ -35,33 +35,33 @@ Puedes encontrar todo lo que necesites de Ruby, desde lo básico a lo
 avanzado, en este libro. Es fácil de leer, fácil de entender, es perfecto.
 Desearía que cada lenguaje tuviera un libro de esta calidad. Al reverso
 del libro, encontrarás una gran sección detallando cada método en cada
-clase, explicandolo y dando ejemplos. ¡Me encanta este libro!
+clase, explicándolo y dando ejemplos. ¡Me encanta este libro!
 
 Hay algunos lugares donde puedes conseguir una versión más antigua (incluyendo
-el sitio mismo  Pragmatic Programmers), pero mi lugar favorito es
+el sitio mismo Pragmatic Programmers), pero mi lugar favorito es
 en <a href="http://www.ruby-doc.org/docs/ProgrammingRuby/">ruby-doc.org</a>.
 Esta versión tiene una linda tabla de contenidos a un costado, como también
 un índice. (ruby-doc.org tiene un montón más de grandiosos contenidos también,
-como para el Core API y biblioteca estándar(Standard Library)... basicamente,
+como el Core API y biblioteca estándar(Standard Library)... básicamente,
 documenta todo Ruby. <a href="http://www.ruby-doc.org/">Chequealo aquí.</a>)
 
-Y porque es llamado "¿el pico"? Bueno, hay una imágen de un pico en la tapa del
+Y porque es llamado "¿el pico"? Bueno, hay una imagen de un pico en la tapa del
 libro. Es un nombre tonto, creo yo, pero quedó así.
 
 ## Ruby-Talk: la lista de mails Ruby
 
 Aun teniendo irb y el pico, algunas veces sigues sin resolver
 algo que necesitas. O quizás quieres saber si alguien ya hizo algo de lo
-tú estás intentando, para saber si puedes usar eso en cambio. En estos casos,
-el lugar para esto es ruby-talk, la lista de mails Ruby. Esta lleno de gente
+que tú estás intentando, para saber si puedes usar eso en cambio. En estos casos,
+el lugar para esto es ruby-talk, la lista de mails Ruby. Está lleno de gente
 amigable, inteligente y con ganas de ayudar. Para aprender más de esto, o suscribirte,
 mira <a href="http://www.ruby-lang.org/es/community/mailing-lists/">aquí</a>.
 
-**ADVERTENCIA:** Hay *muchos* emails en
+**ADVERTENCIA:** Hay *muchos* correos electrónicos en
 esta lista de correos cada día. Tuve que enviar directamente estos
-a diferentes carpetas de mail para que no me molesten. Si no quieres
-ocuparte de todos esos emails, pienso, no debes inscribirte. La lista
-de mails es espejada en el grupo de noticias comp.lang.ruby, y viceversa,
+a diferentes carpetas de correo para que no me molesten. Si no quieres
+ocuparte de todos esos correos electrónicos, pienso, no debes inscribirte. La lista
+de correos electrónicos es espejada en el grupo de noticias comp.lang.ruby, y viceversa,
 entonces puedes ver los mensajes ahí. De igual manera, ves los mismos
 mensajes, pero en un formato diferente.
 
@@ -71,16 +71,16 @@ Algo que traté de mostrarte, lo cual seguramente podrás probar pronto,
 es el concepto de TMTOWTDI (pronunciado como "Tim Toady" en inglés for *There's
 More Than One Way To Do It*): *Hay Más De Una Forma DE Hacer Esto*.
 
-Algunos te dirán que TMTOWTDI es maravillos mientras otros
+Algunos te dirán que TMTOWTDI es maravilloso mientras otros
 puedan pensar algo diferente. No tengo fuertes sentimientos de las
 cosas en general, pero pienso que esto es
-una *terrible* forma de enseñar a programar a alguién.
+una *terrible* forma de enseñar a programar a alguien.
 (Como si aprender a programar de una forma no fuera suficiente desafío y confuso!)
 
-Sin embargo, ahora que te estás moviendose más allá de este tutorial, verás mucha
+Sin embargo, ahora que te estás moviendote más allá de este tutorial, verás mucha
 más diversidad de código. Por ejemplo, pienso que al menos hay otras cinco formas
 de hacer un texto (aparte de las que encierran un texto en comillas), y cada uno de estos
-trabaja un poco diferente. Solo mostre lo más simple.
+trabaja un poco diferente. Solo mostré lo más simple.
 
 Cuando hablamos de ramificación, mostré el `if`,
 pero no mostré el `unless`. Voy a dejar que te des
@@ -104,8 +104,8 @@ grobably combergearl kitatently thememberate
 ```
 
 Y finalmente, hay otro camino para escribir métodos la cual toma bloques
-(no procs). Vimos la parte donde tomabamos el bloque y lo convertíamos
-dentro de un proc usando el truco `&block` en la lista de parametros
+(no procs). Vimos la parte donde tomábamos el bloque y lo convertíamos
+dentro de un proc usando el truco `&block` en la lista de parámetros
 cuando defines una función. Entonces, para llamar el bloque, solo usas
 `block.call`.  Bueno, hay una manera más corta (aunque personalmente pienso que
 es más confuso). En lugar de esto:
