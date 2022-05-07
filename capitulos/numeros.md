@@ -32,7 +32,7 @@ Enteros y flotantes
 
 En la mayoría de los lenguajes de programación (y Ruby no es la excepción)
 los números sin decimales son llamados *enteros* (traducción de *integers*
-en su versión en Inglés), y los números con punto decimal normalmente son
+en su versión en inglés), y los números con punto decimal normalmente son
 llamados *números de punto flotante* (o llamados sólo *flotantes* de ahora
 en adelante ya que proviene de su original en inglés *floats*).
 
@@ -154,4 +154,4 @@ Aquí hay una pregunta más difícil:
 * Si tengo 1031 millones de segundos de edad, ¿cuántos años tengo?
 
 Cuando termines de jugar con números, echemos un vistazo a cómo manejar
-[textos](/aprende.a.programar/capitulos/textos.html) en Ruby.
+[textos](/capitulos/textos.md) en Ruby.
