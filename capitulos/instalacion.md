@@ -3,7 +3,7 @@ Instalación
 
 Antes de comenzar, necesitas descargar e instalar Ruby en tu computadora.
 
-Para instalar Ruby en **Windows**, descarga [Ruby Installer](http://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.0.0-p451.exe?direct).
+Para instalar Ruby en **Windows**, descarga [Ruby Installer](https://rubyinstaller.org/downloads/).
 Luego, ejecuta el instalador, sigue los pasos de instalación y listo!
 
 Si estás en **Mac OS X**, ya tienes instalado Ruby. Pero si quieres la
@@ -27,4 +27,4 @@ En **CentOS**, **Fedora** o **RHEL**, puedes usar `yum`:
 $ sudo yum install ruby
 ```
 
-¡Eso es todo! Estás listo para [aprender a programar](/aprende.a.programar/capitulos/numeros.html)
+¡Eso es todo! Estás listo para [aprender a programar](/capitulos/numeros.md)
