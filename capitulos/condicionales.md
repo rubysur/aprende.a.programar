@@ -500,4 +500,4 @@ serás capaz de programar cualquier cosa. ¡En serio! Solo mira la cantidad de c
 que antes cuando no tenías bucles y ramificaciones.
 
 Ahora, aprendamos sobre un nuevo tipo de objeto, que permite tener control de listas de otros objetos:
-[matrices](/aprende.a.programar/capitulos/matrices.html).
+[matrices](/capitulos/matrices.md).
