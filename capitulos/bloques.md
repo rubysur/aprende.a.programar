@@ -460,4 +460,4 @@ Porque lo hice. Yo también recibí un montón de ayuda con el código de los ej
 de este tutorial. Pero, ¿dónde estaba *yo* buscando estas cosas y donde *yo* pido
 ayuda?.
 
-[Te voy a enseñar...](/aprende.a.programar/capitulos/fin.html)
+[Te voy a enseñar...](/capitulos/fin.md)
