@@ -527,4 +527,4 @@ esperar de una calculadora científica decente. Y como siempre, los
 flotantes están *realmente cerca* de ser la respuesta
 correcta.
 
-Entonces ahora vamos a ver [control de flujo](/aprende.a.programar/capitulos/condicionales.html).
+Entonces ahora vamos a ver [control de flujo](/capitulos/condicionales.md).
